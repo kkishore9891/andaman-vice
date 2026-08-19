@@ -1,0 +1,68 @@
+<!-- Andaman Vice — GTA-style trip companion. Single-theme neon-night UI (deliberate). -->
+<title>Andaman Vice</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#070919">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Monoton&family=Big+Shoulders+Display:wght@500;700;800&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/app.css">
+
+<div id="app">
+  <!-- MAP LAYER -->
+  <div id="mapwrap">
+    <div id="tilt">
+      <svg id="map" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet"></svg>
+    </div>
+    <div id="flightlayer"></div>
+  </div>
+
+  <!-- HUD: top bar -->
+  <header id="hud">
+    <div id="logo">ANDAMAN&nbsp;VICE</div>
+    <nav id="days"></nav>
+    <div id="hudright">
+      <button class="hudbtn" id="btn-legend" title="Legend">LEGEND</button>
+      <button class="hudbtn" id="btn-budget" title="Budget">₹</button>
+      <button class="hudbtn" id="btn-intel" title="Facts &amp; sources">INTEL</button>
+      <button class="hudbtn" id="btn-kit" title="Clothing &amp; packing">KIT</button>
+      <button class="hudbtn" id="btn-tilt" title="Toggle 2.5D tilt">2.5D</button>
+    </div>
+  </header>
+
+  <!-- Legend -->
+  <aside id="legend" class="sheet hidden"></aside>
+  <!-- Budget / Intel / Kit sheets -->
+  <aside id="budget" class="sheet hidden"></aside>
+  <aside id="intel" class="sheet hidden"></aside>
+  <aside id="kit" class="sheet hidden"></aside>
+
+  <!-- Mission briefing (event detail) -->
+  <aside id="brief" class="hidden">
+    <div id="brief-head">
+      <div id="brief-crumbs"></div>
+      <button id="brief-close">✕</button>
+    </div>
+    <div id="brief-body"></div>
+  </aside>
+
+  <!-- Timeline -->
+  <footer id="timeline">
+    <div id="tl-controls">
+      <button id="tl-play" title="Simulate">▶</button>
+      <select id="tl-speed">
+        <option value="10">10×</option>
+        <option value="60" selected>60×</option>
+        <option value="300">300×</option>
+        <option value="900">900×</option>
+      </select>
+      <div id="tl-clock">--:--</div>
+      <div id="tl-now">select a day</div>
+    </div>
+    <div id="tl-strip"><div id="tl-blocks"></div><div id="tl-cursor"></div></div>
+    <div id="tl-hours"></div>
+  </footer>
+
+  <div id="boot">LOADING&nbsp;TRIP&nbsp;DATA…</div>
+</div>
+
+<script src="js/map.js"></script>
+<script src="js/app.js"></script>
