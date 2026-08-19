@@ -1,0 +1,1874 @@
+{
+ "research": {
+  "flights": {
+   "summary": "All facts gathered live in Chrome on 2026-08-19 from Google Flights, Cleartrip, akasaair.com and goindigo.in. Outbound MAA->IXZ Wed 2026-09-23 has exactly 3 nonstops: Akasa QP 1145 07:40-09:55 (Google ₹11,071; Cleartrip 3-adult search ₹10,721/adult), IndiGo 6E 526 04:40-06:55 (₹21,116), IndiGo 6E 845 10:45-13:00 (₹22,061). Return IXZ->MAA Sun 2026-09-27 has exactly 3 nonstops: Akasa QP 1146 10:35-12:55 (₹9,556; Cleartrip ₹9,206/adult), IndiGo 6E 581 07:25-09:35 (₹21,805) and IndiGo 6E 2698 13:35-15:45 (₹21,805). CRITICAL: the latest nonstop departure from IXZ that Sunday is 13:35 (6E 2698) — no ~5 PM nonstop exists (latest departure of any kind is a 15:15 Air India Express 1-stop), so a Baratang day-trip returning ~3 PM cannot be combined with a same-day flight out. Saturday 2026-09-26 backup: only IndiGo nonstops 6E 07:25 and 13:35 at ₹21,741 each — Akasa's QP 1146 does not appear on Saturday. Cleartrip (no login needed) cross-checked all prices for 3 adults, matching Google within ~₹400/head. Baggage from airline sites: Akasa domestic free allowance 15 kg check-in (1 piece) + 7 kg handbag + 3 kg personal item; IndiGo identical (15 kg check-in, 7 kg cabin 55x35x25 cm, +3 kg personal item). Cheapest sensible 3-pax combo: Akasa out + Akasa return ≈ ₹10,721+₹9,206 = ₹19,927/adult ≈ ₹59,781 total, landing IXZ 09:55 Wed and departing 10:35 Sun.",
+   "facts": [
+    {
+     "topic": "Outbound nonstop 1: Akasa Air QP 1145, MAA-IXZ, Wed 2026-09-23",
+     "value": "07:40 -> 09:55, 2h15m, Boeing 737 MAX 8, ₹11,071 (Google Flights, 1 adult, Best tab; Cheapest tab shows 'from ₹10,780'); Cleartrip 3-adult search: ₹10,721/adult",
+     "as_of": "2026-08-19",
+     "source_url": "https://www.google.com/travel/flights?q=Flights%20from%20MAA%20to%20IXZ%20on%202026-09-23%20one%20way&hl=en&curr=INR"
+    },
+    {
+     "topic": "Outbound nonstop 2: IndiGo 6E 526, MAA-IXZ, Wed 2026-09-23",
+     "value": "04:40 -> 06:55, 2h15m, Airbus A321neo, ₹21,116 (Google Flights, 1 adult); Cleartrip 3-adult: ₹21,221/adult",
+     "as_of": "2026-08-19",
+     "source_url": "https://www.google.com/travel/flights?q=Flights%20from%20MAA%20to%20IXZ%20on%202026-09-23%20one%20way&hl=en&curr=INR"
+    },
+    {
+     "topic": "Outbound nonstop 3: IndiGo 6E 845, MAA-IXZ, Wed 2026-09-23",
+     "value": "10:45 -> 13:00, 2h15m, Airbus A321neo, ₹22,061 (Google Flights, 1 adult); Cleartrip 3-adult: ₹22,166/adult. These 3 are the ONLY nonstops that day (8 results total, rest are 1-2 stop Air India/AI Express)",
+     "as_of": "2026-08-19",
+     "source_url": "https://www.google.com/travel/flights?q=Flights%20from%20MAA%20to%20IXZ%20on%202026-09-23%20one%20way&hl=en&curr=INR"
+    },
+    {
+     "topic": "Return nonstop 1: Akasa Air QP 1146, IXZ-MAA, Sun 2026-09-27",
+     "value": "10:35 -> 12:55, 2h20m, Boeing 737 MAX 8, ₹9,556 (Google Flights, 1 adult); Cleartrip 3-adult: ₹9,206/adult",
+     "as_of": "2026-08-19",
+     "source_url": "https://www.google.com/travel/flights?q=Flights%20from%20IXZ%20to%20MAA%20on%202026-09-27%20one%20way&hl=en&curr=INR"
+    },
+    {
+     "topic": "Return nonstop 2: IndiGo 6E 581, IXZ-MAA, Sun 2026-09-27",
+     "value": "07:25 -> 09:35, 2h10m, Airbus A321neo, ₹21,805 (Google Flights, 1 adult); Cleartrip 3-adult: ₹22,154/adult",
+     "as_of": "2026-08-19",
+     "source_url": "https://www.google.com/travel/flights?q=Flights%20from%20IXZ%20to%20MAA%20on%202026-09-27%20one%20way&hl=en&curr=INR"
+    },
+    {
+     "topic": "Return nonstop 3 (LATEST nonstop of the day): IndiGo 6E 2698, IXZ-MAA, Sun 2026-09-27",
+     "value": "13:35 -> 15:45, 2h10m, Airbus A321neo, ₹21,805 (Google Flights, 1 adult); Cleartrip 3-adult: ₹22,154/adult. NO nonstop departs IXZ after 13:35 that Sunday; latest departure of any itinerary is 15:15 (Air India Express IX-2794, 1-stop via BLR, ₹19,304 Google / ₹18,229-18,026 Cleartrip)",
+     "as_of": "2026-08-19",
+     "source_url": "https://www.google.com/travel/flights?q=Flights%20from%20IXZ%20to%20MAA%20on%202026-09-27%20one%20way&hl=en&curr=INR"
+    },
+    {
+     "topic": "Backup: IXZ-MAA nonstops Sat 2026-09-26",
+     "value": "Only 2 nonstops, both IndiGo: 07:25->09:35 ₹21,741 and 13:35->15:45 ₹21,741 (1 adult). Akasa QP 1146 does NOT operate IXZ-MAA on Saturday (page suggests 'Travel on Sep 25 for ₹9,556'). Other options are 1-2 stop AI Express/AI from ₹19,355",
+     "as_of": "2026-08-19",
+     "source_url": "https://www.google.com/travel/flights?q=Flights%20from%20IXZ%20to%20MAA%20on%202026-09-26%20one%20way&hl=en&curr=INR"
+    },
+    {
+     "topic": "Cross-check site for 3 adults (outbound), no login needed",
+     "value": "Cleartrip 3-adult MAA-IXZ 23/09/2026: Akasa QP-1145 ₹10,721/adult (total ~₹32,163 for 3), IndiGo 6E-526 ₹21,221/adult, IndiGo 6E-845 ₹22,166/adult; flight numbers match Google. Prices shown are per-adult even in 3-pax search",
+     "as_of": "2026-08-19",
+     "source_url": "https://www.cleartrip.com/flights/results?adults=3&childs=0&infants=0&class=Economy&depart_date=23/09/2026&from=MAA&to=IXZ&intl=n"
+    },
+    {
+     "topic": "Cross-check site for 3 adults (return)",
+     "value": "Cleartrip 3-adult IXZ-MAA 27/09/2026: Akasa QP-1146 ₹9,206/adult (total ~₹27,618 for 3), IndiGo 6E-581 ₹22,154/adult, IndiGo 6E-2698 ₹22,154/adult. Confirms 13:35 is the last nonstop",
+     "as_of": "2026-08-19",
+     "source_url": "https://www.cleartrip.com/flights/results?adults=3&childs=0&infants=0&class=Economy&depart_date=27/09/2026&from=IXZ&to=MAA&intl=n"
+    },
+    {
+     "topic": "Akasa Air free baggage allowance (domestic)",
+     "value": "Check-in: 15 kg per customer, 1 piece only, max 158 cm L+W+H. Hand baggage: one handbag up to 7 kg and 115 cm L+W+H, plus one personal item up to 3 kg that fits under the seat",
+     "as_of": "2026-08-19",
+     "source_url": "https://www.akasaair.com/quick-links/baggage"
+    },
+    {
+     "topic": "IndiGo free baggage allowance (domestic)",
+     "value": "Check-in: 15 kg per person. Hand baggage: one handbag up to 7 kg, max 115 cm / 55x35x25 cm, plus one personal article (purse/laptop bag) up to 3 kg. Excess domestic checked baggage ~INR 700/kg",
+     "as_of": "2026-08-19",
+     "source_url": "https://www.goindigo.in/baggage/baggage-allowance.html"
+    },
+    {
+     "topic": "Google Flights price-insights note (both directions)",
+     "value": "'Prices are currently typical'; cheapest booking window stated as 'usually earlier, up to 5 months before takeoff' — no reason to expect drops; book soon",
+     "as_of": "2026-08-19",
+     "source_url": "https://www.google.com/travel/flights?q=Flights%20from%20IXZ%20to%20MAA%20on%202026-09-27%20one%20way&hl=en&curr=INR"
+    }
+   ],
+   "critical_claims": [
+    {
+     "claim": "There is NO nonstop IXZ->MAA departing around 5 PM on Sunday 2026-09-27: the latest nonstop leaves at 13:35 (IndiGo 6E 2698, arr 15:45, ₹21,805), and the latest departure of any itinerary is 15:15 (1-stop). A Baratang day-trip returning ~3 PM cannot connect to any same-day flight home.",
+     "source_url": "https://www.google.com/travel/flights?q=Flights%20from%20IXZ%20to%20MAA%20on%202026-09-27%20one%20way&hl=en&curr=INR"
+    },
+    {
+     "claim": "Cheapest outbound nonstop MAA->IXZ Wed 2026-09-23 is Akasa QP 1145, 07:40->09:55, ₹11,071 on Google / ₹10,721 per adult on Cleartrip's 3-adult search (~₹32,163 for 3).",
+     "source_url": "https://www.cleartrip.com/flights/results?adults=3&childs=0&infants=0&class=Economy&depart_date=23/09/2026&from=MAA&to=IXZ&intl=n"
+    },
+    {
+     "claim": "Cheapest return nonstop IXZ->MAA Sun 2026-09-27 is Akasa QP 1146, 10:35->12:55, ₹9,556 on Google / ₹9,206 per adult on Cleartrip's 3-adult search (~₹27,618 for 3) — but it departs mid-morning, forcing the last island day to end by ~08:30 at the airport.",
+     "source_url": "https://www.google.com/travel/flights?q=Flights%20from%20IXZ%20to%20MAA%20on%202026-09-27%20one%20way&hl=en&curr=INR"
+    },
+    {
+     "claim": "Both candidate airlines (Akasa, IndiGo) give the same free domestic baggage: 15 kg check-in + 7 kg cabin handbag + a 3 kg personal item per passenger, so baggage does not differentiate the choice.",
+     "source_url": "https://www.akasaair.com/quick-links/baggage"
+    }
+   ],
+   "warnings": [
+    "Google Flights price ₹11,071 for Akasa QP 1145 differs slightly from the pre-check figure (~₹10,780); the 'Cheapest' tab still shows 'from ₹10,780', so the lowest fare bucket may be a stripped-down fare. Cleartrip showed ₹10,721/adult for the same flight.",
+    "Google Flights 'Best' tab initially hid the 10:45 IndiGo (6E 845) under 'Other flights'; total nonstop count verified as 3 each way via both Google and Cleartrip full lists.",
+    "Akasa QP 1146 (IXZ-MAA) does not appear on Saturday 2026-09-26 — if the return shifts to Saturday, only the two ₹21,741 IndiGo nonstops (07:25 and 13:35) exist, roughly ₹12,000/person more expensive than Sunday's Akasa.",
+    "IndiGo 6E 526 departs MAA at 04:40 and Google flags it 'Overnight' (airport arrival ~02:30); consider Akasa 07:40 instead.",
+    "Prices are live OTA quotes captured 2026-08-19 and will move; Cleartrip prices exclude its convenience fee added at checkout.",
+    "Google Flights showed a generic 'Travel update: Air traffic disruptions may affect flights' banner on results pages; no route-specific disruption was stated."
+   ]
+  },
+  "ferries": {
+   "summary": "Live fares (3 adults, per-adult INR) were pulled from operator booking engines in Chrome. Makruzz (makruzz.com) runs PB->Havelock 08:00->09:30 and 13:00->14:30 on both Sep 23 and Sep 25 (Premium 1950 / Deluxe 2540 / Royal 3500), Havelock->Neil 10:00->11:00 on Sep 25 and 26 (1800/2100/2900), PB->Neil 08:00->11:00 via Havelock on Sep 25 (1950/2540/3500), Havelock->PB on Sep 26 at 10:00->12:30 via Neil (disc. 1500/2150/3000) and 15:30->17:00 nonstop (disc. 1450/1950/2800), and Neil->PB 11:30->12:30 on Sep 26 and 27 (1850/2250/3250). Nautika (gonautika.com) on Sunday Sep 27 sails Neil->PB at 09:30->10:45 (Luxury 1800 / Royal 2000) - the earliest Sunday sailing found - plus 10:35->11:50 and 16:15->17:30 (adds Business 3300); on Sep 23 it has the cheapest and earliest PB->Havelock at 06:15->07:45 (Luxury 1250 / Royal 1500), then 07:30, 11:00, 12:30. Green Ocean (tickets.greenoceanseaways.com/portal) on Sep 23 runs PB->Havelock 06:30->08:45 (Economy 1050 / Premium 1250 / Royal 1450 plus PMB 50 + fuel surcharge 300), 07:00->09:00, 13:15->15:30; Havelock->Neil Sep 25 at 09:15->10:30 and 09:45->11:00; Neil->PB Sep 27 at 11:00->12:45 and 11:15->13:00 (all + Rs.350 charges). FAQ facts: Nautika asks 45-min check-in (boarding closes 15 min prior), 15 kg luggage with Rs.100/kg excess, outside food/water allowed; Makruzz asks 1 hour; bookmyboat.com (the aggregator, real domain bookmyboat.com) says report 1 hour prior but an Apr 2026 Reddit thread calls it a scam - book direct. Private ferries board at Haddo Jetty, Port Blair (google search result snippets from BookYourFerry/Ferryhopper/FerryBooking.in); Phoenix Bay Jetty is the government-ferry jetty and backup. Govt DSS site dss.andaman.gov.in was unreachable.",
+   "facts": [
+    {
+     "topic": "PB->Havelock Sep 23 - Makruzz",
+     "value": "08:00->09:30 and 13:00->14:30 (1h30m nonstop). Premium Rs.1950, Deluxe Rs.2540, Royal Rs.3500 (Royal sold out on 08:00). Seats live for 3 adults.",
+     "as_of": "2026-08-19",
+     "source_url": "https://www.makruzz.com/web/ferry/select_schedule/single_trip/1/2/2026-09-23/3/0"
+    },
+    {
+     "topic": "PB->Havelock Sep 23 - Nautika",
+     "value": "Nautika 06:15->07:45 Luxury Rs.1250 / Royal Rs.1500; Nautika-Pro 07:30->09:00 Rs.1900/2100/Business 3400; Nautika 11:00->12:30 Rs.1900/2100; Nautika-Pro 12:30->14:00 Rs.1800/2000/3300 (discounted).",
+     "as_of": "2026-08-19",
+     "source_url": "https://gonautika.com/book-now"
+    },
+    {
+     "topic": "PB->Havelock Sep 23 - Green Ocean",
+     "value": "GO1 06:30->08:45 Economy Rs.1050 / Premium Rs.1250 / Royal Rs.1450; GO2 07:00->09:00 Premium Rs.1450 / Royal Rs.1700; GO1 13:15->15:30 same as morning GO1. All fares + Rs.50 PMB + Rs.300 fuel surcharge per adult (so cheapest all-in Rs.1400).",
+     "as_of": "2026-08-19",
+     "source_url": "https://tickets.greenoceanseaways.com/portal"
+    },
+    {
+     "topic": "PB->Havelock Sep 25 - Makruzz",
+     "value": "08:00->09:30 and 13:00->14:30, Premium Rs.1950 / Deluxe Rs.2540 / Royal Rs.3500.",
+     "as_of": "2026-08-19",
+     "source_url": "https://www.makruzz.com/web/ferry/select_schedule/single_trip/1/2/2026-09-25/3/0"
+    },
+    {
+     "topic": "PB->Neil Sep 25 - Makruzz",
+     "value": "08:00->11:00 (3h, via Havelock), Premium Rs.1950 / Deluxe Rs.2540 / Royal Rs.3500. Only sailing shown. Sep 26 PB->Neil not individually checked.",
+     "as_of": "2026-08-19",
+     "source_url": "https://www.makruzz.com/web/ferry/select_schedule/single_trip/1/3/2026-09-25/3/0"
+    },
+    {
+     "topic": "Havelock->Neil Sep 25 - Makruzz",
+     "value": "10:00->11:00 (1h nonstop), Premium Rs.1800 / Deluxe Rs.2100 / Royal Rs.2900 (Royal 0 seats).",
+     "as_of": "2026-08-19",
+     "source_url": "https://www.makruzz.com/web/ferry/select_schedule/single_trip/2/3/2026-09-25/3/0"
+    },
+    {
+     "topic": "Havelock->Neil Sep 25 - Green Ocean",
+     "value": "GO1 09:15->10:30 Economy Rs.1050 / Premium Rs.1450 / Royal Rs.1700; GO2 09:45->11:00 Premium Rs.1450 / Royal Rs.1700. Plus Rs.350 (PMB+fuel) per adult.",
+     "as_of": "2026-08-19",
+     "source_url": "https://tickets.greenoceanseaways.com/portal"
+    },
+    {
+     "topic": "Havelock->Neil Sep 26 - Makruzz",
+     "value": "10:00->11:00, Premium Rs.1800 / Deluxe Rs.2100 / Royal Rs.2900 (Royal 0 seats).",
+     "as_of": "2026-08-19",
+     "source_url": "https://www.makruzz.com/web/ferry/select_schedule/single_trip/2/3/2026-09-26/3/0"
+    },
+    {
+     "topic": "Havelock->PB Sep 26 - Makruzz",
+     "value": "10:00->12:30 via Neil, discounted Premium Rs.1500 / Deluxe Rs.2150 / Royal Rs.3000; 15:30->17:00 nonstop, discounted Premium Rs.1450 / Deluxe Rs.1950 / Royal Rs.2800.",
+     "as_of": "2026-08-19",
+     "source_url": "https://www.makruzz.com/web/ferry/select_schedule/single_trip/2/1/2026-09-26/3/0"
+    },
+    {
+     "topic": "Neil->PB Sep 26 - Makruzz",
+     "value": "11:30->12:30 (1h), Premium Rs.1850 / Deluxe Rs.2250 / Royal Rs.3250 (Royal 0 seats). Only sailing shown.",
+     "as_of": "2026-08-19",
+     "source_url": "https://www.makruzz.com/web/ferry/select_schedule/single_trip/3/1/2026-09-26/3/0"
+    },
+    {
+     "topic": "Neil->PB Sun Sep 27 - Nautika (EARLIEST)",
+     "value": "Nautika 09:30->10:45 Luxury Rs.1800 / Royal Rs.2000 (140+74 seats); Nautika-Pro 10:35->11:50 Rs.1800/2000/Business 3300; Nautika-Pro 16:15->17:30 same fares.",
+     "as_of": "2026-08-19",
+     "source_url": "https://gonautika.com/book-now"
+    },
+    {
+     "topic": "Neil->PB Sun Sep 27 - Makruzz",
+     "value": "Single sailing 11:30->12:30, Premium Rs.1850 / Deluxe Rs.2250 / Royal Rs.3250 (Royal sold out).",
+     "as_of": "2026-08-19",
+     "source_url": "https://www.makruzz.com/web/ferry/select_schedule/single_trip/3/1/2026-09-27/3/0"
+    },
+    {
+     "topic": "Neil->PB Sun Sep 27 - Green Ocean",
+     "value": "GO1 11:00->12:45 Economy Rs.1050 / Premium Rs.1450 / Royal Rs.1700; GO2 11:15->13:00 Premium Rs.1450 / Royal Rs.1700. Plus Rs.350 charges per adult.",
+     "as_of": "2026-08-19",
+     "source_url": "https://tickets.greenoceanseaways.com/portal"
+    },
+    {
+     "topic": "Makruzz fuel surcharge",
+     "value": "Site popup: fuel surcharge revised to Rs.325 per passenger per sector effective 9 May 2026 (reduced by Rs.200). Unclear if included in displayed fares - verify at checkout.",
+     "as_of": "2026-08-19",
+     "source_url": "https://www.makruzz.com/web/home"
+    },
+    {
+     "topic": "Check-in lead time",
+     "value": "Nautika FAQ: reach jetty 45 min before departure, boarding closes 15 min prior. Makruzz FAQ: reach jetty 1 hour before. BookMyBoat pages: report 1 hour prior.",
+     "as_of": "2026-08-19",
+     "source_url": "https://gonautika.com/faqs"
+    },
+    {
+     "topic": "Luggage allowance",
+     "value": "Nautika FAQ: 15 kg per passenger; excess Rs.100/kg; large bags go to baggage hold; outside food and water allowed onboard.",
+     "as_of": "2026-08-19",
+     "source_url": "https://gonautika.com/faqs"
+    },
+    {
+     "topic": "Port Blair jetty for private ferries",
+     "value": "Haddo Jetty per google search result snippets (BookYourFerry, Ferryhopper, FerryBooking.in: 'All four private catamaran operators depart from Haddo: Makruzz, Nautika, Green Ocean, ITT Majestic'). Phoenix Bay Jetty is the government-ferry jetty and a backup; not confirmed on an operator's own site.",
+     "as_of": "2026-08-19",
+     "source_url": "https://go2andaman.com/book-ferry/phoenix-bay-jetty-port-blair/"
+    },
+    {
+     "topic": "bookmyboat aggregator",
+     "value": "Real domain is bookmyboat.com (ferries + activities aggregator). An r/Andaman_and_Nicobar Reddit thread (Apr 2026, seen in google search result) calls it a scam and advises booking on official operator sites.",
+     "as_of": "2026-08-19",
+     "source_url": "https://www.google.com/search?q=bookmyboat+andaman+ferry+booking"
+    },
+    {
+     "topic": "Govt DSS ferry schedule",
+     "value": "Unknown - dss.andaman.gov.in returned an error page on two attempts; government sailings could not be checked.",
+     "as_of": "2026-08-19",
+     "source_url": "https://dss.andaman.gov.in/"
+    }
+   ],
+   "critical_claims": [
+    {
+     "claim": "Earliest Sunday 2026-09-27 Neil->Port Blair sailing: Nautika, departs Shaheed Dweep (Neil) 09:30, arrives Port Blair 10:45 (1h15m), Luxury Rs.1800 / Royal Rs.2000 per adult, ample seats (140 Luxury / 74 Royal) - live search for 3 adults.",
+     "source_url": "https://gonautika.com/book-now"
+    },
+    {
+     "claim": "Wed 2026-09-23 morning Port Blair->Havelock options: Nautika 06:15->07:45 (Luxury Rs.1250 / Royal Rs.1500) and Nautika-Pro 07:30->09:00 (Rs.1900/2100/3400); Makruzz 08:00->09:30 (Premium Rs.1950 / Deluxe Rs.2540); Green Ocean 1 06:30->08:45 (Economy Rs.1050 + Rs.350 charges = Rs.1400 all-in).",
+     "source_url": "https://www.makruzz.com/web/ferry/select_schedule/single_trip/1/2/2026-09-23/3/0"
+    },
+    {
+     "claim": "Makruzz's only Sunday 2026-09-27 Neil->PB sailing is 11:30->12:30 (Premium Rs.1850), so a Sunday-afternoon Chennai flight is safe even on the backup boat, but Nautika 09:30 is the one to book for morning arrival.",
+     "source_url": "https://www.makruzz.com/web/ferry/select_schedule/single_trip/3/1/2026-09-27/3/0"
+    },
+    {
+     "claim": "Havelock->Neil on Fri 2026-09-25 has morning sailings from two operators: Green Ocean 09:15->10:30 / 09:45->11:00 and Makruzz 10:00->11:00 (Premium Rs.1800), so the island-hop leg is well covered.",
+     "source_url": "https://www.makruzz.com/web/ferry/select_schedule/single_trip/2/3/2026-09-25/3/0"
+    }
+   ],
+   "warnings": [
+    "Makruzz displayed fares may exclude the Rs.325/passenger/sector fuel surcharge announced in its site popup - confirm final total at checkout before paying.",
+    "Green Ocean fares shown are base fares; add Rs.50 PMB + Rs.300 fuel surcharge per adult per sector (shown as separate line items in its portal).",
+    "Green Ocean's dates were entered as text (dd-mm-yyyy) in its portal; results matched the requested dates' patterns but re-verify the date header at booking time.",
+    "Makruzz PB->Neil for Sep 26 and Nautika Havelock->Neil for Sep 25/26 were not individually queried (widget/time limits); Nautika advertises daily sailings to both islands, so check gonautika.com for that leg.",
+    "dss.andaman.gov.in (government ferries) was unreachable - govt sailings (often cheaper, earlier) are unknown; Phoenix Bay Jetty counter can be a same-day backup.",
+    "bookmyboat.com works as an aggregator but a Reddit r/Andaman_and_Nicobar thread (Apr 2026) alleges it is a scam; prefer booking directly on operator sites.",
+    "Haddo Jetty as the private-ferry boarding point comes from google search result snippets (BookYourFerry, Ferryhopper, FerryBooking.in), not an operator's own page; tickets state the exact boarding point - re-check on the e-ticket.",
+    "ITT Majestic (4th private operator) was not checked. All fares were quoted ~5 weeks out and can change; Royal class is already sold out on several Makruzz sailings."
+   ]
+  },
+  "weather_astro": {
+   "summary": "All facts gathered by opening pages in Chrome. (A) WeatherNext is Google DeepMind + Google Research's AI weather-forecasting model family (WeatherNext 2 announced 17 Nov 2025, Functional Generative Network, 8x faster, resolution down to 1 hour); it is a medium-range model covering lead times 0-15 days, and its technology now powers weather in Google Search, Gemini, Pixel Weather and Google Maps Platform's Weather API, with raw data in Earth Engine/BigQuery/Vertex AI. Since Sep 23-27 2026 is 35-39 days away from today (2026-08-19), it is beyond the 15-day horizon, so NO genuine forecast for the trip dates can exist today - only climatology. (B) Google's weather box today shows 28 C, light thunderstorms and rain, 86% humidity, 37% precip chance, with the week ahead at 29-31 C highs / 27-28 C lows - a fair sample of the season. (C) timeanddate September climate for Port Blair: avg high 29 C, low 24 C, precipitation 388.2 mm (the wettest month of the year), humidity 90%; rainy-days count is not published on that page (unknown). (D) Sunrise is 05:09 on all trip days; sunset 17:15 (Sep 23) to 17:12 (Sep 27); civil dawn ~04:47-04:48. (E) Full moon falls exactly on Sat 26 Sep 2026 at 22:19 IST; moonset on trip nights is 02:04 (23rd), 02:54 (24th), 03:43 (25th), 04:33 (26th), 05:24 (27th) - so for a 3-5 AM bioluminescence outing the only truly dark window is the early hours of Sep 24 (moon down by 02:54); by Sep 26-27 the ~100%-lit moon is up essentially all night, killing bioluminescence viewing. (F) XTide (tides.mobilegeographics.com) no longer carries India stations (only America/Pacific zones), so tides came from TideTime.org's Port Blair September 2026 calendar: spring tides build toward the full moon - Sep 26: High 03:04 (2.16 m), Low 09:19 (0.29 m), High 15:25 (2.21 m), Low 21:36 (0.34 m); Sep 27: High 03:33 (2.22 m), Low 09:48 (0.22 m), High 15:54 (2.32 m), Low 22:08 (0.29 m). Mid-morning deep lows (~09:19-09:48) are ideal for Neil's Natural Bridge, while Bharatpur watersports get their daytime high tide mid-afternoon (~15:25-15:54).",
+   "facts": [
+    {
+     "topic": "WeatherNext - what it is",
+     "value": "WeatherNext 2 is Google DeepMind + Google Research's state-of-the-art AI weather forecasting model family (announced 17 Nov 2025), using a Functional Generative Network; 8x faster, up to 1-hour resolution, hundreds of scenarios per forecast",
+     "source_url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/weathernext-2/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "WeatherNext - max forecast horizon",
+     "value": "Medium-range model: lead times 0-15 days (page: 'surpasses our previous state-of-the-art WeatherNext model on 99.9% of variables and lead times (0-15 days)'; GenCast predecessor also 'up to 15 days ahead'). Max horizon = 15 days",
+     "source_url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/weathernext-2/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "WeatherNext - where forecasts surface publicly",
+     "value": "Powers upgraded weather in Google Search, Gemini, Pixel Weather, Google Maps Platform Weather API (and Google Maps); forecast data available in Earth Engine, BigQuery, and Vertex AI early access",
+     "source_url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/weathernext-2/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Can a Sep 23-27 2026 forecast exist today?",
+     "value": "NO. Trip is 35-39 days out from 2026-08-19; WeatherNext's 15-day horizon means no real forecast for the trip dates exists today anywhere (Google Weather included) - only seasonal climatology",
+     "source_url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/weathernext-2/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "DeepMind WeatherNext page (confirmed opened)",
+     "value": "deepmind.google/science/weathernext/ describes WeatherNext 2 as 'our most accurate AI weather forecasting technology', 8x faster, six-hour forecasts four times a day, being brought into the core forecasting system powering Google products incl. Maps Platform Weather API",
+     "source_url": "https://deepmind.google/science/weathernext/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Google weather box - current conditions Port Blair (sample of season)",
+     "value": "Wed 19 Aug 2026 ~21:00 IST: 28 C, Light thunderstorms and rain, Precipitation 37%, Humidity 86%, Wind 8 m/s",
+     "source_url": "google search result (weather box) - https://www.google.com/search?q=Port+Blair+weather",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Google weather box - 8-day forecast (season sample)",
+     "value": "Wed 30/27, Thu 29/28, Fri 29/28, Sat 29/28, Sun 31/28, Mon 31/28, Tue 31/28, Wed 29/27 (C). Highs 29-31, lows 27-28, thundery-showers regime",
+     "source_url": "google search result (weather box) - https://www.google.com/search?q=Port+Blair+weather",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "September climate, Port Blair (2012-2021 avgs)",
+     "value": "High 29 C, Low 24 C, Mean 27 C, Precipitation 388.2 mm (wettest month of the year), Humidity 90%, Wind 16 km/h, Visibility 3 km. Rainy-days count NOT published on this page (unknown)",
+     "source_url": "https://www.timeanddate.com/weather/india/port-blair/climate",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Sunrise/sunset Sep 23 2026",
+     "value": "Sunrise 05:09, Sunset 17:15 IST (day 12h06m); civil twilight 04:48-17:36; autumnal equinox this day at 05:35",
+     "source_url": "https://www.timeanddate.com/sun/india/port-blair?month=9&year=2026",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Sunrise/sunset Sep 24-27 2026",
+     "value": "Sep 24: 05:09/17:14; Sep 25: 05:09/17:14; Sep 26: 05:09/17:13; Sep 27: 05:09/17:12 (IST). Civil dawn ~04:47-04:48, astronomical dawn 03:58 all days",
+     "source_url": "https://www.timeanddate.com/sun/india/port-blair?month=9&year=2026",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Moon phases around trip",
+     "value": "New Moon 11 Sep 08:57; First Quarter 19 Sep 02:13; FULL MOON Sat 26 Sep 2026 22:19 IST; Third Quarter 3 Oct 18:55. Trip Sep 23-27 = waxing gibbous 90% -> full",
+     "source_url": "https://www.timeanddate.com/moon/phases/india/port-blair?year=2026",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Moonrise/moonset + illumination Sep 23-27 (IST)",
+     "value": "Sep 23: set 02:04, rise 14:57, 90.0%; Sep 24: set 02:54, rise 15:37, 95.4%; Sep 25: set 03:43, rise 16:15, 98.8%; Sep 26: set 04:33, rise 16:55, 99.9%; Sep 27: set 05:24, rise 17:35, 98.5%",
+     "source_url": "https://www.timeanddate.com/moon/india/port-blair?month=9&year=2026",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "3-5 AM darkness verdict for bioluminescence kayaking",
+     "value": "Night 23->24: moon sets 02:54, 3-5 AM dark = BEST window. Night 24->25: dark only after 03:43. Night 25->26: moon sets 04:33, civil dawn 04:47 = no usable dark. Night 26->27: moon sets 05:24 AFTER sunrise 05:09 = zero darkness. Near-full moon makes all trip nights bright overall",
+     "source_url": "https://www.timeanddate.com/moon/india/port-blair?month=9&year=2026",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "XTide tides.mobilegeographics.com",
+     "value": "FAILED for Port Blair: site search returns nothing and Zone Index now lists only :America/ and :Pacific/ zones - no India stations. Used TideTime.org as fallback",
+     "source_url": "https://tides.mobilegeographics.com/zones/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Tides Sep 23 2026 (Port Blair, IST)",
+     "value": "High 01:38 (1.81 m), Low 07:55 (0.69 m), High 14:07 (1.73 m), Low 19:56 (0.72 m)",
+     "source_url": "https://www.tidetime.org/asia/india/port-blair-calendar-sep.htm",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Tides Sep 24 2026",
+     "value": "High 02:08 (1.95 m), Low 08:23 (0.53 m), High 14:32 (1.91 m), Low 20:31 (0.57 m)",
+     "source_url": "https://www.tidetime.org/asia/india/port-blair-calendar-sep.htm",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Tides Sep 25 2026",
+     "value": "High 02:36 (2.07 m), Low 08:51 (0.40 m), High 14:57 (2.07 m), Low 21:03 (0.43 m)",
+     "source_url": "https://www.tidetime.org/asia/india/port-blair-calendar-sep.htm",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Tides Sep 26 2026 (Neil/Bharatpur planning day)",
+     "value": "High 03:04 (2.16 m), LOW 09:19 (0.29 m), HIGH 15:25 (2.21 m), Low 21:36 (0.34 m). Spring tides (full moon): deep mid-morning low ideal for Natural Bridge; afternoon high suits Bharatpur watersports",
+     "source_url": "https://www.tidetime.org/asia/india/port-blair-calendar-sep.htm",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Tides Sep 27 2026",
+     "value": "High 03:33 (2.22 m), LOW 09:48 (0.22 m), HIGH 15:54 (2.32 m), Low 22:08 (0.29 m). Deepest low of the trip at 09:48",
+     "source_url": "https://www.tidetime.org/asia/india/port-blair-calendar-sep.htm",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "IMD current reference (search snippet)",
+     "value": "India Meteorological Department mausam.imd.gov.in/portblair snippet on 19 Aug: 29 C, 83%, SW 9.3 km/h; sunrise 05:09, sunset 17:37",
+     "source_url": "google search result snippet for https://mausam.imd.gov.in/portblair - https://www.google.com/search?q=Port+Blair+weather",
+     "as_of": "2026-08-19"
+    }
+   ],
+   "critical_claims": [
+    {
+     "claim": "Full moon is exactly on Sat 26 Sep 2026 at 22:19 IST in Port Blair; trip nights are 90-100% illuminated, and moonset (02:04 -> 05:24 across Sep 23-27) leaves the only real 3-5 AM dark window on the night of Sep 23->24 - bioluminescence kayaking is effectively ruled out on Sep 25-27 nights",
+     "source_url": "https://www.timeanddate.com/moon/phases/india/port-blair?year=2026"
+    },
+    {
+     "claim": "Sep 26 2026 Port Blair tides (IST): High 03:04 (2.16 m), Low 09:19 (0.29 m), High 15:25 (2.21 m), Low 21:36 (0.34 m) - mid-morning deep low fits Neil Natural Bridge; mid-afternoon high fits Bharatpur watersports",
+     "source_url": "https://www.tidetime.org/asia/india/port-blair-calendar-sep.htm"
+    },
+    {
+     "claim": "Sep 27 2026 Port Blair tides (IST): High 03:33 (2.22 m), Low 09:48 (0.22 m), High 15:54 (2.32 m), Low 22:08 (0.29 m) - deepest low tide of the trip at 09:48",
+     "source_url": "https://www.tidetime.org/asia/india/port-blair-calendar-sep.htm"
+    },
+    {
+     "claim": "Google DeepMind WeatherNext's maximum forecast horizon is 15 days (it surfaces in Google Search, Gemini, Pixel Weather, Maps Weather API), so on 2026-08-19 no genuine weather forecast for Sep 23-27 can exist - plan on September climatology: ~29/24 C, ~388 mm rain (wettest month), 90% humidity, daily thunderstorm risk",
+     "source_url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/weathernext-2/"
+    }
+   ],
+   "warnings": [
+    "Tide data is from TideTime.org (harmonic predictions for the Port Blair station), not the official Survey of India tide tables; Survey of India publishes monthly prediction ZIPs (surveyofindia.gov.in/pages/tidal) but had only up to Aug 2026 posted per the search snippet. Treat times as +/-15-20 min and re-verify locally. Tide times are for Port Blair; Neil Island (Natural Bridge) and Havelock will differ slightly (typically by minutes).",
+    "Full-moon spring tides + wettest-month seas: Sep 26-27 have the largest tidal range of the trip (0.22-2.37 m); ferries and watersports can face rougher monsoon seas in late September.",
+    "Bioluminescence outlook is poor for this trip: nights are 90-100% moonlit, and on Sep 26->27 the moon sets after sunrise, leaving zero dark window at 3-5 AM. Only the pre-dawn of Thu Sep 24 (moon sets 02:54) offers real darkness.",
+    "Rainy-days-per-month figure for September was not available on the timeanddate climate page - unknown; precipitation 388.2 mm/mo implies frequent rain.",
+    "No actual weather forecast for Sep 23-27 exists yet from any provider (beyond all model horizons incl. WeatherNext's 15 days); the Google weather box data recorded is today's/this week's weather as a seasonal sample only.",
+    "XTide (tides.mobilegeographics.com) failed for this task: its current dataset no longer includes India stations (Zone Index lists only :America/ and :Pacific/)."
+   ]
+  },
+  "redskin": {
+   "summary": "CONFIRMED: the user's belief is correct. Jolly Buoy and Red Skin operate on a strict 6-month rotation inside Mahatma Gandhi Marine National Park (Wandoor): Jolly Buoy is open roughly 15 Nov - 14/15 May, and Red Skin is open the other half (16 May - 14 Nov per an operator's Feb-2026 page). So for 23-26 Sep 2026, Jolly Buoy is CLOSED and Red Skin is the island that is OPEN, and boats DO run from Wandoor Jetty in September (a 2026-season operator, MV WaveRider, sells Red Skin trips in this window), but every source stresses that departures are weather/sea-condition dependent during the SW monsoon and the Forest Department can cancel trips (partial refund of boat charges only). Permits: mandatory Forest Department entry permit, issued ONE DAY in advance (official tourism.andamannicobar.gov.in) from the Forest Dept at Wandoor or Port Blair/Sri Vijaya Puram with photo ID; operators/hotels can arrange it; ~150 visitors/day cap; day trips only, park entry sunrise-2 PM, Jolly Buoy noted closed on Mondays (trip dates Wed-Sat are unaffected). Logistics: Wandoor Jetty is ~25-30 km / 45-60 min by road from Port Blair; boat 25-45 min; morning departures only (reporting ~7-10:30 AM depending on boat, e.g. MV WaveRider reports 10:30 AM, departs 11 AM, back ~4 PM; older govt boats depart 8:30-10 AM, return 3-4 PM); time ashore ~2-4 hours. Allowed activities on Red Skin: swimming in shallow designated zones, supervised snorkeling, glass-bottom boat rides, beach time - all in approved areas. Costs (Indian nationals): permit Rs 50, boat Rs 300-500 (packaged trips from ~Rs 1,275-1,600 per person), snorkel set ~Rs 500, glass-bottom ride from ~Rs 1,000 per one source; strict plastic ban, no food stalls, carry photo ID.",
+   "facts": [
+    {
+     "topic": "Which island is open late Sep 2026",
+     "value": "Red Skin Island OPEN (season 16 May - 14 Nov); Jolly Buoy CLOSED during that window under the rotational conservation plan",
+     "source_url": "https://jollybuoyisland.com/blogs/red-skin-island-tour-2026-mv-waverider-boat-booking",
+     "as_of": "2026-02-02 (operator page for 2026 season, read 2026-08-19)"
+    },
+    {
+     "topic": "Rotation corroboration 1",
+     "value": "Go2Andaman: Jolly Buoy is one of only 2 tourist islands in MGMNP; Red Skin 'is open for the other 6 months'; Jolly Buoy best time Nov-Apr; when Jolly Buoy closed 6 months, visit Red Skin instead",
+     "source_url": "https://go2andaman.com/visit/jolly-buoy-island/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Rotation corroboration 2",
+     "value": "Andaman Bliss (2026 guide): 'From May to October, when Jolly Buoy closes, Red Skin Island opens, and vice versa'; Jolly Buoy open Nov-Apr; complete Jolly Buoy closure Jun-Sep monsoon",
+     "source_url": "https://www.andamanbliss.com/blogs/jolly-buoy-island-travel-guide-permit-best-time-and-hidden-rules",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Rotation corroboration 3 (exact dates)",
+     "value": "Tripadvisor snippet: 'Jolly Buoy opens 15 November to 14 May and Red Skin 15 May to 14 November' (google search result snippet, destination page not opened)",
+     "source_url": "https://www.google.com/search?q=Jolly+Buoy+Red+Skin+island+open+season+2026+Mahatma+Gandhi+Marine+National+Park",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Permit process (official)",
+     "value": "Entry permit mandatory from Forest Department, Wandoor or Sri Vijaya Puram; permits issued ONE DAY IN ADVANCE for Jolly Buoy/Red Skin trips (official A&N Tourism MGMNP page)",
+     "source_url": "https://tourism.andamannicobar.gov.in/nature_details.php?data=SNfCAbiCn6E_lJ-zUQ6lggyghFPEXhFdX6sTReY-HzCU-l1hL28zMZTI",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Permit detail / booking channels",
+     "value": "Apply at Forest Dept office Port Blair with photo ID (Aadhaar/passport/DL), stamped slip issued; at least 1 day ahead; primarily OFFLINE - registered tour operators or hotels can arrange; ~150 visitors/day cap; no on-the-spot tickets",
+     "source_url": "https://www.andamanbliss.com/blogs/jolly-buoy-island-travel-guide-permit-best-time-and-hidden-rules",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Costs (Indian nationals)",
+     "value": "Permit Rs 50 (foreigner Rs 500); boat Rs 300-500; snorkel set ~Rs 500; optional guide Rs 300; total ~Rs 850-1,350/person (Andaman Bliss). Go2Andaman package prices: Jolly Buoy trip from Rs 1,600, Red Skin trip from Rs 1,275, glass-bottom boat from Rs 1,000",
+     "source_url": "https://www.andamanbliss.com/blogs/jolly-buoy-island-travel-guide-permit-best-time-and-hidden-rules",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Departure jetty and timings",
+     "value": "All boats leave Wandoor Jetty (25-30 km, 45-60 min drive from Port Blair). Govt boats: departures 8:30/9:00/10:00 AM, returns 3:00-4:00 PM, subject to weather and Forest Dept decisions; park entry sunrise-2 PM, Jolly Buoy closed Mondays. MV WaveRider (Red Skin 2026): report 10:30 AM, depart 11:00 AM, 25-30 min crossing, back ~4:00 PM",
+     "source_url": "https://jollybuoyisland.com/blogs/red-skin-island-tour-2026-mv-waverider-boat-booking",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Time ashore and activities",
+     "value": "Red Skin: ~2-2.5 hrs on island (MV WaveRider) - up to 3-4 hrs per GuavaTrips for Jolly Buoy; allowed: swimming in shallow designated zones, supervised snorkeling in approved areas, glass-bottom boat rides (subject to availability), beach time; day visits only, no overnight, strict plastic ban, no shops/food stalls, carry photo ID",
+     "source_url": "https://jollybuoyisland.com/blogs/red-skin-island-tour-2026-mv-waverider-boat-booking",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "September / monsoon boat operation",
+     "value": "Boats to Red Skin operate through the SW monsoon window (its season deliberately covers Jun-Oct), but 'subject to weather conditions and official notifications'; Forest Dept cancels trips in rough weather with only partial refund (boat charges only, permit fee non-refundable)",
+     "source_url": "https://www.guavatrips.com/beach-island-trip-costs/jolly-buoy-island-andaman-ferry-permit-activities",
+     "as_of": "2026-08-06 dated page, read 2026-08-19"
+    }
+   ],
+   "critical_claims": [
+    {
+     "claim": "For 23-26 Sep 2026 Red Skin Island is the open MGMNP island and Jolly Buoy is closed: Red Skin season is 16 May - 14 Nov, during which Jolly Buoy remains closed under the rotational conservation plan (user's belief CONFIRMED)",
+     "source_url": "https://jollybuoyisland.com/blogs/red-skin-island-tour-2026-mv-waverider-boat-booking"
+    },
+    {
+     "claim": "Independent confirmation of the 6-month rotation: 'When Jolly Buoy is open (November to April), Red Skin remains closed, and vice versa' - so in September only Red Skin is visitable",
+     "source_url": "https://www.andamanbliss.com/blogs/jolly-buoy-island-travel-guide-permit-best-time-and-hidden-rules"
+    },
+    {
+     "claim": "Boats from Wandoor DO run to Red Skin in the September monsoon window (a dedicated 2026-season vessel, MV WaveRider, operates the route), but sailings are weather-dependent and the Forest Department can cancel on rough-sea days with only partial refund",
+     "source_url": "https://www.guavatrips.com/beach-island-trip-costs/jolly-buoy-island-andaman-ferry-permit-activities"
+    },
+    {
+     "claim": "Official A&N Tourism: entry permit is mandatory from the Forest Department (Wandoor or Sri Vijaya Puram) and permits are issued ONE DAY IN ADVANCE for Jolly Buoy/Red Skin trips - build this into the itinerary the day before the Wandoor excursion",
+     "source_url": "https://tourism.andamannicobar.gov.in/nature_details.php?data=SNfCAbiCn6E_lJ-zUQ6lggyghFPEXhFdX6sTReY-HzCU-l1hL28zMZTI"
+    }
+   ],
+   "warnings": [
+    "Could not find a government notification or local news article stating the exact 2026 rotation dates; the 16 May - 14 Nov Red Skin window comes from operator/travel-guide pages (multiple, mutually consistent, all 2026-dated). Confirm locally or via Forest Dept phone before locking the Wandoor day.",
+    "September is peak SW monsoon: even though Red Skin is officially 'open', day-of cancellations for rough seas are common and refunds are partial (boat charges only, permit fee non-refundable). Keep a backup activity for that day.",
+    "Minor discrepancies between sources on timings (reporting 7-8 AM for govt boats vs 10:30 AM for MV WaveRider) and on trip cost (Rs 850-1,350 self-arranged vs Rs 1,275-1,600 packaged); treat figures as indicative.",
+    "Andaman Bliss notes Jolly Buoy is closed on Mondays in its open season; unclear whether the Monday rule applies to Red Skin, but the trip dates (Wed 23 - Sat 26 Sep) avoid Monday anyway.",
+    "Snorkeling gear (~Rs 500) and glass-bottom boat rides are paid extras and 'subject to availability' in monsoon; no food/water sold on the island and plastic is banned - carry non-plastic containers and photo ID."
+   ]
+  },
+  "activities": {
+   "summary": "All facts gathered in-browser. (A) DiveIndia (Havelock base: Beach No.5, White Sand Beach Resort, Govind Nagar; also a Neil branch at Bharatpur Beach 50m from jetty) runs a 2-day \"Intro to Scuba\" beginner program at Rs.14,000 pp all-inclusive (2 boat dives + confined-water day, possible shore dive) and states diving runs \"all year round\"; second operator Dive Andaman (Beach No.2, Govind Nagar) prices shore DSD Rs.5,500 +18% GST (~1 hr total, 30 min training + 35 min underwater), shore try-dive Rs.3,500, DSD by boat Rs.7,500. (B) Bioluminescence night kayaking on Havelock: Andaman Bliss charges Rs.3,500 pp (all taxes, 1-2 hr, sessions start ~3:30 AM, near Lighthouse/Beach No.5, age 13-45, basic swimming needed); Go2Andaman kayaking from Rs.2,800 and both operators say night/biolum kayaking happens only around no-moon/new-moon nights - and Sept 26, 2026 is a FULL MOON (Sept 25 = 98.5% waxing gibbous), so biolum kayaking during the Sept 23-27 trip is effectively ruled out. (C) Neil/Bharatpur: beach entry free, timings 5 AM-6 PM, jet ski Rs.800-1,200 for 10-15 min, guided snorkelling from Rs.3,500; scuba backup on Neil = DIVEIndia's Neil DIVEResort at Bharatpur Beach; May-Sept is off-season with weather-limited water sports. (D) Elephant Beach: no entry fee, speed-boat round trip Rs.1,000 pp rising to Rs.1,200 pp from September 2026, boats 9 AM-1 PM (~3-hr window, 20-min ride), 2-km/30-40-min jungle trek alternative; June-Sept monsoon means water sports often suspended and the beach may close some days with last-minute cancellations - open in principle but weather-dependent in late September. (E) Baratang: private-cab day tour Rs.8,400 (Go2Andaman, up to 2 pax - 3 adults likely costs more) or Rs.4,500 round-trip taxi + Rs.900 pp speedboat (Andaman Ocean); shared tours ~Rs.2,250-4,500 pp (Google snippets); hotel pickup 4:00-4:30 AM, Jirkatang convoy ~6:00 AM, caves ~9-10 AM, back in Port Blair ~3:30-4:00 PM, 10-12 hrs door-to-door, tour runs all days. (F) Chidiya Tapu: beach free (5 AM-6 PM, area clears by 7 PM), Biological Park Rs.25 (10 AM-5 PM, closed Mondays), Munda Pahad trek strictly 11 AM-3 PM with gate closing 3 PM sharp, 1.5 km/45-60 min, sunset 5:30-6 PM, cab from Port Blair Rs.1,500-3,500, trails slippery in monsoon. (G) Cellular Jail light-and-sound show: Rs.300 adult / Rs.150 child, ~45 min; Hindi 5:50/7:50/8:50 PM daily + 6:50 PM Tue/Thu/Sat/Sun, English 6:50 PM Mon/Wed/Fri, closed national holidays.",
+   "facts": [
+    {
+     "topic": "A: DiveIndia beginner program price",
+     "value": "Intro to Scuba: Rs.14,000 per person all inclusive; 2-day program (Day 1 confined-water skills + possible supervised shore dive, Day 2 two boat dives); min age 10",
+     "source_url": "https://diveindia.com/course/intro-to-scuba/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "A: DiveIndia September/monsoon operation",
+     "value": "FAQ 'What is the best time to dive in the Andamans?' answer: 'All year round, dictated only by the Ocean's moods (winds, tides & currents)' - i.e. operates in late September",
+     "source_url": "https://diveindia.com/course/intro-to-scuba/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "A: DiveIndia meeting points",
+     "value": "Havelock: Beach No. 5, White Sand Beach Resort, Govind Nagar, Swaraj Dweep. Neil: DIVEResort, Bharatpur Beach, 50 m from jetty, Neil Kendra",
+     "source_url": "https://diveindia.com/contact-us/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "A: Dive Andaman (2nd operator) DSD prices shore vs boat",
+     "value": "PADI DSD at sea shore Rs.5,500 pp (+18% GST), approx 1 hr total: 30 min training + 35 min underwater; shore Try Dive Rs.3,500 pp; PADI DSD by boat Rs.7,500 pp. Located Beach No. 2, Govind Nagar, Havelock",
+     "source_url": "https://www.diveandaman.com/diving-packages-in-havelock-island",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "B: Bioluminescence kayaking operator price/timing (Andaman Bliss)",
+     "value": "Rs.3,500 pp all taxes; duration 1-2 hrs (~1.5 hr); 'Kayak Timing: Starts From 3:30 AM'; sites: Beach No.5 (Nemo Reef) and Jetty-to-Lighthouse; requirements: age 13-45, basic swimming; free pickup within 5 km; includes photos/videos",
+     "source_url": "https://andamanbliss.com/activity/bioluminescence-night-kayaking-in-havelock-island",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "B: Moon-phase requirement (operator statements)",
+     "value": "Go2Andaman: 'Night kayaking occurs only during certain times of the month, typically around the no-moon day and new moon phase... bioluminescence is unpredictable; contact us prior to booking.' Andaman Bliss FAQ: best on new-moon nights, phenomenon 'more prominent from November to April, although it can be seen at other times'",
+     "source_url": "https://go2andaman.com/book-kayaking-andamans/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "B: Moon phase during trip (Sept 23-27, 2026)",
+     "value": "Sept 25, 2026 = Waxing Gibbous 98.5% illuminated; Full Moon Saturday Sept 26, 2026 (google search result snippets from theskylive.com and catalina.lpl.arizona.edu)",
+     "source_url": "https://www.google.com/search?q=moon+phase+September+25+2026",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "B: Go2Andaman kayaking price",
+     "value": "Kayak tours start from Rs.2,800 pp; operating windows 06:00 am to 07:00 pm; includes kayak, life jacket, certified instructor, pickup/drop",
+     "source_url": "https://go2andaman.com/book-kayaking-andamans/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "C: Bharatpur Beach (Neil) entry & timings",
+     "value": "Entry fee: Free; beach timings 5:00 AM-6:00 PM; water sports counters at beach entrance (jet ski, banana/sofa rides, glass-bottom boat, snorkelling, boat scuba); 300 m walk from Neil jetty; best tide for swimming after ~10 AM",
+     "source_url": "https://go2andaman.com/visit/bharatpur-beach-neil-island/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "C: Jet ski price/duration (Andaman incl. Neil/Bharatpur)",
+     "value": "Rs.800 to Rs.1,200 per ride for 10-15 minutes (Go2Andaman water sports guide)",
+     "source_url": "https://go2andaman.com/best-water-sports-in-andaman/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "C: Guided snorkelling price",
+     "value": "Starting at Rs.3,500 including gear and guide (Go2Andaman); same Rs.3,500 starting fee listed on Bharatpur Beach page, timings 08:00 am-03:00 pm",
+     "source_url": "https://go2andaman.com/best-water-sports-in-andaman/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "C: Neil scuba backup operator",
+     "value": "DIVEIndia operates a full dive school on Neil (DIVEResort, Bharatpur Beach, 50 m from jetty) - same year-round operator as Havelock; Go2Andaman also sells 'Boat Diving in Neil Island'. Neil Sept caveat: May-Sept off-season, activities depend on sea conditions",
+     "source_url": "https://diveindia.com/contact-us/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "D: Elephant Beach boat ticket",
+     "value": "Speedboat from Havelock jetty ~20 min; Rs.1,000 pp round trip, rising to Rs.1,200 pp from September 2026; boats 9:00 AM start, last boat ~1:00 PM; ticket window gives ~3 hrs on beach; basic 5-7 min snorkel included with most boat packages (Go2Andaman: slots 7:30 AM-1:00 PM, complimentary 5-min snorkel when booked online)",
+     "source_url": "https://trytrabby.com/blog/elephant-beach-havelock-island",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "D: Elephant Beach September/monsoon status",
+     "value": "TryTrabby (Jul 2026): 'June to September is monsoon season. The sea gets rough, many water sports are suspended, and the beach may remain closed on some days. Last-minute cancellations are common.' Go2Andaman: beach 'Open on All Days', entry free, but June-Sept water activities may be limited by sea conditions. Trek (2-2.5 km, 30-40 min from Radhanagar road) stays usable but muddy/slippery after rain - no source found saying the trek is formally closed in September",
+     "source_url": "https://trytrabby.com/blog/elephant-beach-havelock-island",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "D: Elephant Beach snorkel combo / activity prices",
+     "value": "Extended snorkelling with photos Rs.1,500-1,800; sea walking Rs.3,500-4,000; parasailing Rs.3,500; jet ski Rs.1,200-1,500 (10-15 min); glass-bottom boat Rs.1,000-1,200; semi-submarine Rs.3,000; lockers Rs.100",
+     "source_url": "https://trytrabby.com/blog/elephant-beach-havelock-island",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "E: Baratang private tour price (Go2Andaman)",
+     "value": "Rs.8,400 (discounted from Rs.9,000) for up to 2 pax, private AC car incl. all entry fees, boat tickets and permits; 12-hr day trip; 'available on all days'; 3 adults will likely need a higher-pax price tier - confirm",
+     "source_url": "https://go2andaman.com/book/baratang-tour/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "E: Baratang cab + boat fares (Andaman Ocean)",
+     "value": "Round-trip taxi Port Blair-Baratang Rs.4,500 per cab; speedboat ticket to limestone caves Rs.900 pp; packages for 2 persons Rs.6,300 (caves only) / Rs.7,300 (caves + mud volcano); trip duration 10-12 hrs",
+     "source_url": "https://www.andamanocean.in/baratang-limestone-cave-trip/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "E: Baratang shared tour per-head price",
+     "value": "Andaman Ocean 'Baratang limestone Cave Trip @2250/-pp (Sharing), 10-12 hrs, ~3:30-4:30 AM pickup' (google search result snippet); eandamantourism google snippet: shared day tour Rs.2,800-4,500 pp - destination pages not opened, treat as approximate",
+     "source_url": "https://www.google.com/search?q=Jirkatang+convoy+timings+Baratang+2026+shared+tour+per+person+price",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "E: Baratang timings door-to-door",
+     "value": "Go2Andaman itinerary: hotel pickup 4:30 AM -> Jirkatang check post 6:00 AM (breakfast) -> Middle Strait jetty 8:00 AM -> boat 8:30 AM -> limestone caves 9:00 AM -> mud volcano 12:30 PM -> hotel drop ~3:30-4:00 PM. Andaman Ocean: pickup 4:00 AM, convoy crossing 6:00 AM, caves 9-10 AM, drop 3:30 PM. Jarawa-reserve convoy drive ~45-60 min, windows shut, no stops, no photography; ID compulsory",
+     "source_url": "https://go2andaman.com/book/baratang-tour/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "E: Jirkatang convoy schedule (approximate, conflicting sources)",
+     "value": "Google snippets: traveltourister.com says 4 daily convoys from Jirkatang at 6:00 AM, 9:00 AM, 12:30 PM, 3:30 PM; andamantourtravelpackage.com says 6:00 AM, 9:00 AM, 12:00 PM, 2:30 PM with returns 12:00 PM and 3:00 PM - destination pages not opened; only the first 6:00 AM convoy is consistent everywhere",
+     "source_url": "https://www.google.com/search?q=Jirkatang+convoy+timings+Baratang+2026+shared+tour+per+person+price",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "F: Chidiya Tapu fees & timings",
+     "value": "Beach entry free; beach timings 5:00 AM-6:00 PM (area closes by 7:00 PM); Biological Park Rs.25 pp, 10:00 AM-5:00 PM, closed Mondays; parking available; cab from Port Blair Rs.1,500-3,500 (45-60 min, ~25 km); auto Rs.800-1,200",
+     "source_url": "https://andamanferryticket.com/chidiya-tapu-beach-travel-guide/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "F: Munda Pahad trek rules",
+     "value": "Trek strictly open 11:00 AM-3:00 PM, gate closes 3:00 PM sharp (start before then); moderate 1.5 km trail, 45-60 min, 300 ft viewpoint; slippery after rain (monsoon trekking called risky); sunset viewing at beach rocks ~5:30-6:00 PM, arrive by ~4:30 PM for a spot",
+     "source_url": "https://andamanferryticket.com/chidiya-tapu-beach-travel-guide/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "G: Cellular Jail light & sound show",
+     "value": "Tickets: Rs.300 adult, Rs.150 child (5-12 yrs); ~45-min show; Hindi shows 5:50 PM, 7:50 PM, 8:50 PM all days + 6:50 PM Tue/Thu/Sat/Sun; English show 6:50 PM Mon/Wed/Fri; closed on national holidays; carry govt ID; arrive ~30 min early (Go2Andaman also lists 'starts from Rs.400' bundled booking)",
+     "source_url": "https://go2andaman.com/visit/cellular-jail-light-and-sound-show/",
+     "as_of": "2026-08-19"
+    }
+   ],
+   "critical_claims": [
+    {
+     "claim": "Elephant Beach in late September: no formal closure found - beach listed 'Open on All Days' with free entry, but it is monsoon off-season: speedboats (Rs.1,000 pp, rising to Rs.1,200 pp from Sept 2026; 9 AM-1 PM slots) get suspended in rough seas, water sports are often cancelled last-minute, and the beach may close on some days; the 2-2.5 km trek route remains an all-weather (muddy) fallback",
+     "source_url": "https://trytrabby.com/blog/elephant-beach-havelock-island"
+    },
+    {
+     "claim": "Baratang day trip requires a ~4:00-4:30 AM hotel pickup from Port Blair to catch the ~6:00 AM Jirkatang convoy; caves visited ~9-10 AM via Rs.900 pp speedboat from the jetty, and you are back at your Port Blair hotel ~3:30-4:00 PM (10-12 hrs door-to-door); private tour Rs.8,400 for up to 2 pax (Go2Andaman) or Rs.4,500 cab + Rs.900 pp boat (Andaman Ocean); tour runs all days including September",
+     "source_url": "https://go2andaman.com/book/baratang-tour/"
+    },
+    {
+     "claim": "Bioluminescence kayaking on Havelock (Rs.3,500 pp, ~1.5 hr, sessions from ~3:30 AM per Andaman Bliss) is only run/worthwhile around no-moon/new-moon nights per both Go2Andaman and Andaman Bliss - and Sept 26, 2026 is a full moon (Sept 25 = 98.5% waxing gibbous per google search result), so the Sept 23-27 trip dates are the worst possible moon window; treat biolum kayaking as unavailable/not worth booking for these dates",
+     "source_url": "https://andamanbliss.com/activity/bioluminescence-night-kayaking-in-havelock-island"
+    },
+    {
+     "claim": "Scuba is NOT monsoon-blocked: DiveIndia states diving runs all year round and operates on both Havelock (Beach No.5, Govind Nagar) and Neil (Bharatpur Beach, 50 m from jetty), with beginner Intro to Scuba at Rs.14,000 pp; cheaper beginner options exist at Dive Andaman (shore DSD Rs.5,500+GST, boat DSD Rs.7,500)",
+     "source_url": "https://diveindia.com/course/intro-to-scuba/"
+    }
+   ],
+   "warnings": [
+    "Browser extension blocked reading several domains (blueandamantour.com, frogman.in, havelockislandbeachresort.com), so a few data points (shared Baratang per-head Rs.2,250-4,500, full Jirkatang convoy schedule) rest on Google result snippets, explicitly marked as such.",
+    "Go2Andaman's Rs.8,400 Baratang price is 'for up to 2 pax' - the party is 3 adults, so expect a higher tier or a larger-cab surcharge; confirm before booking.",
+    "Jirkatang convoy timings conflict across sources (12:00 vs 12:30 PM, 2:30 vs 3:30 PM later convoys); only the 6:00 AM first convoy is consistent - re-verify locally, as tours are built around catching it.",
+    "Elephant Beach speedboat fare officially revises to Rs.1,200 pp from September 2026 (per TryTrabby and a Facebook post snippet) - budget the higher number.",
+    "Sept 23-27, 2026 spans a full moon (Sept 26): bioluminescence kayaking is effectively off the table; Andaman Bliss additionally requires basic swimming and age 13-45 for the night session.",
+    "No operator page explicitly stated September closure or operation of the Elephant Beach jungle trek; forest-department notices were not found in accessible sources - status 'open but muddy' is inferred from operator monsoon guidance only.",
+    "DiveIndia does not publish a separate shore-only try-dive price on its site; Rs.14,000 Intro to Scuba is its only listed beginner price (includes boat dives). Shore vs boat split comes from Dive Andaman instead."
+   ]
+  },
+  "hotels": {
+   "summary": "All prices are live Booking.com totals for 3 adults INCLUDING taxes, captured 2026-08-19 in INR. HAVELOCK (Sep 23-25, 2 nights / alt Sep 25-26, 1 night): Silver Sand Beach Resort (on Vijay Nagar/Beach No.5, ~5-6 km from jetty) Rs 32,507 / Rs 16,253 with breakfast + free cancellation is the best-value quality beachfront pick; SeaShell Havelock Rs 30,798 / Rs 18,054 (breakfast, members price, no free-cancel shown); Symphony Palms (right on Govind Nagar Beach) Rs 22,654 / Rs 12,035 but scores only 4.6/10 on Booking; Barefoot at Havelock (Radhanagar side, beach ~11-12 km from jetty) needs 2 tented cottages: Rs 63,720 / Rs 31,860; Taj Exotica splurge Rs 98,767 (2 nights, breakfast+dinner, free cancel) / Rs 50,977 (1 night). NEIL (Sep 25-27 / Sep 26-27): SeaShell Neil (facing Lakshmanpur Beach, ~1-1.5 km from jetty) Rs 23,364 / Rs 11,682 with breakfast; Summer Sands (Ram Nagar beach, ~1 km from jetty) Rs 22,654 / Rs 11,327 but 5.4/10 score; TSG Aura Rs 27,364 / Rs 12,694 (2 villas, free cancel); Pearl Park Rs 18,428 / Rs 9,214 (free cancel); nothing bookable directly on Sitapur (sunrise) beach - it is ~5 km from jetty. PORT BLAIR: Welcomhotel Bay Island IS the former Fortune Resort Bay Island (rebranded) and is NOT bookable on Booking.com for these dates (aggregator benchmarks ~$86-135/night; 690 m from Phoenix Bay Jetty, ~4 km from airport, per Google snippets); SeaShell Port Blair (0.1 km from Welcomhotel, Marine Hill) Rs 28,674 for Sep 23-25 / Rs 14,337 for Sep 26-27 with breakfast; strong cheap sea-view alternative: The Seaview Residency Rs 9,450 (Sep 23-25, sea-view room, breakfast, free cancellation, 8.3/10). Veg-friendliness of individual resort restaurants was not verifiable from the pages opened.",
+   "facts": [
+    {
+     "topic": "Havelock Sep23-25: Silver Sand Beach Resort Havelock (cheapest for 3)",
+     "value": "Rs 32,507 total, 2 nights 3 adults, Andaman Villa Garden View, breakfast included, FREE cancellation; 8 km from downtown; Booking score 8.4",
+     "source_url": "https://www.booking.com/searchresults.html?ss=Havelock+Island&checkin=2026-09-23&checkout=2026-09-25&group_adults=3&no_rooms=1&selected_currency=INR&nflt=beachfront%3D1",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Silver Sand Havelock beach + jetty distance",
+     "value": "Sits on Vijay Nagar Beach (Beach No. 5); about 5-6 km from Havelock jetty, close to Kala Pathar Beach (Tripadvisor/Facebook snippets in google search result)",
+     "source_url": "https://www.google.com/search?q=Silver+Sand+Beach+Resort+Havelock+Vijay+Nagar+beach+distance+from+Havelock+jetty+SeaShell+Havelock+beach",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Havelock Sep23-25: Sea Shell Resort & Spa Havelock",
+     "value": "Rs 30,798 (members price; Rs 34,220 regular), 2 nights 3 adults, Andaman Cottage, breakfast included, no free-cancellation tag; 6.3 km from downtown; score 8.1; sea-view room rate not shown; beach name unverified",
+     "source_url": "https://www.booking.com/searchresults.html?ss=Havelock+Island&checkin=2026-09-23&checkout=2026-09-25&group_adults=3&no_rooms=1&selected_currency=INR&nflt=beachfront%3D1",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Havelock Sep25-26: Sea Shell Havelock / Silver Sand (1-night alt)",
+     "value": "SeaShell Rs 18,054 (Andaman Chalet, breakfast); Silver Sand Rs 16,253 (breakfast, free cancellation)",
+     "source_url": "https://www.booking.com/searchresults.html?ss=Havelock+Island&checkin=2026-09-25&checkout=2026-09-26&group_adults=3&no_rooms=1&selected_currency=INR",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Havelock: Symphony Palms Beach Resort",
+     "value": "Sep23-25 Rs 22,654 (Havelock Casa garden/jungle view, breakfast, free cancel); Sep25-26 Rs 12,035; sits right on Govind Nagar Beach (Travelira snippet); WARNING Booking review score only 4.6/10 (31 reviews)",
+     "source_url": "https://www.booking.com/searchresults.html?ss=Havelock+Island&checkin=2026-09-23&checkout=2026-09-25&group_adults=3&no_rooms=1&selected_currency=INR&nflt=beachfront%3D1",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Havelock: The Barefoot at Havelock (Radhanagar side)",
+     "value": "Needs 2x Tented Cottage for 3 adults: Sep23-25 Rs 63,720; Sep25-26 Rs 31,860; breakfast + free cancellation; score 9.1, location 9.6; Radhanagar Beach is ~11-12 km / ~20 min from Havelock jetty",
+     "source_url": "https://www.booking.com/searchresults.html?ss=Havelock+Island&checkin=2026-09-23&checkout=2026-09-25&group_adults=3&no_rooms=1&selected_currency=INR&nflt=beachfront%3D1",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Havelock: Taj Exotica Resort & Spa (splurge benchmark)",
+     "value": "Sep23-25 Rs 98,767 (Deluxe Villa, breakfast AND dinner included, free cancellation, score 9.4); Sep25-26 Rs 50,977 (Deluxe Villa Mangrove Facing, free cancellation); 4.1 km from downtown, near Radhanagar",
+     "source_url": "https://www.booking.com/searchresults.html?ss=Havelock+Island&checkin=2026-09-23&checkout=2026-09-25&group_adults=3&no_rooms=1&selected_currency=INR&nflt=beachfront%3D1",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Havelock sea-view room price example",
+     "value": "Coral Reef Resort & Spa Coral Teal Suite Sea View (sleeps 3): Rs 59,295 Sep23-25 / Rs 29,648 Sep25-26 (members price, no breakfast); score 7.0. Only 10 Havelock properties have sea-view rooms on Booking; Munjoh 'private beachfront' Family Bungalow Rs 63,718 Sep23-25",
+     "source_url": "https://www.booking.com/searchresults.html?ss=Havelock+Island&checkin=2026-09-23&checkout=2026-09-25&group_adults=3&no_rooms=1&selected_currency=INR&nflt=beachfront%3D1",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Neil Sep25-27: Sea Shell Neil",
+     "value": "Rs 23,364 (members; Rs 25,960 regular), 2 nights 3 adults, Andaman Cottage, breakfast included, no free-cancel tag; score 8.1; Sep26-27: Rs 11,682",
+     "source_url": "https://www.booking.com/searchresults.html?ss=Neil+Island&checkin=2026-09-25&checkout=2026-09-27&group_adults=3&no_rooms=1&selected_currency=INR",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "SeaShell Neil beach + jetty",
+     "value": "Faces/has views of Lakshmanpur Beach; ~1 km from Neil Island Jetty (Google hotels snippet), 1.5 km per a Tripadvisor review; 0.9 mi from Lakshmanpur and 1.9 mi from Sitapur per planetofhotels snippet",
+     "source_url": "https://www.google.com/search?q=Summer+Sands+Beach+Resort+Neil+Island+which+beach+distance+from+jetty+and+SeaShell+Neil+Laxmanpur+Sitapur+beach+resort",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Neil: Symphony Summer Sands Beach Resort",
+     "value": "Sep25-27 Rs 22,654 (King Room, breakfast, free cancellation); Sep26-27 Rs 11,327; on Ram Nagar beach ~1 km / 5-min drive from jetty, Sitapur ~3 km, Laxmanpur ~4 km (google snippets); WARNING Booking score only 5.4/10",
+     "source_url": "https://www.booking.com/searchresults.html?ss=Neil+Island&checkin=2026-09-25&checkout=2026-09-27&group_adults=3&no_rooms=1&selected_currency=INR",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Neil: TSG Aura",
+     "value": "Sep25-27 Rs 27,364 (2x Superior Villa for 3 adults, breakfast, free cancellation; orig Rs 38,440); Sep26-27 Rs 12,694; 2.6 km from downtown; score 7.4",
+     "source_url": "https://www.booking.com/searchresults.html?ss=Neil+Island&checkin=2026-09-25&checkout=2026-09-27&group_adults=3&no_rooms=1&selected_currency=INR",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Neil: Pearl Park Beach Resort",
+     "value": "Sep25-27 Rs 18,428 (2x Double Garden View, breakfast, free cancellation; orig Rs 28,350); Sep26-27 Rs 9,214; Booking mislabels it 'Port Blair, 3.2 km from Neil Island'; location score 9.5 but overall 6.0 (6 reviews)",
+     "source_url": "https://www.booking.com/searchresults.html?ss=Neil+Island&checkin=2026-09-25&checkout=2026-09-27&group_adults=3&no_rooms=1&selected_currency=INR",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Neil: Sitapur Beach (sunrise) options",
+     "value": "Sitapur Beach is ~5 km from Neil jetty/market at the island tip (trytrabby/experienceandamans snippets); no Booking-listed resort sits directly on it; Silver Sand Beach Resort Neil (Rs 27,138 Sep25-27 / Rs 13,569 Sep26-27, breakfast, free cancel, score 7.7) is the closest named quality option but sources conflict on its exact distance to Sitapur; sea-view budget alt: Coconhuts 2x Semi Deluxe Sea View Rs 20,160 Sep25-27 (breakfast, free cancel, score 5.5)",
+     "source_url": "https://www.google.com/search?q=Summer+Sands+Beach+Resort+Neil+Island+which+beach+distance+from+jetty+and+SeaShell+Neil+Laxmanpur+Sitapur+beach+resort",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Port Blair: Welcomhotel Bay Island = Fortune Resort Bay Island",
+     "value": "Same property - Tripadvisor review snippet: hotel name 'now changed to Welcomhotel Bay Island Port Blair (managed by ITC)'; so only 2 distinct sea-view targets exist, not 3 (google search result)",
+     "source_url": "https://www.google.com/search?q=Fortune+Resort+Bay+Island+Port+Blair+now+Welcomhotel+rebranded",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Port Blair: Welcomhotel Bay Island availability/price",
+     "value": "NOT bookable on Booking.com for Sep 23-25 or 26-27 (hotel-name search returned only other properties); aggregator snippets (google search result): Agoda from $122/night, KAYAK ~$101, Expedia from $86 (2 adults, 1 night); Phoenix Bay Jetty 690 m (Agoda snippet); ~4 km from Veer Savarkar Airport (itchotels.com snippet). Exact 3-adult Sep price unknown - book via ITC/Agoda directly",
+     "source_url": "https://www.google.com/search?q=Welcomhotel+By+ITC+Hotels+Bay+Island+Port+Blair+price+per+night+distance+to+airport+Phoenix+Bay+jetty",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Port Blair: Sea Shell Port Blair",
+     "value": "Sep23-25 Rs 28,674 (Standard Double, breakfast, no free-cancel tag); Sep26-27 Rs 14,337; score 8.1; 1.6 km from downtown; 0.1 km from Welcomhotel Bay Island per Google similar-hotels panel (i.e., Marine Hill, ~690 m from Phoenix Bay Jetty area)",
+     "source_url": "https://www.booking.com/searchresults.html?ss=Welcomhotel+Bay+Island+Port+Blair&checkin=2026-09-23&checkout=2026-09-25&group_adults=3&no_rooms=1&selected_currency=INR",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Port Blair cheaper sea-view alternatives Sep23-25",
+     "value": "The Seaview Residency: Rs 9,450 (Super Deluxe Sea view, breakfast, free cancellation, score 8.3, 250 reviews); Hotel Atlanta (beachfront tag) 2x Double Balcony+Sea View Rs 17,740 free cancel (7.9); Sinclairs Bayview Quadruple Sea View Rs 26,762 breakfast (6.8); Sep26-27 unfiltered: Seaview Residency Rs 4,158, SeaShell PB Rs 14,337",
+     "source_url": "https://www.booking.com/searchresults.html?ss=Port+Blair&checkin=2026-09-23&checkout=2026-09-25&group_adults=3&no_rooms=1&selected_currency=INR&nflt=roomfacility%3D108",
+     "as_of": "2026-08-19"
+    }
+   ],
+   "critical_claims": [
+    {
+     "claim": "Best Havelock beachfront option: Silver Sand Beach Resort Havelock (Vijay Nagar Beach) is AVAILABLE Sep 23-25 for 3 adults at Rs 32,507 total (2 nights, taxes incl., breakfast included, FREE cancellation, Booking score 8.4); 1-night alt Sep 25-26 Rs 16,253",
+     "source_url": "https://www.booking.com/searchresults.html?ss=Havelock+Island&checkin=2026-09-23&checkout=2026-09-25&group_adults=3&no_rooms=1&selected_currency=INR&nflt=beachfront%3D1"
+    },
+    {
+     "claim": "Best Neil option: Sea Shell Neil (facing Lakshmanpur Beach, ~1-1.5 km from jetty) is AVAILABLE Sep 25-27 for 3 adults at Rs 23,364 total (2 nights, taxes incl., breakfast included, members price; Rs 25,960 regular); Sep 26-27 alone Rs 11,682",
+     "source_url": "https://www.booking.com/searchresults.html?ss=Neil+Island&checkin=2026-09-25&checkout=2026-09-27&group_adults=3&no_rooms=1&selected_currency=INR"
+    },
+    {
+     "claim": "Taj Exotica (splurge benchmark) is available Sep 23-25 at Rs 98,767 for 3 adults incl. breakfast+dinner with free cancellation; Barefoot at Havelock needs 2 cottages = Rs 63,720 for the same 2 nights",
+     "source_url": "https://www.booking.com/searchresults.html?ss=Havelock+Island&checkin=2026-09-23&checkout=2026-09-25&group_adults=3&no_rooms=1&selected_currency=INR&nflt=beachfront%3D1"
+    },
+    {
+     "claim": "Welcomhotel Bay Island and Fortune Resort Bay Island are the SAME rebranded property, and it is not bookable on Booking.com for these dates - price it via ITC/Agoda instead (google search result)",
+     "source_url": "https://www.google.com/search?q=Fortune+Resort+Bay+Island+Port+Blair+now+Welcomhotel+rebranded"
+    }
+   ],
+   "warnings": [
+    "Some quoted prices are Booking.com 'Sign in for members-only price' Genius rates; regular prices noted where captured (e.g., SeaShell Havelock Rs 34,220 vs 30,798).",
+    "Prices shown are for the cheapest room configuration Booking picked for 3 adults (sometimes 1 queen-bed room for 3, sometimes 2 rooms marked '2x'); triple-bed availability inside each hotel was not itemized.",
+    "Sea-view room rates were only visible where Booking surfaced them (Coral Reef Havelock, Coconhuts Neil, Port Blair hotels); SeaShell Havelock / Silver Sand sea-view categories and Taj sea-view villa rates were not itemized - open property pages before booking.",
+    "Beachfront properties with LOW Booking scores despite great locations: Symphony Palms Havelock 4.6/10, Symphony Summer Sands Neil 5.4/10, Pearl Park Neil 6.0/10 - view quality may not match service quality.",
+    "Veg-friendliness of each resort restaurant was NOT verified from any opened page (all Andaman resorts on these lists include restaurants, but menus were not checked).",
+    "Welcomhotel Bay Island exact price for 3 adults on the Sep dates is unknown (not on Booking; only USD aggregator snippets ~$86-135/night from a google search result).",
+    "Booking's 'km from downtown' metric is not the same as distance to the ferry jetty; jetty distances quoted come from google search result snippets and are approximate.",
+    "SeaShell Havelock's exact beach and the Sitapur-side resort situation on Neil (Silver Sand Neil vs jetty vs Sitapur distances) had conflicting/ambiguous sources - marked unverified.",
+    "Prices were captured 2026-08-19 for travel 2026-09-23/27 and will move; free-cancellation flags recorded per property line."
+   ]
+  },
+  "food": {
+   "summary": "Researched veg food on all three islands via Chrome (Google Maps search pages, Zomato, Swiggy, official sites, and Google SERP snippets of Justdial/TripAdvisor menus). IMPORTANT LIMITATION: mouse clicks/scrolls did not register in this browser session (verified on multiple pages), so Google Maps menu-photo viewers could NOT be opened; dish prices were instead taken from text menus/snippets on Zomato/Swiggy/Justdial/TripAdvisor. Port Blair's best veg anchor is Icy Spicy - Pure Veg (4.2, 3,491 reviews, Island Arcade Junglighat, ₹200-400/person on Maps; sample dishes: Ghee Dosa ₹149, Veg Manchurian Gravy ₹280, Paneer Manchurian Dry ₹350; dinner for 3 roughly ₹700-1,100); Annapurna Cafeteria (3.7, 4,487, opens 7am) and Delhi Wala Pure Veg (4.8, 376) are alternates. Havelock: Something Different - A Beachside Cafe (4.4, 5,224, Beach No.2, opens 11:30am; TripAdvisor menu: Green Salad ₹195, Raw Papaya Salad ₹320, Moroccan Chickpea Salad ₹345; ~₹1,400-1,800 for 3) for an upscale beach dinner, and Rajasthani pureveg dhaba (4.5, 1,187, ₹200-400/person, opens 7am) plus Aao Ji Khao Ji (4.6, 2,586, ₹400-1,200/person) for cheaper/heartier meals; Full Moon Cafe is veg-friendly but seafood-led (₹850 for two on Justdial, opens 12pm). Shakahaar Pure Veg Restaurant in Havelock is real (Justdial 3.9, 605 ratings). Neil Island is full of pure-veg spots: PURE VEG RESTAURANT Lakshmanpur (4.8, 254, ₹200-400/person), The Island Spices (4.9, 400), Shiva Pure Veg (4.8, 248), Shakahari (4.2, 332), and VEERA Pure Veg where a Maps review states veg thali at ₹240 — dinner for 3 on Neil is roughly ₹700-900. Before 6 AM NOTHING is open on any of the three islands (earliest openings are 7:00 am everywhere: Rajasthani Dhaba Andaman/Annapurna/Lazeez in Port Blair, Rajasthani dhaba and Hashtag Dosa in Havelock, Full Moon Pure Vegetarian/Mamma Mia on Neil) — carry food/fruit from the previous evening for sunrise/kayak/Baratang starts. Beachfront resorts do serve veg-friendly breakfast: a July-2025 TripAdvisor review of SeaShell Havelock says \"good option for vegetarians in the breakfast buffet\", and Symphony Palms Havelock advertises a buffet/continental breakfast (Agoda) and \"Free Lavish Breakfast\" (symphonyresorts.com).",
+   "facts": [
+    {
+     "topic": "Port Blair - Icy Spicy - Pure Veg listing",
+     "value": "4.2 stars, 3,491 reviews, ₹200-400 per person (reported by 1,063 people), Island Arcade, Junglighat, Sri Vijaya Puram 744103; Maps hours: opens 11 am (restaurant); phone +91 99320 80105; pure vegetarian (Indian/Chinese/Italian), Jain menu available",
+     "source_url": "https://www.google.com/maps/place/Icy+Spicy+-+Pure+Veg/ (opened via https://www.google.com/maps/search/Icy+Spicy+Pure+Veg+Island+Arcade+Port+Blair)",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Icy Spicy dish prices",
+     "value": "Ghee Dosa ₹149 (Swiggy snippet); Sugar Free Gulab Jamun ₹45/pc, Veg Manchurian Gravy ₹280, Paneer Manchurian Dry ₹350 (Justdial menu snippet); Zomato avg cost ₹500 for two; Swiggy ₹300 for two, 4.5 (6.4K ratings), opens 8:00 am on Swiggy. Dinner for 3 veg adults ≈ ₹700-1,100",
+     "source_url": "google search result snippets at https://www.google.com/search?q=restaurant+guru+icy+spicy+port+blair+menu+prices plus https://www.swiggy.com/city/port-blair/icy-spicy-restaurant-pure-veg-junglighat-rest591633",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Port Blair - other top pure veg",
+     "value": "Annapurna Cafeteria Pure Veg 3.7 (4,487), ₹200-400, 71 MA Rd, opens 7 am; Delhi wala restaurant (Pure Veg) 4.8 (376), ₹200-400, 35 MA Rd, opens 10 am; Rajasthani Dhaba Andaman 4.2 (1,186), ₹200-400, Goalghar, opens 7 am; Shree Bikaner Pure Veg 4.1 (633)",
+     "source_url": "https://www.google.com/maps/search/pure+veg+restaurant+Port+Blair/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Havelock - Something Different - A Beachside Cafe",
+     "value": "4.4 stars, 5,224 reviews, Beach No. 2 behind Havelock Power House, opens 11:30 am; TripAdvisor menu prices: Green Salad ₹195, Raw Papaya Salad ₹320, Moroccan Chickpea Salad ₹345; veg-friendly multicuisine (pizza/pasta); dinner for 3 ≈ ₹1,400-1,800",
+     "source_url": "https://www.google.com/maps/search/veg+restaurant+Havelock+Island/ and TripAdvisor menu snippet at https://www.google.com/search?q=%22something+different%22+beachside+cafe+havelock+menu+price+%E2%82%B9",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Havelock - budget pure veg",
+     "value": "Rajasthani pureveg restaurant (dhaba): 4.5 (1,187), ₹200-400/person, SH4, opens 7 am - dinner for 3 ≈ ₹600-900. Aao ji khao ji (Punjabi): 4.6 (2,586), ₹400-1,200/person, Beach No.5, opens 8 am. Vegan Life Pure Veg: 4.1 (699), ₹200-600, Beach No.2, opens 7:30 am. HASHTAG DOSA: 4.6 (481), ₹200-400, Beach No.5, opens 7 am",
+     "source_url": "https://www.google.com/maps/search/veg+restaurant+Havelock+Island/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Havelock - Full Moon Cafe",
+     "value": "Maps: 4.4 (1,594), ₹400-1,400/person, Havelock no.3, opens 12 pm, categorized Seafood but 'menu was welcoming for vegetarians and vegans' (review quote); Justdial: 4.3 (1,576), ₹850 for two",
+     "source_url": "https://www.google.com/maps/search/veg+restaurant+Havelock+Island/ and https://www.google.com/search?q=justdial+%22full+moon+cafe%22+havelock+menu",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Havelock - Shakahaar exists",
+     "value": "Shakahaar Pure Veg Restaurant, Havelock: real, Justdial rating 3.9 (605 ratings); also has a TripAdvisor page",
+     "source_url": "google search result snippets at https://www.google.com/search?q=%22aao+ji+khao+ji%22+havelock+menu+price+paneer+thali+roti",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Neil Island - top veg places",
+     "value": "PURE VEG RESTAURANT (Lakshmanpur, near Hotel Samsaara): 4.8 (254), ₹200-400, opens 8 am; The Island Spices: 4.9 (400), ₹200-1,000, near Market, opens 10 am, closes 11 pm; Shiva pure veg: 4.8 (248), ₹200-400, opens 8:30 am; SHAKAHARI PURE VEG: 4.2 (332), opens 8 am; Garden View Restaurant & Resort: 4.8 (95) on Maps / 4.6 (77) budget-₹ on TripAdvisor; VEERA Pure Veg (Bharatpur Beach): review states 'veg thali at rs 240', opens 9 am; Mamma Mia: 4.9 (111), opens 7 am",
+     "source_url": "https://www.google.com/maps/search/veg+restaurant+Neil+Island/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Neil Island thali cost benchmark",
+     "value": "Simple thali ₹150-200 per blog guide; VEERA Pure Veg thali ₹240 per Maps review; dinner for 3 veg adults ≈ ₹700-900 at Neil pure-veg places (₹200-400/person Maps band)",
+     "source_url": "https://www.google.com/search?q=neil+island+%22island+spices%22+OR+%22garden+view%22+OR+%22shakahari%22+menu+price+thali+%E2%82%B9 (smartlytravel.in snippet) and https://www.google.com/maps/search/veg+restaurant+Neil+Island/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Food before 6 AM",
+     "value": "NO restaurant found open before 6 am on any island. Earliest openings - Port Blair: 7 am (Rajasthani Dhaba Andaman, Annapurna Cafeteria, Prabha's Manasara, Lazeez Rooftop); Havelock: 7 am (Rajasthani pureveg dhaba, HASHTAG DOSA), 7:30 am (Vegan Life, Ocean Prime, Blue Fin); Neil: 7 am (FULL MOON PURE VEGETARIAN, Rahul Pure Veg, Mamma Mia). For sunrise/kayak/Baratang starts: carry food from the previous evening",
+     "source_url": "https://www.google.com/maps/search/pure+veg+restaurant+Port+Blair/ + https://www.google.com/maps/search/veg+restaurant+Havelock+Island/ + https://www.google.com/maps/search/veg+restaurant+Neil+Island/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Beachfront resort veg breakfast",
+     "value": "SeaShell Resort & Spa Havelock: TripAdvisor guest review (stay July 2025) says 'Good option for vegetarians in the breakfast buffet'. Symphony Palms Beach Resort Havelock: buffet and continental breakfast provided (Agoda) and 'Free Lavish Breakfast' advertised on symphonyresorts.com",
+     "source_url": "google search result snippets at https://www.google.com/search?q=%22symphony+palms%22+OR+%22seashell%22+havelock+breakfast+buffet+vegetarian+included",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Icy Spicy outlets/hours (official site)",
+     "value": "Junglighat flagship (Island Arcade, opp. SBI, 3 min from airport): 11:00 AM-10:00 PM daily, 70-seat dine-in; Aberdeen Bazaar outlet (sweets/chaats); Jain menu (no onion/garlic/root veg); 100% eggless bakery; on Swiggy and Zomato. Note: Zomato lists hours Mon-Sun 8am-10pm - the 8am likely reflects the sweets/bakery counter",
+     "source_url": "https://icyspicy.in/ and https://www.zomato.com/port-blair/icy-spicy-pure-veg-restaurant-port-blair-locality/order",
+     "as_of": "2026-08-19"
+    }
+   ],
+   "critical_claims": [
+    {
+     "claim": "Port Blair's best veg option: Icy Spicy - Pure Veg, Junglighat (4.2 stars / 3,491 reviews on Maps) - budget level ₹200-400 per person, dinner for 3 roughly ₹700-1,100 (sample real prices: Ghee Dosa ₹149, Veg Manchurian Gravy ₹280, Paneer Manchurian Dry ₹350)",
+     "source_url": "https://www.google.com/maps/search/Icy+Spicy+Pure+Veg+Island+Arcade+Port+Blair"
+    },
+    {
+     "claim": "Havelock's best veg options: Something Different - A Beachside Cafe (4.4 / 5,224 reviews, mid-upper price, TripAdvisor menu items ₹195-345 for salads, opens 11:30 am) for the beach-dinner experience, and Rajasthani pureveg dhaba (4.5 / 1,187, ₹200-400/person, opens 7 am) for cheap early meals",
+     "source_url": "https://www.google.com/maps/search/veg+restaurant+Havelock+Island/"
+    },
+    {
+     "claim": "Neil Island's best veg option: PURE VEG RESTAURANT at Lakshmanpur near Hotel Samsaara (4.8 / 254 reviews, ₹200-400 per person, opens 8 am); veg thali on Neil runs about ₹240 (VEERA Pure Veg review)",
+     "source_url": "https://www.google.com/maps/search/veg+restaurant+Neil+Island/"
+    },
+    {
+     "claim": "No restaurant on Port Blair, Havelock, or Neil opens before 6 AM (earliest anywhere is 7:00 am), so for pre-dawn starts the crew must carry food from the previous evening",
+     "source_url": "https://www.google.com/maps/search/veg+restaurant+Havelock+Island/"
+    }
+   ],
+   "warnings": [
+    "Browser input injection (mouse clicks, scrolls, key-scrolling) did not register in this Chrome session - verified on Google Maps tabs, Zomato, and a plain Google SERP pagination link. Google Maps menu-PHOTO viewers therefore could not be opened, and dish prices were sourced from text menus and search-result snippets (Swiggy, Zomato, Justdial, TripAdvisor) instead of Maps photo OCR. Dish-level prices marked as snippets should be treated as approximate/possibly dated.",
+    "Dish-level prices could not be found for Full Moon Cafe, Aao Ji Khao Ji, and the Neil Island restaurants (only per-person Maps price bands and a ₹240 thali review quote) - unknown at dish level.",
+    "Hours discrepancy for Icy Spicy: Google Maps shows restaurant opening 11 am, Zomato shows 8 am-10 pm, official site says flagship 11 AM-10 PM - assume restaurant meals from 11 am, sweets/bakery possibly from 8 am; call +91 99320 80211 to confirm.",
+    "All ratings/hours were read on 2026-08-19 and reflect that day's Maps data; September hours could differ (monsoon/off-season changes possible).",
+    "Resort veg-breakfast evidence is thin: one TripAdvisor review (SeaShell Havelock) and marketing copy (Symphony Palms). Most beachfront resorts likely serve veg breakfast but this was not verified property-by-property."
+   ]
+  },
+  "rentals_fuel": {
+   "summary": "andamanrentals.in is DEAD (WordPress critical error page), so two live alternatives were researched in-browser. (1) Go2Andaman \"Rent a Bike - Havelock\": flat ₹600/bike/24h, with an off-season rate of ₹500/day valid until 30 September 2026 (covers the 23-27 Sep trip); 24h slot 10am-10am, hotel/jetty delivery+pickup included (10am-6pm), 2 helmets and paperwork included, fuel NOT included, DL copy required at booking, book at least 48h ahead, max 2 adults + 1 child under 5 per scooter, no km limit; deposit not stated. (2) Eternal Andamans: Honda Activa/Yamaha Fascino ₹500/24h (booking widget ₹699/day), Jupiter/Dio/Vespa ₹700, Royal Enfield/FZ/Avenger ₹1000; refundable ₹500 security deposit; helmets for both riders; petrol filled by customer per usage (effectively as-received/empty-type policy — fuel never included); no km limit; overtime ₹499/day after 9am; claims delivery on Port Blair, Havelock AND Neil, but a live banner currently says rentals only available at Port Blair due to high demand. Fuel: Havelock has essentially one working IndianOil pump area (two IndianOil listings: Krishna Nagar/Havelock Bazar, opens 6am, and Govind Nagar 'Havelock No.2', opens 6am with a review saying open till 8pm; ANIIDCO pump temporarily closed); Neil Island HAS one IndianOil pump at Neil Kendra (~1 km from jetty, Google hours 6am but recent review says really 7am-6pm — fill early); Port Blair has many pumps incl. IndianOil Main Road near the airport (opens 6am, 24/7 self-service vending machine per review) and 24/7 pumps at Junglighat and Aberdeen Bazaar per Eternal Andamans. Petrol price TODAY (19 Aug 2026) in Andaman & Nicobar: Rs 88.66/litre (NDTV fuel-price page). Honda Activa real-world mileage: current Activa 47 kmpl owner-reported, Activa 5G 50 kmpl owner-reported / 60 kmpl ARAI (BikeWale). Parking: Radhanagar has a designated stand near the entrance, scooter fee roughly Rs 20-30 (search-snippet sourced); Kalapathar is informal free roadside parking; Chidiya Tapu has a parking area a medium walk from the beach, fee unknown (Biological Park entry ~Rs 20); Bharatpur/Neil jetty parking specifics unknown.",
+   "facts": [
+    {
+     "topic": "andamanrentals.in status",
+     "value": "DEAD - site shows 'There has been a critical error on this website' (WordPress error page); no rental info retrievable",
+     "source_url": "https://www.andamanrentals.in/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Alternative 1: Go2Andaman Havelock scooter rental - price",
+     "value": "Flat ₹600/bike per 24h; off-season price ₹500/day valid until 30 Sep 2026 (trip dates 23-27 Sep fall in off-season); rated 4.7 (811 reviews)",
+     "source_url": "https://go2andaman.com/book/bike-on-rent-havelock/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Go2Andaman terms",
+     "value": "24h slot fixed 10am-10am; hotel/jetty delivery and pickup included (service hours 10am-6pm); includes 2 helmets + paperwork; fuel NOT included; unlimited km; book >=48h in advance with driver's licence copy; max 2 adults + 1 child <5 per vehicle; extensions on request; security deposit not mentioned on page (unknown); scooter model not specified",
+     "source_url": "https://go2andaman.com/book/bike-on-rent-havelock/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Alternative 2: Eternal Andamans - models and prices per 24h",
+     "value": "Honda Activa ₹500, Yamaha Fascino ₹500, Vespa ₹700, TVS Jupiter ₹700, Honda Dio ₹700, Royal Enfield ₹1000, Bajaj Avenger ₹1000, Yamaha FZ ₹1000 (booking cards show ₹699/day for scooters); phone 8900971661 / 03192-235674",
+     "source_url": "https://www.eternalandamans.com/bike-rentals-in-andaman",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Eternal Andamans terms",
+     "value": "Security deposit ₹500 refunded on return; helmets for rider+pillion provided; valid 2W licence required at handover; petrol to be filled by customer per own usage (fuel not included); no km limit; return by 9am next day else ₹499 full-day overtime; free cancellation until 1h before delivery; prebooking required; claims service on Port Blair, Havelock (Swaraj Dweep) and Neil (Shaheed Dweep) with hotel delivery, BUT current site banner says 'Due to High-Demand, Bike Rentals are only Available at Port Blair', min 24h booking - verify by phone for Havelock/Neil",
+     "source_url": "https://www.eternalandamans.com/bike-rentals-in-andaman",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Scooter rental going market rate (context)",
+     "value": "Reddit r/Andaman_and_Nicobar and Justdial snippets: Havelock scooters ~₹600/day just outside jetty (one operator delivers at jetty, ph 9474268205); Port Blair standard scooters ₹300-600/day; on-spot shops charge minimum ₹500/day per Eternal Andamans FAQ",
+     "source_url": "https://www.google.com/search?q=scooter+rental+Havelock+jetty (google search result snippets)",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Neil Island scooter operator",
+     "value": "'Neil On Wheels (Scooter Rentals)', Neil Kendra, rated 5.0 (17 reviews), listed Open 24 hours, ph +91 94742 68205 (google search local result)",
+     "source_url": "https://www.google.com/search?q=scooter+rental+Havelock+jetty (google search result)",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Havelock petrol pumps",
+     "value": "Google Maps shows 2 IndianOil pumps + 1 closed: (1) IndianOil, Krishna Nagar, Havelock Bazar, 3.7 stars, opens 6am, ph +91 94342 70984 - review calls it 'the only petrol bunk in Havelock which works'; (2) IndianOil, Havelock No.2 (Govind Nagar area), 4.0 stars, opens 6am, ph +91 96795 50225 - review says open till 8pm while others close by 5pm; (3) ANIIDCO Petrol Pump (2XMR+PXQ) temporarily closed. Eternal Andamans page also states 'only one petrol pump at Havelock' - fill tank before long rides",
+     "source_url": "https://www.google.com/maps/search/petrol+pump+Havelock+Island",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Neil Island petrol pump",
+     "value": "YES, one exists: IndianOil, Neil Kendra (plus code R2JJ+Q9), ~500m from market, ~1km from jetty, 3.6 stars (18 reviews), ph +91 99332 87400; Google hours say opens 6am, but a 6-month-old review warns actual hours are 7am-6pm and it was closed at 9pm; another review notes it is the only pump on Shaheed Dweep and sometimes not working. Eternal Andamans adds that govt-authorized shops also sell petrol on Neil and close as early as 5pm - fill up early",
+     "source_url": "https://www.google.com/maps/search/petrol+pump+Neil+Island+Shaheed+Dweep",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Petrol pump near Port Blair airport/jetty",
+     "value": "IndianOil, Plot No 52/4, Main Road (plus code JPWJ+882, near airport), 4.0 stars (163 reviews), opens 6am, ph +91 94342 82300, review mentions 24/7 self-service vending machine; other IndianOil pumps at Ograbanj ('24hrs service' per review) and several city pumps opening 6am. Eternal Andamans: pumps abundant in Port Blair (Airport, Junglighat, Bathubasti, Aberdeen Bazaar); 24/7 ones are Junglighat and Aberdeen Bazaar",
+     "source_url": "https://www.google.com/maps/search/petrol+pump+near+Port+Blair+airport",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Petrol price TODAY, Andaman & Nicobar",
+     "value": "Rs 88.66 per litre, dated Aug 19, 2026 (NDTV fuel prices page for Andaman and Nicobar; goodreturns.in port-blair page now redirects to homepage - dead)",
+     "source_url": "https://www.ndtv.com/fuel-prices/petrol-price-in-andaman-and-nicobar-state",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Honda Activa mileage (110cc class)",
+     "value": "BikeWale: current Honda Activa owner-reported 47 kmpl; Activa 5G (109cc) owner-reported 50 kmpl, ARAI 60 kmpl; comparable scooters Dio 48, Jupiter 49 kmpl. Plan on ~45-50 km/l real world (a full Havelock day is only ~40-60 km, i.e. roughly 1-1.5 L / Rs 90-135 per scooter per day). Note: honda2wheelersindia.com not opened; BikeWale used as the reputable spec site",
+     "source_url": "https://www.bikewale.com/honda-bikes/activa-5g/mileage/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Radhanagar Beach parking",
+     "value": "Designated parking area near the beach entrance; entry to beach free; scooter parking roughly Rs 20-30 per search snippets (andamandiscover.com 3 Jul 2026 snippet: 'Scooter 20 to 30... Parking Available Near Entrance'; frogman.in Aug 2026 snippet: 'No entry fee... you pay only for parking'). Exact tariff board unverified on a destination page - treat Rs 20-30 as indicative",
+     "source_url": "https://www.google.com/search?q=Radhanagar+beach+parking+fee+scooter+Kalapathar+parking (google search result snippets)",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Kalapathar Beach parking",
+     "value": "Informal roadside parking at entrance area, no official high charges, mostly free; beach free to visit with only 'optional charges for parking or food stalls' (thevacationvoice.com snippet + Google AI-overview text). No fixed paid stand confirmed",
+     "source_url": "https://www.google.com/search?q=Radhanagar+beach+parking+fee+scooter+Kalapathar+parking (google search result snippets)",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Chidiya Tapu parking",
+     "value": "Parking area exists - Tripadvisor reviewer: 'medium walk from parking to the beach through tall trees'; beach and sunset point free; Chidiya Tapu Biological Park entry ~Rs 20 Indians / Rs 50 foreigners (andamantourism.org snippet). Parking fee amount: UNKNOWN - not stated in any opened source",
+     "source_url": "https://www.google.com/search?q=Bharatpur+beach+Neil+jetty+parking+scooter+%22Chidiya+Tapu%22+parking+fee (google search result snippets)",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Bharatpur Beach / Neil jetty parking",
+     "value": "UNKNOWN specifics - no source opened states a paid stand or fee; Bharatpur Beach is ~0.5 km from Neil jetty and 'easily reachable by bike, cab, or walking from Neil Island jetty' (excellentandamans.com snippet), so scooters are typically parked free near the beach/jetty approach. Mark as unverified",
+     "source_url": "https://www.google.com/search?q=Bharatpur+beach+Neil+jetty+parking+scooter+%22Chidiya+Tapu%22+parking+fee (google search result snippets)",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Baratang two-wheeler restriction",
+     "value": "Two-wheelers are NOT allowed past the forest check-post on the Baratang road (tribal reserve); only fully covered cabs and buses permitted - do not plan a scooter for the Baratang day",
+     "source_url": "https://www.eternalandamans.com/bike-rentals-in-andaman",
+     "as_of": "2026-08-19"
+    }
+   ],
+   "critical_claims": [
+    {
+     "claim": "Havelock scooter rental costs ₹500-600 per 24h in late September 2026: Go2Andaman lists flat ₹600/bike with off-season ₹500/day valid until 30 Sep, including jetty/hotel delivery and 2 helmets, fuel excluded",
+     "source_url": "https://go2andaman.com/book/bike-on-rent-havelock/"
+    },
+    {
+     "claim": "Petrol in Andaman & Nicobar costs Rs 88.66/litre as of 19 Aug 2026",
+     "source_url": "https://www.ndtv.com/fuel-prices/petrol-price-in-andaman-and-nicobar-state"
+    },
+    {
+     "claim": "Neil Island has exactly one petrol pump (IndianOil, Neil Kendra, ~1 km from jetty) with practical hours ~7am-6pm, and Havelock has effectively one working pump - tanks must be filled early in the day",
+     "source_url": "https://www.google.com/maps/search/petrol+pump+Neil+Island+Shaheed+Dweep"
+    },
+    {
+     "claim": "The user-recommended site www.andamanrentals.in is down (WordPress critical error), so bookings must go through alternatives like Go2Andaman or Eternal Andamans (₹500 Activa/24h, ₹500 refundable deposit)",
+     "source_url": "https://www.andamanrentals.in/"
+    }
+   ],
+   "warnings": [
+    "andamanrentals.in is completely down - could not retrieve any of its terms; alternatives researched instead",
+    "Eternal Andamans' site currently shows a banner that bike rentals are ONLY available at Port Blair due to high demand despite the page advertising Havelock and Neil service - confirm by phone (8900971661) before relying on them outside Port Blair",
+    "Go2Andaman does not state a security deposit and does not name scooter models; the collapsed 'Pricing Details' FAQ was not expandable via text extraction - confirm deposit at booking",
+    "Radhanagar scooter parking fee (Rs 20-30) and Kalapathar/Chidiya Tapu/Bharatpur parking details come from Google search-result snippets, not fully opened destination pages - treat as indicative, not confirmed tariffs",
+    "Honda official site (honda2wheelersindia.com) was not opened; mileage figures are from BikeWale (owner-reported 47-50 kmpl)",
+    "Google-listed opening hours for island petrol pumps are unreliable: a Neil pump review says real hours 7am-6pm despite Google showing 6am opening; plan refuelling before evening",
+    "Baratang cannot be visited by rented two-wheeler (forest check-post allows only covered vehicles)"
+   ]
+  },
+  "distances": {
+   "summary": "All requested driving routes and coordinates were read live from Google Maps directions/place pages in Chrome on 2026-08-19. Port Blair: airport to Phoenix Bay Jetty is only 3.4 km / ~8 min; Chidiya Tapu is ~24 km / 44 min from Aberdeen Bazaar with a further 2.2 km drivable road (or ~33 min walk) to Munda Pahad; the Baratang run is long — Aberdeen Bazaar to Jirkatang check post 47.4 km / ~1 hr 12 min, then Jirkatang to Middle Strait (Nilambur ferry point on the Port Blair side) another 47.7 km / ~1 hr 23 min. Havelock: jetty to Govind Nagar 3 km / 7 min, jetty to Radhanagar 10.9 km / 24 min, Govind Nagar to Kalapathar 3.7 km / 8 min, and the Elephant Beach trek start (Maps place \"Walking Path To Elephant Beach\" on SH4) is 6.4 km / 14 min from Govind Nagar. Neil: everything is tiny — jetty (Maps name \"Shaheed Dweep Jetty\") to Bharatpur Beach 1.1 km / 3 min, to Natural Bridge 2.1 km / 4 min, to Laxmanpur 1 2.7 km / 5 min, to Sitapur 5.6 km / 10 min. Coordinates were captured for every requested place except Neil's Cove, which has no resolvable Google Maps listing (searches returned unrelated places). Note that querying \"Bharatpur Jetty\" on Maps wrongly resolves to Bharatpur Beach; the correct jetty place is \"Shaheed Dweep Jetty\". All times are Maps car times with typical traffic as shown today.",
+   "facts": [
+    {
+     "topic": "route:Veer Savarkar Airport->Phoenix Bay Jetty",
+     "value": "3.4 km, 8 min via VIP Rd (alt 3.6 km/9 min via Great Andaman Trunk Rd); Airport 11.641656,92.730243; Phoenix Bay Jetty 11.6726921,92.7345295",
+     "source_url": "https://www.google.com/maps/dir/Veer+Savarkar+International+Airport/Phoenix+Bay+Jetty+Port+Blair/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "route:Veer Savarkar Airport->Marina Park/Aberdeen Bazaar",
+     "value": "2.7 km, 7 min via VIP Rd (alts 3.3 km/8 min, 3.6 km/8 min); Marina Park 11.6698312,92.7474232; Aberdeen Bazar 11.6675019,92.7412765",
+     "source_url": "https://www.google.com/maps/dir/Veer+Savarkar+International+Airport/Marina+Park+Port+Blair/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "route:Aberdeen Bazaar->Chidiya Tapu",
+     "value": "24.0 km, 44 min via NH 4 (alt 25.2 km/44 min); Aberdeen Bazar 11.6675019,92.7412765; Chidiya Tapu Beach 11.5059682,92.7014649",
+     "source_url": "https://www.google.com/maps/dir/Aberdeen+Bazaar+Port+Blair/Chidiya+Tapu/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "route:Chidiya Tapu->Munda Pahad Beach",
+     "value": "2.2 km, 8 min drive via Munda Pahad Bch Rd (Maps also shows 33-min option = on foot; so it is drivable, walkable in ~30 min); Chidiya Tapu Beach 11.5059682,92.7014649; Munda Pahad Beach 11.4914543,92.7087511",
+     "source_url": "https://www.google.com/maps/dir/Chidiya+Tapu/Munda+Pahad+Beach/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "route:Aberdeen Bazaar->Jirkatang Check Post",
+     "value": "47.4 km, 1 hr 12 min via NH 4 (alt 48.8 km/1 hr 17 min); Jirkatang Check Post 11.8396935,92.6538333",
+     "source_url": "https://www.google.com/maps/dir/Aberdeen+Bazaar+Port+Blair/Jirkatang+Check+Post/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "route:Jirkatang Check Post->Middle Strait (Nilambur) Jetty",
+     "value": "47.7 km, 1 hr 23 min via NH 4; Jirkatang 11.8396935,92.6538333; Middle Strait Jetty 12.1599132,92.7557293 (this is the vehicle-ferry point on the South Andaman side, opposite Baratang's Nilambur Jetty)",
+     "source_url": "https://www.google.com/maps/dir/Jirkatang+Check+Post/Middle+Strait+Jetty/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "route:Aberdeen Bazaar->Wandoor Beach",
+     "value": "24.8 km, 42 min via VIP Rd, NH 4 and SH8 (alt 25.3 km/44 min); Wandoor Beach 11.5949706,92.6075913",
+     "source_url": "https://www.google.com/maps/dir/Aberdeen+Bazaar+Port+Blair/Wandoor+Beach/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "route:Veer Savarkar Airport->Corbyn's Cove",
+     "value": "7.3 km, 15 min via Corbyns Cove Rd (alt 7.3 km/16 min); Corbyn's Cove Beach 11.6450857,92.7481568",
+     "source_url": "https://www.google.com/maps/dir/Veer+Savarkar+International+Airport/Corbyn's+Cove+Beach/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "route:Havelock Jetty->Govind Nagar Beach",
+     "value": "3.0 km, 7 min via SH4; Havelock Jetty 12.0429471,92.9835984; Govind Nagar Beach 12.0306216,93.000842",
+     "source_url": "https://www.google.com/maps/dir/Havelock+Jetty/Govind+Nagar+Beach+Havelock/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "route:Havelock Jetty->Radhanagar Beach",
+     "value": "10.9 km, 24 min via SH4; Havelock Jetty 12.0429471,92.9835984; Radhanagar Beach 11.9844552,92.9508454",
+     "source_url": "https://www.google.com/maps/dir/Havelock+Jetty/Radhanagar+Beach+Havelock/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "route:Govind Nagar->Radhanagar Beach",
+     "value": "9.6 km, 22 min via SH4; Govind Nagar Beach 12.0306216,93.000842; Radhanagar Beach 11.9844552,92.9508454",
+     "source_url": "https://www.google.com/maps/dir/Govind+Nagar+Beach+Havelock/Radhanagar+Beach+Havelock/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "route:Govind Nagar->Kalapathar Beach",
+     "value": "3.7 km, 8 min via SH5; Govind Nagar Beach 12.0306216,93.000842; Kala Pathar Beach 12.0006111,93.0070952",
+     "source_url": "https://www.google.com/maps/dir/Govind+Nagar+Beach+Havelock/Kalapathar+Beach/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "route:Govind Nagar->Elephant Beach trek start",
+     "value": "6.4 km, 14 min via SH4 to Maps place 'Walking Path To Elephant Beach' (trailhead on SH4/Radhanagar road) 12.0087171,92.9635124; Govind Nagar Beach 12.0306216,93.000842",
+     "source_url": "https://www.google.com/maps/dir/Govind+Nagar+Beach+Havelock/Elephant+Beach+Trek+Starting+Point/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "route:Neil Jetty (Shaheed Dweep Jetty)->Bharatpur Beach",
+     "value": "1.1 km, 3 min drive via Bharatpur Bch Rd (walk ~15 min); Shaheed Dweep Jetty 11.8371487,93.0311195; Bharatpur Beach 11.8361324,93.034197",
+     "source_url": "https://www.google.com/maps/dir/?api=1&origin=Shaheed+Dweep+Jetty+Neil+Island&destination=Bharatpur+Beach+Neil+Island&travelmode=driving",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "route:Neil Jetty->Natural Bridge (Laxmanpur Beach 2)",
+     "value": "2.1 km, 4 min drive via Village road (walking option 29 min; final approach to the bridge is on foot over shore rocks); Shaheed Dweep Jetty 11.8371487,93.0311195; Natural bridge 1 11.8320292,93.0139828",
+     "source_url": "https://www.google.com/maps/dir/Shaheed+Dweep+Jetty/Natural+bridge+1+Shaheed+dweep/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "route:Neil Jetty->Sitapur Beach",
+     "value": "5.6 km, 10 min via SH6; Shaheed Dweep Jetty 11.8371487,93.0311195; Sitapur Beach 11.8261573,93.0650936",
+     "source_url": "https://www.google.com/maps/dir/Shaheed+Dweep+Jetty/Sitapur+Beach/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "route:Laxmanpur Beach 1->Sitapur Beach",
+     "value": "7.4 km, 12 min via SH6; Laxmanpur Beach No 1 11.847006,93.0156096; Sitapur Beach 11.8261573,93.0650936",
+     "source_url": "https://www.google.com/maps/dir/Laxmanpur+Beach+Neil+Island/Sitapur+Beach+Neil+Island/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "route:Neil Jetty->Laxmanpur Beach 1",
+     "value": "2.7 km, 5 min via Village road; Shaheed Dweep Jetty 11.8371487,93.0311195; Laxmanpur Beach No 1 11.847006,93.0156096",
+     "source_url": "https://www.google.com/maps/dir/Shaheed+Dweep+Jetty/Laxmanpur+Beach+No+1/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "coords:Limestone Cave Baratang",
+     "value": "12.0959029, 92.7454867",
+     "source_url": "https://www.google.com/maps/search/Limestone+Caves+Baratang/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "coords:Nilambur Jetty, Baratang",
+     "value": "12.1702177, 92.7624788 (Baratang-side jetty; the Port Blair-side vehicle-ferry point is Middle Strait Jetty 12.1599132,92.7557293)",
+     "source_url": "https://www.google.com/maps/search/Nilambur+Jetty+Baratang/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "coords:Cellular Jail",
+     "value": "11.6747447, 92.7478601",
+     "source_url": "https://www.google.com/maps/search/Cellular+Jail+Port+Blair/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "coords:Kala Pathar Beach (Havelock)",
+     "value": "12.0006111, 93.0070952",
+     "source_url": "https://www.google.com/maps/search/Kalapathar+Beach+Havelock/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "coords:Elephant Beach (Havelock)",
+     "value": "12.0081083, 92.9416061",
+     "source_url": "https://www.google.com/maps/search/Elephant+Beach+Havelock/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "coords:Radhanagar Beach (Havelock)",
+     "value": "11.9844552, 92.9508454",
+     "source_url": "https://www.google.com/maps/dir/Havelock+Jetty/Radhanagar+Beach+Havelock/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "coords:Natural Bridge (Neil)",
+     "value": "11.8320292, 93.0139828 (Maps place 'Natural bridge 1', Shaheed Dweep)",
+     "source_url": "https://www.google.com/maps/dir/Bharatpur+Jetty+Neil+Island/Natural+Bridge+Neil+Island/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "coords:Sitapur Beach (Neil)",
+     "value": "11.8261573, 93.0650936",
+     "source_url": "https://www.google.com/maps/dir/Bharatpur+Jetty+Neil+Island/Sitapur+Beach+Neil+Island/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "coords:Bharatpur Beach (Neil)",
+     "value": "11.8361324, 93.034197",
+     "source_url": "https://www.google.com/maps/search/Neil's+Cove+Beach/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "coords:Munda Pahad Beach",
+     "value": "11.4914543, 92.7087511",
+     "source_url": "https://www.google.com/maps/search/Munda+Pahad+Beach+Chidiya+Tapu/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "coords:Chidiya Tapu Beach",
+     "value": "11.5059682, 92.7014649",
+     "source_url": "https://www.google.com/maps/search/Chidiya+Tapu+Beach/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "coords:Wandoor Jetty",
+     "value": "11.5936441, 92.6093126 (Wandoor Beach itself: 11.5949706,92.6075913)",
+     "source_url": "https://www.google.com/maps/search/Wandoor+Jetty/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "coords:Red Skin Island",
+     "value": "11.5559255, 92.5916443",
+     "source_url": "https://www.google.com/maps/search/Red+Skin+Island/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "coords:Phoenix Bay Jetty",
+     "value": "11.6726921, 92.7345295",
+     "source_url": "https://www.google.com/maps/dir/Cellular+Jail/Phoenix+Bay+Jetty/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "coords:Veer Savarkar International Airport",
+     "value": "11.641656, 92.730243",
+     "source_url": "https://www.google.com/maps/search/Veer+Savarkar+International+Airport/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "coords:Havelock Jetty",
+     "value": "12.0429471, 92.9835984",
+     "source_url": "https://www.google.com/maps/dir/Havelock+Jetty/Radhanagar+Beach+Havelock/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "coords:Neil Jetty (Shaheed Dweep Jetty)",
+     "value": "11.8371487, 93.0311195",
+     "source_url": "https://www.google.com/maps/dir/Neil+Island+Jetty/Bharatpur+Beach+Neil+Island/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "coords:Neil's Cove (Havelock)",
+     "value": "UNKNOWN - Google Maps has no place listing named Neil's Cove; three separate searches resolved to unrelated places (a resort, Corbyn's Cove, Bharatpur Beach). Use Radhanagar Beach (11.9844552,92.9508454) as the access point.",
+     "source_url": "https://www.google.com/maps/search/Neils+Cove+Andaman/",
+     "as_of": "2026-08-19"
+    }
+   ],
+   "critical_claims": [
+    {
+     "claim": "Veer Savarkar Airport to Phoenix Bay Jetty is 3.4 km, ~8 min by car via VIP Rd - tight ferry connections after landing are feasible",
+     "source_url": "https://www.google.com/maps/dir/Veer+Savarkar+International+Airport/Phoenix+Bay+Jetty+Port+Blair/"
+    },
+    {
+     "claim": "Havelock Jetty to Radhanagar Beach is 10.9 km, ~24 min by car/scooter via SH4",
+     "source_url": "https://www.google.com/maps/dir/Havelock+Jetty/Radhanagar+Beach+Havelock/"
+    },
+    {
+     "claim": "Baratang day trip driving legs: Aberdeen Bazaar to Jirkatang check post 47.4 km / ~1 hr 12 min, then Jirkatang to Middle Strait (Nilambur) vehicle-ferry point 47.7 km / ~1 hr 23 min - roughly 2.5+ hr each way before ferry/convoy waits",
+     "source_url": "https://www.google.com/maps/dir/Jirkatang+Check+Post/Middle+Strait+Jetty/"
+    },
+    {
+     "claim": "Neil Island distances are trivial: jetty (Shaheed Dweep Jetty) to Bharatpur 1.1 km, Natural Bridge 2.1 km, Laxmanpur 1 2.7 km, Sitapur 5.6 km - all beaches within 10 min drive of the jetty",
+     "source_url": "https://www.google.com/maps/dir/Shaheed+Dweep+Jetty/Sitapur+Beach/"
+    }
+   ],
+   "warnings": [
+    "Neil's Cove has no Google Maps place listing - its coordinates could not be verified from any opened page; it is reached from Radhanagar Beach (use 11.9844552,92.9508454).",
+    "Google Maps resolves 'Bharatpur Jetty Neil Island' to Bharatpur Beach, not the jetty; the correct Maps place for Neil's ferry jetty is 'Shaheed Dweep Jetty' (11.8371487,93.0311195). First-pass jetty routes were re-run from the true jetty.",
+    "All times are Google Maps car estimates with typical/current traffic as displayed on 2026-08-19; Baratang (NH4 through Jarawa reserve) runs in escorted convoys with fixed timings and a vehicle ferry crossing at Middle Strait, none of which is included in the Maps drive times shown.",
+    "Munda Pahad: Maps shows a drivable 2.2 km road from Chidiya Tapu (8 min) plus a 33-min walking alternative on the same road; similarly Natural Bridge on Neil shows 4 min drive / 29 min walk, with the last stretch to the bridge itself on foot.",
+    "Elephant Beach itself (12.0081083,92.9416061) has no road access; the drive route ends at 'Walking Path To Elephant Beach' trailhead on SH4 (12.0087171,92.9635124), from where it is a forest trek."
+   ]
+  },
+  "budget_stays": {
+   "summary": "Checked Booking.com in Chrome for 3 adults on the exact nights (all prices INR, taxes included). PORT BLAIR (Sep 23-25, 2 nights; prices are 2-NIGHT totals): best sea-facing pick is Hotel Atlanta - A Seaview Hotel (7.9/197, location 9.3, beachfront opposite Marina Park/Phoenix Bay area) Family Room for Rs 8,845 (~Rs 1,474/person/night) with free cancellation; alternatives: The Seaview Residency (8.3/250, beachfront, breakfast, Rs 8,316), Ananya Residency (8.7/164, Triple Room + breakfast, Rs 4,156 - cheapest solid pick, 2.1 km from beach), Royal Seaview Residency (8.7/38, 2 queens, Rs 6,029), Ocean Terrace (7.3/166, balcony + breakfast, Rs 5,859), Blue Bridge Homes (7.8/98, beachfront, Rs 8,503). Hotel Marina Manor has NO availability (page redirects), TSG Grand not listed, Hotel Shompen is 7.8 but only 8 reviews and a 1-queen room at Rs 9,910. HAVELOCK (Sep 25-26, 1 night): standout is Bhuma (9.5/226, homestay 50 m from Govind Nagar Beach, 100 m Vijay Nagar Beach, 2.3 km from jetty) Family Double Room sleeping exactly 3 with breakfast at Rs 6,920 (~Rs 2,307/person - within the Rs 3k 'really good stay' cap; note: rate is non-refundable, cash-only property, Rs 5,000 damage deposit; a partially-refundable rate is Rs 9,505). Cheaper: The Forest Elephant 2 doubles Rs 2,048 (8.4/27, free cancellation, but 9.9 km out near Kalapathar), Emerald Gecko Rs 4,200 (7.7/105, shared toilet), Havelock Farms Rs 5,222-6,907 (8.3/427, breakfast, not on beach), Blue Bird Resort Rs 5,511-6,804 (8.4/55), Senses Rs 7,347 Genius (8.1/186, 2 rooms + breakfast + jetty pickup). Dolphin Resort (govt) is not on Booking.com; Havelock Island Beach Resort shows no availability; Aparupa Sands Marina is Rs 12,979 (over budget); Radhakrishna and Sea View Beach Resort not listed. NEIL (Sep 26-27, 1 night): best pick Blue Lagoon Resort (8.6/256) King Room with Balcony, breakfast, FREE cancellation, Rs 3,968 (~Rs 1,323/person), 2 km from downtown/jetty near Laxmanpur side. Alternatives: Jungle Beach Resort 2 doubles Rs 1,701 (8.4/11 reviews), Blue Bird Residency Rs 2,100 (7.6/36), Sea Sand Resort Triple with SEA VIEW Rs 2,602 (7.2/39, 1.1 km from center), Hotel Highness Sea Rock Deluxe Triple + breakfast Rs 4,095 (7.1/85). The named Neil candidates mostly fail: Tango Beach Resort (Laxmanpur Beach No.1, beachfront, location 9.4) scores only 4.6/16 and is NOT taking reservations on Booking; Coconhuts 5.5 score at Rs 10,080; Pearl Park rechecked at Rs 9,214 (2 garden-view doubles + breakfast, free cancellation) but scores 6.0/6 reviews and is over the Rs 9k cap; CS Empire 2.4 score; Kalapani Eco Resort not on Booking. Whole-trip lodging using best picks: 2x4,423 + 6,920 + 3,968 = Rs 19,733 for 4 nights (Rs 1,644/person/night average) - under the Rs 2,000/person/night target.",
+   "facts": [
+    {
+     "topic": "Port Blair best pick: Hotel Atlanta - A Seaview Hotel (Sep 23-25, 2 nights, 3 adults)",
+     "value": "Family Room (2 full beds), Rs 8,845 total for 2 nights taxes included (Rs 4,423/night, ~Rs 1,474/person/night), free cancellation, breakfast not included; score 7.9 from 197 reviews, location 9.3, tagged Beachfront, 1.4 km from downtown (Aberdeen/Marina Park - Phoenix Bay area)",
+     "source_url": "https://www.booking.com/searchresults.html?ss=Port+Blair&checkin=2026-09-23&checkout=2026-09-25&group_adults=3&no_rooms=1&order=price&selected_currency=INR",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Port Blair alternative: The Seaview Residency",
+     "value": "Deluxe Room, Rs 8,316 for 2 nights taxes included (from Rs 9,240), breakfast included, free cancellation; 8.3 from 250 reviews, tagged Beachfront, 2.8 km from downtown; room shows only 1 full bed",
+     "source_url": "https://www.booking.com/searchresults.html?ss=Port+Blair&checkin=2026-09-23&checkout=2026-09-25&group_adults=3&no_rooms=1&order=price&selected_currency=INR",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Port Blair cheapest solid: Ananya Residency",
+     "value": "Triple Room (1 twin + 1 full), Rs 4,156 for 2 nights taxes included (~Rs 693/person/night), breakfast included, no free cancellation shown; 8.7 from 164 reviews, 1.3 km from downtown, 2.1 km from beach (not sea-facing)",
+     "source_url": "https://www.booking.com/searchresults.html?ss=Port+Blair&checkin=2026-09-23&checkout=2026-09-25&group_adults=3&no_rooms=1&order=price&selected_currency=INR",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Port Blair alternative: Royal Seaview Residency",
+     "value": "Deluxe Family Room (2 queen beds), Rs 6,029 for 2 nights taxes included; 8.7 from 38 reviews, 1.4 km from downtown, 2.1 km from beach; no breakfast or free cancellation shown",
+     "source_url": "https://www.booking.com/searchresults.html?ss=Port+Blair&checkin=2026-09-23&checkout=2026-09-25&group_adults=3&no_rooms=1&order=price&selected_currency=INR",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Port Blair alternative: Ocean Terrace",
+     "value": "Deluxe Double Room with Balcony (1 king), Rs 5,859 for 2 nights taxes included, breakfast included, free cancellation; 7.3 from 166 reviews, 2.4 km from downtown",
+     "source_url": "https://www.booking.com/searchresults.html?ss=Port+Blair&checkin=2026-09-23&checkout=2026-09-25&group_adults=3&no_rooms=1&order=price&selected_currency=INR",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Port Blair alternative: Blue Bridge Homes",
+     "value": "Deluxe Family Suite (2 queen beds), Rs 8,503 for 2 nights taxes included, free cancellation; 7.8 from 98 reviews, tagged Beachfront, 0.7 km from downtown",
+     "source_url": "https://www.booking.com/searchresults.html?ss=Port+Blair&checkin=2026-09-23&checkout=2026-09-25&group_adults=3&no_rooms=1&order=price&selected_currency=INR",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Port Blair named candidates status",
+     "value": "Hotel Marina Manor: booking.com/hotel/in/marina-manor.html redirects to search results (hlrd=14) = no availability for Sep 23-25. TSG Grand: not found in Port Blair results. Hotel Shompen: available, 7.8 but only 8 reviews, Deluxe Double (1 queen - tight for 3), breakfast + free cancellation, Rs 9,910 for 2 nights, 350 m from downtown, 2.4 km from beach",
+     "source_url": "https://www.booking.com/hotel/in/marina-manor.html?checkin=2026-09-23&checkout=2026-09-25&group_adults=3&no_rooms=1&selected_currency=INR",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Havelock best pick: Bhuma (Sep 25-26, 1 night)",
+     "value": "Family Double Room (max 3 people; 1 full + 1 king + 1 queen bed, 33 m2, balcony, AC), Rs 6,920 taxes included (~Rs 2,307/person) with 'exceptional' breakfast included - but NON-REFUNDABLE, pay property before arrival, cash-only, Rs 5,000 refundable damage deposit; partially-refundable rate Rs 9,505. Score 9.5 from 226 reviews (staff 9.9, location 9.5). Location: Govind Nagar Beach 50 m, Vijay Nagar Beach 100 m, Havelock Jetty 2.3 km, main market 50 m. 3 rooms left at time of check",
+     "source_url": "https://www.booking.com/hotel/in/bhuma-homestay.html",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Havelock budget alternatives under Rs 9,000/night (score >= 7.0)",
+     "value": "The Forest Elephant: 2x Standard Double Rs 2,048, 8.4/27 reviews, free cancellation, 9.9 km from downtown (Kalapathar side), no breakfast. Emerald Gecko: 2x Double with shared toilet Rs 4,200, 7.7/105, free cancellation, 8.1 km (Vijay Nagar/Beach 5 area). Havelock Farms Resort: Deluxe Double w/ balcony Rs 5,222 members / Rs 6,907 standard, 8.3/427, breakfast + free cancellation, 7.9 km, farm setting not beachfront. Blue Bird Resort: Double garden view (1 full + 1 futon) Rs 5,511 members / Rs 6,804, 8.4/55, free cancellation, 8.2 km. Senses Havelock: 2x Deluxe rooms Rs 7,347 members (from Rs 13,606), 8.1/186, breakfast + free cancellation + free jetty pickup, 7.9 km",
+     "source_url": "https://www.booking.com/searchresults.html?ss=Havelock+Island&checkin=2026-09-25&checkout=2026-09-26&group_adults=3&no_rooms=1&order=price&selected_currency=INR",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Havelock named candidates status",
+     "value": "Dolphin Resort (govt, Vijay Nagar): not listed on Booking.com at all (book via A&N tourism directly). Havelock Island Beach Resort: hotel page redirects to search (hlrd=14) = no availability Sep 25-26. Aparupa Sands Marina Beach Resort: available but Rs 12,979 (Executive Room, 9.3/3 reviews) - over Rs 9k cap. Radhakrishna Resort and Sea View Beach Resort: not in the 33 Havelock results",
+     "source_url": "https://www.booking.com/hotel/in/havelock-island-beach-resort.html?checkin=2026-09-25&checkout=2026-09-26&group_adults=3&no_rooms=1&selected_currency=INR",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Neil best pick: Blue Lagoon Resort, Neil Island (Sep 26-27, 1 night)",
+     "value": "King Room with Balcony (AC), Rs 3,968 taxes included (~Rs 1,323/person), breakfast included, FREE cancellation; 8.6 from 256 reviews; 2 km from downtown (Neil center/Bharatpur jetty area)",
+     "source_url": "https://www.booking.com/searchresults.html?ss=Neil+Island&checkin=2026-09-26&checkout=2026-09-27&group_adults=3&no_rooms=1&order=price&selected_currency=INR",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Neil budget alternatives (score >= 7.0)",
+     "value": "Jungle Beach Resort: 2x Double Rs 1,701 total, 8.4 but only 11 reviews, 1.3 km from downtown, no breakfast/cancellation shown. Blue Bird Residency: 2x Standard Double Rs 2,100, 7.6/36, 2.3 km. Sea Sand Resort: Triple Room with SEA VIEW Rs 2,602, 7.2/39, 1.1 km from downtown. Hotel Highness Sea Rock: Deluxe Triple + breakfast Rs 4,095, 7.1/85, 2.3 km",
+     "source_url": "https://www.booking.com/searchresults.html?ss=Neil+Island&checkin=2026-09-26&checkout=2026-09-27&group_adults=3&no_rooms=1&order=price&selected_currency=INR",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Neil named candidates status (all fail the >=7.0 score rule)",
+     "value": "Tango Beach Resort (Lakshmanpur, Beach No.1, beachfront + private beach, location 9.4): overall score 4.6 from 16 reviews and 'not taking reservations on our site right now'. Coconhuts Beach Resort: 5.5/35, Rs 10,080 (2 sea-view doubles + breakfast) - over cap. Pearl Park Beach Resort rechecked: Rs 9,214 (from 14,175) for 2x garden-view double + breakfast + free cancellation, but score 6.0 from 6 reviews and listed 3.2 km outside Neil. CS Empire: 2.4/5 reviews, Rs 7,875 suite. Kalapani Eco Resort: not on Booking.com",
+     "source_url": "https://www.booking.com/hotel/in/tango-beach-resort.html?checkin=2026-09-26&checkout=2026-09-27&group_adults=3&no_rooms=1&selected_currency=INR",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Trip lodging total with best picks",
+     "value": "Port Blair Hotel Atlanta Rs 8,845 (2 nights) + Havelock Bhuma Rs 6,920 (1 night) + Neil Blue Lagoon Rs 3,968 (1 night) = Rs 19,733 for 4 nights for 3 adults = Rs 1,644/person/night average, under the Rs 2,000/person/night target",
+     "source_url": "https://www.booking.com/searchresults.html?ss=Port+Blair&checkin=2026-09-23&checkout=2026-09-25&group_adults=3&no_rooms=1&order=price&selected_currency=INR",
+     "as_of": "2026-08-19"
+    }
+   ],
+   "critical_claims": [
+    {
+     "claim": "HAVELOCK BEST PICK: Bhuma (homestay, Govind Nagar) - Family Double Room sleeping exactly 3 (1 full + 1 king + 1 queen), Rs 6,920 taxes included for the night of Sep 25-26 with breakfast, score 9.5 from 226 reviews, 50 m from Govind Nagar Beach / 100 m from Vijay Nagar Beach / 2.3 km from Havelock Jetty. Caveats: this cheapest rate is non-refundable (free-cancellation-style rate costs Rs 9,505), property is cash-only with a Rs 5,000 refundable damage deposit, and only 3 rooms were left",
+     "source_url": "https://www.booking.com/hotel/in/bhuma-homestay.html"
+    },
+    {
+     "claim": "NEIL BEST PICK: Blue Lagoon Resort, Neil Island - King Room with Balcony (AC), Rs 3,968 taxes included for Sep 26-27, breakfast included, free cancellation, score 8.6 from 256 reviews (highest-reviewed affordable property on the island), 2 km from downtown; note the room shows 1 king bed for 3 adults and its exact beach distance was not verifiable on Booking (its own property page URL is not directly reachable)",
+     "source_url": "https://www.booking.com/searchresults.html?ss=Neil+Island&checkin=2026-09-26&checkout=2026-09-27&group_adults=3&no_rooms=1&order=price&selected_currency=INR"
+    },
+    {
+     "claim": "PORT BLAIR BEST PICK: Hotel Atlanta - A Seaview Hotel - Family Room (2 full beds, AC), Rs 8,845 taxes included for BOTH nights Sep 23-25 (Rs 4,423/night, ~Rs 1,474/person/night), free cancellation, score 7.9 from 197 reviews with location 9.3, tagged Beachfront and sits on Marine Hill Road facing the Marina Park/Phoenix Bay waterfront 1.4 km from downtown - exactly the sea-facing-near-Marina brief; breakfast not included at this rate. (Hotel Marina Manor has no availability on Booking for these dates and TSG Grand is not listed)",
+     "source_url": "https://www.booking.com/searchresults.html?ss=Port+Blair&checkin=2026-09-23&checkout=2026-09-25&group_adults=3&no_rooms=1&order=price&selected_currency=INR"
+    }
+   ],
+   "warnings": [
+    "Blue Lagoon Resort (Neil) property page could not be opened directly (two slug guesses failed within the ~30-action budget); its price/score/policies come from the Booking search results page. Its exact distance to Laxmanpur Beach and the Neil jetty was NOT verified - only '2 km from downtown'. Also its King Room lists 1 king bed for 3 adults; confirm an extra mattress with the property.",
+    "Bhuma's Rs 6,920 rate is NON-REFUNDABLE and the property accepts cash only with a Rs 5,000 damage deposit collected at check-in; the partially refundable rate is Rs 9,505 (slightly over the Rs 9,000 cap). Only 3 Family Double Rooms remained at the time of checking.",
+    "Several user-named candidates are unavailable or fail the quality bar: Dolphin Resort (govt) and Kalapani Eco Resort are not on Booking.com at all (book via andamantourism.gov.in or direct); Havelock Island Beach Resort and Hotel Marina Manor show no availability for these dates; Tango Beach Resort (4.6) is not taking Booking reservations; Coconhuts (5.5), Pearl Park (6.0, Rs 9,214), CS Empire (2.4) all score below 7.0.",
+    "Prices are Genius/member-discounted in some cases (Havelock Farms Rs 5,222, Blue Bird Rs 5,511, Senses Rs 7,347 show 'sign in for members-only price'); logged-out standard prices are the higher figures quoted. All prices captured 2026-08-19 and can change.",
+    "Hotel Atlanta's Family Room rate does not include breakfast; The Seaview Residency (8.3/250, beachfront, breakfast, Rs 8,316/2 nights) is the fallback if Atlanta's 2-full-bed room is unsuitable.",
+    "Vegetarian note: Bhuma's included breakfast is explicitly listed as Continental/Vegetarian; other properties' breakfast menus were not verifiable on Booking."
+   ]
+  },
+  "domains": {
+   "summary": "Live check (2026-08-19) for \"andamanvice\" — the name is AVAILABLE on every TLD checked (.xyz .site .fun .online .in .com; Porkbun showed all six registrable, Namecheap confirmed .com/.xyz/.site/.online/.in). All three sources price in USD only (no INR shown). First-year vs renewal (USD, first/renewal): PORKBUN — .site 1.96/28.84, .online 1.96/28.84, .xyz 2.04/12.98, .fun 2.57/31.41, .in 7.83/7.83 (at-cost, no sale), .com 11.08/11.08. NAMECHEAP — .site 0.98/31.98, .online 0.98/34.98, .xyz 2.00/19.48, .in 9.98 (retail 11.98), .com 11.28 first (retail 14.98; promo code NEWCOM679 gives 6.79 to new customers), .fun not offered in results. CLOUDFLARE (public at-cost table cfdomainpricing.com, since the official price list sits behind dashboard login) — .com 10.46/10.46, .xyz 12.30/11.20, .site 27.70/27.70, .fun 30.20/30.20, .online 27.70/27.70, .in NOT offered. Sub-$2 promos spotted: Namecheap .site/.online at $0.98 first year; Porkbun $1.54 first-year sales on .lat/.homes/.help/.quest/.mom/.lol and $1.96 on .site/.space/.online. VERDICT — renewal is the trap on .site/.online/.fun (renew $28-35/yr). Cheapest SANE option: andamanvice.in at Porkbun, $7.83 first year AND $7.83 renewal (~Rs 690/yr, flat at-cost; also thematically right for an Andaman trip site). Runner-up: andamanvice.xyz at Porkbun $2.04 first / $12.98 renew (3-yr cost ~$28 vs .in ~$23.50). Absolute cheapest year-1 if you'll drop it after a year: andamanvice.site or .online at Namecheap $0.98. GitHub Pages DNS (confirmed on docs.github.com): for a subdomain (e.g. www.andamanvice.in) just ONE CNAME record pointing to kkishore9891.github.io (no repo name in the target); for the apex domain, A records on @ to 185.199.108.153 / 185.199.109.153 / 185.199.110.153 / 185.199.111.153 (optionally AAAA 2606:50c0:8000::153, 8001::153, 8002::153, 8003::153, or a single ALIAS/ANAME to kkishore9891.github.io). Then set the custom domain in the repo's Pages settings (writes a CNAME file) and tick Enforce HTTPS; GitHub recommends verifying the domain first.",
+   "facts": [
+    {
+     "topic": "andamanvice availability",
+     "value": "Available (registrable) on all six TLDs checked: .xyz .site .fun .online .in .com",
+     "source_url": "https://porkbun.com/checkout/search?q=andamanvice",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Porkbun andamanvice.xyz",
+     "value": "$2.04 first year (1st-year sale, list $12.98); renews at $12.98/yr",
+     "source_url": "https://porkbun.com/checkout/search?q=andamanvice",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Porkbun andamanvice.site",
+     "value": "$1.96 first year (sale, list $28.84); renews at $28.84/yr",
+     "source_url": "https://porkbun.com/checkout/search?q=andamanvice.site",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Porkbun andamanvice.fun",
+     "value": "$2.57 first year (sale, list $31.41); renews at $31.41/yr",
+     "source_url": "https://porkbun.com/checkout/search?q=andamanvice.fun",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Porkbun andamanvice.online",
+     "value": "$1.96 first year (sale, list $28.84); renews at $28.84/yr",
+     "source_url": "https://porkbun.com/checkout/search?q=andamanvice",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Porkbun andamanvice.in",
+     "value": "$7.83/yr at-cost, renews at $7.83 — same price every year, no sale gimmick",
+     "source_url": "https://porkbun.com/checkout/search?q=andamanvice.in",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Porkbun andamanvice.com",
+     "value": "$11.08/yr at-cost, renews at $11.08",
+     "source_url": "https://porkbun.com/checkout/search?q=andamanvice",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Namecheap andamanvice.site",
+     "value": "$0.98 first year; renews at $31.98/yr",
+     "source_url": "https://www.namecheap.com/domains/registration/results/?domain=andamanvice",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Namecheap andamanvice.online",
+     "value": "$0.98 first year; renews at $34.98/yr",
+     "source_url": "https://www.namecheap.com/domains/registration/results/?domain=andamanvice",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Namecheap andamanvice.xyz",
+     "value": "$2.00 first year; renews at $19.48/yr",
+     "source_url": "https://www.namecheap.com/domains/registration/results/?domain=andamanvice",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Namecheap andamanvice.in",
+     "value": "$9.98 first year (retail $11.98/yr shown; renewal at retail tier)",
+     "source_url": "https://www.namecheap.com/domains/registration/results/?domain=andamanvice.in",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Namecheap andamanvice.com",
+     "value": "$11.28/yr (retail $14.98); promo code NEWCOM679 = $6.79 first year for new customers; .fun not offered in results",
+     "source_url": "https://www.namecheap.com/domains/registration/results/?domain=andamanvice",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Cloudflare Registrar pricing (public at-cost table)",
+     "value": ".com $10.46/$10.46, .xyz $12.30 reg / $11.20 renew, .site $27.70/$27.70, .fun $30.20/$30.20, .online $27.70/$27.70; .in NOT supported (no row). Official list is login-only; table by NameBeta, refreshed regularly",
+     "source_url": "https://cfdomainpricing.com/",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Sub-$2 promo TLDs",
+     "value": "Namecheap: .site and .online $0.98 first yr. Porkbun: $1.54 first-yr sales on .lat .homes .help .quest .mom .lol; $1.96 on .site .space .online (all renew at full list price $12.98-31.41)",
+     "source_url": "https://porkbun.com/checkout/search?q=andamanvice",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "GitHub Pages DNS — subdomain",
+     "value": "One CNAME record pointing the subdomain (e.g. www) to kkishore9891.github.io — must exclude the repository name; plus set the custom domain in repo Settings > Pages (creates CNAME file)",
+     "source_url": "https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "GitHub Pages DNS — apex domain",
+     "value": "A records on @ to 185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153; optional AAAA 2606:50c0:8000::153/8001::153/8002::153/8003::153; or a single ALIAS/ANAME to USERNAME.github.io. Enforce HTTPS available after ~24h; domain verification recommended against takeover",
+     "source_url": "https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site",
+     "as_of": "2026-08-19"
+    }
+   ],
+   "critical_claims": [
+    {
+     "claim": "Cheapest sane option: andamanvice.in at Porkbun — $7.83 first year AND $7.83/yr renewal (at-cost, flat; ~Rs 690/yr). Runner-up andamanvice.xyz at Porkbun $2.04 first / $12.98 renewal. The $0.98-$1.96 deals (.site/.online at Namecheap or Porkbun) renew at $28.84-$34.98/yr — the renewal trap.",
+     "source_url": "https://porkbun.com/checkout/search?q=andamanvice.in"
+    },
+    {
+     "claim": "GitHub Pages custom-domain DNS: subdomain needs only a CNAME record to kkishore9891.github.io; apex needs A records to 185.199.108.153/185.199.109.153/185.199.110.153/185.199.111.153 (or ALIAS/ANAME to kkishore9891.github.io, AAAA optional), plus setting the domain in repo Pages settings and enabling Enforce HTTPS.",
+     "source_url": "https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site"
+    }
+   ],
+   "warnings": [
+    "All three sources displayed prices in USD only — no INR shown on any page (approx Rs 690/yr for the $7.83 .in at ~88 INR/USD; verify at checkout).",
+    "Cloudflare's official TLD price list is only visible inside the logged-in dashboard; figures came from the public community mirror cfdomainpricing.com (by NameBeta) — treat as indicative. Cloudflare Registrar also requires the domain's DNS to be on Cloudflare, does not support .in at all, and does not sell first-year promos.",
+    "Namecheap .in renewal was shown only as 'Retail $11.98/yr' on the results card — the exact renewal could differ slightly; Namecheap's NEWCOM679 $6.79 .com promo is new-customers, non-premium only.",
+    "Namecheap search did not list a .fun option for this name; .fun availability/price there unverified (Porkbun shows it available at $2.57/$31.41).",
+    "Promo first-year prices (Porkbun 1st-Year Sale, Namecheap $0.98 deals) change frequently — re-check on the day of purchase."
+   ]
+  },
+  "ferry_gapfill": {
+   "summary": "All three ferry legs verified with live Sep-2026 availability searches (3 adults) on operator booking engines plus bookyourferry.com as cross-check. (A) THU 24 Sep Havelock→Neil has 6 live-bookable private sailings: Nautika 08:15→09:00 (Luxury ₹1,700), Green Ocean 1 09:15→10:30 (Economy ₹1,050 — cheapest), Nautika-Pro 09:25→10:10 (Luxury ₹1,700), Green Ocean 2 09:45→11:00 (Premium ₹1,450), Makruzz 10:00→11:00 (Premium ₹1,800), and Nautika-Pro 15:00→15:45 (Luxury ₹1,600) — so morning-heavy but an afternoon option exists, which shapes the itinerary. (B) FRI 25 Sep Neil→Port Blair has 6 live sailings: Nautika 09:30→10:45 (₹1,800), Nautika-Pro 10:35→11:50 (₹1,800), Green Ocean 1 11:00→12:45 (₹1,050), Green Ocean 2 11:15→13:00 (₹1,450), Makruzz 11:30→12:30 (₹1,850), Nautika-Pro 16:15→17:30 (₹1,800). For the ~13:00 Port Blair cutoff to make the 14:15 Chidiya Tapu departure: Makruzz 11:30→12:30 is the flagged best fit (30-min buffer); GO1 11:00→12:45 is the cheapest that still makes it (only 15-min buffer, riskier); both Nautika morning boats arrive with huge margin; GO2 arrives exactly 13:00 (no buffer — avoid); the 16:15 Pro fails. (C) WED 23 Sep: Makruzz 13:00→14:30 CONFIRMED live on makruzz.com (Premium ₹1,950, 156 seats). In the 11:30–14:00 window, Nautika-Pro 12:30→14:00 is ₹1,800 (₹150 cheaper, same 14:00 arrival) and Green Ocean 1 13:15→15:30 is far cheaper at ₹1,050 but lands ~1 h later. (D) Cheapest bookable class on every leg is Green Ocean 1 Economy at ₹1,050 base (+₹50 PMB + ₹300 fuel surcharge = ₹1,400 all-in pp); Makruzz/Nautika cheapest classes run ₹1,600–1,950 base, with Makruzz adding a ₹325/sector fuel surcharge (per its own site popup, effective 9 May 2026). (E) Luggage: Nautika FAQ = 15 kg pp, excess ₹100/kg, large bags to hold; Makruzz FAQ gives no kg figure (heavy/large bags must go to baggage hold; bookyourferry states 25 kg); Green Ocean = 20 kg pp / 3 cu ft, excess ₹10/kg, printed ticket mandatory (GO's own FAQ page is broken; figure from bookyourferry operator guide). Check-in leads: Makruzz 60 min, Nautika 45 min (boarding closes 15 min prior), Green Ocean check-in opens 60 min before sailing, arrive 45–60 min early, counter closes 15 min before departure. Caveat: these dates fall in monsoon season — live Sep schedules are thinner than the Oct–May peak timetables (e.g., Makruzz runs only the 10:00 HL→Neil sailing on 24 Sep, not its 3-departure peak pattern), and afternoon sailings carry higher weather-cancellation risk.",
+   "facts": [
+    {
+     "topic": "Leg A: Havelock→Neil, Thu 24 Sep 2026 — Makruzz (live availability, 3 adults)",
+     "value": "One sailing: 10:00→11:00 (1h, non-stop). Classes: Premium ₹1,800 (141 seats), Deluxe ₹2,100 (35), Royal ₹2,900 (sold out). Fuel surcharge ₹325/passenger/sector applies per site popup.",
+     "source_url": "https://www.makruzz.com/web/ferry/select_schedule/single_trip/2/3/2026-09-24/3/0",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Leg A: Havelock→Neil, Thu 24 Sep 2026 — Nautika (live availability)",
+     "value": "Three sailings: Nautika 08:15→09:00 (Luxury ₹1,700/163 seats, Royal ₹1,900/82); Nautika-Pro 09:25→10:10 (Luxury ₹1,700/101, Royal ₹1,900/78, Business ₹3,200/8); Nautika-Pro 15:00→15:45 (Luxury ₹1,600/186, Royal ₹1,800/88, Business ₹3,100/8). All 45-min crossings.",
+     "source_url": "https://gonautika.com/book-now",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Leg A: Havelock→Neil, Thu 24 Sep 2026 — Green Ocean (live availability, operator portal)",
+     "value": "Green Ocean 1: 09:15→10:30, Economy ₹1,050 (41 seats), Premium ₹1,450, Royal ₹1,700; Green Ocean 2: 09:45→11:00, Premium ₹1,450 (162), Royal ₹1,700 (28). All classes add ₹50 PMB + ₹300 fuel surcharge per adult.",
+     "source_url": "https://tickets.greenoceanseaways.com/portal",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Leg A cross-check — bookyourferry 2026 route guide (static, updated Mar 2026)",
+     "value": "Corroborates operators/times: Nautika Pro 9:25 AM + afternoon Nautika ~3:00 PM; Makruzz Gold 10:00 AM (peak adds 11:30 AM & 2:30 PM); Green Ocean mornings 9:15–9:45 AM; ITT Majestic 10:30 AM single circular. GO1 Economy listed Rs 1,350 (higher than operator-live ₹1,050). Monsoon (Jun–Sep) = 3–4 daily, morning-concentrated.",
+     "source_url": "https://www.bookyourferry.com/havelock-to-neil-island-ferry",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Leg B: Neil→Port Blair, Fri 25 Sep 2026 — Makruzz (live availability)",
+     "value": "One sailing: 11:30→12:30 (1h). Premium ₹1,850 (153 seats), Deluxe ₹2,250 (49), Royal ₹3,250 (sold out). Arrives PB 12:30 — FLAGGED as the sailing that best achieves the ~13:00 arrival for the 14:15 Chidiya Tapu departure (30-min buffer).",
+     "source_url": "https://www.makruzz.com/web/ferry/select_schedule/single_trip/3/1/2026-09-25/3/0",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Leg B: Neil→Port Blair, Fri 25 Sep 2026 — Nautika (live availability)",
+     "value": "Three sailings: Nautika 09:30→10:45 (Luxury ₹1,800/157, Royal ₹2,000/82); Nautika-Pro 10:35→11:50 (Luxury ₹1,800/106, Royal ₹2,000/76, Business ₹3,300/8); Nautika-Pro 16:15→17:30 (Luxury ₹1,800, Royal ₹2,000, Business ₹3,300). Both morning boats beat the 13:00 cutoff comfortably; 16:15 fails it.",
+     "source_url": "https://gonautika.com/book-now",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Leg B: Neil→Port Blair, Fri 25 Sep 2026 — Green Ocean (live availability)",
+     "value": "GO1: 11:00→12:45, Economy ₹1,050 (20 seats), Premium ₹1,450, Royal ₹1,700 — cheapest sailing that still makes the ~13:00 cutoff but with only a 15-min buffer. GO2: 11:15→13:00, Premium ₹1,450, Royal ₹1,700 — arrives exactly 13:00, no buffer. Add ₹50 PMB + ₹300 fuel per adult.",
+     "source_url": "https://tickets.greenoceanseaways.com/portal",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Leg C: Port Blair→Havelock, Wed 23 Sep 2026 — Makruzz 13:00 confirmation (live)",
+     "value": "CONFIRMED: 13:00→14:30 still sells (Premium ₹1,950/156 seats, Deluxe ₹2,540/53, Royal ₹3,500/4). Also 08:00→09:30 same fares. No 11:30–12:59 Makruzz departure.",
+     "source_url": "https://www.makruzz.com/web/ferry/select_schedule/single_trip/1/2/2026-09-23/3/0",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Leg C: cheaper 11:30–14:00 alternatives, Wed 23 Sep 2026 (bookyourferry live search, 3 adults)",
+     "value": "Nautika Pro 12:30→14:00 at ₹1,800 pp (₹150 cheaper than Makruzz 13:00, same 14:00-ish arrival); Green Ocean 1 13:15→15:30 at ₹1,050 pp (cheapest, but arrives 15:30 — ~1 h later). Nautika 11:00→12:30 ₹1,900 departs before feasible ~11:15 check-in. Full live PB→HL board 23 Sep: Nautika 06:15 ₹1,250, GO1 06:30 ₹1,050, GO2 07:00 ₹1,450, N-Pro 07:30 ₹1,900, Makruzz 08:00 ₹1,950, Nautika 11:00 ₹1,900, N-Pro 12:30 ₹1,800, Makruzz 13:00 ₹1,950, GO1 13:15 ₹1,050.",
+     "source_url": "https://www.bookyourferry.com/book",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "D) Cheapest bookable class per leg (cross-operator)",
+     "value": "PB→HL 23 Sep: Green Ocean 1 Economy ₹1,050 (06:30 or 13:15); cheapest inside 11:30–14:00 window = GO1 13:15 ₹1,050, cheapest fast option = Nautika-Pro 12:30 ₹1,800. HL→Neil 24 Sep: GO1 09:15 Economy ₹1,050. Neil→PB 25 Sep: GO1 11:00 Economy ₹1,050 (tight for 13:00) — safest-cheap for the cutoff is Makruzz 11:30 Premium ₹1,850. GO all-in adds ₹350/pp (PMB+fuel); Makruzz adds ₹325/sector fuel surcharge; GO1 Economy on bookyourferry's live PB→HL search also showed ₹1,050 (84 seats), Premium ₹1,250, Royal ₹1,450.",
+     "source_url": "https://tickets.greenoceanseaways.com/portal",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "E) Nautika luggage & check-in (operator FAQ)",
+     "value": "Luggage limit 15 kg per passenger; heavy/large bags not allowed in passenger area — stowed in baggage hold; excess charged ₹100/kg. Reach jetty 45 minutes before departure; boarding closes 15 minutes prior.",
+     "source_url": "https://gonautika.com/faqs",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "E) Makruzz luggage & check-in (operator FAQ)",
+     "value": "FAQ states luggage weight is restricted and heavy/large pieces go to the baggage hold (no kg figure published in FAQ). Reach jetty 1 hour before departure for verification/security/luggage checks. (bookyourferry guide states Makruzz allows 25 kg, excess ₹100/kg.)",
+     "source_url": "https://www.makruzz.com/web/cms/faq",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "E) Green Ocean luggage & check-in lead time",
+     "value": "Green Ocean's own FAQ page is broken (serves homepage), so per bookyourferry's Green Ocean guide: 20 kg per person (max 3 cu ft), excess ₹10/kg, one small handbag in cabin, bags X-rayed; check-in opens 60 min before sailing, arrive 45–60 min early (75–90 min peak), counter closes 15 min before departure, boarding starts 20 min before; PRINTED ticket mandatory (mobile tickets rejected).",
+     "source_url": "https://www.bookyourferry.com/green-ocean-ferry",
+     "as_of": "2026-08-19"
+    },
+    {
+     "topic": "Fuel surcharges 2026 (affects all budget math)",
+     "value": "Makruzz popup: fuel surcharge reduced by ₹200 to ₹325 per passenger per sector effective 9 May 2026. Green Ocean portal itemizes ₹300 fuel surcharge + ₹50 PMB per adult on every class. bookyourferry notes ₹300–325 surcharge on Makruzz/Nautika/Green Ocean (introduced Mar 2026); ITT Majestic removed its surcharge 25 May 2026. Nautika's listing did not itemize a surcharge at the results stage.",
+     "source_url": "https://www.makruzz.com/web/home",
+     "as_of": "2026-08-19"
+    }
+   ],
+   "critical_claims": [
+    {
+     "claim": "Makruzz operates exactly one Havelock→Neil sailing on Thu 24 Sep 2026: 10:00→11:00, cheapest class Premium ₹1,800/adult (141 seats available at search time for 3 adults).",
+     "source_url": "https://www.makruzz.com/web/ferry/select_schedule/single_trip/2/3/2026-09-24/3/0"
+    },
+    {
+     "claim": "Nautika operates three Havelock→Neil sailings on Thu 24 Sep 2026: 08:15→09:00 (Luxury ₹1,700), Nautika-Pro 09:25→10:10 (Luxury ₹1,700), and Nautika-Pro 15:00→15:45 (Luxury ₹1,600) — the only afternoon private sailing found on this leg.",
+     "source_url": "https://gonautika.com/book-now"
+    },
+    {
+     "claim": "Green Ocean operates two Havelock→Neil sailings on Thu 24 Sep 2026: GO1 09:15→10:30 (Economy ₹1,050 + ₹50 PMB + ₹300 fuel) and GO2 09:45→11:00 (Premium ₹1,450 + charges) — GO1 Economy is the cheapest class on the leg.",
+     "source_url": "https://tickets.greenoceanseaways.com/portal"
+    },
+    {
+     "claim": "Makruzz operates one Neil→Port Blair sailing on Fri 25 Sep 2026: 11:30→12:30, Premium ₹1,850 — arriving 12:30 it is the sailing that best achieves the ~13:00 Port Blair arrival needed for the 14:15 Chidiya Tapu departure.",
+     "source_url": "https://www.makruzz.com/web/ferry/select_schedule/single_trip/3/1/2026-09-25/3/0"
+    },
+    {
+     "claim": "Nautika operates three Neil→Port Blair sailings on Fri 25 Sep 2026: 09:30→10:45, Nautika-Pro 10:35→11:50 (both Luxury ₹1,800, well before the 13:00 cutoff) and Nautika-Pro 16:15→17:30 (misses it).",
+     "source_url": "https://gonautika.com/book-now"
+    },
+    {
+     "claim": "Green Ocean operates two Neil→Port Blair sailings on Fri 25 Sep 2026: GO1 11:00→12:45 (Economy ₹1,050 — cheapest sailing that still makes the ~13:00 cutoff, 15-min buffer) and GO2 11:15→13:00 (arrives exactly 13:00, no buffer).",
+     "source_url": "https://tickets.greenoceanseaways.com/portal"
+    },
+    {
+     "claim": "bookyourferry's 2026 Havelock–Neil route guide independently corroborates the leg-A operator lineup and times (Nautika Pro 9:25 AM, Makruzz 10:00 AM, Green Ocean 9:15–9:45 AM, afternoon Nautika ~3:00 PM) and its Neil→PB section corroborates leg B (Green Ocean 11:00/11:15 AM, Nautika Pro 10:35 AM, afternoon Nautika ~4:15 PM).",
+     "source_url": "https://www.bookyourferry.com/havelock-to-neil-island-ferry"
+    }
+   ],
+   "warnings": [
+    "Monsoon-season caveat: 24–25 Sep 2026 fall in the Jun–Sep monsoon window. Live schedules are thinner than Oct–May peak timetables (Makruzz shows only its 10:00 HL→Neil sailing on 24 Sep, not the 3-departure peak pattern), and afternoon sailings carry elevated weather-cancellation risk; weather cancellations are refunded in full in 7–10 days.",
+    "Quoted operator fares are base fares. Green Ocean itemizes +₹50 PMB +₹300 fuel surcharge per adult per sector (so GO1 Economy ≈ ₹1,400 all-in). Makruzz's site popup says a ₹325/passenger/sector fuel surcharge applies from 9 May 2026 but the search-results fare (₹1,800/₹1,850/₹1,950) did not itemize it — final checkout total may be higher. Nautika's results page showed no surcharge line; treat its all-in price as unverified past the listing stage.",
+    "GO2's timings differ between the live portal (HL→Neil 09:45 on 24 Sep; Neil→PB 11:15 on 25 Sep) and bookyourferry's static 2026 page (14:15 and 15:45) — vessel rotations change seasonally; trust the live portal numbers captured here but re-verify near booking.",
+    "Neil→PB timing risk for the 14:15 onward departure: GO2 (arr 13:00 sharp) and Nautika-Pro 16:15 miss the cutoff; GO1 (arr 12:45) leaves only 15 minutes and Green Ocean has a slower/older vessel with reported delays — Makruzz 11:30→12:30 or the two Nautika morning boats are the safe picks.",
+    "Makruzz Royal class shows 0 seats on both 24 Sep (HL→Neil) and 25 Sep (Neil→PB) already — inventory is moving; morning/cheapest classes on monsoon dates should be booked soon.",
+    "ITT Majestic also serves both legs (~10:30 HL→Neil, ~11:30–11:45 Neil→PB per bookyourferry static guide) but was not live-verified since it was outside the requested operator list.",
+    "Green Ocean requires PRINTED tickets (mobile tickets rejected) — relevant for a crew landing at 09:55 and connecting to a 13:00/13:15 ferry.",
+    "bookyourferry.com's multi-trip live search stepper froze mid-flow at the seat-map step; its leg-A/leg-B live boards could not be pulled from the aggregator, so corroboration for those two legs uses its static 2026 route guides instead (leg C was captured live from its search results before the freeze)."
+   ]
+  }
+ },
+ "photos": {
+  "images": [
+   {
+    "spot": "Radhanagar Beach",
+    "file_path": "/home/kkishore9891/Desktop/Andaman Trip/website/assets/radhanagar-beach.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Havelock_Island,_Radhanagar_Beach_before_sunset,_Andaman_Islands.jpg",
+    "license": "CC BY 4.0 (attribution: Vyacheslav Argenberg)",
+    "bytes": 62566
+   },
+   {
+    "spot": "Neil's Cove",
+    "file_path": "/home/kkishore9891/Desktop/Andaman Trip/website/assets/neils-cove.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Radhanagar.jpg",
+    "license": "CC BY-SA 4.0 (attribution: Tushar8765); caption: taken at Havelock near Neil's cove",
+    "bytes": 69855
+   },
+   {
+    "spot": "Kalapathar Beach",
+    "file_path": "/home/kkishore9891/Desktop/Andaman Trip/website/assets/kalapathar-beach.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Kalapathar_Beach.jpg",
+    "license": "CC BY-SA 4.0 (attribution: Arkadeep Meta)",
+    "bytes": 40456
+   },
+   {
+    "spot": "Elephant Beach",
+    "file_path": "/home/kkishore9891/Desktop/Andaman Trip/website/assets/elephant-beach.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Havelock_Island,_Elephant_Beach,_Andamans.jpg",
+    "license": "CC BY 4.0 (attribution: Vyacheslav Argenberg); shows Elephant Beach's signature dead-tree shoreline",
+    "bytes": 69172
+   },
+   {
+    "spot": "Govind Nagar / Vijaynagar Beach",
+    "file_path": "/home/kkishore9891/Desktop/Andaman Trip/website/assets/govind-nagar-beach.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Havelock_Island.jpg",
+    "license": "CC BY-SA 4.0 (attribution: Yoginipatil); caption: Vijaynagar Beach on Havelock, geotagged 12.022N 93.007E",
+    "bytes": 67199
+   },
+   {
+    "spot": "Bharatpur Beach",
+    "file_path": "/home/kkishore9891/Desktop/Andaman Trip/website/assets/bharatpur-beach.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Bharatpur_beach,Neil_island,Andaman_-_panoramio.jpg",
+    "license": "CC BY-SA 3.0 (attribution: Biswajit Majumdar)",
+    "bytes": 61502
+   },
+   {
+    "spot": "Natural Bridge (Howrah Bridge) Neil",
+    "file_path": "/home/kkishore9891/Desktop/Andaman Trip/website/assets/natural-bridge-neil.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Natural_Bridge,_Neil_Island,_Andaman,_India.JPG",
+    "license": "CC BY-SA 4.0 (attribution: Harvinder Chandigarh)",
+    "bytes": 69594
+   },
+   {
+    "spot": "Sitapur Beach",
+    "file_path": "/home/kkishore9891/Desktop/Andaman Trip/website/assets/sitapur-beach.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Sitapur_beach,Neil_island,Andaman_-_panoramio.jpg",
+    "license": "CC BY-SA 3.0 (attribution: Biswajit Majumdar)",
+    "bytes": 63015
+   },
+   {
+    "spot": "Laxmanpur Beach",
+    "file_path": "/home/kkishore9891/Desktop/Andaman Trip/website/assets/laxmanpur-beach.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Shaheed_Island,_Andamans,_Laxmanpur_Beach.jpg",
+    "license": "CC BY 4.0 (attribution: Vyacheslav Argenberg)",
+    "bytes": 67785
+   },
+   {
+    "spot": "Limestone Caves Baratang",
+    "file_path": "/home/kkishore9891/Desktop/Andaman Trip/website/assets/limestone-caves-baratang.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Limestone_Caves,_Baratang,_Andaman_01.jpg",
+    "license": "CC BY-SA 4.0 (attribution: Pratiti090)",
+    "bytes": 64199
+   },
+   {
+    "spot": "Munda Pahad / Chidiya Tapu",
+    "file_path": "/home/kkishore9891/Desktop/Andaman Trip/website/assets/chidiya-tapu.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Chidiya_tapu_sunset,_Andaman.jpg",
+    "license": "CC BY-SA 4.0 (attribution: Sudeshnas25); caption: sunset of Chidiya Tapu behind Munda Pahar hills",
+    "bytes": 53066
+   },
+   {
+    "spot": "Cellular Jail",
+    "file_path": "/home/kkishore9891/Desktop/Andaman Trip/website/assets/cellular-jail.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Front_View_of_Cellular_Jail,_Port_Blair.JPG",
+    "license": "CC BY 3.0 (attribution: Jomesh); same image used on the English Wikipedia Cellular Jail article",
+    "bytes": 69440
+   },
+   {
+    "spot": "Jolly Buoy / Red Skin Island",
+    "file_path": "/home/kkishore9891/Desktop/Andaman Trip/website/assets/jolly-buoy.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Jolly_Bouy_Island,_Mahatma_Gandhi_Marine_National_Park.jpg",
+    "license": "CC BY-SA 4.0 (attribution: Ritu Kulshrestha); Commons category: Beaches of Jolly Buoy Island",
+    "bytes": 69386
+   },
+   {
+    "spot": "Makruzz/Nautika-class ferry",
+    "file_path": "/home/kkishore9891/Desktop/Andaman Trip/website/assets/ferry-makruzz.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Havelock_jetty_Andaman_vrvbaan042k24_(8).jpg",
+    "license": "CC BY-SA 4.0 (attribution: Vinayaraj); genuinely the MV Makruzz docked at Havelock jetty - www.makruzz.com, MAKRUZZ dolphin logo and IMO 9188879 visible in the photo",
+    "bytes": 68129
+   },
+   {
+    "spot": "Bioluminescence kayaking (illustrative)",
+    "file_path": "/home/kkishore9891/Desktop/Andaman Trip/website/assets/bioluminescence.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Meeresleuchten_auf_Norderney_02.jpg",
+    "license": "CC BY 4.0 (attribution: Stephan Sprinz); HONEST-USE WARNING: this is Noctiluca scintillans bioluminescence at Norderney beach, GERMANY - not Andaman and not kayaking. Commons/Unsplash have no genuine Andaman bioluminescence-kayaking photo. Caption it as illustrative or drop it.",
+    "bytes": 56483
+   },
+   {
+    "spot": "Port Blair Marina Park / Flag Point",
+    "file_path": "/home/kkishore9891/Desktop/Andaman Trip/website/assets/marina-flag-point.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Marina_park-1-port_blair-andaman-India.jpg",
+    "license": "CC BY-SA 4.0 (attribution: Yercaud-elango); caption: Marina park in Port Blair",
+    "bytes": 65457
+   }
+  ],
+  "notes": "All 16 spots have a verified photo. Method: every image was found via Wikimedia Commons search pages opened in Chrome, its own File: page was opened to verify the description/caption matches the spot and to read the license, then the file was fetched with curl via commons.wikimedia.org/wiki/Special:FilePath/<name>?width=1000 into /home/kkishore9891/Desktop/Andaman Trip/website/assets/raw/ (16 raw copies kept there, ~960-1280px). Finals were compressed with ImageMagick convert (-auto-orient -resize 900x900> -strip, quality stepped down until <=70KB) into /home/kkishore9891/Desktop/Andaman Trip/website/assets/<slug>.jpg. Verified final sizes with stat/ls: all 16 are 40,456-69,855 bytes (<=70KB) at max width 900px; every final was also opened and visually confirmed to depict the right subject. CRITICAL CLAIMS: (1) The ferry photo is the actual MV Makruzz at Havelock jetty (branding and IMO number legible in the image), CC BY-SA 4.0 by Vinayaraj - source https://commons.wikimedia.org/wiki/File:Havelock_jetty_Andaman_vrvbaan042k24_(8).jpg. Commons has NO other Makruzz/Nautika photo and Unsplash's \"makruzz\" search returned unrelated portraits. (2) The bioluminescence image is honest CC BY 4.0 bioluminescence but from Norderney, Germany - the site MUST caption it as illustrative (no CC Andaman biolum photo exists) - source https://commons.wikimedia.org/wiki/File:Meeresleuchten_auf_Norderney_02.jpg. (3) All images are Creative Commons (CC BY 3.0/4.0 or CC BY-SA 3.0/4.0) from Commons file pages listed per image; BY-SA images require author attribution + license link on the website, so add a photo-credits section using the attribution names given per image. (4) No watermarked/agency photos were used; one Commons file (Natural Bridge) had a watermark REMOVED by Commons editors per its file history and is clean. Unrelated site files icon-192.png, icon-512.png, map_geo.json in assets/ were left untouched."
+ },
+ "map": {
+  "file_path": "/home/kkishore9891/Desktop/Andaman Trip/website/assets/map_geo.json",
+  "islands_found": [
+   "South Andaman main landmass incl. Port Blair, Chidiya Tapu, Wandoor, and the ATR road corridor up to Middle Strait (ring #0, 761 pts, lat 11.478-12.239)",
+   "Middle Andaman southern fragment, clipped flat at lat 12.45 for map-edge context north of Baratang (ring #1, 189 pts)",
+   "Baratang (ring #2, 203 pts, lat 12.064-12.313)",
+   "Rutland (ring #3, 118 pts, lat 11.346-11.517)",
+   "Havelock / Swaraj Dweep (ring #4, 72 pts, lon 92.925-93.054, lat 11.882-12.049)",
+   "Neil / Shaheed Dweep (ring #12, 25 pts, lon 93.013-93.071)",
+   "Jolly Buoy (ring #54, 5 pts, near 92.612E 11.508N)",
+   "Red Skin Island (ring #20, 20 pts, near 92.591E 11.555N — center confirmed via OSM named-way query)",
+   "Ross Island / Netaji Subhash Dweep (ring #44, 6 pts)",
+   "North Bay area coast (part of ring #0)",
+   "Long Island (ring #10, 30 pts)",
+   "John Lawrence, Henry Lawrence, Wilson, Inglis, Nicholson and ~65 other minor Ritchie's Archipelago / Labyrinth / MG Marine NP islets kept for visual context"
+  ],
+  "notes": "Source: OSM Overpass API (overpass-api.de), query [out:json][timeout:180]; way[\"natural\"=\"coastline\"](11.30,92.30,12.45,93.20); out geom; — succeeded first try (2.8 MB raw, cached at /tmp/overpass_coast.json), so the Natural Earth fallback was never needed. Pipeline: stitched 221 ways into 108 closed rings by exact endpoint matching (7-decimal keys) plus an end-to-start merge pass that unified the two leftover open chains into one Middle Andaman coastline; that open chain (both endpoints north of the bbox) was Sutherland-Hodgman-clipped to the query bbox, giving a closed fragment with a flat top at lat 12.45. Filter: keep rings with >=25 raw points OR area >= 1.5e-5 deg^2 (retains Jolly Buoy/Red Skin, drops bare rocks); simplified with Douglas-Peucker tol 0.0008 deg (ring split in halves so closure isn't distorted), coords rounded to 5 decimals. Output schema: {\"bbox\":[minLon,minLat,maxLon,maxLat],\"islands\":[{\"points\":[[lon,lat],...]}]}; bbox = [92.51365, 11.30127, 93.12326, 12.45]. Result: 79 rings, 2385 total points, 48257 bytes (47.1 KB — well under the 400 KB cap; headroom exists to lower TOL if crisper coasts are wanted). Validation: 13/13 landmark point-in-polygon checks passed (Port Blair, Chidiya Tapu, Wandoor, Rutland, Baratang, Middle Andaman fragment, Havelock, Neil, Jolly Buoy, Red Skin at OSM-confirmed 92.5908E/11.5553N, Ross Island, North Bay, Long Island), and a 78x42 ascii rasterization shows correct relative shapes/positions: large South Andaman west blob with Rutland below, Baratang above it under the flat-topped Middle Andaman strip, Havelock and Neil to the east, islet cluster near Wandoor. Rings are in OSM winding (counterclockwise around land, water on right); islands array is sorted largest-area first, so island[0] is always South Andaman. Note: OSM/Google now label the city Sri Vijaya Puram; geometry is unaffected."
+ },
+ "verification": [
+  {
+   "from": "flights",
+   "claim": "There is NO nonstop IXZ->MAA departing around 5 PM on Sunday 2026-09-27: the latest nonstop leaves at 13:35 (IndiGo 6E 2698, arr 15:45, ₹21,805), and the latest departure of any itinerary is 15:15 (1-stop). A Baratang day-trip returning ~3 PM cannot connect to any same-day flight home.",
+   "verdict": "confirmed",
+   "evidence_url": "https://www.cleartrip.com/flights/results?adults=1&childs=0&infants=0&class=Economy&depart_date=27/09/2026&from=IXZ&to=MAA&intl=n",
+   "notes": "Independent check on Cleartrip (different site from the original Google Flights source) for IXZ->MAA one-way 2026-09-27 returned 8 itineraries total. Nonstops: Akasa QP-1146 10:35->12:55 (₹9,206), IndiGo 6E-581 07:25->09:35 (₹22,154), IndiGo 6E-2698 13:35->15:45 (₹22,154). Latest nonstop departure is indeed 13:35 (6E-2698, arr 15:45), and the latest departure of ANY itinerary is 15:15 (Air India Express IX-2794, 1-stop). Cleartrip's departure-time filter buckets end at Afternoon (12 PM-4 PM) — no evening or night departures exist at all, so nothing leaves around 5 PM. The schedule claims are fully confirmed. Only minor discrepancy: 6E-2698 fare is ₹22,154 on Cleartrip vs ₹21,805 claimed from Google Flights — a normal OTA price spread (~₹350), not a refutation of the load-bearing schedule facts. Conclusion stands: a Baratang trip returning ~3 PM cannot connect to any same-day flight to Chennai on 2026-09-27."
+  },
+  {
+   "from": "flights",
+   "claim": "Cheapest outbound nonstop MAA->IXZ Wed 2026-09-23 is Akasa QP 1145, 07:40->09:55, ₹11,071 on Google / ₹10,721 per adult on Cleartrip's 3-adult search (~₹32,163 for 3)",
+   "verdict": "confirmed",
+   "evidence_url": "https://www.ixigo.com/search/result/flight?from=MAA&to=IXZ&date=23092026&adults=3&children=0&infants=0&class=e",
+   "notes": "Independent check on ixigo (different OTA from the original Cleartrip source), 3-adult economy search for Wed 23 Sep 2026: cheapest result is Akasa Air QP1145, 07:40 MAA -> 09:55 IXZ, 2h15m non-stop, at exactly ₹10,721 per adult (before an optional 'Extra ₹945 Off' coupon), matching the claimed Cleartrip per-adult fare to the rupee; 3 adults ≈ ₹32,163. ixigo's Stops filter shows Non-Stop from ₹10,721 and only 1 Akasa flight, with Air India from ₹27,713, Air India Express from ₹16,037 (1-stop), IndiGo from ₹21,221 — so QP1145 is indeed the cheapest nonstop, not just the cheapest Akasa. Flight number, times, route, date, and per-adult price all corroborated. The Google-specific figure of ₹11,071 was not separately re-checked (a Google Flights tab for this route/date exists in the browser from the earlier agent), but it is consistent (slightly higher than OTA fare, as typical); the load-bearing parts of the claim are confirmed. Facts observed live on 2026-08-19; fares can change until booked.",
+   "corrected_value": ""
+  },
+  {
+   "from": "ferries",
+   "claim": "Earliest Sunday 2026-09-27 Neil->Port Blair sailing: Nautika, departs Shaheed Dweep (Neil) 09:30, arrives Port Blair 10:45 (1h15m), Luxury Rs.1800 / Royal Rs.2000 per adult, ample seats (140 Luxury / 74 Royal)",
+   "verdict": "confirmed",
+   "evidence_url": "https://gonautika.com/book-now (live search Shaheed Dweep -> Port Blair, 27 Sep 2026, re-run 2026-08-19)",
+   "notes": "Re-ran the live gonautika.com booking search (Shaheed Dweep -> Port Blair, 27 Sep 2026): first result matched digit-for-digit — Nautika 09:30 -> 10:45 (01:15 hrs), Luxury Rs 1,800.00 (Available - 140), Royal Rs 2,000.00 (Available - 74); later Nautika-Pro sailings at 10:35 and 16:15 (Luxury 1800 / Royal 2000 / Business 3300). Route total banner: Royal - 240, Luxury - 457 seats for the day. Caveats: (1) 'earliest' is verified only among Nautika-operated ferries — gonautika lists only its own fleet; other operators (Makruzz, Green Ocean, ITT Majestic) were not live-checked and could have earlier Neil->PB departures. (2) An independent static page, https://go2andaman.com/book-ferry/nautika-ferry-neil-island-to-port-blair/, says 'earliest ferry of Nautika starts at 10:45 am from Neil Island' — this contradicts 09:30 but is undated/stale marketing copy (it also carries outdated fleet/route text), so the date-specific live search takes precedence. (3) experienceandamans.com ferry pages were unreachable (404/hang) during verification; gonautika.com/book-now itself renders a blank widget — the working live search is at gonautika.com/home. Seat counts are live inventory and will drift over time.",
+   "corrected_value": ""
+  },
+  {
+   "from": "ferries",
+   "claim": "Wed 2026-09-23 morning Port Blair->Havelock options: Nautika 06:15->07:45 (Luxury Rs.1250 / Royal Rs.1500); Nautika-Pro 07:30->09:00 (Rs.1900/2100/3400); Makruzz 08:00->09:30 (Premium Rs.1950 / Deluxe Rs.2540); Green Ocean 1 06:30->08:45 (Economy Rs.1050 + Rs.350 charges = Rs.1400 all-in)",
+   "verdict": "confirmed",
+   "evidence_url": "https://www.bookyourferry.com/book",
+   "notes": "Independent check via bookyourferry.com (aggregator, different site from original makruzz.com source): live search Port Blair->Havelock, 1 adult, September 23 2026. Results matched the claim on every checkable point: Nautika 6:15 AM -> 7:45 AM with class panel showing Luxury Rs.1,250 (157 seats left) and Royal Rs.1,500 (82 seats left); Nautika Pro 7:30 AM -> 9:00 AM from Rs.1,900; Makruzz 8:00 AM -> 9:30 AM from Rs.1,950; Green Ocean 1 06:30 AM -> 08:45 AM from Rs.1,050. Not independently checkable on this site (but not contradicted): Nautika Pro upper classes Rs.2,100/3,400, Makruzz Deluxe Rs.2,540, and Green Ocean's Rs.350 port/PSF surcharge making Rs.1,400 all-in (aggregator shows Rs.1,050 base, consistent with the claim's base fare). Aggregator also listed an additional morning option the claim omitted: Green Ocean 2 07:00 -> 09:00 at Rs.1,450, plus later sailings (Nautika 11:00, Nautika Pro 12:30, Makruzz 13:00, Green Ocean 1 13:15). Seat availability was live (seats-left counts shown), so sailings are open for booking on that date. Critical claims verified: (1) Nautika 06:15 dep with Rs.1250/1500 fares - bookyourferry.com/book; (2) Makruzz 08:00 dep Rs.1950 - same URL; (3) Green Ocean 1 06:30 dep Rs.1050 base - same URL; (4) Nautika Pro 07:30 dep Rs.1900 - same URL."
+  },
+  {
+   "from": "weather_astro",
+   "claim": "Full moon is exactly on Sat 26 Sep 2026 at 22:19 IST in Port Blair; trip nights are 90-100% illuminated, and moonset (02:04 -> 05:24 across Sep 23-27) leaves the only real 3-5 AM dark window on the night of Sep 23->24 - bioluminescence kayaking is effectively ruled out on Sep 25-27 nights",
+   "verdict": "confirmed",
+   "evidence_url": "https://www.moongiant.com/moonphases/september/2026/ ; https://www.mooncalc.org/#/11.6234,92.7265,10/2026.09.23/03:00/1/3 (and same URL with dates 2026.09.24, 2026.09.27)",
+   "corrected_value": "Precise independent values: full moon Sat 26 Sep 2026 16:48 UTC = 22:18 pm IST (Moongiant; other SERP sources say 16:49 UTC = 22:19 IST - 1-min rounding). MoonCalc Port Blair moonsets (IST): Sep 23 02:03:58, Sep 24 02:53, Sep 27 05:23:28. Note the 02:04 moonset falls on the night of Sep 22->23 (pre-arrival); the FIRST actual trip night (Sep 23->24) has moonset 02:53, so its dark window is ~02:55-05:30 AM, not starting at 02:04.",
+   "notes": "Independently verified in live Chrome via two non-timeanddate sources. (1) Moongiant (moongiant.com/moonphases/september/2026): Full Moon Sep 26 2026, 16:48 UTC, listed for India as 10:18pm IST Sep 26 - matches claimed Sat 26 Sep ~22:19 IST within 1 minute (Google SERP also showed farmersalmanac.com, hermetikon, moonagetoday all giving 16:49 UTC). (2) MoonCalc.org set to Port Blair coords 11.6234,92.7265, TZ Asia/Kolkata UTC+5.5: moonset 02:03:58 IST on Sep 23 and 05:23:28 IST on Sep 27 - exactly the claimed 02:04 -> 05:24 progression; Sep 24 moonset 02:53 IST; illumination 85.1% early Sep 23, 91.5% early Sep 24, 99.8% (Full) Sep 27. Minor caveats that do NOT overturn the conclusion: (a) illumination on the arrival night is ~85-90%, slightly under the claimed 90-100% band; (b) the 02:04 moonset belongs to the pre-trip night Sep 22->23; the first trip night Sep 23->24 has moonset 02:53, still giving a genuine ~3-5:30 AM dark window, and night Sep 24->25 (moonset ~03:45) retains only a marginal ~1.5h window. Core itinerary conclusion stands: near-full moon all trip, bioluminescence effectively ruled out on Sep 25-27 nights, best (only real) dark window is late night Sep 23->24. critical_claims: [1] Full moon Sep 26 2026 16:48 UTC / 22:18-22:19 IST - source https://www.moongiant.com/moonphases/september/2026/ ; [2] Port Blair moonset 02:03:58 IST Sep 23 and 05:23:28 IST Sep 27, ~100% illumination by Sep 27 - source https://www.mooncalc.org/#/11.6234,92.7265,10/2026.09.27/05:00/1/3 ; [3] First trip night (Sep 23->24) moonset 02:53 IST, illumination ~85-91% - source https://www.mooncalc.org/#/11.6234,92.7265,10/2026.09.24/03:00/1/3"
+  },
+  {
+   "from": "weather_astro",
+   "claim": "Sep 26 2026 Port Blair tides (IST): High 03:04 (2.16 m), Low 09:19 (0.29 m), High 15:25 (2.21 m), Low 21:36 (0.34 m) - mid-morning deep low fits Neil Natural Bridge; mid-afternoon high fits Bharatpur watersports",
+   "verdict": "confirmed",
+   "evidence_url": "https://www.tidetime.org/asia/india/port-blair-calendar-sep.htm",
+   "notes": "Re-read of the cited primary source (allowed route) matches the claim exactly for 26 Sat: High 3:04 am (2.16 m), Low 9:19 am (0.29 m), High 3:25 pm (2.21 m), Low 9:36 pm (0.34 m) — all 8 numbers identical, and the values fit the month's neap-to-spring progression on the same page (Sep 25: low 0.40 m, Sep 27: low 0.22 m), so no transcription/hallucination error. Caveat: a fully independent cross-site check could not be completed within the action budget — tide-forecast.com returned 404 on both URL formats tried, tides4fishing.com 404'd twice, tides.today only publishes ~7-day forecasts (cannot reach Sep 26), and tideschart.com's September page was behind a Cloudflare bot-verification wall which I did not bypass per rules. A Google AI-overview snippet (google.com/search?q=port+blair+tide+table+september+2026...) corroborated the same tidetime.org early-September values pattern but is not an independent computation. Tide predictions from different harmonic providers typically differ by a few minutes / a few cm, so treat times as +/-15 min for planning. critical_claims: (1) Sep 26 2026 Port Blair low tide 09:19 IST at 0.29 m — supports morning Neil Natural Bridge visit — source https://www.tidetime.org/asia/india/port-blair-calendar-sep.htm; (2) Sep 26 2026 high tide 15:25 IST at 2.21 m — supports afternoon Bharatpur watersports — same source."
+  },
+  {
+   "from": "redskin",
+   "claim": "For 23-26 Sep 2026 Red Skin Island is the open MGMNP island and Jolly Buoy is closed; Red Skin season is 16 May - 14 Nov, during which Jolly Buoy remains closed under the rotational conservation plan.",
+   "verdict": "confirmed",
+   "evidence_url": "https://go2andaman.com/visit/red-skin-island/",
+   "notes": "Independent check via Go2Andaman's Red Skin Island 2026 guide (opened and read in browser): 'While Jolly Buoy Island is open from November to May, Red Skin Island takes over from June to November' and lists Red Skin best time to visit as June-November — so on 23-26 Sep 2026 Red Skin is open and Jolly Buoy closed, matching the claim's load-bearing conclusion. A second independent corroboration seen in a Google search result snippet (google.com/search?q=%22Red+Skin%22+island+2026+%2216+May%22+OR+%2214+November%22+open) from a Tripadvisor review of Jolly Buoy Island: 'Jolly Bouy opens from 15 November to 14 May and Red skin 15May to 14 November' — essentially the same window as the claimed 16 May-14 Nov. Caveat: sources disagree by days-to-weeks on the exact boundary dates (Go2Andaman says June-Nov; Tripadvisor snippet says 15 May-14 Nov; original jollybuoyisland.com says 16 May-14 Nov), so the precise '16 May' start date is only single-sourced; but 23-26 Sep falls deep inside every version of the window, so the itinerary-relevant fact (Red Skin open, Jolly Buoy closed in late Sep 2026) is confirmed by multiple independent sources. No source found stating an official Forest Department notification for the 2026-specific rotation; boundary dates could shift slightly by annual notification."
+  },
+  {
+   "from": "redskin",
+   "claim": "Jolly Buoy and Red Skin islands (Mahatma Gandhi Marine National Park) open alternately for ~6 months each; in September only Red Skin is visitable and Jolly Buoy is closed.",
+   "verdict": "confirmed",
+   "evidence_url": "https://andamanferryticket.com/red-skin-island-boat-booking/",
+   "notes": "Independent confirmation via a different site/route than the original andamanbliss source. (1) andamanferryticket.com (MSME-listed Port Blair agency, Red Skin boat-booking page) states Red Skin is \"the seasonal sibling of Jollybuoy Island, opening only between April and September\" and \"alternating with Jollybuoy Island\" — so during the 23-27 Sep 2026 trip Red Skin is open and Jolly Buoy is closed. (2) Google search result snippet from experienceandamans.com (https://www.google.com/search?q=Jolly+Buoy+island+Red+Skin+island+open+alternately+six+months+September+site%3Agov.in+OR+tourism): \"Jolly Bouy island is not opened in September. Instead, Red Skin Island opens\" (destination page itself 404s; this fact is from the Google search result snippet). (3) go2andaman.com/book/trip-to-jolly-buoy/ independently confirms the alternation (\"Jolly Buoy and Red Skin Island, open up for tourists alternatively, every 6 months\") without naming months. Caveat: exact boundary months vary across sources (original claim says Jolly Buoy Nov-Apr; andamanferryticket says Red Skin Apr-Sep, implying Jolly Buoy Oct-Mar; one unopened blueandamantour snippet even claimed Jolly Buoy Jun-Sep), so treat the precise switchover month as fuzzy — but every source that addresses September except that one stray snippet agrees September = Red Skin open / Jolly Buoy closed. No gov.in page settling it was found. Recommend on-ground reconfirmation with the Wandoor forest-department counter when booking permits (permit needed 1-2 days ahead, ~INR 50/Indian).",
+   "corrected_value": ""
+  },
+  {
+   "from": "activities",
+   "claim": "Elephant Beach in late September: no formal closure; open all days with free entry; speedboats Rs.1,000 pp rising to Rs.1,200 pp from Sept 2026, 9 AM-1 PM slots; monsoon rough-sea suspensions and last-minute water-sports cancellations; 2-2.5 km trek is an all-weather (muddy) fallback",
+   "verdict": "refuted",
+   "corrected_value": "Speedboat fare revised to Rs.1,250 per person (round trip, snorkeling dip included) effective 1 September 2026 — not Rs.1,200; previous fare was Rs.1,000. Departures run roughly 8:30 AM-2:00 PM (not just 9 AM-1 PM). The ~2 km trek is NOT an all-weather fallback: the trail closes in monsoon and the final stretch can be covered by tide. Free beach entry, no formal closure, and rough-sea boat suspensions (decided each morning, sometimes several days in a row) are correct.",
+   "evidence_url": "https://www.bookyourferry.com/elephant-beach-boat-ride",
+   "notes": "Verified in live Chrome, independent of the original trytrabby source. Primary refuting page: BookYourFerry (https://www.bookyourferry.com/elephant-beach-boat-ride) states Rs.1,250/person 2026 rate, free entry, 8:30 AM-2 PM departures, monsoon rough-day suspensions with full refund/date move, and explicitly 'the trek closes in monsoon and depends on tides' / 'Trail closes in monsoon; tide can cover the final stretch'. Fare revision independently corroborated by Google search result snippets (https://www.google.com/search?q=%22elephant+beach%22+revised+boat+fare+1250+OR+1200+2026): Andaman Discover blog 'Elephant Beach Boat Fare Revised from 1 September 2026' (Rs.1,250 pp, previous Rs.1,000), Facebook posts by Andaman Discover Private Limited and Andaman Make My Journey (Rs.1,250 pp from Sept 1 2026; children under 3 free), Instagram andamantraveldmc — all ~6 days old (mid-Aug 2026); the andamandiscover.com article page itself 404'd on direct slug guess, so its figure is cited from the google search result snippets. Critical claims: (1) Elephant Beach speedboat = Rs.1,250 pp from 1 Sept 2026 — source https://www.bookyourferry.com/elephant-beach-boat-ride; (2) trek fallback unreliable in monsoon/late Sept (trail closes in monsoon, tide-dependent) — same URL; (3) boats sea-condition dependent, suspended on rough days decided each morning — same URL. Impact for 24-26 Sept 2026 itinerary: budget Rs.1,250 x 3 = Rs.3,750 for the boat, and do not rely on the trek as a guaranteed bad-weather fallback."
+  },
+  {
+   "from": "activities",
+   "claim": "Baratang day trip requires a ~4:00-4:30 AM hotel pickup from Port Blair to catch the ~6:00 AM Jirkatang convoy; caves visited ~9-10 AM via Rs.900 pp speedboat from the jetty, back at Port Blair hotel ~3:30-4:00 PM (10-12 hrs door-to-door); private tour Rs.8,400 for up to 2 pax (Go2Andaman) or Rs.4,500 cab + Rs.900 pp boat (Andaman Ocean); tour runs all days including September",
+   "verdict": "confirmed",
+   "evidence_url": "https://www.andamanocean.in/baratang-limestone-cave-trip/",
+   "notes": "Independent check via Andaman Ocean Tours (andamanocean.in/baratang-limestone-cave-trip/, read live): 4:00 AM hotel pickup, 6:00 AM Jarawa reserve/Jirkatang crossing, limestone caves 9:00-10:00 AM by shared speedboat, hotel drop 3:30 PM, taxi Rs.4,500 round trip, speedboat Rs.900 per person, trip duration 10-12 hours - every figure matches the claim. Re-read of primary source (go2andaman.com/book/baratang-tour/) live: pickup 04:30 AM, Jirkatang Check Post 06:00 AM, speedboat to caves 09:00 AM, hotel drop ~03:30-04:00 PM, price Rs.8,400 (discounted from Rs.9,000) for up to 2 pax with boat tickets and permits included, and explicit statement 'This tour is available on all days.' Third corroboration from Google search snippets: andamanliveholidays.com (dated 30 Jul 2026) recommends 03:30 AM pickup for the 06:00 AM Jirkatang convoy; eandamantourism.com gives 03:30-04:00 pickup and Rs.800-1,500 shared boat. Only minor variance found: a 2019 TripAdvisor review cites 6:30 AM as the first convoy - outdated and not enough to refute; current operator pages consistently say ~6:00 AM. Note the go2andaman 'all days' statement is generic (no September-specific schedule shown anywhere), but no source contradicted September operation. Vegetarian food note: lunch is excluded on both operators' packages (arranged on request). Browser actions used: ~7, all in own tab (closed).",
+   "corrected_value": ""
+  },
+  {
+   "from": "hotels",
+   "claim": "Silver Sand Beach Resort Havelock (Vijay Nagar Beach) available Sep 23-25 2026 for 3 adults at Rs 32,507 total (2 nights, taxes incl., breakfast included, free cancellation, Booking score 8.4); 1-night alt Sep 25-26 Rs 16,253",
+   "verdict": "confirmed",
+   "evidence_url": "https://www.booking.com/searchresults.html?ss=Havelock+Island&checkin=2026-09-23&checkout=2026-09-25&group_adults=3&no_rooms=1&selected_currency=INR&nflt=beachfront%3D1",
+   "notes": "Live re-run of the primary Booking.com search (2026-08-19) matched every element of the claim exactly: Silver Sand Beach Resort Havelock, score 8.4 Very Good (136 reviews), room 'Andaman Villa with Garden View', breakfast included, free cancellation, 2 nights / 3 adults Rs 32,507 'Includes taxes and fees'. The 1-night alt was also confirmed live at Rs 16,253 for checkin=2026-09-25&checkout=2026-09-26 (same URL pattern with those dates). Independent-route attempts: Google Hotels property panel (google.com/travel/search?q=Silver+Sand+Beach+Resort+Havelock) confirmed the Vijay Nagar Beach address ('No. 5, Vijay Nagar Beach Swaraj Dweep, Havelock Island') and 8.4-equivalent 4.3-star profile, but ignored URL date/currency params (showed Nov dates in SEK), so prices were not comparable; Agoda dropped all URL params and redirected to its homepage, so no second-site price check was completed. Caveats for the orchestrator: (1) the Rs 32,507 rate is for a 1-queen-bed villa listed for 3 adults - bedding may be tight for 3; (2) 'best beachfront option' is subjective - the same beachfront-filtered search showed cheaper 8+ scored options (e.g. Havelock Farms Resort Rs 10,443 member price, Yerrata Resorts Rs 19,305) and Sea Shell Resort & Spa at Rs 30,798 member price; (3) prices are live OTA quotes and can change before booking."
+  },
+  {
+   "from": "rentals_fuel",
+   "claim": "Havelock scooter rental costs ₹500-600 per 24h in late September 2026: Go2Andaman lists flat ₹600/bike with off-season ₹500/day valid until 30 Sep, including jetty/hotel delivery and 2 helmets, fuel excluded",
+   "verdict": "confirmed",
+   "evidence_url": "https://www.gohavelock.com/bike-scooty-rentals",
+   "notes": "Primary source re-read live (https://go2andaman.com/book/bike-on-rent-havelock/) matches the claim verbatim: 'Flat Price ₹600/bike', 'Note: ₹500/day is the current off-season price, valid until 30 September' (from 1 Oct ₹500 collected initially with seasonal difference collected later), 24h slot 10am-10am, hotel/jetty delivery and pickup included, 2 helmets included, cost of fuel and travel insurance excluded, booking required 48h in advance. Independent check #1: gohavelock.com/bike-scooty-rentals (evidence_url) — Havelock scooty/bike rentals 'STARTING PRICE ₹600/day', free delivery/pickup to resort or jetty, complimentary helmets, fuel not included — consistent with the top of the claimed range. Independent check #2: https://www.andamanbikerental.com/ (marketplace covering Port Blair/Havelock/Neil hubs) — Honda Activa ₹500/day, TVS Jupiter ₹550/day, Suzuki Access 125 ₹600/day, 2 free helmets included — matches the ₹500-600/day scooter range. No source found contradicting the range. Caveat: none of the independent pages date-stamps the late-Sept-2026 price specifically; the 'valid until 30 Sep' off-season detail rests on the Go2Andaman page alone, and their trip return date 27 Sep 2026 falls within that window. All facts read from live pages in Chrome; no WebFetch/WebSearch used."
+  }
+ ]
+}
