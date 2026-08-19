@@ -221,7 +221,7 @@
     if (pl && pl.photo) {
       const img = document.createElement("img");
       img.className = "photo"; img.src = pl.photo; img.alt = pl.name;
-      img.loading = "lazy"; b.appendChild(img);
+      b.appendChild(img);
     }
     for (const txt of [e.details, pl && pl.blurb]) {
       if (!txt) continue;
