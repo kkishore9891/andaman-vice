@@ -54,6 +54,8 @@ P = [  # id, name, island, lat, lng, kind, photo, blurb
   "'Walking Path to Elephant Beach' on the Radhanagar road (SH4)."),
  ("hl-pump", "IndianOil Havelock (Radhanagar road)", "havelock", 12.008853, 92.97162, "pump", None,
   "The island's working petrol pump (opens 06:00) — conveniently ON the Radhanagar road (SH4)."),
+ ("kayak-point", "Kayak Night Launch (Beach No.5 area)", "havelock", 12.026, 93.003, "other", "assets/bioluminescence.jpg",
+  "Andaman Bliss night-kayak meet point (exact spot confirmed on booking, ₹3,500 pp). On THIS trip the only true-dark window is 03:00–04:47 on the night of Sep 23→24 (moonset 02:54) — glow will be mild near full moon; sunrise from the kayak is the guaranteed part. (Position approximate.)"),
  ("neil-jetty", "Shaheed Dweep Jetty", "neil", 11.8371487, 93.0311195, "jetty", None,
   "Neil Island ferry terminal. Everything on the island is within 6 km."),
  ("bharatpur", "Bharatpur Beach", "neil", 11.8361324, 93.034197, "beach", "assets/bharatpur-beach.jpg",
@@ -125,6 +127,12 @@ R = [
  ("ride-govind-radhanagar", "govind-nagar", "radhanagar", "scooter", 9.6, 22,
   [[12.0306216, 93.000842], [12.038, 92.985], [12.0087171, 92.9635124], [11.9844552, 92.9508454]],
   "Back past the jetty, then SH4 southwest — the island's prettiest ride."),
+ ("ride-govind-elephant", "govind-nagar", "elephant-trek", "scooter", 6.4, 14,
+  [[12.0306216, 93.000842], [12.038, 92.985], [12.0087171, 92.9635124]],
+  "SH4 toward Radhanagar; the trailhead ('Walking Path to Elephant Beach') is on the right."),
+ ("walk-elephant", "elephant-trek", "elephant-beach", "trek", 1.7, 35,
+  [[12.0087171, 92.9635124], [12.010, 92.952], [12.0081083, 92.9416061]],
+  "Forest trek past giant buttress-root trees; a stream crossing near the end — wear clogs/water shoes, not sneakers."),
  ("ride-govind-kalapathar", "govind-nagar", "kalapathar", "scooter", 3.7, 8,
   [[12.0306216, 93.000842], [12.0006111, 93.0070952]], "SH5 south along the coast."),
  ("walk-radhanagar-cove", "radhanagar", "neils-cove", "walk", 1.2, 20,
@@ -186,6 +194,18 @@ def main():
         "Photo-ID for ferry check-ins and Forest permits",
         "Cash ₹8–10k (pumps, parking, stalls and small eateries are cash-first; island ATMs can't be trusted)"]],
     ]
+    # timestamped deep-links into the user's reference video (Sakre Cubes, watched live)
+    YT = "https://www.youtube.com/watch?v=NhLrrne5jXM&t="
+    yt_links = {
+        "radhanagar": 211, "neils-cove": 240, "elephant-beach": 271, "elephant-trek": 271,
+        "kalapathar": 376, "govind-nagar": 442, "kayak-point": 532, "bharatpur": 671,
+        "natural-bridge": 723, "laxmanpur": 770, "sitapur": 784, "cellular-jail": 821,
+        "marina-park": 897, "red-skin": 930, "wandoor": 930, "limestone-caves": 1144,
+        "nilambur": 1144, "chidiya-tapu": 1218, "munda-pahad": 1218,
+        "havelock-jetty": 95, "phoenix-bay": 95, "neil-jetty": 627,
+    }
+    for pid, t in yt_links.items():
+        c.execute("UPDATE places SET source_url=? WHERE id=?", (f"{YT}{t}s", pid))
     c.execute("INSERT OR REPLACE INTO meta VALUES ('kit', ?)", (json.dumps(kit, ensure_ascii=False),))
     c.execute("INSERT OR REPLACE INTO meta VALUES ('petrol_inr_l', ?)", (str(PETROL),))
     c.execute("INSERT OR REPLACE INTO meta VALUES ('scooter_kmpl', ?)", (str(KMPL),))

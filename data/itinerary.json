@@ -1,127 +1,900 @@
 {
-"name": "final",
-"philosophy": "Havelock-first shape. It is forced by three verified facts: (1) the last Sunday nonstop leaves 13:35 and the budget makes the Rs 9,206 Akasa 10:35 the only sane return, so Sunday must be empty; (2) Baratang needs a full Port-Blair day ending ~15:00, and Munda Pahad's trek gate shuts at 15:00, so both anchor to Fri/Sat; (3) Bharatpur watersports need the 14:32 Thursday high tide and Natural Bridge needs the 08:51 Friday low. Sleep averages 7.3 h/night (min 5.75). Cost ~Rs 40,400/person - the user's worst-case line - with listed swaps down to ~Rs 37k.",
-"sleep_hours": [6.75, 7.0, 5.75, 9.75],
-"total_cost_inr": 121139,
-"risks": [
- "September is peak monsoon (388 mm avg): every ferry/boat can be weather-delayed - all bookings chosen refundable where possible (Green Ocean/Makruzz tickets are not; budget assumes they sail)",
- "Ferry prices/times captured live 2026-08-19; rebook-check all four sailings when booking",
- "Bhuma homestay is cash-only and non-refundable (Rs 5,000 damage deposit)",
- "Baratang cab price is an operator-range estimate (Rs 6,500-9,000 private for 3) - lock by phone a day ahead",
- "Bioluminescence released by user: full moon Sep 26 kills it; optional Thu 03:30 attempt only if operator confirms (unlikely in full-moon week)"
-],
-"days": [
-{"day": 1, "date": "2026-09-23", "title": "WHEELS UP → SWARAJ DWEEP",
- "theme": "Chennai dawn flight, island-hop by catamaran, first sunset at Asia's best beach.",
- "events": [
- {"start":"03:45","end":"04:15","title":"Wake up & roll out (Chennai)","category":"prep","place":"maa","cost_inr":0,"notes":"Bags packed night before. Keep each check-in bag <=15 kg (Akasa free allowance; Nautika ferry also caps 15 kg).","tips":"Carry printed ferry tickets + DL photocopies for scooter rentals."},
- {"start":"04:15","end":"05:15","title":"Ride to Chennai Airport T1","category":"travel","place":"maa","cost_inr":0,"notes":"Own cab/Uber (~Rs 700, outside trip budget)."},
- {"start":"05:15","end":"06:40","title":"Check-in + security (Akasa)","category":"prep","place":"maa","cost_inr":0,"notes":"Akasa bag-drop closes 06:55; buffer built in."},
- {"start":"06:40","end":"07:40","title":"Gate & boarding","category":"prep","place":"maa","cost_inr":0},
- {"start":"07:40","end":"09:55","title":"FLY — Akasa QP 1145 to Port Blair","category":"travel","route":"fly-maa-ixz","cost_inr":32163,"cost_note":"3 x Rs 10,721 (Cleartrip 3-adult, 19 Aug)","notes":"Boeing 737 MAX 8, 2h15m over the Bay of Bengal. Window seats left side for the island approach."},
- {"start":"09:55","end":"10:40","title":"Land IXZ — bags & exit","category":"prep","place":"ixz","cost_inr":0},
- {"start":"10:40","end":"10:55","title":"Cab toward town (Junglighat)","category":"travel","route":"cab-ixz-aberdeen","cost_inr":350,"notes":"Icy Spicy is en route between airport and jetty."},
- {"start":"10:55","end":"11:40","title":"Veg lunch @ Icy Spicy","category":"meal","place":"icy-spicy","cost_inr":900,"cost_note":"Ghee dosa Rs 149, mains Rs 250-350","notes":"Port Blair's top pure-veg (4.2, 3.5k reviews)."},
- {"start":"11:40","end":"11:55","title":"Auto to Phoenix Bay Jetty","category":"travel","route":"cab-ixz-phoenix","cost_inr":150},
- {"start":"11:55","end":"13:15","title":"Green Ocean check-in","category":"prep","place":"phoenix-bay","cost_inr":0,"notes":"Counter opens 60 min before sailing; PRINTED ticket mandatory on Green Ocean.","tips":"Print tickets in Chennai or at a shop near the jetty."},
- {"start":"13:15","end":"15:30","title":"SAIL — Green Ocean 1 to Havelock","category":"travel","route":"ferry-pb-havelock","cost_inr":4200,"cost_note":"3 x Rs 1,400 all-in (Rs 1,050 + Rs 50 PMB + Rs 300 fuel)","notes":"Cheapest verified sailing of the day. Motion-sickness tab 30 min before if the sea is up."},
- {"start":"15:30","end":"16:00","title":"Scooters at the jetty → ride out","category":"travel","route":"ride-jetty-govind","cost_inr":1000,"cost_note":"2 x Rs 500/24h (Go2Andaman off-season rate, valid to 30 Sep)","notes":"Booked >=48h ahead with DL copies; helmets included, fuel not.","tips":"Photograph the scooters at handover."},
- {"start":"16:00","end":"16:20","title":"Check in @ Bhuma Homestay","category":"prep","place":"hotel-bhuma","cost_inr":6920,"cost_note":"Family room for 3, breakfast incl., CASH only","notes":"9.5/10-rated homestay 50 m from Govind Nagar Beach. Rs 5,000 refundable damage deposit."},
- {"start":"16:20","end":"16:50","title":"Ride to Radhanagar (fuel en route)","category":"travel","route":"ride-govind-radhanagar","cost_inr":230,"cost_note":"~2 L petrol Rs 200 (@Rs 88.66/L) + parking Rs 30","notes":"IndianOil pump sits ON the Radhanagar road — top both tanks.","tips":"Scooter parking stand at the beach entrance, Rs 20-30."},
- {"start":"16:50","end":"17:10","title":"Neil's Cove walk","category":"scenic","place":"neils-cove","route":"walk-radhanagar-cove","cost_inr":0,"notes":"1.2 km along the sand to the quiet lagoon — the crowd stays behind."},
- {"start":"17:10","end":"17:45","title":"SUNSET @ Radhanagar Beach","category":"scenic","place":"radhanagar","cost_inr":0,"notes":"Sunset 17:14 (verified). Blue-Flag beach, lifeguards on duty."},
- {"start":"17:45","end":"18:20","title":"Night ride back to Govind Nagar","category":"travel","route":"ride-govind-radhanagar","cost_inr":0,"notes":"Dark by 17:36 — easy pace, high beam off for oncoming."},
- {"start":"18:20","end":"19:45","title":"Dinner @ Something Different (beachside)","category":"meal","place":"something-different","cost_inr":1600,"cost_note":"Veg mains Rs 195-345","notes":"4.4-star beachside cafe, 400 m from Bhuma."},
- {"start":"19:45","end":"21:30","title":"Market stroll + wind down","category":"buffer","place":"hotel-bhuma","cost_inr":0,"tips":"Optional: call Andaman Bliss about a 03:30 biolum kayak (Rs 3,500 pp). Full-moon week = almost certainly no; Kala Pathar sunrise is the plan."},
- {"start":"21:30","end":"24:00","title":"Sleep","category":"sleep","place":"hotel-bhuma","cost_inr":0}
-]},
-{"day": 2, "date": "2026-09-24", "title": "SUNRISE ROCKS → SHAHEED DWEEP",
- "theme": "Kala Pathar dawn, hop to Neil, high-tide watersports, Laxmanpur sunset.",
- "events": [
- {"start":"00:00","end":"04:15","title":"Sleep","category":"sleep","place":"hotel-bhuma","cost_inr":0},
- {"start":"04:15","end":"04:35","title":"Up in the dark","category":"prep","place":"hotel-bhuma","cost_inr":0,"tips":"Headlamp on, warm layer — pre-dawn ride."},
- {"start":"04:35","end":"04:45","title":"Night ride to Kala Pathar","category":"travel","route":"ride-govind-kalapathar","cost_inr":0},
- {"start":"04:45","end":"06:00","title":"SUNRISE @ Kala Pathar Beach","category":"scenic","place":"kalapathar","cost_inr":0,"notes":"Sunrise 05:09. Fallen trees + black rocks — the best-photo hour of the trip. Free roadside parking."},
- {"start":"06:00","end":"06:15","title":"Ride back","category":"travel","route":"ride-govind-kalapathar","cost_inr":0},
- {"start":"06:15","end":"07:15","title":"Shower + pack","category":"prep","place":"hotel-bhuma","cost_inr":0},
- {"start":"07:15","end":"07:50","title":"Breakfast @ Bhuma (incl.)","category":"meal","place":"hotel-bhuma","cost_inr":0,"notes":"Ask for it early the night before."},
- {"start":"07:50","end":"08:15","title":"Ride to jetty, return scooters","category":"travel","route":"ride-jetty-govind","cost_inr":0,"notes":"Jetty drop-off included in rental."},
- {"start":"08:15","end":"09:15","title":"Green Ocean check-in","category":"prep","place":"havelock-jetty","cost_inr":0,"notes":"Printed tickets again; counter closes 15 min before."},
- {"start":"09:15","end":"10:30","title":"SAIL — Green Ocean 1 to Neil","category":"travel","route":"ferry-havelock-neil","cost_inr":4200,"cost_note":"3 x Rs 1,400 all-in","notes":"Cheapest of six verified Thursday sailings."},
- {"start":"10:30","end":"11:00","title":"Neil scooters @ jetty","category":"travel","place":"neil-jetty","cost_inr":1000,"cost_note":"2 x ~Rs 500/day","notes":"Neil On Wheels, Neil Kendra (5.0-rated) — ph +91 94742 68205. Book ahead by phone."},
- {"start":"11:00","end":"11:20","title":"Ride to Blue Lagoon (Sitapur side)","category":"travel","route":"ride-neiljetty-sitapur","cost_inr":0},
- {"start":"11:20","end":"11:45","title":"Check in @ Blue Lagoon Resort","category":"prep","place":"hotel-bluelagoon","cost_inr":3968,"cost_note":"King w/ balcony + breakfast, free cancellation","notes":"8.6/10; the sunrise beach is a 3-minute ride away."},
- {"start":"11:45","end":"12:45","title":"Veg thali lunch @ Pure Veg Restaurant","category":"meal","place":"pure-veg-neil","cost_inr":720,"cost_note":"3 x Rs 240 thali","notes":"Neil's best-rated veg (4.8)."},
- {"start":"12:45","end":"13:45","title":"Rest / swim window","category":"buffer","place":"hotel-bluelagoon","cost_inr":0},
- {"start":"13:45","end":"14:00","title":"Ride to Bharatpur Beach","category":"travel","route":"ride-neiljetty-bharatpur","cost_inr":0},
- {"start":"14:00","end":"15:00","title":"SNORKEL the coral garden (high tide)","category":"activity","place":"bharatpur","cost_inr":3000,"cost_note":"~Rs 1,000 pp guided boat snorkel, on-spot","notes":"High tide 14:32 (verified) = the lagoon at its best. DiveIndia's Neil branch is 50 m away if anyone upgrades to a Rs ~4,500 intro dive.","tips":"Book at the beach counter, never prepay online."},
- {"start":"15:00","end":"15:40","title":"JET SKI runs","category":"activity","place":"bharatpur","cost_inr":2400,"cost_note":"3 x Rs 800 (10-15 min each; verified range 800-1,200)","notes":"Glassy high-tide water — the Goa comparison ends here."},
- {"start":"15:40","end":"16:20","title":"Swim + beach time","category":"buffer","place":"bharatpur","cost_inr":0},
- {"start":"16:20","end":"16:40","title":"Refuel @ Neil Kendra pump","category":"travel","place":"neil-pump","cost_inr":150,"cost_note":"~1.7 L across both scooters","notes":"Neil's ONLY pump, practical hours ~07:00-18:00 — this is the last call."},
- {"start":"16:40","end":"17:00","title":"Ride to Laxmanpur Beach 1","category":"travel","route":"ride-neiljetty-laxmanpur","cost_inr":0},
- {"start":"17:00","end":"17:50","title":"SUNSET @ Laxmanpur","category":"scenic","place":"laxmanpur","cost_inr":0,"notes":"Sunset 17:14. Dead-coral shore — watch, don't swim."},
- {"start":"17:50","end":"19:00","title":"Dinner @ Pure Veg Restaurant","category":"meal","place":"pure-veg-neil","cost_inr":800},
- {"start":"19:00","end":"19:20","title":"Ride home","category":"travel","route":"ride-neiljetty-sitapur","cost_inr":0},
- {"start":"19:20","end":"21:30","title":"Wind down","category":"buffer","place":"hotel-bluelagoon","cost_inr":0},
- {"start":"21:30","end":"24:00","title":"Sleep","category":"sleep","place":"hotel-bluelagoon","cost_inr":0}
-]},
-{"day": 3, "date": "2026-09-25", "title": "PINK DAWN → CLIFF RUN",
- "theme": "Sitapur sunrise, Natural Bridge at a 0.4 m low tide, ferry west, Munda Pahad trek, Chidiya Tapu sunset.",
- "events": [
- {"start":"00:00","end":"04:30","title":"Sleep","category":"sleep","place":"hotel-bluelagoon","cost_inr":0},
- {"start":"04:30","end":"04:42","title":"Up before the sun","category":"prep","place":"hotel-bluelagoon","cost_inr":0},
- {"start":"04:42","end":"04:47","title":"3-minute ride to Sitapur","category":"travel","route":"ride-neiljetty-sitapur","cost_inr":0},
- {"start":"04:47","end":"06:15","title":"SUNRISE @ Sitapur Beach + cave & shipwreck","category":"scenic","place":"sitapur","cost_inr":0,"notes":"Sunrise 05:09, pink-tinged sand. Walk ~500 m along the shore for the photo-frame cave and the shipwreck."},
- {"start":"06:15","end":"06:25","title":"Ride back","category":"travel","route":"ride-neiljetty-sitapur","cost_inr":0},
- {"start":"06:25","end":"07:30","title":"Breakfast (incl.) + pack + checkout","category":"prep","place":"hotel-bluelagoon","cost_inr":0},
- {"start":"07:30","end":"07:50","title":"Ride to Natural Bridge","category":"travel","route":"ride-neiljetty-bridge","cost_inr":0},
- {"start":"07:50","end":"09:35","title":"NATURAL BRIDGE at low tide","category":"activity","place":"natural-bridge","cost_inr":0,"notes":"Low tide 08:51 at 0.40 m (verified) — the full walk to and past the coral arch is open. Tide pools hold trapped fish.","tips":"Grip water-shoes mandatory; dead coral is slippery. Optional guide Rs 500/group."},
- {"start":"09:35","end":"10:00","title":"Jetty: return scooters + refuel-as-agreed","category":"travel","place":"neil-jetty","cost_inr":100},
- {"start":"10:00","end":"11:30","title":"Makruzz check-in (60 min) + buffer","category":"prep","place":"neil-jetty","cost_inr":0},
- {"start":"11:30","end":"12:30","title":"SAIL — Makruzz to Port Blair","category":"travel","route":"ferry-neil-pb","cost_inr":6525,"cost_note":"3 x (Rs 1,850 + Rs 325 fuel surcharge)","notes":"Chosen over the Rs 1,400 Green Ocean (arrives 12:45) for a 65-min margin on the Munda Pahad gate — the day's hard deadline."},
- {"start":"12:30","end":"13:10","title":"PB scooters near jetty + snack grab","category":"travel","place":"phoenix-bay","cost_inr":1200,"cost_note":"2 x ~Rs 600/day (Eternal Andamans; Rs 500 refundable deposit each)","notes":"Eternal currently rents at Port Blair only — confirmed live. Grab bananas/snacks; lunch is light today."},
- {"start":"13:10","end":"14:00","title":"Ride south to Chidiya Tapu","category":"travel","route":"ride-pb-chidiyatapu","cost_inr":250,"cost_note":"~2.7 L fuel for the 55 km round trip","notes":"24 km, 44 min on NH4 — South Andaman's prettiest road."},
- {"start":"14:00","end":"14:10","title":"On to Munda Pahad Beach","category":"travel","route":"ride-chidiyatapu-munda","cost_inr":0},
- {"start":"14:10","end":"15:55","title":"MUNDA PAHAD TREK","category":"activity","place":"munda-pahad","cost_inr":0,"notes":"Gate entry BEFORE 15:00 (we arrive 14:10 — 50-min margin). 1.3 km, ~30 min up; clifftop view that earns the Bali comparisons. Area clears by 16:00.","tips":"Trainers, water, mosquito repellent."},
- {"start":"15:55","end":"16:40","title":"Munda Pahad beach + ride back to Chidiya Tapu","category":"scenic","place":"chidiya-tapu","cost_inr":0},
- {"start":"16:40","end":"17:40","title":"SUNSET @ Chidiya Tapu","category":"scenic","place":"chidiya-tapu","cost_inr":0,"notes":"The best sunset stage in South Andaman (sunset 17:14). NO swimming — saltwater crocodiles are spotted here.","tips":"Parking area is a short walk from the beach through tall trees."},
- {"start":"17:40","end":"18:40","title":"Night ride back to Port Blair","category":"travel","route":"ride-pb-chidiyatapu","cost_inr":0},
- {"start":"18:40","end":"19:00","title":"Check in @ Hotel Atlanta (sea view)","category":"prep","place":"hotel-atlanta","cost_inr":8845,"cost_note":"Family room, 2 nights, free cancellation","notes":"Location 9.3/10, opposite the Marina Park waterfront."},
- {"start":"19:00","end":"20:15","title":"Dinner @ Annapurna Cafeteria","category":"meal","place":"annapurna","cost_inr":900,"notes":"Veg South-Indian stalwart, 200 m from the hotel."},
- {"start":"20:15","end":"21:45","title":"Prep for Baratang + wind down","category":"buffer","place":"hotel-atlanta","cost_inr":0,"tips":"Reconfirm the 04:00 cab, pack water/snacks/ID, keep cameras packed away for the convoy."},
- {"start":"21:45","end":"24:00","title":"Sleep","category":"sleep","place":"hotel-atlanta","cost_inr":0}
-]},
-{"day": 4, "date": "2026-09-26", "title": "JARAWA CONVOY → LIMESTONE",
- "theme": "The 4 AM mission: convoy through the reserve, mangrove speedboat, million-year cave — then an earned nap and the Marina at dusk.",
- "events": [
- {"start":"00:00","end":"03:30","title":"Sleep","category":"sleep","place":"hotel-atlanta","cost_inr":0},
- {"start":"03:30","end":"04:00","title":"Up & out","category":"prep","place":"hotel-atlanta","cost_inr":0},
- {"start":"04:00","end":"06:00","title":"Cab to Jirkatang Check Post","category":"travel","route":"cab-pb-jirkatang","cost_inr":7500,"cost_note":"Private AC cab day-tour for 3 (verified range Rs 6,500-9,000 — lock price when booking)","notes":"47 km in the dark to make the 06:00 first convoy. Two-wheelers are banned past the check post."},
- {"start":"06:00","end":"07:30","title":"CONVOY through the Jarawa reserve","category":"travel","route":"cab-jirkatang-middlestrait","cost_inr":0,"notes":"48 km escorted. Absolutely no photography, no stopping, windows up if asked.","tips":"You may glimpse Jarawa people — cameras stay down, it is a criminal offence."},
- {"start":"07:30","end":"08:00","title":"Vehicle ferry across Middle Strait","category":"travel","route":"boat-middlestrait-nilambur","cost_inr":0,"notes":"Fee included in cab tour."},
- {"start":"08:00","end":"08:45","title":"Speedboat into the mangroves","category":"travel","route":"boat-nilambur-caves","cost_inr":2700,"cost_note":"3 x Rs 900 round trip","notes":"Creek channels narrow to a tunnel of roots — half the show is the ride."},
- {"start":"08:45","end":"10:15","title":"LIMESTONE CAVES","category":"activity","place":"limestone-caves","cost_inr":0,"notes":"1.2 km walk from the drop point, then ~35 min inside the sculpted chambers.","tips":"Headlamp beats phone torch; floor is wet and uneven."},
- {"start":"10:15","end":"11:00","title":"Boat back to Nilambur","category":"travel","route":"boat-nilambur-caves","cost_inr":0},
- {"start":"11:00","end":"11:40","title":"Early lunch @ Baratang jetty","category":"meal","place":"nilambur","cost_inr":450,"notes":"Simple veg meals only — eat now, the convoy won't stop."},
- {"start":"11:40","end":"12:10","title":"Ferry back across the strait","category":"travel","route":"boat-middlestrait-nilambur","cost_inr":0},
- {"start":"12:10","end":"13:40","title":"Return convoy (12:30 slot)","category":"travel","route":"cab-jirkatang-middlestrait","cost_inr":0,"notes":"Convoy times south vary by source (12:00/12:30) — the driver knows the slot."},
- {"start":"13:40","end":"15:00","title":"Drive back to Port Blair","category":"travel","route":"cab-pb-jirkatang","cost_inr":0},
- {"start":"15:00","end":"16:30","title":"Earned nap","category":"sleep","place":"hotel-atlanta","cost_inr":0,"notes":"Protects the sleep average after the 03:30 start."},
- {"start":"16:30","end":"17:45","title":"Marina Park + Flag Point at dusk","category":"scenic","place":"marina-park","cost_inr":0,"notes":"Where the first tricolour rose in 1943; the waterfront is 5 min from the hotel."},
- {"start":"17:45","end":"19:15","title":"Optional: Cellular Jail light & sound","category":"buffer","place":"cellular-jail","cost_inr":0,"notes":"Optional (~Rs 300 pp, not in budget); skip freely if tired — nothing downstream depends on it."},
- {"start":"19:15","end":"20:30","title":"Farewell dinner @ Icy Spicy","category":"meal","place":"icy-spicy","cost_inr":1000},
- {"start":"20:30","end":"21:00","title":"Pack for the flight","category":"prep","place":"hotel-atlanta","cost_inr":0},
- {"start":"21:00","end":"24:00","title":"Sleep","category":"sleep","place":"hotel-atlanta","cost_inr":0}
-]},
-{"day": 5, "date": "2026-09-27", "title": "EXFIL",
- "theme": "Slow morning, 10:35 wheels-up, Chennai by lunch.",
- "events": [
- {"start":"00:00","end":"06:45","title":"Sleep (long one — 9¾ h)","category":"sleep","place":"hotel-atlanta","cost_inr":0},
- {"start":"06:45","end":"07:45","title":"Breakfast + pack out","category":"prep","place":"hotel-atlanta","cost_inr":300,"notes":"Atlanta room rate has no breakfast — cafe next door or Annapurna (opens 07:00)."},
- {"start":"07:45","end":"08:05","title":"Cab to the airport","category":"travel","route":"cab-ixz-aberdeen","cost_inr":300,"notes":"2.7 km against traffic — 10 min."},
- {"start":"08:05","end":"09:50","title":"Check-in + security","category":"prep","place":"ixz","cost_inr":0,"notes":"Akasa counter closes 09:50 — we're in with 1h45 to spare."},
- {"start":"09:50","end":"10:35","title":"Gate","category":"prep","place":"ixz","cost_inr":0},
- {"start":"10:35","end":"12:55","title":"FLY — Akasa QP 1146 to Chennai","category":"travel","route":"fly-ixz-maa","cost_inr":27618,"cost_note":"3 x Rs 9,206 (Cleartrip 3-adult, 19 Aug)","notes":"2h20m home. Right-side windows for a last look at the archipelago."},
- {"start":"12:55","end":"13:20","title":"Land MAA — trip complete","category":"prep","place":"maa","cost_inr":0,"notes":"Every minute since Wednesday 03:45 is on this map."}
-]}
-]}
+ "name": "final",
+ "philosophy": "Havelock-first shape. It is forced by three verified facts: (1) the last Sunday nonstop leaves 13:35 and the budget makes the Rs 9,206 Akasa 10:35 the only sane return, so Sunday must be empty; (2) Baratang needs a full Port-Blair day ending ~15:00, and Munda Pahad's trek gate shuts at 15:00, so both anchor to Fri/Sat; (3) Bharatpur watersports need the 14:32 Thursday high tide and Natural Bridge needs the 08:51 Friday low. Sleep averages 7.3 h/night (min 5.75). Cost ~Rs 40,400/person - the user's worst-case line - with listed swaps down to ~Rs 37k. v2 additions on user request: the 03:30 Thu kayak is scheduled in the trip's only true-dark window (moonset 02:54, dawn 04:47) as a confirm-by-phone attempt, and the Elephant Beach forest trek + coral-garden snorkel fills Thursday morning, pushing the Neil ferry to the verified 15:00 Nautika and the jet ski to 16:35 (beach open to 18:00).",
+ "sleep_hours": [
+  5.5,
+  7.0,
+  5.75,
+  9.75
+ ],
+ "total_cost_inr": 133319,
+ "risks": [
+  "September is peak monsoon (388 mm avg): every ferry/boat can be weather-delayed - all bookings chosen refundable where possible (Green Ocean/Makruzz tickets are not; budget assumes they sail)",
+  "Ferry prices/times captured live 2026-08-19; rebook-check all four sailings when booking",
+  "Bhuma homestay is cash-only and non-refundable (Rs 5,000 damage deposit)",
+  "Baratang cab price is an operator-range estimate (Rs 6,500-9,000 private for 3) - lock by phone a day ahead",
+  "Night kayak (Thu 03:30) MUST be phone-confirmed Wed evening - operators often refuse full-moon week; glow will be mild, sunrise-from-kayak is the sure part. Fallback: sleep to 04:15 + Kala Pathar sunrise",
+  "Elephant Beach trek is officially open but monsoon-muddy; the stream crossing needs water shoes. Fallback: Rs 1,250 pp speedboat from the jetty",
+  "v2 cost is ~Rs 44,300/person - Rs 4,300 over the worst-case line. Trims if wanted: drop kayak (-Rs 3,500), Ananya hotel swap in PB (-Rs 940), Green Ocean Friday ferry (-Rs 775)"
+ ],
+ "days": [
+  {
+   "day": 1,
+   "date": "2026-09-23",
+   "title": "WHEELS UP → SWARAJ DWEEP",
+   "theme": "Chennai dawn flight, island-hop by catamaran, first sunset at Asia's best beach.",
+   "events": [
+    {
+     "start": "03:45",
+     "end": "04:15",
+     "title": "Wake up & roll out (Chennai)",
+     "category": "prep",
+     "place": "maa",
+     "cost_inr": 0,
+     "notes": "Bags packed night before. Keep each check-in bag <=15 kg (Akasa free allowance; Nautika ferry also caps 15 kg).",
+     "tips": "Carry printed ferry tickets + DL photocopies for scooter rentals."
+    },
+    {
+     "start": "04:15",
+     "end": "05:15",
+     "title": "Ride to Chennai Airport T1",
+     "category": "travel",
+     "place": "maa",
+     "cost_inr": 0,
+     "notes": "Own cab/Uber (~Rs 700, outside trip budget)."
+    },
+    {
+     "start": "05:15",
+     "end": "06:40",
+     "title": "Check-in + security (Akasa)",
+     "category": "prep",
+     "place": "maa",
+     "cost_inr": 0,
+     "notes": "Akasa bag-drop closes 06:55; buffer built in."
+    },
+    {
+     "start": "06:40",
+     "end": "07:40",
+     "title": "Gate & boarding",
+     "category": "prep",
+     "place": "maa",
+     "cost_inr": 0
+    },
+    {
+     "start": "07:40",
+     "end": "09:55",
+     "title": "FLY — Akasa QP 1145 to Port Blair",
+     "category": "travel",
+     "route": "fly-maa-ixz",
+     "cost_inr": 32163,
+     "cost_note": "3 x Rs 10,721 (Cleartrip 3-adult, 19 Aug)",
+     "notes": "Boeing 737 MAX 8, 2h15m over the Bay of Bengal. Window seats left side for the island approach."
+    },
+    {
+     "start": "09:55",
+     "end": "10:40",
+     "title": "Land IXZ — bags & exit",
+     "category": "prep",
+     "place": "ixz",
+     "cost_inr": 0
+    },
+    {
+     "start": "10:40",
+     "end": "10:55",
+     "title": "Cab toward town (Junglighat)",
+     "category": "travel",
+     "route": "cab-ixz-aberdeen",
+     "cost_inr": 350,
+     "notes": "Icy Spicy is en route between airport and jetty."
+    },
+    {
+     "start": "10:55",
+     "end": "11:40",
+     "title": "Veg lunch @ Icy Spicy",
+     "category": "meal",
+     "place": "icy-spicy",
+     "cost_inr": 900,
+     "cost_note": "Ghee dosa Rs 149, mains Rs 250-350",
+     "notes": "Port Blair's top pure-veg (4.2, 3.5k reviews)."
+    },
+    {
+     "start": "11:40",
+     "end": "11:55",
+     "title": "Auto to Phoenix Bay Jetty",
+     "category": "travel",
+     "route": "cab-ixz-phoenix",
+     "cost_inr": 150
+    },
+    {
+     "start": "11:55",
+     "end": "13:15",
+     "title": "Green Ocean check-in",
+     "category": "prep",
+     "place": "phoenix-bay",
+     "cost_inr": 0,
+     "notes": "Counter opens 60 min before sailing; PRINTED ticket mandatory on Green Ocean.",
+     "tips": "Print tickets in Chennai or at a shop near the jetty."
+    },
+    {
+     "start": "13:15",
+     "end": "15:30",
+     "title": "SAIL — Green Ocean 1 to Havelock",
+     "category": "travel",
+     "route": "ferry-pb-havelock",
+     "cost_inr": 4200,
+     "cost_note": "3 x Rs 1,400 all-in (Rs 1,050 + Rs 50 PMB + Rs 300 fuel)",
+     "notes": "Cheapest verified sailing of the day. Motion-sickness tab 30 min before if the sea is up."
+    },
+    {
+     "start": "15:30",
+     "end": "16:00",
+     "title": "Scooters at the jetty → ride out",
+     "category": "travel",
+     "route": "ride-jetty-govind",
+     "cost_inr": 1000,
+     "cost_note": "2 x Rs 500/24h (Go2Andaman off-season rate, valid to 30 Sep)",
+     "notes": "Booked >=48h ahead with DL copies; helmets included, fuel not.",
+     "tips": "Photograph the scooters at handover."
+    },
+    {
+     "start": "16:00",
+     "end": "16:20",
+     "title": "Check in @ Bhuma Homestay",
+     "category": "prep",
+     "place": "hotel-bhuma",
+     "cost_inr": 6920,
+     "cost_note": "Family room for 3, breakfast incl., CASH only",
+     "notes": "9.5/10-rated homestay 50 m from Govind Nagar Beach. Rs 5,000 refundable damage deposit."
+    },
+    {
+     "start": "16:20",
+     "end": "16:50",
+     "title": "Ride to Radhanagar (fuel en route)",
+     "category": "travel",
+     "route": "ride-govind-radhanagar",
+     "cost_inr": 230,
+     "cost_note": "~2 L petrol Rs 200 (@Rs 88.66/L) + parking Rs 30",
+     "notes": "IndianOil pump sits ON the Radhanagar road — top both tanks.",
+     "tips": "Scooter parking stand at the beach entrance, Rs 20-30."
+    },
+    {
+     "start": "16:50",
+     "end": "17:10",
+     "title": "Neil's Cove walk",
+     "category": "scenic",
+     "place": "neils-cove",
+     "route": "walk-radhanagar-cove",
+     "cost_inr": 0,
+     "notes": "1.2 km along the sand to the quiet lagoon — the crowd stays behind."
+    },
+    {
+     "start": "17:10",
+     "end": "17:45",
+     "title": "SUNSET @ Radhanagar Beach",
+     "category": "scenic",
+     "place": "radhanagar",
+     "cost_inr": 0,
+     "notes": "Sunset 17:14 (verified). Blue-Flag beach, lifeguards on duty."
+    },
+    {
+     "start": "17:45",
+     "end": "18:20",
+     "title": "Night ride back to Govind Nagar",
+     "category": "travel",
+     "route": "ride-govind-radhanagar",
+     "cost_inr": 0,
+     "notes": "Dark by 17:36 — easy pace, high beam off for oncoming."
+    },
+    {
+     "start": "18:20",
+     "end": "19:45",
+     "title": "Dinner @ Something Different (beachside)",
+     "category": "meal",
+     "place": "something-different",
+     "cost_inr": 1600,
+     "cost_note": "Veg mains Rs 195-345",
+     "notes": "4.4-star beachside cafe, 400 m from Bhuma."
+    },
+    {
+     "start": "19:45",
+     "end": "21:30",
+     "title": "Market stroll + wind down",
+     "category": "buffer",
+     "place": "hotel-bhuma",
+     "cost_inr": 0,
+     "tips": "CALL Andaman Bliss TONIGHT to confirm the 03:30 kayak (full-moon week needs explicit operator sign-off). If refused: sleep till 04:15 and do Kala Pathar at sunrise instead."
+    },
+    {
+     "start": "21:30",
+     "end": "24:00",
+     "title": "Sleep",
+     "category": "sleep",
+     "place": "hotel-bhuma",
+     "cost_inr": 0
+    }
+   ]
+  },
+  {
+   "day": 2,
+   "date": "2026-09-24",
+   "title": "GLOW RUN → SHAHEED DWEEP",
+   "theme": "Night kayak in the only dark window, Kala Pathar driftwood dawn, the giant-tree trek to Elephant Beach, then Neil by 15:45 for jet ski and sunset.",
+   "events": [
+    {
+     "start": "00:00",
+     "end": "03:00",
+     "title": "Sleep",
+     "category": "sleep",
+     "place": "hotel-bhuma"
+    },
+    {
+     "start": "03:00",
+     "end": "03:20",
+     "title": "Up in the dark (kayak kit)",
+     "category": "prep",
+     "place": "hotel-bhuma",
+     "tips": "Dry bag, quick-dry clothes, headlamp. Skip if the operator cancelled - sleep to 04:15."
+    },
+    {
+     "start": "03:20",
+     "end": "03:30",
+     "title": "Ride to the kayak launch",
+     "category": "travel",
+     "place": "kayak-point"
+    },
+    {
+     "start": "03:30",
+     "end": "05:45",
+     "title": "NIGHT KAYAK — dark-window glow attempt + sunrise on the water",
+     "category": "activity",
+     "place": "kayak-point",
+     "cost_inr": 10500,
+     "cost_note": "3 x Rs 3,500 (Andaman Bliss, all taxes)",
+     "notes": "The trip's ONLY true darkness: moonset 02:54, civil dawn 04:47. Expect a mild sparkle at paddle-strokes, not the new-moon fireworks - then sunrise 05:09 from the kayaks.",
+     "tips": "Basic swimming required (age 13-45 rule). Phones in dry bag only."
+    },
+    {
+     "start": "05:45",
+     "end": "06:10",
+     "title": "Ride to Kala Pathar",
+     "category": "travel",
+     "route": "ride-govind-kalapathar",
+     "notes": "Golden hour is 05:45-06:45 - straight there while the light is soft."
+    },
+    {
+     "start": "06:10",
+     "end": "06:50",
+     "title": "Kala Pathar — fallen trees & black rocks",
+     "category": "scenic",
+     "place": "kalapathar",
+     "notes": "The rustic driftwood-and-jungle shoreline from the video. Free roadside parking."
+    },
+    {
+     "start": "06:50",
+     "end": "07:05",
+     "title": "Ride back to Bhuma",
+     "category": "travel",
+     "route": "ride-govind-kalapathar"
+    },
+    {
+     "start": "07:05",
+     "end": "07:55",
+     "title": "Breakfast @ Bhuma (incl.)",
+     "category": "meal",
+     "place": "hotel-bhuma"
+    },
+    {
+     "start": "07:55",
+     "end": "08:15",
+     "title": "Checkout — bags stored at Bhuma",
+     "category": "prep",
+     "place": "hotel-bhuma",
+     "tips": "Homestay holds luggage till the 13:00 pickup; settle the cash bill now."
+    },
+    {
+     "start": "08:15",
+     "end": "08:35",
+     "title": "Ride to the Elephant Beach trailhead",
+     "category": "travel",
+     "route": "ride-govind-elephant"
+    },
+    {
+     "start": "08:35",
+     "end": "09:15",
+     "title": "TREK — giant trees to Elephant Beach",
+     "category": "activity",
+     "route": "walk-elephant",
+     "notes": "1.7 km forest trail past enormous buttress-root trees; stream crossing near the end.",
+     "tips": "Clogs/water shoes, mosquito repellent. Trail is flat but monsoon-muddy."
+    },
+    {
+     "start": "09:15",
+     "end": "11:00",
+     "title": "ELEPHANT BEACH — snorkel the coral garden",
+     "category": "activity",
+     "place": "elephant-beach",
+     "cost_inr": 2400,
+     "cost_note": "~Rs 800 pp gear+guide on the beach (on-spot rate, estimate)",
+     "notes": "Shallow reef right off the sand - the transcript's favourite snorkel. Book water sports ON the beach, never prepaid.",
+     "tips": "No restaurants here - carry water/fruit. Lockers/showers at small extra cost."
+    },
+    {
+     "start": "11:00",
+     "end": "11:40",
+     "title": "Trek back to the trailhead",
+     "category": "travel",
+     "route": "walk-elephant"
+    },
+    {
+     "start": "11:40",
+     "end": "12:00",
+     "title": "Ride back to Govind Nagar",
+     "category": "travel",
+     "route": "ride-govind-elephant"
+    },
+    {
+     "start": "12:00",
+     "end": "13:00",
+     "title": "Lunch @ Something Different",
+     "category": "meal",
+     "place": "something-different",
+     "cost_inr": 1600,
+     "notes": "Opens 11:30 - beachside table, veg mains Rs 195-345."
+    },
+    {
+     "start": "13:00",
+     "end": "13:20",
+     "title": "Bags + jetty, return scooters",
+     "category": "travel",
+     "route": "ride-jetty-govind",
+     "cost_inr": 500,
+     "cost_note": "possible 2nd-slot charge (10am-10am rental windows)",
+     "tips": "Hand scooters back with the agreed fuel level."
+    },
+    {
+     "start": "13:20",
+     "end": "14:15",
+     "title": "Nautika check-in (45 min)",
+     "category": "prep",
+     "place": "havelock-jetty"
+    },
+    {
+     "start": "14:15",
+     "end": "15:00",
+     "title": "Jetty wait",
+     "category": "buffer",
+     "place": "havelock-jetty"
+    },
+    {
+     "start": "15:00",
+     "end": "15:45",
+     "title": "SAIL — Nautika-Pro to Neil",
+     "category": "travel",
+     "route": "ferry-havelock-neil",
+     "cost_inr": 4800,
+     "cost_note": "3 x Rs 1,600 Luxury (verified live)"
+    },
+    {
+     "start": "15:45",
+     "end": "16:05",
+     "title": "Neil scooters @ jetty",
+     "category": "travel",
+     "place": "neil-jetty",
+     "cost_inr": 1000,
+     "cost_note": "2 x ~Rs 500/day",
+     "notes": "Neil On Wheels, ph +91 94742 68205 - book ahead."
+    },
+    {
+     "start": "16:05",
+     "end": "16:20",
+     "title": "Ride via the pump — flash check-in @ Blue Lagoon",
+     "category": "travel",
+     "route": "ride-neiljetty-sitapur",
+     "cost_inr": 4118,
+     "cost_note": "stay Rs 3,968 (breakfast incl., free cancel) + Rs 150 fuel",
+     "notes": "Top up at IndianOil Neil Kendra (closes ~18:00) on the way; drop bags, straight back out."
+    },
+    {
+     "start": "16:20",
+     "end": "16:35",
+     "title": "Ride to Bharatpur",
+     "category": "travel",
+     "route": "ride-neiljetty-bharatpur"
+    },
+    {
+     "start": "16:35",
+     "end": "17:05",
+     "title": "JET SKI @ Bharatpur",
+     "category": "activity",
+     "place": "bharatpur",
+     "cost_inr": 2400,
+     "cost_note": "3 x Rs 800 (10-15 min each; verified range 800-1,200)",
+     "notes": "Beach open till 18:00; tide still ~1.5 m - plenty of water in the lagoon."
+    },
+    {
+     "start": "17:05",
+     "end": "17:15",
+     "title": "Hop to Laxmanpur",
+     "category": "travel",
+     "route": "ride-neiljetty-laxmanpur"
+    },
+    {
+     "start": "17:15",
+     "end": "17:50",
+     "title": "SUNSET @ Laxmanpur Beach 1",
+     "category": "scenic",
+     "place": "laxmanpur",
+     "notes": "Sunset 17:14 - Neil's sunset stage."
+    },
+    {
+     "start": "17:50",
+     "end": "19:00",
+     "title": "Dinner @ Pure Veg Restaurant",
+     "category": "meal",
+     "place": "pure-veg-neil",
+     "cost_inr": 800,
+     "cost_note": "thali Rs 240 pp + extras"
+    },
+    {
+     "start": "19:00",
+     "end": "19:20",
+     "title": "Ride home",
+     "category": "travel",
+     "route": "ride-neiljetty-sitapur"
+    },
+    {
+     "start": "19:20",
+     "end": "21:30",
+     "title": "Wind down",
+     "category": "buffer",
+     "place": "hotel-bluelagoon",
+     "tips": "Tomorrow: 04:30 wake for Sitapur sunrise, then Natural Bridge at the 08:51 low tide."
+    },
+    {
+     "start": "21:30",
+     "end": "24:00",
+     "title": "Sleep",
+     "category": "sleep",
+     "place": "hotel-bluelagoon"
+    }
+   ]
+  },
+  {
+   "day": 3,
+   "date": "2026-09-25",
+   "title": "PINK DAWN → CLIFF RUN",
+   "theme": "Sitapur sunrise, Natural Bridge at a 0.4 m low tide, ferry west, Munda Pahad trek, Chidiya Tapu sunset.",
+   "events": [
+    {
+     "start": "00:00",
+     "end": "04:30",
+     "title": "Sleep",
+     "category": "sleep",
+     "place": "hotel-bluelagoon",
+     "cost_inr": 0
+    },
+    {
+     "start": "04:30",
+     "end": "04:42",
+     "title": "Up before the sun",
+     "category": "prep",
+     "place": "hotel-bluelagoon",
+     "cost_inr": 0
+    },
+    {
+     "start": "04:42",
+     "end": "04:47",
+     "title": "3-minute ride to Sitapur",
+     "category": "travel",
+     "route": "ride-neiljetty-sitapur",
+     "cost_inr": 0
+    },
+    {
+     "start": "04:47",
+     "end": "06:15",
+     "title": "SUNRISE @ Sitapur Beach + cave & shipwreck",
+     "category": "scenic",
+     "place": "sitapur",
+     "cost_inr": 0,
+     "notes": "Sunrise 05:09, pink-tinged sand. Walk ~500 m along the shore for the photo-frame cave and the shipwreck."
+    },
+    {
+     "start": "06:15",
+     "end": "06:25",
+     "title": "Ride back",
+     "category": "travel",
+     "route": "ride-neiljetty-sitapur",
+     "cost_inr": 0
+    },
+    {
+     "start": "06:25",
+     "end": "07:30",
+     "title": "Breakfast (incl.) + pack + checkout",
+     "category": "prep",
+     "place": "hotel-bluelagoon",
+     "cost_inr": 0
+    },
+    {
+     "start": "07:30",
+     "end": "07:50",
+     "title": "Ride to Natural Bridge",
+     "category": "travel",
+     "route": "ride-neiljetty-bridge",
+     "cost_inr": 0
+    },
+    {
+     "start": "07:50",
+     "end": "09:35",
+     "title": "NATURAL BRIDGE at low tide",
+     "category": "activity",
+     "place": "natural-bridge",
+     "cost_inr": 0,
+     "notes": "Low tide 08:51 at 0.40 m (verified) — the full walk to and past the coral arch is open. Tide pools hold trapped fish.",
+     "tips": "Grip water-shoes mandatory; dead coral is slippery. Optional guide Rs 500/group."
+    },
+    {
+     "start": "09:35",
+     "end": "10:00",
+     "title": "Jetty: return scooters + refuel-as-agreed",
+     "category": "travel",
+     "place": "neil-jetty",
+     "cost_inr": 100
+    },
+    {
+     "start": "10:00",
+     "end": "11:30",
+     "title": "Makruzz check-in (60 min) + buffer",
+     "category": "prep",
+     "place": "neil-jetty",
+     "cost_inr": 0
+    },
+    {
+     "start": "11:30",
+     "end": "12:30",
+     "title": "SAIL — Makruzz to Port Blair",
+     "category": "travel",
+     "route": "ferry-neil-pb",
+     "cost_inr": 6525,
+     "cost_note": "3 x (Rs 1,850 + Rs 325 fuel surcharge)",
+     "notes": "Chosen over the Rs 1,400 Green Ocean (arrives 12:45) for a 65-min margin on the Munda Pahad gate — the day's hard deadline."
+    },
+    {
+     "start": "12:30",
+     "end": "13:10",
+     "title": "PB scooters near jetty + snack grab",
+     "category": "travel",
+     "place": "phoenix-bay",
+     "cost_inr": 1200,
+     "cost_note": "2 x ~Rs 600/day (Eternal Andamans; Rs 500 refundable deposit each)",
+     "notes": "Eternal currently rents at Port Blair only — confirmed live. Grab bananas/snacks; lunch is light today."
+    },
+    {
+     "start": "13:10",
+     "end": "14:00",
+     "title": "Ride south to Chidiya Tapu",
+     "category": "travel",
+     "route": "ride-pb-chidiyatapu",
+     "cost_inr": 250,
+     "cost_note": "~2.7 L fuel for the 55 km round trip",
+     "notes": "24 km, 44 min on NH4 — South Andaman's prettiest road."
+    },
+    {
+     "start": "14:00",
+     "end": "14:10",
+     "title": "On to Munda Pahad Beach",
+     "category": "travel",
+     "route": "ride-chidiyatapu-munda",
+     "cost_inr": 0
+    },
+    {
+     "start": "14:10",
+     "end": "15:55",
+     "title": "MUNDA PAHAD TREK",
+     "category": "activity",
+     "place": "munda-pahad",
+     "cost_inr": 0,
+     "notes": "Gate entry BEFORE 15:00 (we arrive 14:10 — 50-min margin). 1.3 km, ~30 min up; clifftop view that earns the Bali comparisons. Area clears by 16:00.",
+     "tips": "Trainers, water, mosquito repellent."
+    },
+    {
+     "start": "15:55",
+     "end": "16:40",
+     "title": "Munda Pahad beach + ride back to Chidiya Tapu",
+     "category": "scenic",
+     "place": "chidiya-tapu",
+     "cost_inr": 0
+    },
+    {
+     "start": "16:40",
+     "end": "17:40",
+     "title": "SUNSET @ Chidiya Tapu",
+     "category": "scenic",
+     "place": "chidiya-tapu",
+     "cost_inr": 0,
+     "notes": "The best sunset stage in South Andaman (sunset 17:14). NO swimming — saltwater crocodiles are spotted here.",
+     "tips": "Parking area is a short walk from the beach through tall trees."
+    },
+    {
+     "start": "17:40",
+     "end": "18:40",
+     "title": "Night ride back to Port Blair",
+     "category": "travel",
+     "route": "ride-pb-chidiyatapu",
+     "cost_inr": 0
+    },
+    {
+     "start": "18:40",
+     "end": "19:00",
+     "title": "Check in @ Hotel Atlanta (sea view)",
+     "category": "prep",
+     "place": "hotel-atlanta",
+     "cost_inr": 8845,
+     "cost_note": "Family room, 2 nights, free cancellation",
+     "notes": "Location 9.3/10, opposite the Marina Park waterfront."
+    },
+    {
+     "start": "19:00",
+     "end": "20:15",
+     "title": "Dinner @ Annapurna Cafeteria",
+     "category": "meal",
+     "place": "annapurna",
+     "cost_inr": 900,
+     "notes": "Veg South-Indian stalwart, 200 m from the hotel."
+    },
+    {
+     "start": "20:15",
+     "end": "21:45",
+     "title": "Prep for Baratang + wind down",
+     "category": "buffer",
+     "place": "hotel-atlanta",
+     "cost_inr": 0,
+     "tips": "Reconfirm the 04:00 cab, pack water/snacks/ID, keep cameras packed away for the convoy."
+    },
+    {
+     "start": "21:45",
+     "end": "24:00",
+     "title": "Sleep",
+     "category": "sleep",
+     "place": "hotel-atlanta",
+     "cost_inr": 0
+    }
+   ]
+  },
+  {
+   "day": 4,
+   "date": "2026-09-26",
+   "title": "JARAWA CONVOY → LIMESTONE",
+   "theme": "The 4 AM mission: convoy through the reserve, mangrove speedboat, million-year cave — then an earned nap and the Marina at dusk.",
+   "events": [
+    {
+     "start": "00:00",
+     "end": "03:30",
+     "title": "Sleep",
+     "category": "sleep",
+     "place": "hotel-atlanta",
+     "cost_inr": 0
+    },
+    {
+     "start": "03:30",
+     "end": "04:00",
+     "title": "Up & out",
+     "category": "prep",
+     "place": "hotel-atlanta",
+     "cost_inr": 0
+    },
+    {
+     "start": "04:00",
+     "end": "06:00",
+     "title": "Cab to Jirkatang Check Post",
+     "category": "travel",
+     "route": "cab-pb-jirkatang",
+     "cost_inr": 7500,
+     "cost_note": "Private AC cab day-tour for 3 (verified range Rs 6,500-9,000 — lock price when booking)",
+     "notes": "47 km in the dark to make the 06:00 first convoy. Two-wheelers are banned past the check post."
+    },
+    {
+     "start": "06:00",
+     "end": "07:30",
+     "title": "CONVOY through the Jarawa reserve",
+     "category": "travel",
+     "route": "cab-jirkatang-middlestrait",
+     "cost_inr": 0,
+     "notes": "48 km escorted. Absolutely no photography, no stopping, windows up if asked.",
+     "tips": "You may glimpse Jarawa people — cameras stay down, it is a criminal offence."
+    },
+    {
+     "start": "07:30",
+     "end": "08:00",
+     "title": "Vehicle ferry across Middle Strait",
+     "category": "travel",
+     "route": "boat-middlestrait-nilambur",
+     "cost_inr": 0,
+     "notes": "Fee included in cab tour."
+    },
+    {
+     "start": "08:00",
+     "end": "08:45",
+     "title": "Speedboat into the mangroves",
+     "category": "travel",
+     "route": "boat-nilambur-caves",
+     "cost_inr": 2700,
+     "cost_note": "3 x Rs 900 round trip",
+     "notes": "Creek channels narrow to a tunnel of roots — half the show is the ride."
+    },
+    {
+     "start": "08:45",
+     "end": "10:15",
+     "title": "LIMESTONE CAVES",
+     "category": "activity",
+     "place": "limestone-caves",
+     "cost_inr": 0,
+     "notes": "1.2 km walk from the drop point, then ~35 min inside the sculpted chambers.",
+     "tips": "Headlamp beats phone torch; floor is wet and uneven."
+    },
+    {
+     "start": "10:15",
+     "end": "11:00",
+     "title": "Boat back to Nilambur",
+     "category": "travel",
+     "route": "boat-nilambur-caves",
+     "cost_inr": 0
+    },
+    {
+     "start": "11:00",
+     "end": "11:40",
+     "title": "Early lunch @ Baratang jetty",
+     "category": "meal",
+     "place": "nilambur",
+     "cost_inr": 450,
+     "notes": "Simple veg meals only — eat now, the convoy won't stop."
+    },
+    {
+     "start": "11:40",
+     "end": "12:10",
+     "title": "Ferry back across the strait",
+     "category": "travel",
+     "route": "boat-middlestrait-nilambur",
+     "cost_inr": 0
+    },
+    {
+     "start": "12:10",
+     "end": "13:40",
+     "title": "Return convoy (12:30 slot)",
+     "category": "travel",
+     "route": "cab-jirkatang-middlestrait",
+     "cost_inr": 0,
+     "notes": "Convoy times south vary by source (12:00/12:30) — the driver knows the slot."
+    },
+    {
+     "start": "13:40",
+     "end": "15:00",
+     "title": "Drive back to Port Blair",
+     "category": "travel",
+     "route": "cab-pb-jirkatang",
+     "cost_inr": 0
+    },
+    {
+     "start": "15:00",
+     "end": "16:30",
+     "title": "Earned nap",
+     "category": "sleep",
+     "place": "hotel-atlanta",
+     "cost_inr": 0,
+     "notes": "Protects the sleep average after the 03:30 start."
+    },
+    {
+     "start": "16:30",
+     "end": "17:45",
+     "title": "Marina Park + Flag Point at dusk",
+     "category": "scenic",
+     "place": "marina-park",
+     "cost_inr": 0,
+     "notes": "Where the first tricolour rose in 1943; the waterfront is 5 min from the hotel."
+    },
+    {
+     "start": "17:45",
+     "end": "19:15",
+     "title": "Optional: Cellular Jail light & sound",
+     "category": "buffer",
+     "place": "cellular-jail",
+     "cost_inr": 0,
+     "notes": "Optional (~Rs 300 pp, not in budget); skip freely if tired — nothing downstream depends on it."
+    },
+    {
+     "start": "19:15",
+     "end": "20:30",
+     "title": "Farewell dinner @ Icy Spicy",
+     "category": "meal",
+     "place": "icy-spicy",
+     "cost_inr": 1000
+    },
+    {
+     "start": "20:30",
+     "end": "21:00",
+     "title": "Pack for the flight",
+     "category": "prep",
+     "place": "hotel-atlanta",
+     "cost_inr": 0
+    },
+    {
+     "start": "21:00",
+     "end": "24:00",
+     "title": "Sleep",
+     "category": "sleep",
+     "place": "hotel-atlanta",
+     "cost_inr": 0
+    }
+   ]
+  },
+  {
+   "day": 5,
+   "date": "2026-09-27",
+   "title": "EXFIL",
+   "theme": "Slow morning, 10:35 wheels-up, Chennai by lunch.",
+   "events": [
+    {
+     "start": "00:00",
+     "end": "06:45",
+     "title": "Sleep (long one — 9¾ h)",
+     "category": "sleep",
+     "place": "hotel-atlanta",
+     "cost_inr": 0
+    },
+    {
+     "start": "06:45",
+     "end": "07:45",
+     "title": "Breakfast + pack out",
+     "category": "prep",
+     "place": "hotel-atlanta",
+     "cost_inr": 300,
+     "notes": "Atlanta room rate has no breakfast — cafe next door or Annapurna (opens 07:00)."
+    },
+    {
+     "start": "07:45",
+     "end": "08:05",
+     "title": "Cab to the airport",
+     "category": "travel",
+     "route": "cab-ixz-aberdeen",
+     "cost_inr": 300,
+     "notes": "2.7 km against traffic — 10 min."
+    },
+    {
+     "start": "08:05",
+     "end": "09:50",
+     "title": "Check-in + security",
+     "category": "prep",
+     "place": "ixz",
+     "cost_inr": 0,
+     "notes": "Akasa counter closes 09:50 — we're in with 1h45 to spare."
+    },
+    {
+     "start": "09:50",
+     "end": "10:35",
+     "title": "Gate",
+     "category": "prep",
+     "place": "ixz",
+     "cost_inr": 0
+    },
+    {
+     "start": "10:35",
+     "end": "12:55",
+     "title": "FLY — Akasa QP 1146 to Chennai",
+     "category": "travel",
+     "route": "fly-ixz-maa",
+     "cost_inr": 27618,
+     "cost_note": "3 x Rs 9,206 (Cleartrip 3-adult, 19 Aug)",
+     "notes": "2h20m home. Right-side windows for a last look at the archipelago."
+    },
+    {
+     "start": "12:55",
+     "end": "13:20",
+     "title": "Land MAA — trip complete",
+     "category": "prep",
+     "place": "maa",
+     "cost_inr": 0,
+     "notes": "Every minute since Wednesday 03:45 is on this map."
+    }
+   ]
+  }
+ ]
+}

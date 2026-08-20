@@ -34,15 +34,16 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   background:repeating-linear-gradient(0deg,transparent 0 3px,rgba(25,227,210,.016) 3px 4px)}
 #tilt{position:absolute;inset:0;transform-style:preserve-3d;
   transition:transform .6s cubic-bezier(.2,.8,.2,1)}
-#tilt.on{transform:rotateX(16deg) scale(1.02)}
+#tilt.on{transform:rotateX(14deg)}
 #map{width:100%;height:100%;display:block;touch-action:none;cursor:grab}
 #map:active{cursor:grabbing}
-#map .island{fill:var(--island);stroke:var(--shore);stroke-width:1.1;
+#map .island{fill:var(--island);stroke:var(--shore);
+  stroke-width:calc(1.1px * var(--sw,1));
   filter:drop-shadow(0 10px 0 rgba(0,0,0,.45)) drop-shadow(0 0 14px rgba(25,227,210,.28))}
 #map .island.dim{opacity:.5}
-#map .route{fill:none;stroke:var(--route);stroke-width:2.4;stroke-linecap:round;
-  opacity:.28}
-#map .route.active{opacity:1;stroke-width:3.4;stroke-dasharray:10 8;
+#map .route{fill:none;stroke:var(--route);stroke-width:calc(2.4px * var(--sw,1));
+  stroke-linecap:round;opacity:.28}
+#map .route.active{opacity:1;stroke-width:calc(3.6px * var(--sw,1));stroke-dasharray:10 8;
   animation:dash 1.2s linear infinite;
   filter:drop-shadow(0 0 8px rgba(255,79,163,.8))}
 #map .route.sea{stroke-dasharray:2 8}
@@ -127,8 +128,25 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 #brief-crumbs .crumb::after{content:"▸";margin:0 4px;color:var(--line)}
 #brief-crumbs .crumb:last-child{color:var(--sand);cursor:default}
 #brief-crumbs .crumb:last-child::after{content:""}
-#brief-close{margin-left:auto;color:var(--muted);font-size:15px;padding:2px 6px}
+#brief-nav{margin-left:auto;display:flex;gap:4px}
+#brief-nav button{width:30px;height:30px;border:1px solid var(--line);color:var(--shore);
+  font-size:13px}
+#brief-nav button:hover:not(:disabled){border-color:var(--shore);
+  box-shadow:0 0 8px rgba(25,227,210,.35)}
+#brief-nav button:disabled{color:var(--line);cursor:default}
+#brief-close{color:var(--muted);font-size:15px;padding:2px 6px}
 #brief-close:hover{color:var(--route)}
+.watch-btn{display:inline-block;font-family:var(--disp);font-weight:700;font-size:12.5px;
+  letter-spacing:.1em;color:var(--sand);border:1px solid var(--sand);padding:6px 10px;
+  margin:8px 0;text-decoration:none}
+.watch-btn:hover{box-shadow:0 0 10px rgba(255,217,138,.4)}
+.receipts{margin-top:12px;border:1px solid var(--line);background:rgba(7,9,25,.5);
+  padding:8px 10px}
+.receipts .rc-h{font-family:var(--disp);font-weight:700;font-size:11px;
+  letter-spacing:.14em;color:var(--muted);margin-bottom:6px}
+.receipts .rc{font-size:12px;line-height:1.5;color:var(--ink);padding:4px 0;
+  border-top:1px solid rgba(44,39,87,.5)}
+.receipts .rc a{color:var(--shore);text-decoration:none;margin-left:6px}
 #brief-body{overflow:auto;padding:14px 16px 20px}
 #brief-body h1{font-family:var(--disp);font-weight:800;font-size:26px;
   letter-spacing:.04em;text-transform:uppercase;line-height:1.05;

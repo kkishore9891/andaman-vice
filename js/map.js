@@ -52,17 +52,19 @@ const VMap = (() => {
 
   function apply() {
     svg.setAttribute("viewBox", `${vb.x} ${vb.y} ${vb.w} ${vb.h}`);
-    // keep marker/label sizes readable at any zoom
+    // sqrt scaling: zooming IN makes labels/strokes grow on screen (instead of
+    // staying fixed), zooming OUT keeps them from swallowing the map.
     const s = vb.w / W;
-    svg.style.setProperty("--zs", s);
+    const k = Math.sqrt(s);
+    svg.style.setProperty("--sw", k);
     for (const t of svg.querySelectorAll(".mk circle"))
-      t.setAttribute("r", 8 * s + "");
+      t.setAttribute("r", 8 * k + "");
     for (const t of svg.querySelectorAll(".mk text"))
-      t.setAttribute("font-size", 9 * s + "");
+      t.setAttribute("font-size", 9 * k + "");
     for (const t of svg.querySelectorAll(".mklabel"))
-      t.setAttribute("font-size", 10.5 * s + "");
+      t.setAttribute("font-size", 10.5 * k + "");
     for (const t of svg.querySelectorAll(".you"))
-      t.setAttribute("r", 5.5 * s + "");
+      t.setAttribute("r", 5.5 * k + "");
   }
 
   function markers(places) {

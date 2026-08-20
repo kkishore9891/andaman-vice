@@ -51,7 +51,7 @@
   try { const r = await fetch("assets/map_geo.json"); if (r.ok) geo = await r.json(); } catch (e) {}
   if (!geo && window.MAP_GEO) geo = window.MAP_GEO;
   if (!geo) geo = { bbox: [92.3, 11.3, 93.2, 12.45], islands: [] };
-  VMap.init($("#map"), geo, { onPlace: (id) => { const e = leaves.find(l => l.place_id === id); if (e) openBrief(e.id); } });
+  VMap.init($("#map"), geo, { onPlace: (id) => openPlace(id) });
   VMap.markers(D.places);
   VMap.routes(D.routes);
 
@@ -173,6 +173,76 @@
   /* ---------- briefing panel ---------- */
   const brief = $("#brief");
   $("#brief-close").onclick = () => brief.classList.add("hidden");
+
+  function watchBtn(url) {
+    if (!url || !/youtu/.test(url)) return null;
+    const a = document.createElement("a");
+    a.className = "watch-btn"; a.href = url; a.target = "_blank"; a.rel = "noopener";
+    a.textContent = "▶ WATCH THIS SPOT IN THE VIDEO";
+    return a;
+  }
+
+  function receipts(container, e, r, pl) {
+    // per-event receipts: facts that mention this place/route/activity + sources
+    const keys = [];
+    if (pl) keys.push(...pl.name.toLowerCase().split(/[^a-z]+/).filter(w => w.length > 3));
+    if (r) keys.push(r.mode);
+    keys.push(...e.title.toLowerCase().split(/[^a-z]+/).filter(w => w.length > 4));
+    const uniq = [...new Set(keys)];
+    const scored = (D.facts || []).map(f => {
+      const hay = (f.topic + " " + f.value).toLowerCase();
+      return [uniq.reduce((n, k) => n + (hay.includes(k) ? 1 : 0), 0), f];
+    }).filter(([n]) => n >= 2).sort((a, b) => b[0] - a[0]).slice(0, 3);
+    if (!scored.length && !e.source_url) return;
+    const box = document.createElement("div");
+    box.className = "receipts";
+    box.innerHTML = "<div class='rc-h'>RECEIPTS</div>" + scored.map(([, f]) =>
+      `<div class="rc"><span>${f.verified === "confirmed" ? "✅" : "📋"} ${f.value.slice(0, 150)}</span>
+       ${f.source_url ? `<a href="${f.source_url}" target="_blank" rel="noopener">source</a>` : ""}</div>`
+    ).join("");
+    container.appendChild(box);
+  }
+
+  /* ---------- place card (map pin click) ---------- */
+  function openPlace(id) {
+    const pl = places[id]; if (!pl) return;
+    brief.classList.remove("hidden");
+    const cr = $("#brief-crumbs"); cr.innerHTML = "";
+    const s = document.createElement("span");
+    s.className = "crumb"; s.textContent = "MAP · " + (pl.island || "").replace("_", " ");
+    cr.appendChild(s);
+    const b = $("#brief-body"); b.innerHTML = "";
+    const h = document.createElement("h1"); h.textContent = pl.name; b.appendChild(h);
+    const chip = document.createElement("span");
+    chip.className = "cat-chip"; chip.textContent = pl.kind || "place";
+    chip.style.background = catColor("scenic"); b.appendChild(chip);
+    if (pl.photo) {
+      const img = document.createElement("img");
+      img.className = "photo"; img.src = pl.photo; img.alt = pl.name; b.appendChild(img);
+    }
+    if (pl.blurb) { const p = document.createElement("p"); p.textContent = pl.blurb; b.appendChild(p); }
+    const wb = watchBtn(pl.source_url); if (wb) b.appendChild(wb);
+    const here = leaves.filter(l => l.place_id === id);
+    const kd = document.createElement("div"); kd.className = "kids";
+    if (here.length) {
+      const hh = document.createElement("p"); hh.className = "mut";
+      hh.textContent = "On the itinerary here:"; b.appendChild(hh);
+      for (const k of here) {
+        const row = document.createElement("div"); row.className = "kid";
+        row.innerHTML = `<span class="t">D${Math.floor(k.start_min / 1440) + 1} ${fmtT(k.start_min)}</span>
+          <span class="n">${k.title}</span><span class="arr">▸</span>`;
+        row.onclick = () => openBrief(k.id);
+        kd.appendChild(row);
+      }
+    } else {
+      const p = document.createElement("p"); p.className = "mut";
+      p.textContent = "Not scheduled on this trip — kept on the map for orientation (see the blurb for why/when it's worth it).";
+      b.appendChild(p);
+    }
+    b.appendChild(kd);
+    VMap.activePlace(id); VMap.activeRoute(null);
+    if (pl.lat != null) VMap.focusLatLng(pl.lat, pl.lng, 5);
+  }
   function crumbs(e) {
     const c = [];
     let cur = e;
@@ -248,13 +318,17 @@
       }
       b.appendChild(kd);
     }
-    const srcs = [e.source_url, r && r.source_url, pl && pl.source_url].filter(Boolean);
-    if (srcs.length) {
-      const s = document.createElement("div"); s.className = "src";
-      s.innerHTML = "SOURCES · " + srcs.map(u =>
-        `<a href="${u}" target="_blank" rel="noopener">${u.replace(/^https?:\/\//, "").slice(0, 60)}</a>`
-      ).join(" · ");
-      b.appendChild(s);
+    const wb = watchBtn(pl && pl.source_url); if (wb) b.appendChild(wb);
+    receipts(b, e, r, pl);
+    // prev/next across the chronological leaf sequence
+    const li = leaves.findIndex(l => l.id === e.id);
+    const nav = $("#brief-nav");
+    nav.style.visibility = li >= 0 ? "visible" : "hidden";
+    if (li >= 0) {
+      $("#bn-prev").disabled = li <= 0;
+      $("#bn-next").disabled = li >= leaves.length - 1;
+      $("#bn-prev").onclick = () => li > 0 && openBrief(leaves[li - 1].id);
+      $("#bn-next").onclick = () => li < leaves.length - 1 && openBrief(leaves[li + 1].id);
     }
     // focus map
     if (r && r.polyline) {
@@ -339,7 +413,6 @@
 
   /* ---------- boot ---------- */
   $("#boot").remove();
-  $("#tilt").classList.add("on"); $("#btn-tilt").classList.add("on");
   setDay(1, false);
   setMinute(L0);
   if ("serviceWorker" in navigator && location.protocol.startsWith("http"))
