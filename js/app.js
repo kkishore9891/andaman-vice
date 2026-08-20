@@ -121,13 +121,9 @@
       if (r && r.polyline) {
         const f = (simMin - lf.start_min) / (lf.end_min - lf.start_min);
         if (r.mode === "flight") {
-          // plane glyph traces the projected flight line, nose on true bearing
+          // plane glyph traces the drawn approach corridor, nose on true bearing
           const pose = VMap.poseAlong(r, f);
-          if (pose) {
-            VMap.you(pose.lat, pose.lng, pose.heading, "flight");
-            const ixz = places.ixz;   // keep plane + the islands in frame
-            VMap.fitPoints([[pose.lat, pose.lng], [ixz.lat, ixz.lng]]);
-          }
+          if (pose) VMap.you(pose.lat, pose.lng, pose.heading, "flight");
         } else {
           const p = VMap.pointAlong(r, f);
           if (p) VMap.you(p[0], p[1]);
@@ -173,6 +169,23 @@
     a.className = "watch-btn"; a.href = url; a.target = "_blank"; a.rel = "noopener";
     a.textContent = "▶ WATCH THIS SPOT IN THE VIDEO";
     return a;
+  }
+
+  function mapsBtn(pl) {
+    if (!pl || !pl.maps_url) return null;
+    const a = document.createElement("a");
+    a.className = "watch-btn maps-btn"; a.href = pl.maps_url;
+    a.target = "_blank"; a.rel = "noopener";
+    a.textContent = "📍 OPEN IN GOOGLE MAPS";
+    return a;
+  }
+
+  function linkRow(...btns) {
+    const row = document.createElement("div");
+    row.className = "linkrow";
+    let any = false;
+    for (const b of btns) if (b) { row.appendChild(b); any = true; }
+    return any ? row : null;
   }
 
   function receipts(container, e, r, pl) {
@@ -224,7 +237,7 @@
       img.className = "photo"; img.src = pl.photo; img.alt = pl.name; b.appendChild(img);
     }
     if (pl.blurb) { const p = document.createElement("p"); p.textContent = pl.blurb; b.appendChild(p); }
-    const wb = watchBtn(pl.source_url); if (wb) b.appendChild(wb);
+    const lr = linkRow(mapsBtn(pl), watchBtn(pl.source_url)); if (lr) b.appendChild(lr);
     const here = placeEvents(id);
     const kd = document.createElement("div"); kd.className = "kids";
     if (here.length) {
@@ -321,7 +334,9 @@
       }
       b.appendChild(kd);
     }
-    const wb = watchBtn(pl && pl.source_url); if (wb) b.appendChild(wb);
+    const dest = pl || (r && places[r.to_place]);
+    const lr = linkRow(mapsBtn(dest), watchBtn(dest && dest.source_url));
+    if (lr) b.appendChild(lr);
     receipts(b, e, r, pl);
     // prev/next across the chronological leaf sequence
     const li = leaves.findIndex(l => l.id === e.id);
@@ -337,10 +352,7 @@
     if (r && r.polyline) {
       VMap.activeRoute(r.id);
       if (r.mode === "flight") {
-        const f = e.start_min != null
-          ? Math.min(Math.max((simMin - e.start_min) / (e.end_min - e.start_min), 0), 1) : 0;
-        const pose = VMap.poseAlong(r, f);
-        if (pose) VMap.fitPoints([[pose.lat, pose.lng], [places.ixz.lat, places.ixz.lng]]);
+        VMap.focusAll();   // keep the whole archipelago framed during air legs
       } else {
         const p = VMap.pointAlong(r, 0.5); if (p) VMap.focusLatLng(p[0], p[1], 2);
       }

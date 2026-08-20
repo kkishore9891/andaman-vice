@@ -71,6 +71,11 @@ def conn():
     c = sqlite3.connect(DB_PATH)
     c.row_factory = sqlite3.Row
     c.executescript(SCHEMA)
+    # additive migrations (CREATE TABLE IF NOT EXISTS won't add columns)
+    for table, col, decl in (("places", "maps_url", "TEXT"),):
+        cols = {r["name"] for r in c.execute(f"PRAGMA table_info({table})")}
+        if col not in cols:
+            c.execute(f"ALTER TABLE {table} ADD COLUMN {col} {decl}")
     return c
 
 

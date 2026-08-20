@@ -88,10 +88,15 @@ P = [  # id, name, island, lat, lng, kind, photo, blurb
 
 # id, from, to, mode, km, min, polyline([[lat,lng],..]), note
 R = [
- ("fly-maa-ixz", "maa", "ixz", "flight", 1355, 135, [[13.08, 80.27], [12.4, 86.5], [11.641656, 92.730243]],
-  "Akasa QP 1145 (Boeing 737 MAX 8), 07:40→09:55, 2h15m over the Bay of Bengal."),
- ("fly-ixz-maa", "ixz", "maa", "flight", 1355, 130, [[11.641656, 92.730243], [12.4, 86.5], [13.08, 80.27]],
-  "Return over the Bay of Bengal to Chennai."),
+ # Chennai is 12° of longitude off-map, so the drawn line is the final APPROACH
+ # corridor (the plane traces it); the full 1,355 km sits in the stats.
+ ("fly-maa-ixz", "maa", "ixz", "flight", 1355, 135,
+  [[12.60, 92.36], [12.30, 92.47], [11.98, 92.60], [11.75, 92.68], [11.641656, 92.730243]],
+  "Akasa QP 1145 (Boeing 737 MAX 8), 07:40→09:55, 2h15m over the Bay of Bengal. "
+  "The line on the map is the final approach into Port Blair from the west — the full 1,355 km crossing starts far off-map at Chennai."),
+ ("fly-ixz-maa", "ixz", "maa", "flight", 1355, 130,
+  [[11.641656, 92.730243], [11.75, 92.68], [11.98, 92.60], [12.30, 92.47], [12.60, 92.36]],
+  "Return over the Bay of Bengal to Chennai. The map shows the departure corridor heading west-north-west; Chennai lies 1,355 km beyond the frame."),
  ("cab-ixz-phoenix", "ixz", "phoenix-bay", "cab", 3.4, 8, [[11.641656, 92.730243], [11.658, 92.729], [11.6726921, 92.7345295]],
   "Via VIP Rd."),
  ("cab-ixz-aberdeen", "ixz", "aberdeen", "cab", 2.7, 7, [[11.641656, 92.730243], [11.655, 92.737], [11.6675019, 92.7412765]],
@@ -154,8 +159,12 @@ def main():
     c = db.conn()
     c.execute("DELETE FROM places"); c.execute("DELETE FROM routes"); c.execute("DELETE FROM facts")
     for (pid, name, isl, lat, lng, kind, photo, blurb) in P:
-        c.execute("INSERT INTO places VALUES (?,?,?,?,?,?,?,?,?)",
-                  (pid, name, isl, lat, lng, kind, photo, blurb, None))
+        # fallback Maps link by coordinates; canonical listing URLs applied below
+        murl = (f"https://www.google.com/maps/search/?api=1&query={lat},{lng}"
+                if lat is not None else None)
+        c.execute("INSERT INTO places (id,name,island,lat,lng,kind,photo,blurb,source_url,maps_url) "
+                  "VALUES (?,?,?,?,?,?,?,?,?,?)",
+                  (pid, name, isl, lat, lng, kind, photo, blurb, None, murl))
     for (rid, a, b, mode, km, mins, poly, note) in R:
         fuel_l = round(2 * km / KMPL, 3) if mode == "scooter" else None   # 2 scooters
         fuel_c = round(fuel_l * PETROL, 1) if fuel_l else None

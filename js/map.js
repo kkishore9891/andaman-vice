@@ -52,20 +52,32 @@ const VMap = (() => {
 
   function apply() {
     svg.setAttribute("viewBox", `${vb.x} ${vb.y} ${vb.w} ${vb.h}`);
-    // Labels/strokes grow on screen when zooming in, but capped at 2x
-    // (and never below 0.75x when zoomed out) so nothing balloons.
-    const s = vb.w / W;
-    const f = Math.max(0.75, Math.min(2, 1 / Math.sqrt(s)));
-    const k = f * s;
+    // Size everything in SCREEN PIXELS, not map units: one map unit is
+    // vb.w/clientWidth px, so a T-px target needs T * unitsPerPx user units.
+    // Zooming in still enlarges slightly (capped) without ever ballooning.
+    const cw = svg.clientWidth || svg.getBoundingClientRect().width || 1000;
+    const unitsPerPx = vb.w / cw;
+    const grow = Math.max(1, Math.min(1.6, Math.pow(W / vb.w, 0.22)));
+    const k = unitsPerPx * grow;
     svg.style.setProperty("--sw", k);
     for (const t of svg.querySelectorAll(".mk circle"))
-      t.setAttribute("r", 8 * k + "");
+      t.setAttribute("r", 9 * k + "");
     for (const t of svg.querySelectorAll(".mk text"))
-      t.setAttribute("font-size", 9 * k + "");
-    for (const t of svg.querySelectorAll(".mklabel"))
-      t.setAttribute("font-size", 10.5 * k + "");
+      t.setAttribute("font-size", 10 * k + "");
+    for (const t of svg.querySelectorAll(".mklabel")) {
+      t.setAttribute("font-size", 13 * k + "");
+      t.setAttribute("stroke-width", 3.2 * k + "");
+      const c = t.getAttribute("data-cx");
+      if (c !== null) t.setAttribute("x", (+c + 13 * k) + "");
+    }
     for (const t of svg.querySelectorAll(".you"))
-      t.setAttribute("r", 5.5 * k + "");
+      t.setAttribute("r", 6 * k + "");
+    for (const t of svg.querySelectorAll(".you-ring"))
+      t.setAttribute("r", 7 * k + "");
+    for (const t of svg.querySelectorAll(".you-plane"))
+      t.setAttribute("font-size", 26 * k + "");
+    for (const t of svg.querySelectorAll(".far-label"))
+      t.setAttribute("font-size", 12 * k + "");
   }
 
   function markers(places) {
@@ -77,7 +89,7 @@ const VMap = (() => {
       el("circle", { cx: x, cy: y, r: 8 }, g);
       const ic = el("text", { x, y: y + 3 }, g);
       ic.textContent = (p.kind || "?")[0].toUpperCase();
-      const lb = el("text", { class: "mklabel", x: x + 12, y: y + 4 }, g);
+      const lb = el("text", { class: "mklabel", x: x + 12, y: y + 4, "data-cx": x }, g);
       lb.textContent = p.name;
       g.addEventListener("click", () => cb.onPlace && cb.onPlace(p.id));
     }
@@ -96,6 +108,12 @@ const VMap = (() => {
       }).join("");
       const cls = "route" + (["ferry", "boat", "flight"].includes(r.mode) ? " sea" : "");
       el("path", { class: cls, d, "data-id": r.id }, gRoute);
+      if (r.mode === "flight" && r.id === "fly-maa-ixz") {
+        // the corridor's far end leaves the frame toward mainland India
+        const [fx, fy] = proj(pts[0][0], pts[0][1]);
+        const t = el("text", { class: "far-label", x: fx, y: fy - 6 }, gRoute);
+        t.textContent = "◀ CHENNAI · 1,355 km";
+      }
     }
   }
 
