@@ -1,25 +1,25 @@
 {
  "name": "final",
- "philosophy": "Havelock-first shape. It is forced by three verified facts: (1) the last Sunday nonstop leaves 13:35 and the budget makes the Rs 9,206 Akasa 10:35 the only sane return, so Sunday must be empty; (2) Baratang needs a full Port-Blair day ending ~15:00, and Munda Pahad's trek gate shuts at 15:00, so both anchor to Fri/Sat; (3) Bharatpur watersports need the 14:32 Thursday high tide and Natural Bridge needs the 08:51 Friday low. Sleep averages 7.3 h/night (min 5.75). Cost ~Rs 40,400/person - the user's worst-case line - with listed swaps down to ~Rs 37k. v2 additions on user request: the 03:30 Thu kayak is scheduled in the trip's only true-dark window (moonset 02:54, dawn 04:47) as a confirm-by-phone attempt, and the Elephant Beach forest trek + coral-garden snorkel fills Thursday morning, pushing the Neil ferry to the verified 15:00 Nautika and the jet ski to 16:35 (beach open to 18:00). v5: snorkelling and scuba both moved to Govind Nagar on the user's call - the homestay is 50 m from that beach, which deletes the Elephant Beach trek, its speedboat fare and roughly two hours of travel. Jet ski stays at Bharatpur.",
+ "philosophy": "Havelock-first shape. It is forced by three verified facts: (1) the last Sunday nonstop leaves 13:35 and the budget makes the Rs 9,206 Akasa 10:35 the only sane return, so Sunday must be empty; (2) Baratang needs a full Port-Blair day ending ~15:00, and Munda Pahad's trek gate shuts at 15:00, so both anchor to Fri/Sat; (3) Bharatpur watersports need the 14:32 Thursday high tide and Natural Bridge needs the 08:51 Friday low. Sleep averages 7.3 h/night (min 5.75). Cost ~Rs 40,400/person - the user's worst-case line - with listed swaps down to ~Rs 37k. v2 additions on user request: the 03:30 Thu kayak is scheduled in the trip's only true-dark window (moonset 02:54, dawn 04:47) as a confirm-by-phone attempt, and the Elephant Beach forest trek + coral-garden snorkel fills Thursday morning, pushing the Neil ferry to the verified 15:00 Nautika and the jet ski to 16:35 (beach open to 18:00). v5: snorkelling and scuba both moved to Govind Nagar on the user's call - the homestay is 50 m from that beach, which deletes the Elephant Beach trek, its speedboat fare and roughly two hours of travel. Jet ski stays at Bharatpur. v8: trimmed to the user's hard Rs 40,000/person ceiling. Flights are Rs 19,927 pp and immovable, so the ground budget had to fit Rs 20,073 pp. The kayak was the casualty - full-moon week made it a mild-glow gamble at Rs 3,500 a head - and Kala Pathar sunrise inherits the morning.",
  "sleep_hours": [
-  5.5,
+  6.75,
   7.0,
   5.75,
   9.75
  ],
- "total_cost_inr": 138139,
+ "total_cost_inr": 119864,
  "risks": [
   "September is peak monsoon (388 mm avg): every ferry/boat can be weather-delayed - all bookings chosen refundable where possible (Green Ocean/Makruzz tickets are not; budget assumes they sail)",
   "Ferry prices/times captured live 2026-08-19; rebook-check all four sailings when booking",
   "Bhuma homestay is cash-only and non-refundable (Rs 5,000 damage deposit)",
-  "Night kayak (Thu 03:30) MUST be phone-confirmed Wed evening - operators often refuse full-moon week; glow will be mild, sunrise-from-kayak is the sure part. Fallback: sleep to 04:15 + Kala Pathar sunrise",
-  "v2 cost is ~Rs 44,300/person - Rs 4,300 over the worst-case line. Trims if wanted: drop kayak (-Rs 3,500), Ananya hotel swap in PB (-Rs 940), Green Ocean Friday ferry (-Rs 775)",
   "Govind Nagar scuba price (Rs 3,500 pp shore Try Dive, Dive Andaman) and the snorkel gear rate are being re-confirmed live - treat Thursday's water costs as provisional",
   "VERIFIED: private ferries sail from HADDO JETTY (Gate 3), not Phoenix Bay — the plan now sends you to Haddo, but confirm the gate printed on your own ticket",
   "Late September is the tail of the SW monsoon: ferries run, but boat-based watersports at Bharatpur are weather-dependent on the day",
   "Saturday's Cellular Jail show is Hindi-only (English runs Mon/Wed/Fri)",
   "Bhuma's Rs 5,685 room and Pibo's Rs 5,250 rate each show only 1 left as of 20 Aug — book the rooms before the flights",
-  "Bhuma is non-refundable and cash-only; Pibo and Blue Lagoon both allow free cancellation (24 Sep and 17 Sep respectively)"
+  "Bhuma is non-refundable and cash-only; Pibo and Blue Lagoon both allow free cancellation (24 Sep and 17 Sep respectively)",
+  "KAYAK DROPPED to meet the Rs 40,000 ceiling. If you decide with your cousins that you want it back, it is Rs 3,500 pp and pushes the trip to about Rs 43,500 pp",
+  "Friday's Green Ocean sailing lands 12:45, leaving a 35-minute margin on the 15:00 Munda Pahad gate - if the ferry runs late, skip the trek and go straight to Chidiya Tapu for sunset"
  ],
  "days": [
   {
@@ -240,63 +240,46 @@
    "events": [
     {
      "start": "00:00",
-     "end": "03:00",
+     "end": "04:15",
      "title": "Sleep",
      "category": "sleep",
      "place": "hotel-bhuma"
     },
     {
-     "start": "03:00",
-     "end": "03:20",
-     "title": "Up in the dark (kayak kit)",
+     "start": "04:15",
+     "end": "04:35",
+     "title": "Up in the dark",
      "category": "prep",
      "place": "hotel-bhuma",
-     "tips": "Dry bag, quick-dry clothes, headlamp. If the operator declined, sleep to 05:30 and start at Kala Pathar instead."
+     "notes": "A gentler start than the kayak version — 6h45m of sleep behind you.",
+     "tips": "Headlamp and a warm layer; it is properly dark until about 04:47."
     },
     {
-     "start": "03:20",
-     "end": "03:30",
-     "title": "Ride to the kayak launch",
-     "category": "travel",
-     "route": "ride-bhuma-kayak",
-     "place": "kayak-point"
-    },
-    {
-     "start": "03:30",
-     "end": "05:45",
-     "title": "NIGHT KAYAK — dark-window glow attempt + sunrise on the water",
-     "category": "activity",
-     "place": "kayak-point",
-     "cost_inr": 10500,
-     "cost_note": "3 x Rs 3,500 (Andaman Bliss, all taxes)",
-     "notes": "The trip's only true darkness: moonset 02:54, civil dawn 04:47. Expect a mild sparkle at the paddle strokes rather than new-moon fireworks - then sunrise 05:09 from the kayaks.",
-     "tips": "Basic swimming required (the operator's age 13-45 rule). Phones in a dry bag only."
-    },
-    {
-     "start": "05:45",
-     "end": "06:10",
+     "start": "04:35",
+     "end": "05:00",
      "title": "Ride to Kala Pathar",
      "category": "travel",
      "route": "ride-bhuma-kalapathar",
-     "notes": "Golden hour runs to about 06:45 - go straight there while the light is soft."
+     "notes": "Sunrise is 05:09, so this puts you on the sand with minutes to spare."
     },
     {
-     "start": "06:10",
-     "end": "06:50",
-     "title": "Kala Pathar — fallen trees & black rocks",
+     "start": "05:00",
+     "end": "06:30",
+     "title": "SUNRISE @ Kala Pathar Beach",
      "category": "scenic",
      "place": "kalapathar",
-     "notes": "The driftwood-and-jungle shoreline from the reference video. Free roadside parking."
+     "notes": "Sunrise 05:09 over the driftwood-and-black-rock shoreline the reference video calls the best sunrise in the Andamans. With the kayak dropped this becomes the morning's centrepiece and you get a full 90 minutes of it instead of a rushed 40.",
+     "tips": "Free roadside parking. Walk south along the sand for the empty unnamed stretches."
     },
     {
-     "start": "06:50",
-     "end": "07:05",
+     "start": "06:30",
+     "end": "06:50",
      "title": "Ride back to Bhuma",
      "category": "travel",
      "route": "ride-bhuma-kalapathar"
     },
     {
-     "start": "07:05",
+     "start": "06:50",
      "end": "07:45",
      "title": "Breakfast @ Bhuma (included)",
      "category": "meal",
@@ -317,10 +300,10 @@
      "title": "SCUBA — shore dive at Govind Nagar",
      "category": "activity",
      "place": "govind-nagar",
-     "cost_inr": 13500,
-     "cost_note": "3 x Rs 4,500 shore Discover Scuba (Dive Andaman, Govind Nagar) — CONFIRMED live 20 Aug",
-     "notes": "Briefing, kit-up and a guided shore dive on the reef the reference video rates as Havelock's best - a massive coral bed with clownfish among it. Non-swimmers can dive: you breathe, the instructor handles the rest.",
-     "tips": "Book by phone a day ahead. No alcohol the night before. No flying for 18-24 h after a dive — Sunday's 10:35 departure is comfortably clear. Turquoise Dream on Neil is the same Rs 4,500 but MORNINGS ONLY, which is why the dive sits here on Havelock rather than after Thursday's ferry."
+     "cost_inr": 10500,
+     "cost_note": "3 x Rs 3,500 shore Try Dive (Dive Andaman, Govind Nagar) — the shorter beginner tier",
+     "notes": "Briefing, kit-up and a guided shore dive on the reef the reference video rates as Havelock's best. The Try Dive is the shorter option: about 30 minutes underwater against the Rs 4,500 Discover Scuba. Same reef, same instructor ratio.",
+     "tips": "Book by phone a day ahead. No alcohol the night before; no flying for 18-24 h after — Sunday's 10:35 flight is clear. Upgrade to the Rs 4,500 Discover Scuba on the day if the budget feels comfortable when you get there."
     },
     {
      "start": "10:15",
@@ -346,8 +329,8 @@
      "title": "Lunch @ Something Different",
      "category": "meal",
      "place": "something-different",
-     "cost_inr": 1600,
-     "cost_note": "veg mains Rs 195-345 (TripAdvisor menu)",
+     "cost_inr": 1000,
+     "cost_note": "keep it to mains — salads and sides here run Rs 195-345 each",
      "notes": "Beachside cafe rated 4.4 from 5,224 reviews, a short hop up the strip."
     },
     {
@@ -356,9 +339,9 @@
      "title": "Ride to the jetty, return scooters",
      "category": "travel",
      "route": "ride-hljetty-bhuma",
-     "cost_inr": 500,
-     "cost_note": "possible second-slot charge (rentals run on 10am-10am windows)",
-     "tips": "Hand the scooters back with the agreed fuel level."
+     "cost_inr": 0,
+     "cost_note": "returned inside the 24h window — no second-slot charge",
+     "tips": "Return by the 10am rental boundary to avoid a second day's charge."
     },
     {
      "start": "13:35",
@@ -559,25 +542,26 @@
     },
     {
      "start": "10:00",
-     "end": "11:30",
-     "title": "Makruzz check-in (60 min) + buffer",
+     "end": "11:00",
+     "title": "Green Ocean check-in",
      "category": "prep",
      "place": "neil-jetty",
-     "cost_inr": 0
+     "cost_inr": 0,
+     "notes": "Counter opens 60 min before sailing and shuts 15 min prior. PRINTED ticket mandatory."
     },
     {
-     "start": "11:30",
-     "end": "12:30",
-     "title": "SAIL — Makruzz to Port Blair",
+     "start": "11:00",
+     "end": "12:45",
+     "title": "SAIL — Green Ocean 1 to Port Blair",
      "category": "travel",
      "route": "ferry-neil-haddo",
-     "cost_inr": 6525,
-     "cost_note": "3 x (Rs 1,850 + Rs 325 fuel surcharge)",
-     "notes": "Chosen over the Rs 1,400 Green Ocean (arrives 12:45) for a 65-min margin on the Munda Pahad gate — the day's hard deadline."
+     "cost_inr": 4200,
+     "cost_note": "3 x Rs 1,400 all-in (Green Ocean 1, Rs 1,050 + Rs 50 PMB + Rs 300 fuel)",
+     "notes": "Rs 2,325 cheaper than the Makruzz sailing. Lands 12:45 instead of 12:30, which still leaves a 35-minute margin on the Munda Pahad gate."
     },
     {
-     "start": "12:30",
-     "end": "13:10",
+     "start": "12:45",
+     "end": "13:25",
      "title": "PB scooters near jetty + snack grab",
      "category": "travel",
      "place": "haddo-jetty",
@@ -586,8 +570,8 @@
      "notes": "Eternal currently rents at Port Blair only — confirmed live. Grab bananas/snacks; lunch is light today."
     },
     {
-     "start": "13:10",
-     "end": "14:00",
+     "start": "13:25",
+     "end": "14:15",
      "title": "Ride south to Chidiya Tapu",
      "category": "travel",
      "route": "ride-haddo-chidiyatapu",
@@ -596,16 +580,16 @@
      "notes": "24 km, 44 min on NH4 — South Andaman's prettiest road."
     },
     {
-     "start": "14:00",
-     "end": "14:10",
+     "start": "14:15",
+     "end": "14:25",
      "title": "On to Munda Pahad Beach",
      "category": "travel",
      "route": "ride-chidiyatapu-munda",
      "cost_inr": 0
     },
     {
-     "start": "14:10",
-     "end": "15:55",
+     "start": "14:25",
+     "end": "16:00",
      "title": "MUNDA PAHAD TREK",
      "category": "activity",
      "place": "munda-pahad",
@@ -614,16 +598,16 @@
      "tips": "Trainers, water and mosquito repellent. Budget 2-2.5 hours for the round trip including time at the top."
     },
     {
-     "start": "15:55",
-     "end": "16:40",
+     "start": "16:00",
+     "end": "16:45",
      "title": "Munda Pahad beach + ride back to Chidiya Tapu",
      "category": "scenic",
      "place": "chidiya-tapu",
      "cost_inr": 0
     },
     {
-     "start": "16:40",
-     "end": "17:40",
+     "start": "16:45",
+     "end": "17:45",
      "title": "SUNSET @ Chidiya Tapu",
      "category": "scenic",
      "place": "chidiya-tapu",
@@ -632,16 +616,16 @@
      "tips": "Parking area is a short walk from the beach through tall trees."
     },
     {
-     "start": "17:40",
-     "end": "18:40",
+     "start": "17:45",
+     "end": "18:45",
      "title": "Night ride back to Port Blair",
      "category": "travel",
      "route": "ride-chidiyatapu-pibo",
      "cost_inr": 0
     },
     {
-     "start": "18:40",
-     "end": "19:00",
+     "start": "18:45",
+     "end": "19:05",
      "title": "Check in @ Pibo Homestay",
      "category": "prep",
      "place": "hotel-pibo",
@@ -651,8 +635,8 @@
      "tips": "Only 1 room left at this rate — book it before the flights if you want it."
     },
     {
-     "start": "19:00",
-     "end": "20:15",
+     "start": "19:05",
+     "end": "20:20",
      "title": "Dinner @ Annapurna Cafeteria",
      "category": "meal",
      "place": "annapurna",
@@ -660,8 +644,8 @@
      "notes": "Veg South-Indian stalwart, 200 m from the hotel."
     },
     {
-     "start": "20:15",
-     "end": "21:45",
+     "start": "20:20",
+     "end": "21:50",
      "title": "Prep for Baratang + wind down",
      "category": "buffer",
      "place": "hotel-pibo",
@@ -669,7 +653,7 @@
      "tips": "Reconfirm the 04:00 cab, pack water/snacks/ID, keep cameras packed away for the convoy."
     },
     {
-     "start": "21:45",
+     "start": "21:50",
      "end": "24:00",
      "title": "Sleep",
      "category": "sleep",
@@ -706,9 +690,10 @@
      "title": "Cab to Jirkatang Check Post",
      "category": "travel",
      "route": "cab-pibo-jirkatang",
-     "cost_inr": 5400,
-     "cost_note": "private sedan round trip, Rs 5,000-6,500 published range (ferrybooking.in lists Rs 5,400 for up to 4 pax) — includes driver, tolls, parking and the Middle Strait vehicle ferry",
-     "notes": "47 km in the dark to make the 06:00 first convoy. Two-wheelers are banned past the check post. A shared joining tour is Rs 2,250 pp (Rs 6,750 for three) if you would rather split the cost than have the car to yourselves."
+     "cost_inr": 6750,
+     "cost_note": "3 x Rs 2,250 shared joining tour (Andaman Ocean) — includes A/C shared cab with hotel pickup, convoy permit assistance, shared speedboat tickets, tolls and parking",
+     "notes": "A shared vehicle rather than your own car: Rs 1,350 cheaper and it folds the speedboat and permits into one price. Hotel pickup around 04:00 to make the 06:00 convoy.",
+     "tips": "Excludes the Rs 14 pp vehicle-ferry ticket and all meals. A private sedan is Rs 5,400 + boat if you would rather not share."
     },
     {
      "start": "06:00",
@@ -735,8 +720,8 @@
      "title": "Speedboat into the mangroves",
      "category": "travel",
      "route": "boat-nilambur-caves",
-     "cost_inr": 2700,
-     "cost_note": "3 x Rs 900 (counter rate Rs 900-1,000 pp, booked on arrival at Nilambur)",
+     "cost_inr": 0,
+     "cost_note": "included in the shared tour price",
      "notes": "A 6-8 seat motorboat, about 25 minutes each way through mangrove creeks. Half the show is the ride."
     },
     {
