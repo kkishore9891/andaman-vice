@@ -3,6 +3,7 @@ const VMap = (() => {
   const NS = "http://www.w3.org/2000/svg";
   let svg, gIsl, gRoute, gMk, gYou, proj, vb, cb = {};
   let W = 1000, H = 1000;
+  let dayPlaces = null;   // ids whose labels stay visible when zoomed out
 
   function el(n, at, parent) {
     const e = document.createElementNS(NS, n);
@@ -70,11 +71,18 @@ const VMap = (() => {
       t.setAttribute("r", 24 * k + "");
     for (const t of svg.querySelectorAll(".mk text"))
       t.setAttribute("font-size", 12 * k + "");
+    // Declutter: when zoomed out, only today's places keep their label.
+    // Zoom past ~2.5x and everything labels up.
+    const showAll = vb.w < W / 2.5;
     for (const t of svg.querySelectorAll(".mklabel")) {
       t.setAttribute("font-size", 16 * k + "");
       t.setAttribute("stroke-width", 3.6 * k + "");
       const c = t.getAttribute("data-cx");
       if (c !== null) t.setAttribute("x", (+c + 15 * k) + "");
+      const id = t.parentNode && t.parentNode.getAttribute("data-id");
+      const keep = showAll || !dayPlaces || dayPlaces.has(id) ||
+                   t.parentNode.classList.contains("active");
+      t.style.display = keep ? "" : "none";
     }
     for (const t of svg.querySelectorAll(".you"))
       t.setAttribute("r", 6 * k + "");
@@ -284,7 +292,9 @@ const VMap = (() => {
     apply();
   }
 
-  return { init, markers, routes, activeRoute, activePlace, you,
+  function setDayPlaces(ids) { dayPlaces = ids && ids.size ? ids : null; apply(); }
+
+  return { init, markers, routes, activeRoute, activePlace, you, setDayPlaces,
            focusLatLng, focusAll, pointAlong, poseAlong, fitPoints,
            proj: (a, b) => proj(a, b) };
 })();

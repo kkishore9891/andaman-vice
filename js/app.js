@@ -85,6 +85,15 @@
       div.onclick = (evx) => { evx.stopPropagation(); setMinute(a); openBrief(lf.id); };
       blocksEl.appendChild(div);
     }
+    // label only today's places while zoomed out (declutters dense clusters)
+    const todays = new Set();
+    for (const lf of leaves) {
+      if (lf.end_min <= s || lf.start_min >= e) continue;
+      if (lf.place_id) todays.add(lf.place_id);
+      const rr = lf.route_id && routesById[lf.route_id];
+      if (rr) { todays.add(rr.from_place); todays.add(rr.to_place); }
+    }
+    VMap.setDayPlaces(todays);
     const hrs = $("#tl-hours"); hrs.innerHTML = "";
     for (let h = 0; h <= 24; h += 3) {
       const sp = document.createElement("span");
