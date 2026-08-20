@@ -16,6 +16,8 @@ P = [  # id, name, island, lat, lng, kind, photo, blurb
   "Port Blair / Sri Vijaya Puram airport (IXZ). 3.4 km from Phoenix Bay Jetty."),
  ("phoenix-bay", "Phoenix Bay Jetty", "south_andaman", 11.6726921, 92.7345295, "jetty", None,
   "Private ferry terminal (Makruzz/Nautika/Green Ocean). Check-in ~60 min before sailing."),
+ ("haddo-jetty", "Haddo Jetty (Gate 3)", "south_andaman", 11.6790, 92.7255, "jetty", None,
+  "Where the PRIVATE catamarans sail from — Makruzz, Nautika, Green Ocean. NOT Phoenix Bay, which is the government ferry terminal about 1 km away. Green Ocean e-tickets print 'Haddo (Gate-3)'; reporting is 60 min before departure (Nautika 45). (Position approximate — confirm the gate printed on your ticket.)"),
  ("aberdeen", "Aberdeen Bazaar", "south_andaman", 11.6675019, 92.7412765, "other", None,
   "Port Blair city hub — hotels, food, market."),
  ("cellular-jail", "Cellular Jail", "south_andaman", 11.6747447, 92.7478601, "viewpoint", "assets/cellular-jail.jpg",
@@ -222,6 +224,23 @@ ROUTES_V2 = [
   "Village road."),
 ]
 R = R + ROUTES_V2
+
+# --- Haddo jetty legs (private-ferry terminal, verified 2026-08-20) ---
+ROUTES_V3 = [
+ ("cab-icyspicy-haddo", "icy-spicy", "haddo-jetty", "cab", 2.8, 8,
+  [[11.6587633, 92.7313498], [11.668, 92.729], [11.6790, 92.7255]],
+  "Junglighat to Haddo Wharf. Makruzz says 15-20 min from the airport by taxi."),
+ ("ferry-haddo-havelock", "haddo-jetty", "havelock-jetty", "ferry", 74, 90,
+  [[11.6790, 92.7255], [11.82, 92.85], [12.0429471, 92.9835984]],
+  "Private catamaran from Haddo Gate 3 to Swaraj Dweep."),
+ ("ferry-neil-haddo", "neil-jetty", "haddo-jetty", "ferry", 60, 75,
+  [[11.8371487, 93.0311195], [11.75, 92.88], [11.6790, 92.7255]],
+  "Neil back to Haddo Wharf, Port Blair."),
+ ("ride-haddo-chidiyatapu", "haddo-jetty", "chidiya-tapu", "scooter", 27.0, 50,
+  [[11.6790, 92.7255], [11.62, 92.72], [11.56, 92.71], [11.5059682, 92.7014649]],
+  "NH 4 south from the jetty."),
+]
+R = R + ROUTES_V3
 
 
 def main():

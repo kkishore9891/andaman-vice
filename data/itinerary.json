@@ -7,16 +7,17 @@
   5.75,
   9.75
  ],
- "total_cost_inr": 144469,
+ "total_cost_inr": 142069,
  "risks": [
   "September is peak monsoon (388 mm avg): every ferry/boat can be weather-delayed - all bookings chosen refundable where possible (Green Ocean/Makruzz tickets are not; budget assumes they sail)",
   "Ferry prices/times captured live 2026-08-19; rebook-check all four sailings when booking",
   "Bhuma homestay is cash-only and non-refundable (Rs 5,000 damage deposit)",
-  "Baratang cab price is an operator-range estimate (Rs 6,500-9,000 private for 3) - lock by phone a day ahead",
   "Night kayak (Thu 03:30) MUST be phone-confirmed Wed evening - operators often refuse full-moon week; glow will be mild, sunrise-from-kayak is the sure part. Fallback: sleep to 04:15 + Kala Pathar sunrise",
   "v2 cost is ~Rs 44,300/person - Rs 4,300 over the worst-case line. Trims if wanted: drop kayak (-Rs 3,500), Ananya hotel swap in PB (-Rs 940), Green Ocean Friday ferry (-Rs 775)",
   "Govind Nagar scuba price (Rs 3,500 pp shore Try Dive, Dive Andaman) and the snorkel gear rate are being re-confirmed live - treat Thursday's water costs as provisional",
-  "Bharatpur watersports counter hours are disputed (one source says 08:00-15:00): if they shut at 15:00 the 16:12 jet ski must move to Friday morning after Natural Bridge"
+  "VERIFIED: private ferries sail from HADDO JETTY (Gate 3), not Phoenix Bay — the plan now sends you to Haddo, but confirm the gate printed on your own ticket",
+  "Late September is the tail of the SW monsoon: ferries run, but boat-based watersports at Bharatpur are weather-dependent on the day",
+  "Saturday's Cellular Jail show is Hindi-only (English runs Mon/Wed/Fri)"
  ],
  "days": [
   {
@@ -102,18 +103,18 @@
      "end": "11:45",
      "title": "Cab to the ferry jetty",
      "category": "travel",
-     "route": "cab-icyspicy-phoenix",
+     "route": "cab-icyspicy-haddo",
      "cost_inr": 200,
      "cost_note": "short auto/taxi hop, ESTIMATE — no verified tariff",
-     "tips": "CONFIRM THE JETTY ON YOUR TICKET. Private catamarans may sail from Haddo rather than Phoenix Bay — the two are adjacent parts of the same harbour but not the same gate."
+     "tips": "Go to HADDO JETTY, Gate 3 — NOT Phoenix Bay. Phoenix Bay is the government ferry terminal about 1 km away. Makruzz's own FAQ and Green Ocean's e-tickets both say Haddo."
     },
     {
      "start": "11:45",
      "end": "12:30",
      "title": "Nautika check-in",
      "category": "prep",
-     "place": "phoenix-bay",
-     "notes": "Nautika asks you to reach 45 minutes before departure; boarding shuts 15 minutes prior.",
+     "place": "haddo-jetty",
+     "notes": "Reporting is 60 minutes before departure (Nautika asks 45). Check-in shuts 15 min prior and boarding 10 min prior. A printed ticket and photo ID are mandatory.",
      "tips": "Luggage is capped at 15 kg per person, with excess at Rs 100/kg."
     },
     {
@@ -121,7 +122,7 @@
      "end": "14:00",
      "title": "SAIL — Nautika-Pro to Havelock",
      "category": "travel",
-     "route": "ferry-pb-havelock",
+     "route": "ferry-haddo-havelock",
      "cost_inr": 5400,
      "cost_note": "3 x Rs 1,800 Luxury (live operator search, 19 Aug)",
      "notes": "Chosen over the cheaper 13:15 Green Ocean because arriving 14:00 instead of 15:30 is what makes Neil's Cove and the Radhanagar sunset both possible today.",
@@ -406,10 +407,10 @@
      "title": "JET SKI @ Bharatpur",
      "category": "activity",
      "place": "bharatpur",
-     "cost_inr": 2400,
-     "cost_note": "3 x Rs 800 (10-15 min each; verified range 800-1,200)",
-     "notes": "Gliding over the lagoon your notes and the video both rate above Goa. Beach is free to enter and open to 18:00.",
-     "tips": "CHECK COUNTER HOURS when booking - one source says the watersports desks close at 15:00, which would push this to Friday morning. Stash the bags in a beach locker while you ride."
+     "cost_inr": 2100,
+     "cost_note": "3 x Rs 700 (walk-up counter rate Rs 500-700 for a ~10-min ride)",
+     "notes": "Gliding over the lagoon your notes and the video both rate above Goa. Beach entry is free, beach hours 05:00-18:00, and the jet ski counter runs roughly 10:00-17:00 — 16:12 is well inside it.",
+     "tips": "The '15:00 closing' scare was a false alarm: that figure came from a tour-package box, not the counter hours. Book at the beach desk, and stash bags in a locker while you ride."
     },
     {
      "start": "16:45",
@@ -567,7 +568,7 @@
      "end": "12:30",
      "title": "SAIL — Makruzz to Port Blair",
      "category": "travel",
-     "route": "ferry-neil-pb",
+     "route": "ferry-neil-haddo",
      "cost_inr": 6525,
      "cost_note": "3 x (Rs 1,850 + Rs 325 fuel surcharge)",
      "notes": "Chosen over the Rs 1,400 Green Ocean (arrives 12:45) for a 65-min margin on the Munda Pahad gate — the day's hard deadline."
@@ -577,7 +578,7 @@
      "end": "13:10",
      "title": "PB scooters near jetty + snack grab",
      "category": "travel",
-     "place": "phoenix-bay",
+     "place": "haddo-jetty",
      "cost_inr": 1200,
      "cost_note": "2 x ~Rs 600/day (Eternal Andamans; Rs 500 refundable deposit each)",
      "notes": "Eternal currently rents at Port Blair only — confirmed live. Grab bananas/snacks; lunch is light today."
@@ -587,7 +588,7 @@
      "end": "14:00",
      "title": "Ride south to Chidiya Tapu",
      "category": "travel",
-     "route": "ride-phoenix-chidiyatapu",
+     "route": "ride-haddo-chidiyatapu",
      "cost_inr": 250,
      "cost_note": "~2.7 L fuel for the 55 km round trip",
      "notes": "24 km, 44 min on NH4 — South Andaman's prettiest road."
@@ -607,8 +608,8 @@
      "category": "activity",
      "place": "munda-pahad",
      "cost_inr": 0,
-     "notes": "Gate entry BEFORE 15:00 (we arrive 14:10 — 50-min margin). 1.3 km, ~30 min up; clifftop view that earns the Bali comparisons. Area clears by 16:00.",
-     "tips": "Trainers, water, mosquito repellent."
+     "notes": "Gate entry must be BEFORE 15:00 (we arrive 14:10, a 50-minute margin). The trail is about 1.5 km one way and takes 30-60 minutes depending on pace, on an uneven path with a few inclines. Entry is free; be back down by 16:15-16:30 when the area clears.",
+     "tips": "Trainers, water and mosquito repellent. Budget 2-2.5 hours for the round trip including time at the top."
     },
     {
      "start": "15:55",
@@ -702,9 +703,9 @@
      "title": "Cab to Jirkatang Check Post",
      "category": "travel",
      "route": "cab-atlanta-jirkatang",
-     "cost_inr": 7500,
-     "cost_note": "Private AC cab day-tour for 3 (verified range Rs 6,500-9,000 — lock price when booking)",
-     "notes": "47 km in the dark to make the 06:00 first convoy. Two-wheelers are banned past the check post."
+     "cost_inr": 5400,
+     "cost_note": "private sedan round trip, Rs 5,000-6,500 published range (ferrybooking.in lists Rs 5,400 for up to 4 pax) — includes driver, tolls, parking and the Middle Strait vehicle ferry",
+     "notes": "47 km in the dark to make the 06:00 first convoy. Two-wheelers are banned past the check post. A shared joining tour is Rs 2,250 pp (Rs 6,750 for three) if you would rather split the cost than have the car to yourselves."
     },
     {
      "start": "06:00",
@@ -732,8 +733,8 @@
      "category": "travel",
      "route": "boat-nilambur-caves",
      "cost_inr": 2700,
-     "cost_note": "3 x Rs 900 round trip",
-     "notes": "Creek channels narrow to a tunnel of roots — half the show is the ride."
+     "cost_note": "3 x Rs 900 (counter rate Rs 900-1,000 pp, booked on arrival at Nilambur)",
+     "notes": "A 6-8 seat motorboat, about 25 minutes each way through mangrove creeks. Half the show is the ride."
     },
     {
      "start": "08:45",
@@ -768,7 +769,8 @@
      "title": "Ferry back across the strait",
      "category": "travel",
      "route": "boat-middlestrait-nilambur",
-     "cost_inr": 0
+     "cost_inr": 0,
+     "notes": "Vehicle ferry across Middle Strait — included in the private-cab rate."
     },
     {
      "start": "12:10",
@@ -777,7 +779,7 @@
      "category": "travel",
      "route": "cab-jirkatang-middlestrait",
      "cost_inr": 0,
-     "notes": "Convoy times south vary by source (12:00/12:30) — the driver knows the slot."
+     "notes": "Southbound convoys leave the Baratang side at roughly 12:00, 15:00 and 16:00 — the LAST one is 15:00 and missing it strands you overnight. Your driver knows the day's slot; confirm it on arrival."
     },
     {
      "start": "13:40",
@@ -809,11 +811,13 @@
     {
      "start": "17:45",
      "end": "19:15",
-     "title": "Optional: Cellular Jail light & sound",
+     "title": "Optional: Cellular Jail light & sound (Hindi)",
      "category": "buffer",
      "place": "cellular-jail",
      "cost_inr": 0,
-     "notes": "Optional (~Rs 300 pp, not in budget); skip freely if tired — nothing downstream depends on it."
+     "notes": "On Saturday every show is in HINDI: 17:50, 18:50 and 19:50. English runs only Mon/Wed/Fri, so there is no English option on the 26th. The 17:50 Hindi show fits this slot.",
+     "cost_note": "Rs 300 per adult (Rs 900 for three) if you go — not counted in the trip budget",
+     "tips": "Tickets are sold on the official Andaman Tourism e-Tourist portal. Skip it freely if the 04:00 start has flattened everyone — nothing downstream depends on it."
     },
     {
      "start": "19:15",

@@ -1,0 +1,720 @@
+{
+ "jetty_water": {
+  "summary": "JETTY (trip-critical): Private catamaran ferries in Port Blair / Sri Vijaya Puram depart from HADDO JETTY (Haddo Wharf), NOT Phoenix Bay. The strongest proof is Green Ocean's OWN e-ticket print portal (tickets.greenoceanseaways.com), whose tickets print the Port Blair terminal as \"Haddo (Gate-3)\" together with \"Reporting time should be 01 hours prior to Departure.\" Makruzz's own FAQ likewise tells passengers to \"reach Haddo Jetty\" from the airport, and Makruzz's own blog states \"Ferries usually depart from: Haddo Wharf, Sri Vijaya Puram (Port Blair)\". Nautika's own site never names a jetty at all \u2014 it only says \"the boarding point ... will be mentioned on your cruise ticket\" \u2014 so for Nautika I rely on non-operator sources (all of which say Haddo). Phoenix Bay Jetty is the GOVERNMENT (DSS) ferry terminal (Havelock, Neil, Rangat, Diglipur, outer islands, plus Little Andaman mainline sailings); it is about 1 km from Haddo, in the same Port Blair harbour but a separate terminal/building. Reporting time: Green Ocean 60 min, Makruzz 60 min (check-in closes T-15, boarding closes T-10), Nautika 45 min (its FAQ says boarding closes T-15, its Terms say T-20 \u2014 a self-contradiction on Nautika's own site). For a 13:15 sailing, 11:55 arrival = 80 min before departure, comfortably inside every operator's rule.\nBHARATPUR (Task 2): The \"08:00\u201315:00\" and \"from Rs 3,500\" figures the crew were worried about BOTH come from the same yellow callout box on go2andaman.com's Bharatpur page \u2014 and that box is the \"Neil Island \u2013 Day Trip\" tour package (it ends with \"Book with us: Neil Island \u2013 Day Trip\" and a booking button). It is NOT the watersports counter hours and NOT the snorkelling price. Refuted. Real picture: the beach itself is listed 05:00\u201318:00 daily, entry free; individual watersports counters run roughly 08:00\u201317:00 overall, with snorkelling ~09:00\u201316:00, glass-bottom boat ~08:00\u201316:00 and jet ski ~10:00\u201317:00. Walk-up snorkelling at the Bharatpur counter is ~Rs 500\u20131,000 pp; pre-booked online through agencies it is Rs 2,500\u20133,000 pp. Jet ski is a 10-minute single ride, Rs 500\u2013700 pp. Glass-bottom boat Rs 400\u2013800 pp.\nSCUBA ON NEIL (Task 3): Three dive centres run dives from Neil itself \u2014 Turquoise Dream (near Neil Jetty, 5-min walk), India Scuba Explorers (Beach No.1, Neil's first PADI centre, est. 2007) and DIVEIndia's Neil DIVESchool (Dancing Dugong Resort, 100 m from jetty). Cheapest real beginner price on Neil from an operator's own site: Turquoise Dream \"Discover Scuba Diving\" Rs 5,500 pp (equipment, instruction, boat transfers, certification included; 10% off for groups of 4+). India Scuba Explorers: \"Try Dive Lite\" Rs 5,000 + 18% GST (= Rs 5,900) for a 1-hour/30-min-underwater program, or full \"PADI DSD\" Rs 7,000 + GST (= Rs 8,260), half day. DIVEIndia's beginner product on Neil is \"Intro to Scuba\", Rs 14,000 pp all-inclusive \u2014 but it is a 2-DAY, 2-DIVE program, not a single try dive, so it is not comparable. Late-September operation: Turquoise Dream says it dives \"year-round (weather permitting)\" with 7 AM dives; DIVEIndia says the best time is \"All year round, dictated only by the Ocean's moods\". Booking lead time on Neil: 2\u20133 days in peak season (Dec\u2013Mar); same-day possible subject to availability \u2014 so 23\u201327 Sep is a low-pressure window.\nMONSOON CAVEAT: 23\u201327 Sep 2026 falls at the tail of the SW monsoon. Every source agrees the \"season\" is Oct\u2013May and that June\u2013Sep activities \"pause or run reduced hours\" / \"may be restricted\" because of swell and visibility. Ferries themselves definitely run (Makruzz's live booking engine sells the 08:00 Port Blair\u2192Neil sailing for 23 Sep 2026 at Rs 1,950 Premium, 88 seats free), but boat-based watersports at Bharatpur on a given day are weather-dependent. No source states a fixed September closure date.\nSOURCE-KIND NOTE: greenoceanseaways.com's public pages carry NO jetty or reporting-time information at all (its FAQ and Contact links are dead, and its published schedule page is stale, headed \"SCHEDULE OPEN FOR 01 MAY 2024 - 15 AUGUST 2024\"). The Haddo/1-hour evidence for Green Ocean therefore comes from Google's cached snippet of Green Ocean's own ticket-print portal, not from a page I could open directly (the ticket URLs 404 now, and I deliberately did not attempt to view other travellers' ticket data). A&N government sites (dss.andaman.gov.in, andamantourism.gov.in) could NOT be opened \u2014 the browser extension denied content access on those domains \u2014 so no government-sourced confirmation was obtainable.",
+  "facts": [
+   {
+    "topic": "Green Ocean \u2014 Port Blair departure jetty (a)",
+    "value": "Green Ocean's own e-ticket print portal shows the Port Blair terminal as \"Haddo (Gate-3)\". Exact snippet wording: \"Sun-09 Nov 2025 Haddo (Gate-3), 2 Hrs 15 Minutes, Sun-09 Nov 2025 Swaraj Dweep(Havelock) Jetty\" and, on the return leg, \"Wed-12 Nov 2025 Shaheed Dweep (Neil) Jetty, 1 Hrs 45 Minutes, Wed-12 Nov 2025 Haddo (Gate-3)\". So: Haddo Jetty, Gate 3.",
+    "source_url": "https://tickets.greenoceanseaways.com/print/",
+    "source_kind": "google_snippet",
+    "as_of": "2026-08-20 (snippet dated 7 Nov 2025; live ticket URLs now 404)"
+   },
+   {
+    "topic": "Green Ocean \u2014 reporting time (f)",
+    "value": "Operator's own e-ticket instructions: \"Reporting time should be 01 hours prior to Departure. 2. Check in ...\" i.e. 60 minutes before sailing. For a 13:15 departure that means being at Haddo Gate-3 by 12:15; arriving 11:55 leaves 20 min of slack.",
+    "source_url": "https://tickets.greenoceanseaways.com/print/",
+    "source_kind": "google_snippet",
+    "as_of": "2026-08-20 (snippet dated 7 Nov 2025)"
+   },
+   {
+    "topic": "Green Ocean \u2014 own website silent on jetty",
+    "value": "greenoceanseaways.com's live pages (home, cruise-schedule.html, terms-of-use.html, cancellation-policy.html) contain NO mention of Haddo, Phoenix Bay, jetty or reporting time. The footer 'FAQ' link (faqs.html) and 'Contact' link (contact.html) both fall back to the homepage \u2014 the pages do not exist. The published schedule is stale: \"SCHEDULE OPEN FOR 01 MAY 2024- 31 MAY 2024\" and \"SCHEDULE OPEN FOR 01 JUNE 2024 - 15 AUGUST 2024\".",
+    "source_url": "https://greenoceanseaways.com/cruise-schedule.html",
+    "source_kind": "operator_official",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Green Ocean \u2014 23 Sep 2026 availability could not be confirmed",
+    "value": "On tickets.greenoceanseaways.com/portal, a Port Blair \u2192 Shaheed Dweep(Neil) search for 23-09-2026, 3 adults returned \"No seat available on this day\". A control search (Port Blair \u2192 Havelock, 24-08-2026) returned the same message, so the portal appears not to be returning schedules at all rather than the 23 Sep sailing being sold out. The 13:15 Green Ocean sailing could NOT be verified on Green Ocean's own site.",
+    "source_url": "https://tickets.greenoceanseaways.com/portal",
+    "source_kind": "operator_official",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Makruzz \u2014 Port Blair jetty (b), operator FAQ",
+    "value": "Makruzz FAQ, answer to \"How much time does it take to reach the jetty from Andaman Airport?\": \"The jetty isn't very far from the airport and should not take more than 15-20 minutes from Port Blair Airport by taxi or car. You can also take an auto, a government bus, or a minibus from outside the airport to reach Haddo Jetty.\" \u2014 Makruzz names Haddo Jetty explicitly.",
+    "source_url": "https://www.makruzz.com/web/cms/faq",
+    "source_kind": "operator_official",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Makruzz \u2014 reporting / check-in times (f)",
+    "value": "Makruzz Terms & Conditions, CHECK-IN RULES: \"Report at the jetty an hour before departure.\" / \"A hard copy of the ticket is mandatory during check-in.\" / \"Passengers should carry a PHOTO IDENTITY CARD at the time of Check-In.\" / \"Check-in counter closes - 15 Mins Before Departure\" / \"Boarding Closes - 10 Mins Before Departure\".",
+    "source_url": "https://www.makruzz.com/web/cms/terms-conditions",
+    "source_kind": "operator_official",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Makruzz \u2014 reporting time (FAQ wording)",
+    "value": "\"If you have already booked a ticket, you must reach the jetty an hour before the actual departure for the ticket verification, security and luggage checks. In addition, check with your ticket provider or Makruzz customer care for any changes in the scheduled timings.\"",
+    "source_url": "https://www.makruzz.com/web/cms/faq",
+    "source_kind": "operator_official",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Makruzz \u2014 Travel Advice reporting rule",
+    "value": "DO'S list: \"Reach early: Irrespective of the timing of the ferry, you must reach the jetty at least an hour earlier. The security checks done at ports are as strict as on airports.\" Also: \"If your ticket was booked online, don't forget to collect your hard copy before arriving at the jetty.\"",
+    "source_url": "https://www.makruzz.com/web/cms/travel-advice",
+    "source_kind": "operator_official",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Makruzz \u2014 departure point named on own blog",
+    "value": "\"Port Blair Ferry Terminal Information \u2014 Ferries usually depart from: Haddo Wharf, Sri Vijaya Puram (Port Blair). Arrive at least 60\u201390 minutes before departure for smooth boarding.\" Quick Summary line: \"Departure Point: Haddo Wharf, Port Blair\".",
+    "source_url": "https://blog.makruzz.com/port-blair-to-havelock-ferry-guide-2026/",
+    "source_kind": "operator_official",
+    "as_of": "2026-08-20 (article dated 2 Mar 2026)"
+   },
+   {
+    "topic": "Makruzz \u2014 airport-to-jetty logistics on own blog",
+    "value": "\"The ferry terminal (Haddo Wharf) is about 15\u201320 minutes by car from the airport.\" / \"Step 3: Check-in at the Ferry Terminal \u2014 When you reach Haddo Wharf: Head to the Makruzz counter with your ticket and valid government ID.\" / \"Important: Boarding shuts 15 minutes before departure. Always arrive at the jetty at least 1 hour in advance to avoid last-minute rush.\" / Baggage: \"Each passenger is allowed 15 kg of check-in luggage + small hand baggage.\"",
+    "source_url": "https://blog.makruzz.com/andaman-island-transfers-explained-airport-to-hotel-to-ferry-step-by-step/",
+    "source_kind": "operator_official",
+    "as_of": "2026-08-20 (article dated 22 Dec 2025)"
+   },
+   {
+    "topic": "Makruzz \u2014 Phoenix Bay usage (d), operator's own words",
+    "value": "On Makruzz's Port Blair page, under Things To Do: \"Take a ferry from Phoenix Bay and Haddo Wharf to visit Little Andaman - a remote destination which is worth a visit for its lagoons and the waterfall.\" (i.e. Phoenix Bay is used for government/mainline sailings, not the Makruzz catamaran.)",
+    "source_url": "https://www.makruzz.com/web/cms/discover-pb",
+    "source_kind": "operator_official",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Makruzz \u2014 sails on 23 Sep 2026",
+    "value": "Live booking engine, Sri Vijaya Puram(PB) \u2192 Shaheed Dweep (Neil), 23 Sep 2026, 3 adults: one sailing, 08:00 \u2192 11:00 (3 hrs, via Swaraj Dweep/Havelock). Premium Rs 1,950 (88 seats avl), Deluxe Rs 2,540 (46 avl), Royal Rs 3,500 (0 avl). Confirms private ferries do run in late September.",
+    "source_url": "https://www.makruzz.com/web/ferry/select_schedule/single_trip/1/3/2026-09-23/3/0",
+    "source_kind": "operator_official",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Nautika \u2014 jetty NOT named on own site (c)",
+    "value": "Nautika's own FAQ deliberately avoids naming a jetty: \"Please note that the boarding point and timing information will be mentioned on your cruise ticket.\" Searching Nautika's whole indexed site for \"Haddo\" OR \"Phoenix Bay\" returns zero documents. Nautika's own site therefore does NOT state which jetty \u2014 mark unknown from the operator itself.",
+    "source_url": "https://gonautika.com/faqs",
+    "source_kind": "operator_official",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Nautika \u2014 reporting time (f), FAQ wording",
+    "value": "\"If you have already booked a ticket, you must reach the jetty 45 minutes before the actual departure for the ticket verification, security and luggage checks. Please note that boarding closes 15 minutes prior to departure. In addition, check with your ticket provider or SeaLink customer care for any changes in the scheduled timings.\" (Note the site's own text says 'SeaLink' \u2014 Nautika is operated by the SeaLink group.)",
+    "source_url": "https://gonautika.com/faqs",
+    "source_kind": "operator_official",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Nautika \u2014 reporting time, Terms of Service (conflicts with own FAQ)",
+    "value": "Terms of Service, Key Policies: \"Passengers should report at least 45 min prior to departure; boarding closes 20 min before departure\" and \"Photo ID proof required for every passenger at port entry\". This says boarding closes T-20, whereas Nautika's FAQ says T-15 \u2014 an internal contradiction on the operator's own site. Take the stricter T-20.",
+    "source_url": "https://gonautika.com/terms-of-service",
+    "source_kind": "operator_official",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Nautika \u2014 jetty per non-operator sources",
+    "value": "Go2Andaman: \"Boarding/Departure Jetty- Nautika Ferry from Port Blair to Havelock Island departs from Haddo Jetty in Northern Port Blair.\" Andaman Seahawk Travels: \"Boarding Point: Haddo Jetty, Port Blair\". BookYourFerry lists Nautika among the four private operators at Haddo. All agree: Haddo.",
+    "source_url": "https://go2andaman.com/book-ferry/nautika-ferry-port-blair-to-havelock/",
+    "source_kind": "aggregator",
+    "as_of": "2026-08-20 (via Google result listing)"
+   },
+   {
+    "topic": "Haddo vs Phoenix Bay \u2014 what each is used for (d)",
+    "value": "Three-jetty breakdown: HADDO JETTY (Haddo Wharf) = private catamaran ferries to Havelock & Neil \u2014 Makruzz, Nautika, Green Ocean, ITT Majestic; booked online in advance. PHOENIX BAY JETTY = Government (DSS) ferries to Havelock, Neil, Rangat, Diglipur & the outer islands; booked at the counter ~2 days before. ABERDEEN JETTY / Water Sports Complex = Ross Island & North Bay harbour boats and glass-bottom cruises. Quote: \"The rule of thumb: if you booked your ferry online, you're going to Haddo.\"",
+    "source_url": "https://www.bookyourferry.com/haddo-jetty-port-blair",
+    "source_kind": "aggregator",
+    "as_of": "2026-08-20 (page dated 11 Jul 2026)"
+   },
+   {
+    "topic": "Haddo\u2013Phoenix Bay distance / relationship (e)",
+    "value": "\"Is Haddo Jetty the same as Phoenix Bay Jetty? No. Haddo Jetty handles the private ferries you book online; Phoenix Bay Jetty, about a kilometre away, handles the government DSS ferries booked at the counter.\" Also: \"If you're taking the cheaper government ferry, that leaves from Phoenix Bay, about a kilometre away. The two are close but not the same building.\" Both sit on Port Blair's western/inner harbour \u2014 same harbour, adjacent neighbourhoods, but separate terminals ~1 km apart.",
+    "source_url": "https://www.bookyourferry.com/haddo-jetty-port-blair",
+    "source_kind": "aggregator",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Haddo Jetty \u2014 location, airport distance, arrival advice",
+    "value": "\"It's roughly 4 km from Veer Savarkar International Airport (IXZ) and a similar distance from the main Aberdeen Bazaar area \u2014 15 to 20 minutes by taxi in normal traffic.\" \"Plan to reach Haddo Jetty 45\u201360 minutes before departure, and more in peak season.\" \"the entrance is marked by a blue 'Passenger Terminal' gate off the main Haddo road\", run by the Port Management Board. Each operator (Makruzz, Nautika, Green Ocean, ITT) has its own check-in counter inside the terminal. Prepaid airport taxi ~Rs 300\u2013500.",
+    "source_url": "https://www.bookyourferry.com/haddo-jetty-port-blair",
+    "source_kind": "aggregator",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "CONFLICTING SOURCE on the jetty",
+    "value": "andamanislands.com (a Port Blair travel agency) states in its Travel Tips: \"Ferries to Neil Island operate from Phoenix Bay Jetty in Port Blair.\" This directly contradicts Green Ocean's own printed e-ticket (\"Haddo (Gate-3)\") and Makruzz's own FAQ/blog (\"Haddo Jetty\" / \"Haddo Wharf\"). The operator's own ticket wins: it is the document the gate staff check. The agency page is generic, undated blog copy and is most likely conflating government ferries (which DO leave Phoenix Bay) with the private catamarans.",
+    "source_url": "https://www.andamanislands.com/activity/jet-ski-in-neil-island",
+    "source_kind": "blog_or_guide",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Bharatpur \u2014 the 08:00\u201315:00 / Rs 3,500 claim RESOLVED (a,b)",
+    "value": "REFUTED as watersports data. On go2andaman.com's Bharatpur page a highlighted box reads \"Fee: Starts from Rs.3,500/-  Timings: 08:00 am to 03.00 pm\" \u2014 but the box continues \"G2A Tip: A day trip to Neil Island covers Bharatpur Beach, Natural Bridge, and Laxmanpur Beach... Book with us: Neil Island \u2013 Day Trip\" and ends with a \"Book Neil Island Day Trip\" button. Verified visually: it is the price and timing of go2andaman's own NEIL ISLAND DAY TRIP tour package, not the watersports counter hours and not the snorkelling price.",
+    "source_url": "https://go2andaman.com/visit/bharatpur-beach-neil-island/",
+    "source_kind": "aggregator",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Bharatpur Beach \u2014 beach opening hours (a)",
+    "value": "Same go2andaman page, Quick Facts: \"Timings: 5:00 AM to 6:00 PM. Entry Fee: Free. Facilities: Water sports counters, local food stalls, changing rooms, parking, small shops. Ideal Visit Duration: 2 to 3 hours. Best Time to Visit: October to May.\"",
+    "source_url": "https://go2andaman.com/visit/bharatpur-beach-neil-island/",
+    "source_kind": "aggregator",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Bharatpur Beach \u2014 beach hours, second source (a)",
+    "value": "Day-by-day listing: Monday\u2013Sunday all \"5:00 am \u2013 6:00 pm\". Entry Fee: Free. Listed phone 03192232694. Address: \"300 m from Neil Island Jetty\". Last Updated: 20 April 2026.",
+    "source_url": "https://andamantourism.org.in/bharatpur-beach-neil-island-andaman",
+    "source_kind": "aggregator",
+    "as_of": "2026-04-20 (page's own 'Last Updated')"
+   },
+   {
+    "topic": "Bharatpur watersports COUNTER hours (a) \u2014 per-activity table",
+    "value": "\"most run from morning to late afternoon (roughly 8 AM to 5 PM)\". Per-activity table, all at Bharatpur: Snorkelling 9 AM\u20134 PM; Scuba (Discover Scuba) 7 AM\u20133 PM; Sea walking 9 AM\u20133 PM; Glass-bottom boat 8 AM\u20134 PM; Jet skiing 10 AM\u20135 PM; Banana boat 9 AM\u20135 PM; Parasailing 9 AM\u20134 PM. \"Morning hours are usually the best for water activities due to calmer seas and fewer crowds.\"",
+    "source_url": "https://www.andamantourism.org/water-activities-in-neil-island/",
+    "source_kind": "aggregator",
+    "as_of": "2026-08-20 (article by-lined 16 Jan 2025)"
+   },
+   {
+    "topic": "Bharatpur watersports hours \u2014 third source (a)",
+    "value": "\"Although the beach is open 24/7 due to the lack of any gates, the allotted opening time is 8 AM and closing time is 5 PM.\" (Eternal Andamans / Andaman Emerald Holidays carry identical wording.) A fourth blog (TrippinAI) says \"Everyone who wants to jet ski or snorkel is here between 9 AM and 3 PM\". Consensus band: counters staffed roughly 08:00/09:00 to 16:00/17:00 \u2014 so a Thursday AFTERNOON plan works, but is at the tail end for snorkelling (last slots ~15:00\u201316:00).",
+    "source_url": "https://www.eternalandamans.com/neil-island/bharatpur-beach",
+    "source_kind": "blog_or_guide",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Bharatpur snorkelling \u2014 walk-up counter price (b)",
+    "value": "\"Snorkelling at Neil Island (Shaheed Dweep) costs from Rs 500 per person and runs roughly 9:00 AM to 4:00 PM, with the calm, shallow lagoon at Bharatpur Beach the top spot for beginners. No certification or swimming experience is needed. A guide, mask, snorkel and fins are provided on site.\" Also: \"For snorkelling, glass-bottom boat rides and jet skiing you can usually buy tickets on the spot at Bharatpur Beach.\"",
+    "source_url": "https://www.andamantourism.org/water-activities-in-neil-island/",
+    "source_kind": "aggregator",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Bharatpur snorkelling \u2014 on-spot price, second source (b)",
+    "value": "Bharatpur Beach entry-fee list: \"Free\" beach entry; \"1000/- per person for Snorkeling\"; \"800/- per person for Glass Bottom Boat Ride\"; \"600/- per person for Jet Ski\"; \"600/- per person for Banana Ride\"; \"600/- per person for Speed Boat\"; \"4500/- per person for Scuba(Boat)\".",
+    "source_url": "https://andamantourism.org.in/bharatpur-beach-neil-island-andaman",
+    "source_kind": "aggregator",
+    "as_of": "2026-04-20"
+   },
+   {
+    "topic": "Bharatpur snorkelling \u2014 pre-booked agency price (b)",
+    "value": "Andaman Bliss sells \"Snorkeling at Bharatpur Beach, Neil Island\" at Rs 2,500 per person. Listed inclusions: certified guide, mask/snorkel/fins, life jacket, safety briefing, 25\u201330 min guided snorkelling, complimentary photos & videos. Sessions: \"Morning Session Timing: 9:00 AM - 11:30 AM\" and \"Afternoon Session Timing: 12:00 PM - 3:00 PM\", duration 25\u201330 min each. Age 10\u201355 (an FAQ on the same page says minimum 12 \u2014 internally inconsistent). Excludes transport from the jetty.",
+    "source_url": "https://andamanbliss.com/activity/snorkeling-in-bharatpur-beach",
+    "source_kind": "aggregator",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Bharatpur snorkelling \u2014 boat snorkelling agency price (b)",
+    "value": "\"Snorkelling at Neil Island (Saheed Dweep) By Boat \u2014 3,000/-\" per person (Port Blair travel agency listing). Confirms the pattern: shore/counter Rs 500\u20131,000, boat and/or pre-booked online Rs 2,500\u20133,000.",
+    "source_url": "https://www.andamanislands.com/activity/jet-ski-in-neil-island",
+    "source_kind": "blog_or_guide",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Bharatpur jet ski \u2014 price and duration (c)",
+    "value": "Duration: 10 minutes, one ride. Operator listing: \"Jet ski ride Andaman \u2013 10 minutes of thrill on the water. Suitable for ages 10 to 50. Professional guides & safety gear (life jacket) included\"; price shown only as \"Enquire for Best Price\", 18% GST extra. Price from other sources: Rs 700/ride (andamantourism.org, 10 AM\u20135 PM), Rs 600 (andamantourism.org.in), Rs 599 for 10 min at Bharatpur (Eternal Andamans), Rs 500 for 10 min (Blue Andaman Tour, which adds \"Vendors offering jet ski rides can be found on the right side of the beach\"). Budget Rs 500\u2013700 pp for 10 minutes.",
+    "source_url": "https://www.andamanislands.com/activity/jet-ski-in-neil-island",
+    "source_kind": "blog_or_guide",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Bharatpur glass-bottom boat \u2014 price (d)",
+    "value": "Two figures: \"Glass-bottom boat ride Rs 400 \u2013 Rs 600, 8 AM \u2013 4 PM, Bharatpur\" (andamantourism.org, which adds \"runs through the day (about 8:00 AM to 4:00 PM), letting families and non-swimmers see the reef without getting wet\"); and \"800/- per person for Glass Bottom Boat Ride\" (andamantourism.org.in). Expect Rs 400\u2013800 pp on the day. Non-swimmer friendly, no booking needed.",
+    "source_url": "https://www.andamantourism.org/water-activities-in-neil-island/",
+    "source_kind": "aggregator",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Bharatpur \u2014 late-September (monsoon) operation (e)",
+    "value": "\"October to May, when the sea is calm and visibility is highest. December to March is peak season. Activities pause or run reduced hours during the June to September monsoon, when rough seas cut visibility.\" go2andaman: \"May to September (Off Season) \u2014 During the monsoon months, Neil Island experiences occasional rainfall and rough sea conditions. Some water activities may remain limited depending on weather and sea conditions.\" Andaman Bliss: \"Avoid the monsoon month that starts from June to September, as it may lead to heavy rainfall and rough weather conditions.\" No source gives a fixed closure date; 23\u201327 Sep is day-by-day weather-dependent, and boat-based rides are the first to be suspended.",
+    "source_url": "https://www.andamantourism.org/water-activities-in-neil-island/",
+    "source_kind": "aggregator",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "NEIL SCUBA \u2014 Turquoise Dream, programs & prices",
+    "value": "Operator's own FAQ, verbatim: \"Turquoise Dream dive center offers competitive Neil Island scuba diving prices: Discover Scuba Diving in Neil Island at Rs 5,500, Fun Dives for certified scuba diving Neil Island at Rs 4,500 per dive, PADI Open Water Course for comprehensive Neil Island scuba diving certification at Rs 28,000, and Advanced scuba diving in Neil Island at Rs 25,000. All Neil Island scuba diving packages at our dive center include equipment, instruction, boat transfers, and certification. We offer 10% discounts for group scuba diving Neil Island bookings (4+) with no hidden costs.\" Dive centre is \"near Neil Island Jetty (5-minute walk)\". Phone +91 70021 10021.",
+    "source_url": "https://turquoisedream.in/",
+    "source_kind": "operator_official",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "NEIL SCUBA \u2014 Turquoise Dream, season & session times",
+    "value": "Operator's own FAQ, verbatim: \"The optimal season for Neil Island scuba diving at Turquoise Dream dive center is October to May, featuring calm seas perfect for scuba diving in Neil Island with 20-30 meter visibility. For the best scuba diving Neil Island experience, visit December to March when our dive center frequently encounters manta rays. We offer Neil Island scuba diving year-round (weather permitting), with early morning dives at 7 AM providing premium conditions for scuba diving in Neil Island with excellent visibility and active marine life.\" So YES, they operate in late September, weather permitting; 7 AM is the flagship slot.",
+    "source_url": "https://turquoisedream.in/",
+    "source_kind": "operator_official",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "NEIL SCUBA \u2014 Turquoise Dream, how far ahead to book",
+    "value": "Operator's own FAQ, verbatim: \"...or visit our dive center near Neil Island Jetty (5-minute walk). For peak season Neil Island scuba diving (December-March), book 2-3 days ahead. Same-day scuba diving Neil Island is available at our dive center subject to availability.\" Booking channels: website, WhatsApp +91-7002110021, info@turquoisedream.in. For 23\u201327 Sep (off-peak) a day's notice or same-day should suffice, but book ahead anyway to lock the 7 AM slot.",
+    "source_url": "https://turquoisedream.in/",
+    "source_kind": "operator_official",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "NEIL SCUBA \u2014 India Scuba Explorers, beginner programs & prices",
+    "value": "Two named beginner programs, both on Neil (\"Neil Island's 1st PADI dive centre\", established 2007, Beach No.1). (1) \"PADI DSD\" \u2014 Duration 1/2 day, Course Fees Rs 7,000*; itinerary: short video and briefing, confined-water dive in 1 m, then \"Dive (up to 12 metres) with an instructor for as long as your air lasts\"; Prerequisite None, Max Depth 12 m, No. of Dives 1, Swimming Skills Not Required, Min Age 10 years; registered with PADI and countable toward Open Water for 6 months. (2) \"TRY DRIVE LITE\" [sic \u2014 Try Dive Lite] \u2014 \"A shorter version of the PADI DSD Program\"; Duration 1 hour, Course Fees Rs 5,000*; briefing, practising breathing on the surface, then \"Dive with an instructor for 30 minutes\"; Max Depth 12 m, Min Age 10, non-swimmers OK. Footnote on both: \"* 18% GST is applicable on the course fees mentioned.\" \u2192 Rs 8,260 and Rs 5,900 all-in.",
+    "source_url": "https://www.indiascubaexplorers.com/try-diving.php",
+    "source_kind": "operator_official",
+    "as_of": "2026-08-20 (site footer reads '\u00a9 2020' \u2014 prices may be stale)"
+   },
+   {
+    "topic": "NEIL SCUBA \u2014 India Scuba Explorers, certified-diver packages",
+    "value": "Guided dives (Neil dive sites, all discovered by them): 2 Dives Rs 7,000*; 4 Dives Rs 14,000*; 6 Dives Rs 19,200*; 8 Dives Rs 24,800*; 10 Dives Rs 31,500*; 12 Dives Rs 36,600*; Refresher Rs 3,000*; Dawn-Dives Rs 4,000*. \"* 18% GST is applicable\". \"10% Discount if you have all your own equipment. All prices are inclusive of equipment rental.\" Separately, their Offers page frames the season as \"special offers for October, November, April and May\" \u2014 September is not mentioned either way.",
+    "source_url": "https://www.indiascubaexplorers.com/guided-divers-scuba-explorers-india.php",
+    "source_kind": "operator_official",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "NEIL SCUBA \u2014 DIVEIndia Neil, beginner program & price",
+    "value": "DIVEIndia runs SSI DIVESchools at BOTH Havelock and Neil (\"Dive at Havelock, Neil, or both!\"); the Neil centre is at Dancing Dugong Resort, 100 m from the jetty. Beginner product \"INTRO TO SCUBA\" \u2014 page title \"Intro to Scuba Diving - Havelock & Neil\". ESSENTIALS tab, verbatim: \"Price: Rs 14,000 per person, all inclusive\". Duration 2 Days, Dives 2, Depth 12 m, Minimum Age 10 Years. Itinerary: Day 0 orientation; Day 1 confined-water skills + snorkelling + possible short shore dive; Day 2 \"two boat dives\". Inclusions: \"study material, instructor charges, gear, training dives, photos & videos, certification, snacks & beverages on all dive days, and taxes. Travel, meals, & stay are additional expenses.\" NOT a one-session try dive \u2014 it needs two days.",
+    "source_url": "https://diveindia.com/course/intro-to-scuba/",
+    "source_kind": "operator_official",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "NEIL SCUBA \u2014 DIVEIndia, year-round operation",
+    "value": "DIVEIndia's own FAQ on the Intro to Scuba page: \"WHAT IS THE BEST TIME TO DIVE IN THE ANDAMANS? All year round, dictated only by the Ocean's moods (a.k.a. winds, tides & currents).\" DIVEIndia's certified-diver Fun Diving rates (Havelock & Neil): \"Close-by sites: Rs 6500 for 2 dives/day; Far-off sites: Rs 8000 for 2 dives/day; Farther-out sites: Rs 10000 for 2 dives/day; Night Dive (shore-based): Rs 6000\". Other courses: Scuba Diver Rs 27,000; Open Water Diver Rs 36,000; Scuba Skills Update Rs 7,500.",
+    "source_url": "https://diveindia.com/course/intro-to-scuba/",
+    "source_kind": "operator_official",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "NEIL SCUBA \u2014 other operators present on Neil",
+    "value": "Google Business listings for Shaheed Dweep show three dive outfits with physical Neil addresses: \"India Scuba Explorers \u2014 4.8(148) \u2014 Diving center \u2014 Beach No.1, Neil Island, near SeaShell Samssara \u2014 Open, Closes 7 pm \u2014 +91 94742 89006\"; \"ISLAND SCUBA 'endless fun' PADI DIVE CENTER \u2014 5.0(93) \u2014 Laxman pur, Shaheed dweep, near Mitra seafood Restro \u2014 +91 70639 26396\"; \"DIVE India \u2014 4.9(201) \u2014 Dancing Dugong Resort, 100 Meters from Jetty \u2014 Open, Closes 6 pm \u2014 +91 77188 41966\". Turquoise Dream (SDI 5-star / PADI, near Neil Jetty) is a fourth. A \"REEFERS DIVE CENTRE\" also appears at Sitapur, Neil.",
+    "source_url": "https://www.google.com/search?q=scuba+diving+Neil+Island+Shaheed+Dweep+dive+centre+%22discover+scuba%22+price+2026",
+    "source_kind": "google_snippet",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "NEIL SCUBA \u2014 beach-counter scuba price at Bharatpur (not a named dive school)",
+    "value": "Boat scuba sold from the Bharatpur counters is quoted at \"4500/- per person for Scuba(Boat)\" (andamantourism.org.in) and \"Scuba diving (Discover Scuba) from Rs 3,500, 7 AM \u2013 3 PM, Bharatpur\" (andamantourism.org). These are counter/tout prices, not attributable to a specific PADI/SSI centre, and the Rs 3,500 figure is the lowest anyone advertises for Neil \u2014 but no operator's own site confirms it, so treat it as indicative only.",
+    "source_url": "https://www.andamantourism.org/water-activities-in-neil-island/",
+    "source_kind": "aggregator",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Government / Directorate of Shipping sources \u2014 NOT reachable",
+    "value": "Attempted https://dss.andaman.gov.in/ and https://www.andamantourism.gov.in/ in the browser. Both returned \"Permission denied for reading page content on this domain\" from the Chrome extension, so no A&N Administration or Directorate of Shipping Services page could be read. No government confirmation of the jetty allocation was obtainable \u2014 mark as unknown from government sources.",
+    "source_url": "https://dss.andaman.gov.in/",
+    "source_kind": "government",
+    "as_of": "2026-08-20"
+   }
+  ],
+  "critical_claims": [
+   {
+    "claim": "THE JETTY: Green Ocean's private catamarans depart Port Blair from HADDO JETTY, Gate 3 \u2014 not Phoenix Bay. Green Ocean's own e-ticket prints the Port Blair terminal as \"Haddo (Gate-3)\" and instructs \"Reporting time should be 01 hours prior to Departure.\" The crew should go to Haddo Jetty (Haddo Wharf), the blue 'Passenger Terminal' gate off the Haddo road, ~4 km / 15-20 min from IXZ airport, and be there by 12:15 for a 13:15 sailing \u2014 an 11:55 arrival is correct and gives 20 min of slack. Makruzz's own FAQ independently says \"...to reach Haddo Jetty\" and Makruzz's own blog says \"Ferries usually depart from: Haddo Wharf, Sri Vijaya Puram (Port Blair)\". Phoenix Bay Jetty, about 1 km away in the same harbour, is the GOVERNMENT (DSS) ferry terminal \u2014 different building, tickets sold at the counter. Nautika's own site names no jetty (only \"the boarding point ... will be mentioned on your cruise ticket\"); all non-operator sources put Nautika at Haddo too. One dissenting source (andamanislands.com, a travel agency) says \"Ferries to Neil Island operate from Phoenix Bay Jetty\" \u2014 it is wrong for private ferries and is outranked by the operator's own printed ticket.",
+    "source_url": "https://tickets.greenoceanseaways.com/print/"
+   },
+   {
+    "claim": "BHARATPUR COUNTER HOURS: The \"08:00-15:00\" claim is REFUTED as watersports hours \u2014 verified on-page, that figure (together with \"from Rs 3,500\") sits inside go2andaman.com's \"Neil Island - Day Trip\" package callout box, which ends with a \"Book Neil Island Day Trip\" button. The actual position: Bharatpur Beach itself is listed 5:00 AM - 6:00 PM daily, entry free; the watersports counters run roughly 8 AM to 5 PM, with snorkelling 9 AM - 4 PM, glass-bottom boat 8 AM - 4 PM and jet ski 10 AM - 5 PM. A Thursday-afternoon plan therefore works, but arrive by ~14:00-14:30 to be safe: snorkelling's last slot is around 15:00-16:00 and morning has the calmer water. In late September (tail of monsoon) individual boat-based activities can be suspended on the day for sea conditions.",
+    "source_url": "https://go2andaman.com/visit/bharatpur-beach-neil-island/"
+   },
+   {
+    "claim": "CHEAPEST REAL BEGINNER SCUBA ON NEIL: Rs 5,500 per person \u2014 Turquoise Dream's \"Discover Scuba Diving in Neil Island\", stated on the operator's own site, including equipment, instruction, boat transfers and certification, with a 10% group discount for 4+ (so no discount for a party of 3). Runner-up from an operator's own site: India Scuba Explorers' \"Try Dive Lite\", Rs 5,000 + 18% GST = Rs 5,900 (1 hour, 30 min underwater, max 12 m); their full PADI DSD is Rs 7,000 + GST = Rs 8,260 (half day, 1 dive). Do NOT quote DIVEIndia's Rs 14,000 as a try-dive price \u2014 that is their 2-day, 2-dive \"Intro to Scuba\" program (Havelock & Neil, same price). Bharatpur beach counters advertise boat scuba from ~Rs 3,500-4,500, but no operator's own site backs that figure. Turquoise Dream confirms it dives \"year-round (weather permitting)\" with 7 AM starts and asks only 2-3 days' notice in peak season (Dec-Mar), with same-day possible \u2014 so late September is bookable at short notice.",
+    "source_url": "https://turquoisedream.in/"
+   }
+  ],
+  "warnings": [
+   "Green Ocean's public website carries NO jetty or reporting-time information at all \u2014 its footer FAQ (faqs.html) and Contact (contact.html) links are dead and silently fall back to the homepage. The Haddo (Gate-3) / 1-hour reporting evidence for Green Ocean comes from Google's cached snippet of Green Ocean's OWN ticket-print portal (tickets.greenoceanseaways.com), not from a page I could open live \u2014 the two indexed ticket URLs now return 404. I also deliberately did not pursue those URLs further because they contain other travellers' personal booking data.",
+   "Green Ocean's published schedule page is badly out of date: it is headed \"SCHEDULE OPEN FOR 01 MAY 2024- 31 MAY 2024\" and \"SCHEDULE OPEN FOR 01 JUNE 2024 - 15 AUGUST 2024\". I could NOT verify the 13:15 Green Ocean sailing on 23 Sep 2026 anywhere on Green Ocean's own site: their booking portal returned \"No seat available on this day\" for Port Blair->Neil on 23-09-2026, and returned the same message for a control search (Port Blair->Havelock, 24-08-2026), which suggests the portal is not serving schedules rather than the sailing being full. Re-confirm the 13:15 departure and the Haddo Gate-3 reporting point directly on the e-ticket, or by phone on +91-03192-230777 / info@greenoceancruise.com, before travel.",
+   "Nautika contradicts itself on its own site about boarding cut-off: the FAQ says \"boarding closes 15 minutes prior to departure\" while the Terms of Service say \"boarding closes 20 min before departure\". Use the stricter 20-minute figure. Nautika's FAQ text also still refers customers to \"SeaLink customer care\" rather than Nautika.",
+   "A&N government sources could NOT be checked: navigation to dss.andaman.gov.in and www.andamantourism.gov.in was allowed but the browser extension returned \"Permission denied for reading page content on this domain\", so no Directorate of Shipping Services or A&N Administration page could be read. The jetty allocation is therefore evidenced by operator documents and travel-trade sources only, with no government confirmation.",
+   "Bharatpur watersports prices are counter/on-the-day prices with no single authoritative source. Snorkelling ranges from \"from Rs 500\" (andamantourism.org) to \"Rs 1,000\" (andamantourism.org.in) to Rs 2,500-3,000 if pre-booked online through an agency; jet ski ranges Rs 500-700 for the same 10-minute ride; glass-bottom boat Rs 400-800. Expect to negotiate at the counter and expect the figures to differ from anything published.",
+   "India Scuba Explorers' website footer reads \"\u00a9 2020\" and its content shows no sign of recent updating, so its Rs 5,000 / Rs 7,000 try-dive prices (plus 18% GST) may be stale. Turquoise Dream's footer reads \"\u00a9 2003-2024\" and several of its own internal links 404 (e.g. /dive-programs/discover-scuba-diving), so its Rs 5,500 figure \u2014 which I read from its live homepage FAQ \u2014 should also be reconfirmed by WhatsApp before relying on it.",
+   "23-27 Sep 2026 sits at the tail end of the southwest monsoon. Every source, including the operators, treats Oct-May as the season; June-Sep activities \"pause or run reduced hours\" and \"may be restricted\". Ferries themselves are running (Makruzz's live engine sells the 08:00 Port Blair->Neil sailing for 23 Sep 2026), but snorkelling, glass-bottom boat, jet ski and boat scuba at Bharatpur are decided on the day by sea state. Build a rain/rough-sea fallback into the Thursday afternoon plan and do not prepay non-refundable watersports.",
+   "The Andaman Bliss snorkelling page contradicts itself on age limits: the booking panel says \"Age Limit: 10 to 55 years\" while its own FAQ says \"The minimum age for snorkeling is 12 years and above.\" Confirm at the counter if anyone in the party is near those bounds.",
+   "Nothing on any operator site addresses vegetarian catering for the 3 vegetarian adults; Makruzz's T&Cs only mention a \"snack box\" for Deluxe/Royal class and Nautika mentions a snack kiosk. Meal suitability was not verifiable and should be checked directly."
+  ]
+ },
+ "land_ops": {
+  "summary": "All four tasks researched by opening pages in Chrome (no WebFetch/WebSearch). Tab 1977593512 was created for this work and closed at the end. Tabs 1977593503 and 1977593515 belong to other sessions and were left untouched.\n\nTASK 1 \u2014 BARATANG DAY TRIP, Sat 26 Sep 2026, 3 vegetarian adults from Port Blair.\nThe conflicting prices resolve into two different cost MODELS, not two prices for the same thing:\n(a) PRIVATE CAB (vehicle-priced). Dekho Andaman (local operator, Port Blair, +91 7063-950-125) publishes the cleanest breakdown: Ertiga SUV (max 6 pax + driver) round trip Port Blair\u2194Baratang with Limestone Cave + Mud Volcano = \u20b95,400 (9 hrs); Limestone Cave only = \u20b94,800 (8 hrs). INCLUDED in that \u20b95,400: cab+driver all day, parking and toll charges, VEHICLE FERRY TICKETS at Middle Strait, professional driver, \"Permit for Middle Andaman for every Traveler\". EXCLUDED: any meals, and the Limestone Cave speedboat at \u20b9800/person extra. So for 3 adults: \u20b95,400 + 3\u00d7\u20b9800 = \u20b97,800 (\u2248\u20b92,600 pp) before food. A sedan (Dzire/Etios, 2\u20133 pax) is the right size for 3 and e-Andaman Tourism lists \u20b95,000\u2013\u20b96,500 for that round trip; ferrybooking.in (Port Blair) lists \u20b95,400 for max 4 pax; Tropical Andamans \u20b94,000\u20136,000/vehicle; Andaman Ocean \u20b94,500 approx; TravelTriangle \u20b94,500\u20136,000. So a realistic private-cab figure for 3 people is \u20b94,500\u20136,500 for the CAR, plus ~\u20b9800\u2013900 pp boat, plus ~\u20b910\u201314 pp vehicle ferry if not included, plus food = roughly \u20b97,000\u20139,500 total for the three (\u20b92,350\u20133,200 pp).\n(b) SHARED / JOINING TOUR (per-head). Andaman Ocean (Port Blair operator since 2013): \u20b92,250 pp sharing, including A/C shared cab hotel pickup-drop, convoy permit assistance at Jirkatang, shared speedboat tickets, entry-permit/ticket coordination, tolls and parking, trip coordinator. Explicitly EXCLUDED: vehicle ferry ticket \u20b914/pp, all meals, professional cave guide (extra on request), camera fees, forest entry charges not listed, Mud Volcano add-on, GST if applicable. Same operator's second page and their own T&C quote \u20b92,100 pp \u2014 an internal inconsistency on their own site. Other per-head quotes: Tropical Andamans \u20b91,500\u20132,500 pp all-in; e-Andaman Tourism \u20b92,500\u20134,000 pp \"shared tour/coach\"; TravelTriangle \u20b91,000\u20131,500 pp bare shared and \u20b93,000\u20133,500 pp for a full operator package. For 3 adults sharing: ~\u20b96,300\u20137,500 total. Verdict: for exactly 3 people the private cab and the shared tour land in the same ballpark (~\u20b92,300\u20132,600 pp), so the private cab is the better buy \u2014 you get door-to-door control, no strangers, and the convoy-slot flexibility.\nCOMPONENTS: vehicle ferry across Middle Strait \u20b910\u201314 pp (trivially cheap; included by some operators). Speedboat at Nilambur jetty \u20b9800\u2013\u20b91,000 pp is the real consensus (Dekho Andaman \u20b9800; Andaman Ocean, ferrybooking.in and TravelTriangle \u20b9900; TravelTriangle table \u20b9900\u20131,000; e-Andaman \u20b9800\u20131,200/\u20b9800\u20131,500; iAndaman's \u20b9600 is from a 2017-copyright page and is stale). PERMITS: Indian nationals need NO paid permit \u2014 you register with a government photo ID at the Jirkatang forest check post and the operator/driver handles the convoy paperwork (TravelTriangle, Tropical Andamans and e-Andaman Tourism all say this; Dekho Andaman bundles \"Permit for Middle Andaman\" into the cab price). Foreign nationals need a permit obtained in Port Blair. GUIDE: not in the base price \u2014 Andaman Ocean lists \"Professional guide at Limestone Caves (available on request at extra cost)\" as an exclusion, while Tropical Andamans says guides are mandatory at the caves and volcanoes and are handled by the operator. BREAKFAST/LUNCH: excluded by every operator without exception. CAVE ENTRY: sources disagree \u2014 TravelTriangle states flatly \"No entry fee to the caves\"; ferrybooking.in says \u20b95\u201310 pp at the entry; Andaman Ocean bundles unspecified \"entry tickets\". Budget \u20b910 pp and don't worry about it.\nWALK AND TIME INSIDE: boat drop to cave entrance is ~1.2 km one way on a marked forest trail (Tropical Andamans, Exclusive Andaman), quoted up to 1.5\u20132 km by others; 15\u201320 min (Exclusive Andaman), 30\u201340 min (e-Andaman), Andaman Ocean warns off anyone who can't manage a 2\u20133 km round-trip walk. Time inside: 45\u201360 minutes (Tropical Andamans), 20\u201330 min (e-Andaman); Dekho Andaman allots 2 hours for the whole boat+trek+cave block, matching TravelTriangle's \"~2 hours including boat + trek\".\nRETURN CONVOY (the 12:00 / 12:30 / 14:30 conflict): all three numbers appear, and they are describing DIFFERENT slots of a multi-departure schedule, not competing claims about one departure. Northbound from Jirkatang the schedule is very consistently 06:00, 09:00, 12:00 (or 12:30) and 14:30 (or 15:00/15:30). Southbound from the Baratang/Middle Strait side, Go2Andaman says 12:00 PM and 3:00 PM; Tropical Andamans (re-checked 27 July 2026) says \"the last return at 3:00 PM\"; Exclusive Andaman lists the fourth convoy at 3:00 PM; TravelTriangle's table lists ~12:00 PM, 3:00 PM and 4:00 PM; Localpostit reports 06:30/09:30/12:30/15:30 from the Mid Strait check post (i.e. offset ~30 min from Jirkatang). Dekho Andaman's hour-by-hour plan has the convoy leaving the Baratang side after lunch and reaching Jirkatang by 15:30, hotel by 17:00. PLANNING ANSWER: aim for the 06:00 Jirkatang convoy (pickup 03:30\u201304:30) and be back at the Middle Strait vehicle-ferry queue by ~13:00 to make the early-afternoon return; treat ~15:00 as the hard last convoy and do not cut it fine. Confirm the exact slots locally the day before \u2014 every operator says timings are periodically revised.\nNOT AVAILABLE ON 26 SEP: Makruzz's new MV Makruzz Pearl Port Blair\u2192Baratang ferry (05:45\u219207:45, ~\u20b92,300 Premium, no convoy, no permit) starts 1 October 2026, and in any case has no return sailing to Port Blair \u2014 it continues to Havelock at noon.\n\nTASK 2 \u2014 FOOD.\nAT NILAMBUR/BARATANG JETTY: yes, and vegetarian is easy. Go2Andaman's dedicated Baratang restaurants page names two: Mahima Restaurant (on the main road in Nilambur, left-hand side coming from the jetty) serving poori and paratha at breakfast, rice at lunch, with curries, veg sauces and salad, \"packed with locals\", cheap; and Preethi Restaurant (right-hand side of the main road from Nilambur jetty) serving thalis with vegetarian or seafood sides and vegetable biryani on request, with staff happy to refill your plate. Plus food stalls all around the jetty doing South Indian and Bengali dishes, chai, snacks, coconut water, spiced cucumber, buttermilk and lassi. Tropical Andamans: \"Basic local restaurants operate near the jetty and in Baratang town \u2014 simple Indian food, perfectly decent. Options are limited.\" Their own trip photos are captioned \"The jetty stalls \u2014 samosas, chai\". e-Andaman Tourism: \"simple dhabas near the jetty: veg thalis, omelettes, snacks, tea, fresh coconuts... hygiene and options are basic\". PRICE: \u20b9150\u2013350 per person for a simple lunch at the Baratang jetty (e-Andaman Tourism); the same site budgets \u20b9200\u2013500 pp for meals/snacks across the day. Dekho Andaman's plan says \"Have lunch from the Restaurants nearby or on the way back\". Note ATMs and card acceptance are limited \u2014 carry small cash.\nPORT BLAIR BEFORE 04:00: nothing is open. Go2Andaman's 2026 Port Blair restaurant round-up shows the earliest openings in town are 6:30 AM (Rajasthani Bhojnalay/Dhaba) and 7:00 AM (Annapurna in Aberdeen Bazaar \u2014 pure vegetarian, South Indian, ~\u20b9500 for 2; also Javitri, also Buzzing Bee), and it explicitly notes \"most places in Port Blair close down quite early\", with the latest closer being Frywings at 11:30 PM. So carrying food from the previous night is effectively the only self-service option \u2014 but you should not need to: the standard operator practice is a hotel packed breakfast. Dekho Andaman's published tour plan states \"Early morning at 4.00 am we start for BARATANG... This day you will be given have packed breakfast from the hotel.\" e-Andaman Tourism advises \"Carry packed breakfast or grab tea and snacks near Jirkatang.\" Dekho Andaman also confirms you can refresh with tea and snacks at the Jirkatang check post while the driver does the paperwork (~05:00\u201306:00), and Luxury Andamans' sample plan has breakfast on arrival at Baratang around 08:00. RECOMMENDATION: ask the hotel the night before for a 03:30 packed breakfast, carry fruit/biscuits/water, and count on chai at Jirkatang.\n\nTASK 3 \u2014 CELLULAR JAIL LIGHT & SOUND SHOW, SATURDAY 26 SEP 2026. Answered from the OFFICIAL government e-Tourist portal (tourism.andamannicobar.gov.in/etourist), linked from the official A&N Tourism homepage.\nThree shows daily: 5:50 PM Hindi (all days), 6:50 PM Hindi (Tue/Thu/Sat/Sun), 6:50 PM ENGLISH (Mon/Wed/Fri only), 7:50 PM Hindi (all days). On Saturday 26 Sep 2026 ALL THREE SHOWS ARE IN HINDI \u2014 there is no English show on a Saturday. The claim that English runs only Mon/Wed/Fri is CONFIRMED, and doubly so: the portal's live seat-availability grid for the next 7 days shows \"No Show\" against the 06:50 PM English column on Thursday 20, Saturday 22, Sunday 23 and Tuesday 25 August 2026, and shows English available with the 06:50 PM Hindi marked \"No Show\" on Friday 21, Monday 24 and Wednesday 26 August. The pattern is hard-coded to the weekday.\nPrice: \u20b9300 per adult, \u20b9150 per child aged 5\u201311. For 3 adults = \u20b9900. This is a SEPARATE ticket from daytime museum entry (\u20b930 per Indian, \u20b9100 per foreigner). Photography charges: \u20b9200 per non-professional video/handy camera, \u20b91,000 per professional video camera, \u20b910,000/day for film shooting on the freedom movement with prior permission.\nWhere to buy: online on the official Andaman Tourism e-Tourist portal \u2014 register (name, age, gender, nationality, ID type and number, contact), get an acknowledgement number, pick services, pick date and show, pay via SBI ePay, print/save the confirmation slip. The portal also has Search Booking, Check Seat Availability and Verify Payment. I did not log in, register or pay. I found no published statement about an on-site counter or about how far in advance booking opens \u2014 the availability grid only publishes 7 days ahead, so 26 Sep 2026 seats are not yet listed as of 20 Aug 2026.\nBonus: the daytime Cellular Jail museum is open 9:00 AM\u201312:30 PM and 1:30 PM\u20135:00 PM, Tuesday to Sunday, closed Mondays and national holidays \u2014 so it is open on Sat 26 Sep. Note the museum's Monday closure does NOT stop the Monday evening shows.\n\nTASK 4 \u2014 MUNDA PAHAD TREK, CHIDIYA TAPU.\nTRAIL LENGTH: 1.5 km one way is the consensus. No source I opened says 1.3 km. Acquaint Andaman says \"approx. 1.5 to 2 km (one way)\". AndamansGuide's FAQ: \"approximately 1.5 km long, starting from Chidiya Tapu Beach\". andamantourism.org: \"about 1.5 km one way\".\nTIME UP: genuinely varies by source and by fitness, 30\u201360 minutes one way. Fast end: AndamansGuide 30\u201340 min; Acquaint Andaman \"a mild 30\u201340 minute hike\". Slow end: andamantourism.org \"roughly 45 to 60 minutes... the path is uneven with a few inclines, shaded most of the way\"; Experience Andamans (Port Blair operator, enlisted with Ministry of Tourism) \"approximately 40\u201360 minutes, and that depends on how fast you are\". Both figures are right \u2014 30 min is a brisk fit walker, 45\u201360 min is a normal pace with photo stops. Budget 2\u20132.5 hours round trip including time at the cliff.\nENTRY CUT-OFF: 15:00 CONFIRMED by two independent sources. AndamansGuide states \"Entry for the trek closes at 3:00 PM, and visitors must return by 4:15\u20134:30 PM\", and repeats it in its FAQ: \"The Munda Pahad Trek timing is limited for safety. Entry closes at 3:00 PM, and visitors need to return by 4:15\u20134:30 PM.\" Acquaint Andaman's fact box lists \"Timings: Approx. 1.5 to 2 km (one way) Till 03:00 PM\". Caveat: neither is a government source and I found no forest-department notification online, so treat 15:00 as the working rule and confirm at the Chidiya Tapu forest check post on the day. Acquaint Andaman adds: \"Trek only during daylight hours; avoid visiting after dark for safety.\"\nCHIDIYA TAPU SUNSET RULES AND FEES: the beach and sunset point are FREE to enter (andamantourism.org, stated twice including in its FAQ; AndamansGuide also lists Munda Pahad entry as free). The beach \"runs on daylight, roughly sunrise to sunset, and the forest road winds down after dark\" \u2014 you're expected to leave once the light goes; there is little lighting on the forest road, mobile network is patchy to non-existent, and nothing is hireable out there after dark, so fix your cab's return and waiting time before you set off. Arrive at least 30 minutes before listed sunset for the good spots. Swimming is not advised \u2014 rocky seabed, strong currents, and saltwater crocodiles reported along the coast. Do NOT confuse two places: Chidiya Tapu Beach (the long rocky stretch you reach first) is the main sunset viewpoint; Munda Pahar Beach is a few km further and is where the trek starts. The Chidiya Tapu Biological Park is a separate ticketed forest-department facility: \u20b920 per Indian visitor and \u20b950 per foreign national with under-5s free per andamantourism.org, or \"from \u20b950 adults, \u20b920 children\" per Go2Andaman \u2014 sources disagree on the exact figure; 9:00 AM to 4:00 PM, closed Mondays, camera charges extra (\u20b950 still / \u20b9100 video per Go2Andaman). Cab from Port Blair: ~25\u201328 km, 45\u201360 min drive, roughly \u20b91,500 return for a sedan; government bus ~\u20b930 one way but infrequent and won't wait. Food at Chidiya Tapu is only small stalls near the parking area (tea, packaged snacks, coconut water) \u2014 no restaurants at the beach and none on the trail.",
+  "facts": [
+   {
+    "topic": "Cellular Jail Light & Sound Show \u2014 Saturday language and full weekly schedule",
+    "value": "Official schedule: 1st show 5:50 PM HINDI all days; 2nd show 6:50 PM HINDI on Tue/Thu/Sat/Sun; 2nd show 6:50 PM ENGLISH on Mon/Wed/Fri only; 3rd show 7:50 PM HINDI all days. Saturday 26 Sep 2026 therefore has NO English show \u2014 all three shows are Hindi.",
+    "source_url": "https://tourism.andamannicobar.gov.in/etourist/show-details",
+    "source_kind": "government",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Cellular Jail Light & Sound Show \u2014 ticket price",
+    "value": "\u20b9300 per adult, \u20b9150 per child aged 5\u201311. Three adults = \u20b9900. Separate from daytime museum entry.",
+    "source_url": "https://tourism.andamannicobar.gov.in/etourist/show-details",
+    "source_kind": "government",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Cellular Jail \u2014 daytime museum entry and camera fees",
+    "value": "Entry \u20b930 per head for Indians, \u20b9100 for foreigners. Non-professional video/handy camera \u20b9200 per camera; professional video camera \u20b91,000 per camera; film shooting on the freedom movement (with prior permission) \u20b910,000 per day.",
+    "source_url": "https://tourism.andamannicobar.gov.in/etourist/show-details",
+    "source_kind": "government",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Cellular Jail Light & Sound Show \u2014 English/Hindi pattern verified against live seat data",
+    "value": "Live 7-day availability grid shows the 06:50 PM English column as 'No Show' on Thu 20, Sat 22, Sun 23 and Tue 25 Aug 2026, and shows English open with 06:50 PM Hindi as 'No Show' on Fri 21, Mon 24 and Wed 26 Aug 2026. Confirms the Mon/Wed/Fri English rule empirically.",
+    "source_url": "https://tourism.andamannicobar.gov.in/etourist/available-seats",
+    "source_kind": "government",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Cellular Jail Light & Sound Show \u2014 where and how tickets are bought",
+    "value": "Online on the official Andaman Tourism e-Tourist portal: Register & Book Online \u2192 acknowledgement number \u2192 service selection \u2192 visit date and show timing \u2192 review \u2192 payment via SBI ePay \u2192 confirmation slip. Portal also offers Search/Print Booking Slip, Check Seat Availability and Verify Payment. Linked as 'Light and Sound Show' from the official A&N Tourism homepage.",
+    "source_url": "https://tourism.andamannicobar.gov.in/etourist",
+    "source_kind": "government",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Cellular Jail \u2014 museum opening hours and weekly closure",
+    "value": "Museum 9:00 AM\u201312:30 PM and 1:30 PM\u20135:00 PM, Tuesday to Sunday; closed Mondays and national holidays. Open on Sat 26 Sep 2026. The Monday museum closure does not cancel Monday evening shows.",
+    "source_url": "https://cellularjail.com/timings",
+    "source_kind": "blog_or_guide",
+    "as_of": "2026-07-30"
+   },
+   {
+    "topic": "Baratang \u2014 private cab full breakdown (Dekho Andaman, Port Blair operator)",
+    "value": "Ertiga SUV (max 6 pax + driver) private, non-shared: \u20b95,400 for the Limestone Cave + Mud Volcano day (9 hrs / listed duration 10h30m). INCLUDED: cab with driver for the entire road trip, parking and toll charges, VEHICLE FERRY TICKETS, professional driver, operator guidance, 'Permit for Middle Andaman for every Traveler'. EXCLUDED: any meals, and Limestone Cave boat tickets at \u20b9800 per person extra.",
+    "source_url": "https://dekhoandaman.com/to_book/baratang-island-trip/",
+    "source_kind": "operator_official",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Baratang \u2014 private cab tariff table (Dekho Andaman)",
+    "value": "Port Blair\u2192Baratang taxi: 'Baratang Island Tour with Limestone Cave' 08 hours = \u20b94,800; 'Baratang Island tour with Mud Volcano and Limestone Cave' 09 hours = \u20b95,400. Boat trip to Limestone Cave \u20b9800 per person, 3 hours. Boat to Parrot Island \u20b96,000 per boat, 3 hours.",
+    "source_url": "https://dekhoandaman.com/andaman-cab-service/baratang-island-cab-service/",
+    "source_kind": "operator_official",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Baratang \u2014 private cab fares by vehicle type",
+    "value": "Same-day Port Blair\u21c4Baratang round trip with hotel pick-up/drop: Sedan (Dzire/Etios, AC, 2\u20133 pax) \u20b95,000\u2013\u20b96,500; MPV (Ertiga, AC, up to 5 pax) \u20b96,500\u2013\u20b97,500; SUV (Innova/Crysta, up to 6\u20137 pax) \u20b97,500\u2013\u20b99,500; Tempo Traveller (10\u201312 pax) \u20b911,000\u2013\u20b914,000. Included: vehicle with driver for the day (pick-up ~3:00\u20134:30 AM), waiting time at check-posts/jetty/sightseeing points, driver's allowance. Excluded and payable on the spot: forest/permit fees if applicable, vehicle ferry charges at Middle Strait if charged separately, shared speedboat \u20b9800\u2013\u20b91,200 pp, Mud Volcano jeep \u20b9100\u2013\u20b9300 pp, meals.",
+    "source_url": "https://eandamantourism.com/private-cab-fares-to-baratang-andaman/",
+    "source_kind": "operator_official",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Baratang \u2014 shared/joining tour price and inclusions",
+    "value": "\u20b92,250 per person sharing (above 3 years); child 2\u20133 yrs \u20b91,200; infant under 1 complimentary. INCLUDES A/C shared cab hotel pickup & drop within Port Blair city limits, convoy permit assistance at Jirkatang check post, shared speed boat tickets (Middle Strait\u2013Baratang\u2013Limestone Cave route), coordination for entry permits & tickets, all tolls & parking, trip coordinator. EXCLUDES vehicle ferry ticket \u20b914/pp, meals & beverages (breakfast, lunch, snacks), professional guide at Limestone Caves (on request at extra cost), camera/video fees, forest entry charges not listed, Mud Volcano visit and private cab/boat upgrades, personal expenses. GST extra if applicable. Private cab upgrade available on request.",
+    "source_url": "https://www.andamanocean.in/activities/baratang-limestone-cave-trip/",
+    "source_kind": "operator_official",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Baratang \u2014 same operator's internal price inconsistency",
+    "value": "Andaman Ocean's headline and pricing block say \u20b92,250 per person sharing, but the Terms & Conditions on the same page say 'The quoted price of \u20b92100/- per person is for shared cab & speed boat services' \u2014 and the operator runs a second page titled 'Baratang limestone Cave Trip @ 2100/-pp'. Quote must be confirmed in writing.",
+    "source_url": "https://www.andamanocean.in/activities/baratang-limestone-cave-trip/",
+    "source_kind": "operator_official",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Baratang \u2014 component cost breakdown paid at the counter",
+    "value": "Cab transfer \u20b95,400 for max 4 passengers (Port Blair to Baratang and back); ferry ticket \u20b910 per person paid at the ferry counter; boat trip to Limestone Caves \u20b9900 per person booked at the counter on arrival (driver can assist); cave entry ticket \u20b95\u201310 per person paid at the entry point.",
+    "source_url": "https://ferrybooking.in/baratang-cab-ferry-boat-lime-stone-cave",
+    "source_kind": "operator_official",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Baratang \u2014 speedboat fare at Nilambur jetty (consensus)",
+    "value": "\u20b9800\u2013\u20b91,000 per person round trip. Dekho Andaman \u20b9800; Andaman Ocean \u20b9900 stand-alone; ferrybooking.in \u20b9900; TravelTriangle \u20b9900 in FAQ and 'approx Rs 900\u20131,000/person' in its timings table; e-Andaman Tourism \u20b9800\u2013\u20b91,200 (and \u20b9800\u2013\u20b91,500 seat/share on another page). Boat seats 6\u20138 people, ~20\u201325 min through the mangrove creek. The \u20b9600 figure on iAndaman is from a page whose copyright line reads 2017 and is stale.",
+    "source_url": "https://traveltriangle.com/andaman-tourism/places-to-visit/baratang-island/timings",
+    "source_kind": "aggregator",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Baratang \u2014 permit cost for Indian nationals",
+    "value": "No paid permit. 'Indian nationals do not need a paid permit to visit Baratang. Simply carry a government-issued photo ID and register at the Jirkatang Forest check post before joining the escorted convoy.' Foreign nationals need an Andaman entry permit, issued free of charge in Port Blair, plus a valid passport. There is also no entry fee for Baratang Island itself (\u20b90).",
+    "source_url": "https://traveltriangle.com/andaman-tourism/places-to-visit/baratang-island/entry-fees",
+    "source_kind": "aggregator",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Baratang \u2014 permit handled by the operator",
+    "value": "'Not one you arrange yourself. On the road route, the convoy and reserve permits are handled entirely by the operator \u2014 you just carry photo ID.' Guides are mandatory at the caves and the mud volcano; permits are handled by the operator.",
+    "source_url": "https://tropicalandamans.com/destinations/baratang-island",
+    "source_kind": "operator_official",
+    "as_of": "2026-07-27"
+   },
+   {
+    "topic": "Baratang \u2014 cave entry fee (sources disagree)",
+    "value": "TravelTriangle: 'There is no separate ticket to enter the caves themselves' and 'No entry fee to the caves'. ferrybooking.in: cave entry ticket \u20b95\u201310 per person paid at the entry point. Andaman Ocean bundles unspecified 'entry tickets' into its \u20b92,250 shared price. Either way it is a rounding error; carry \u20b910 pp in change.",
+    "source_url": "https://traveltriangle.com/andaman-tourism/places-to-visit/baratang-island/entry-fees",
+    "source_kind": "aggregator",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Baratang \u2014 walk from boat drop to the caves and time inside",
+    "value": "1.2 km walk from the jetty and 45\u201360 minutes in the caves, with some mild climbing; floor gets slippery, carry a torch, photography allowed. Boat leg 20\u201325 min. Mud volcano is a ~200 m walkway trek, 4 km from the jetty, mandatory guide.",
+    "source_url": "https://tropicalandamans.com/destinations/baratang-island",
+    "source_kind": "operator_official",
+    "as_of": "2026-07-27"
+   },
+   {
+    "topic": "Baratang \u2014 walk distance and time (second reading)",
+    "value": "'The boat drops you at a small jetty, from where you walk for about 1.2 km (15\u201320 minutes) through a forest trail to reach the cave entrance.' Boat ride ~20\u201325 minutes from Middle Strait Jetty.",
+    "source_url": "https://exclusiveandaman.com/limestone-caves-in-baratang-island/",
+    "source_kind": "operator_official",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Baratang \u2014 walk distance and time (third reading)",
+    "value": "'~1.2\u20131.5 km easy trail (one way) under shade; basic fitness required'; 09:15\u201310:15 AM allotted for trek to the caves; 'Not advised if you have mobility issues that restrict a 2\u20133 km round trip walk.'",
+    "source_url": "https://www.andamanocean.in/activities/baratang-limestone-cave-trip/",
+    "source_kind": "operator_official",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Baratang \u2014 walk distance and time (longer estimates)",
+    "value": "e-Andaman Tourism: speedboat + guided walk 08:45\u201310:45, '20\u201325 min boat; 30\u201340 min walk each way; cave visit 20\u201330 min'; elsewhere 'walk 1.5\u20132 km to stalactites' and FAQ 'an easy-to-moderate walk of about 1.5\u20132 km each way on a mostly flat trail'. TravelTriangle's table: 'Trek to the caves ~2 km each way on a marked trail; time needed at the caves ~2 hours including boat + trek'.",
+    "source_url": "https://eandamantourism.com/day-trip-itinerary-port-blair-to-baratang-and-back/",
+    "source_kind": "operator_official",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Baratang \u2014 outbound convoy departures from Jirkatang",
+    "value": "6:00 AM, 9:00 AM, 12:00 PM and 2:30 PM. 'Convoys to Baratang Limestone Caves depart Jirkatang at 6:00 AM, 9:00 AM, 12:00 PM, and 2:30 PM; return convoys to reach Port Blair are at 12:00 PM and 3:00 PM.'",
+    "source_url": "https://go2andaman.com/baratang/how-to-reach/",
+    "source_kind": "operator_official",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Baratang \u2014 return convoy, most recent operator reading",
+    "value": "'The recent pattern has outbound convoys around 6:00, 9:00 and 11:30 AM with the last return at 3:00 PM \u2014 but these timings change, so we confirm the current ones the day we book your trip.' Hour-by-hour plan puts the return convoy at 3:00 PM: 'The last convoy back \u2014 missing it means being stuck.' Do's & don'ts: \"Don't cut the 3 PM return convoy fine.\"",
+    "source_url": "https://tropicalandamans.com/destinations/baratang-island",
+    "source_kind": "operator_official",
+    "as_of": "2026-07-27"
+   },
+   {
+    "topic": "Baratang \u2014 convoy timings table with both directions",
+    "value": "Port Blair side to Baratang (Jirkatang check-post): 6:00 AM \u00b7 9:00 AM \u00b7 12:30 PM \u00b7 3:30 PM. Baratang to Port Blair (return): ~12:00 PM \u00b7 3:00 PM \u00b7 4:00 PM. Registration window: reach the check-post ~1 hr before your slot. Road leg Port Blair\u2192Jirkatang\u2192Baratang ~3.5\u20134 hr each way. Full day-trip duration ~10 hours door-to-door. Ferry crossing (Nilambur to Middle Strait) ~15\u201320 min. Limestone Caves visiting hours ~7:00 AM\u20133:00 PM. Mud Volcano window ~7:00 AM\u20133:00 PM.",
+    "source_url": "https://traveltriangle.com/andaman-tourism/places-to-visit/baratang-island/timings",
+    "source_kind": "aggregator",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Baratang \u2014 four daily convoys, official tourist timings",
+    "value": "'There are four daily convoys that allow vehicles to pass through the restricted forest zone. These are the official timings for tourists: First convoy 6:00 AM from Jirkatang; Second convoy 9:00 AM; Third convoy 12:00 PM; Fourth convoy 3:00 PM. To reach Baratang on time and avoid crowds, most tourists take the first convoy at 6:00 AM. This is why tours usually start from Port Blair by 3:30 AM.'",
+    "source_url": "https://exclusiveandaman.com/limestone-caves-in-baratang-island/",
+    "source_kind": "operator_official",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Baratang \u2014 hour-by-hour day plan with return convoy timing",
+    "value": "04:00 AM start from Port Blair; packed breakfast from the hotel; Jirkatang check post \u2014 paperwork by driver, tea and snacks available; convoy reaches Middle Strait Port by 8:30 AM; ferry at 9:00 AM, Baratang in 20 minutes; speedboat to Limestone Cave; 2 hours at the cave; back in the boat around 12:00 PM; back at Baratang by 12:30 noon; lunch at nearby restaurants; Mud Volcano 5 km north; ferry back to Middle Strait; convoy restarts to Jirkatang guided by police vans, reaching Jirkatang by 3:30 PM; another 2 hours to the hotel, arriving 5:00 PM.",
+    "source_url": "https://dekhoandaman.com/to_book/baratang-island-trip/",
+    "source_kind": "operator_official",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Baratang \u2014 outlier convoy claim",
+    "value": "Dekho Andaman's 'Things to Note' bullet states 'There are two convoys : 8.00 am and 10.00 am', which contradicts every other source including that same page's own hour-by-hour plan (which has the convoy reaching Middle Strait by 8:30 AM after a 4:00 AM start). Treat as an error on their page.",
+    "source_url": "https://dekhoandaman.com/to_book/baratang-island-trip/",
+    "source_kind": "operator_official",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Baratang \u2014 full-day timeline with the vehicle-ferry leg",
+    "value": "03:45\u201304:30 depart Port Blair for Jirkatang (40\u201345 km, 1\u20131.25 hrs); 05:30\u201306:30 queue, register, join the first convoy; 06:30\u201308:00 escorted convoy to Middle Strait/Nilambur Jetty (45\u201350 km); 08:00\u201308:30 vehicle ferry across Middle Strait to the Baratang side (wait time can vary); 08:45\u201310:45 speedboat + guided walk to the caves; 11:00\u201312:30 jeep and short hike to Mud Volcano; 12:45\u201313:30 simple lunch at Baratang jetty eateries plus buffer for the ferry/convoy; 13:30\u201315:30 return ferry and afternoon convoy; 16:30\u201317:30 back in Port Blair.",
+    "source_url": "https://eandamantourism.com/day-trip-itinerary-port-blair-to-baratang-and-back/",
+    "source_kind": "operator_official",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Baratang \u2014 per-group and per-person cost model",
+    "value": "Typical day-trip costs per group: private cab (sedan) \u20b95,000\u2013\u20b96,500; boat to Limestone Caves (shared) \u20b9800\u2013\u20b91,200 pp; Mud Volcano local transfer \u20b9100\u2013\u20b9300 pp; permits/jetty/ferry \u20b9100\u2013\u20b9400 pp (some fees may be per vehicle); meals/snacks \u20b9200\u2013\u20b9500 pp. Sample per-person cost: 2 travellers sharing a sedan \u2248\u20b93,000\u2013\u20b94,000 pp; 4 travellers sharing an SUV \u2248\u20b91,800\u2013\u20b92,600 pp. Elsewhere on the same site: private cab full day \u20b96,000\u2013\u20b910,000 per vehicle; shared tour/coach \u20b92,500\u2013\u20b94,000 including convoy logistics; simple lunch at Baratang jetty \u20b9150\u2013\u20b9350.",
+    "source_url": "https://eandamantourism.com/private-cab-fares-to-baratang-andaman/",
+    "source_kind": "operator_official",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Baratang \u2014 indicative all-in day-trip prices",
+    "value": "'Group day tours run roughly \u20b91,500\u20132,500 per person all-in as an indicative range; a private car roughly \u20b94,000\u20136,000 per vehicle. Guides are mandatory at the caves and volcanoes; permits are handled by the operator.' FAQ: 'group day tours around \u20b91,500\u20132,500 per person including transport, permits and boat rides; a private car around \u20b94,000\u20136,000 per vehicle. Add a little for lunch and the optional Parrot Island boat.'",
+    "source_url": "https://tropicalandamans.com/destinations/baratang-island",
+    "source_kind": "operator_official",
+    "as_of": "2026-07-27"
+   },
+   {
+    "topic": "Baratang \u2014 private cab and packaged tour price ranges (aggregator view)",
+    "value": "'A private cab round trip from Port Blair to Baratang costs roughly \u20b94,500-\u20b96,000 for the car, shared among everyone travelling. You still pay about \u20b9900 per person for the speedboat.' 'A bundled Baratang day tour typically costs \u20b91,000-\u20b91,500 per person at the shared level and up to about \u20b93,000-\u20b93,500 for a full operator package.' Mud Volcano and Parrot Island each carry a small permit/boat charge of around \u20b950 per person, usually not included.",
+    "source_url": "https://traveltriangle.com/andaman-tourism/places-to-visit/baratang-island/entry-fees",
+    "source_kind": "aggregator",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Baratang \u2014 new Makruzz ferry (NOT available 26 Sep 2026)",
+    "value": "From 1 October 2026 MV Makruzz Pearl runs Port Blair 5:45 AM \u2192 Baratang 7:45 AM, ~\u20b92,300 in Premium, with no convoy, no reserve crossing and no permit needed. But it does not come back: at 12:00 PM the same vessel continues to Havelock, arriving 1:30 PM, and there is no sailing back to Port Blair. Irrelevant for a 26 September round trip.",
+    "source_url": "https://tropicalandamans.com/destinations/baratang-island",
+    "source_kind": "operator_official",
+    "as_of": "2026-07-27"
+   },
+   {
+    "topic": "Food at Nilambur/Baratang jetty \u2014 named restaurants and cuisine",
+    "value": "'There aren't any fancy restaurants in Baratang, but you won't stay hungry either. A couple of food stalls and small eateries are dotted around the Nilambur jetty and mainly serve South Indian and Bengali dishes. You can find refreshments, snacks, and chai almost on every corner... very pocket-friendly.' MAHIMA RESTAURANT \u2014 by the main road in Nilambur, left-hand side coming from the jetty; poori and paratha for breakfast, rice for lunch, bread for dinner, all with typical curries, veg sauces and salad; packed with locals; cheap. PREETHI RESTAURANT \u2014 right-hand side of the main road from the Nilambur jetty; tasty thalis with vegetarian or seafood sides; can prepare biryani with chicken or vegetables. Also coconut water, spiced cucumbers, buttermilk and lassi from street vendors; cookies and chocolate from small shops.",
+    "source_url": "https://go2andaman.com/baratang/restaurants/",
+    "source_kind": "operator_official",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Food at Baratang \u2014 veg options and price",
+    "value": "'Lunch: Simple thalis (veg/egg/fish), fried snacks, coconuts at Baratang jetty stalls.' 'Simple lunch at Baratang jetty: INR 150\u2013350 [per person].' Elsewhere on the same site: 'Expect simple dhabas near the jetty: veg thalis, omelettes, snacks, tea, fresh coconuts. Seafood availability varies; hygiene and options are basic\u2014carry snacks and water.' Shopping/kiosks: 'Very limited. Small kiosks sell beverages, chips, seasonal fruits.'",
+    "source_url": "https://eandamantourism.com/day-trip-itinerary-port-blair-to-baratang-and-back/",
+    "source_kind": "operator_official",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Food at Baratang \u2014 operator's own read",
+    "value": "'Basic local restaurants operate near the jetty and in Baratang town \u2014 simple Indian food, perfectly decent. Options are limited, so we carry snacks and water, and most tour packages include a lunch arrangement.' Their trip photo from the circuit is captioned 'The jetty stalls \u2014 samosas, chai, and the day's plan.'",
+    "source_url": "https://tropicalandamans.com/destinations/baratang-island",
+    "source_kind": "operator_official",
+    "as_of": "2026-07-27"
+   },
+   {
+    "topic": "Port Blair \u2014 earliest restaurant opening times (nothing before 04:00)",
+    "value": "Earliest openings among Port Blair's best-known restaurants: Rajasthani Bhojnalay / Rajasthani Dhaba 6:30 AM\u201310 PM (\u20b9400 for 2); Annapurna, Aberdeen Bazaar 7 AM\u201310 PM, pure vegetarian, South Indian, 'opens early' (\u20b9500 for 2); Javitri, School Line 7 AM\u201310 PM (pure veg main course, chaat, \u20b9250 for 2); The Buzzing Bee by Bayleaf Inn 7 AM\u201310 PM; Anju Coco, Aberdeen Bazaar 8 AM\u201310:30 PM; Lazeez 8 AM\u20133 PM and 6\u201311 PM; Icy Spicy (best vegetarian restaurant) 11 AM\u201310 PM. The page explicitly notes 'most places in Port Blair close down quite early', with Frywings the latest at 11:30 PM. Nothing opens before 04:00.",
+    "source_url": "https://go2andaman.com/best-restaurants-port-blair/",
+    "source_kind": "operator_official",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Pre-04:00 food solution \u2014 hotel packed breakfast is standard",
+    "value": "Operator's published tour plan: 'Early morning at 4.00 am we start for BARATANG island which is located 100 km towards the north of Port Blair. This day you will be given have packed breakfast from the hotel.' And: 'You will reach Jirgatang Check post. Here the paper works will be done by our drivers and you can refresh yourself with tea and snacks.' Also 'Breakfast and Lunch cab [can] be done from the Baratang Jetty.'",
+    "source_url": "https://dekhoandaman.com/to_book/baratang-island-trip/",
+    "source_kind": "operator_official",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Pre-04:00 food \u2014 carry it or grab tea at Jirkatang",
+    "value": "'Breakfast: Carry packed breakfast or grab tea and snacks near Jirkatang.' 'Hydration: Bring sufficient water; shade can be limited on trails.' Also 'Carry government ID, cash (ATMs and card acceptance are limited), water, snacks, and small change for local transfers.'",
+    "source_url": "https://eandamantourism.com/day-trip-itinerary-port-blair-to-baratang-and-back/",
+    "source_kind": "operator_official",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Munda Pahad \u2014 trail length, time and 15:00 entry cut-off",
+    "value": "'This short 1.5 km trek takes about 30\u201340 minutes.' Key features: Entry Fee \u2014 Free. Timing \u2014 'Entry for the trek closes at 3:00 PM, and visitors must return by 4:15\u20134:30 PM.' FAQ: 'The Munda Pahad trek is approximately 1.5 km long, starting from Chidiya Tapu Beach, and takes around 30 minutes to reach the viewpoint.' FAQ: 'The Munda Pahad Trek timing is limited for safety. Entry closes at 3:00 PM, and visitors need to return by 4:15\u20134:30 PM.' Food: 'There are no food stalls at the Munda Pahad viewpoint, but visitors can enjoy snacks from stalls at Chidiya Tapu beach nearby.'",
+    "source_url": "https://www.andamansguide.com/munda-pahad-trek",
+    "source_kind": "blog_or_guide",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Munda Pahad \u2014 15:00 cut-off, second confirming source",
+    "value": "Fact box: 'Location: Near Chidiya Tapu, 25 km from Port Blair. Timings: Approx. 1.5 to 2 km (one way) Till 03:00 PM.' Trail description: 'The trail to Munda Pahad begins at the Chidiya Tapu forest check post. It's a mild 30\u201340 minute hike through thick coastal forest... The path is well-marked and suitable for beginners.' Travel tips: 'No shops or restrooms on the trail; use facilities at Chidiya Tapu Beach before starting' and 'Trek only during daylight hours; avoid visiting after dark for safety.'",
+    "source_url": "https://acquaintandaman.com/sightseeing/munda-pahad/",
+    "source_kind": "operator_official",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Munda Pahad \u2014 longer time estimate (45\u201360 min) and terrain",
+    "value": "'A moderate walk of about 1.5 km one way, roughly 45 to 60 minutes, runs through dense forest to a high point above the sea at the southern tip. The path is uneven with a few inclines, shaded most of the way. At the top you get an open view of the Bay of Bengal, with Rutland Island across Duncan Passage to the south... Wear proper shoes and start with enough daylight to get back.'",
+    "source_url": "https://www.andamantourism.org/chidiya-tapu/",
+    "source_kind": "operator_official",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Munda Pahad \u2014 operator-run guided trek price and duration",
+    "value": "'Trekking to Munda Pahad, Chidiatapu' \u2014 \u20b91,500 per person, includes climbing and cab. 'We start around 1:30 PM from your hotel to Chidiyatapu... around 30 KM from the main city... journey would take around one hour.' 'The trekking trail is simple and you don't need a guide for the trek. The trek is covered in approximately 40\u201360 minutes, and that depends on how fast you are.' 'There are no restaurants or food stalls available inside the park; however, small hotels are present at the entrance.' Advance booking required.",
+    "source_url": "https://www.experienceandamans.com/water-sports/trekking/trekking-to-munda-pahad-chidiatapu",
+    "source_kind": "operator_official",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Chidiya Tapu \u2014 entry fee and sunset-viewing rules",
+    "value": "'Beach entry is free.' FAQ: 'The beach and sunset point are free. The Chidiya Tapu Biological Park charges around 20 rupees for Indian visitors and 50 rupees for foreign nationals, with children under 5 free and camera charges extra (as of 2026).' Opening: 'The beach runs on daylight, roughly sunrise to sunset, and the forest road winds down after dark.' 'Reach the sunset point at least 30 minutes before the listed sunset time.' 'Do not arrive after dark or linger too late. The forest road has little lighting and the beach zone effectively winds down by early evening.' Swimming not advised \u2014 rocky seabed, strong currents, saltwater crocodiles reported. Mobile network patchy to non-existent. Chidiya Tapu Beach is the main sunset spot; Munda Pahar Beach a few km further is where the trek starts. Cab: sedan Port Blair\u2194Chidiya Tapu return roughly \u20b91,500 (2026); government bus ~\u20b930 one way, infrequent, does not wait. Distance 25\u201328 km, 45\u201360 min. Food: only small stalls near the parking area selling tea, packaged snacks and coconut water; no restaurants at the beach.",
+    "source_url": "https://www.andamantourism.org/chidiya-tapu/",
+    "source_kind": "operator_official",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Chidiya Tapu Biological Park \u2014 ticket, hours, weekly closure",
+    "value": "Ticket cost from INR 50 (adults), INR 20 (children). Timings 9:00 AM to 4:00 PM. Closed on Monday. Camera fee INR 50 (still), INR 100 (video). Address: Biological Park, Chidiya Tapu, Port Blair, South Andaman. 25 km / 45 minutes from Port Blair. Note this contradicts andamantourism.org, which lists \u20b920 Indian / \u20b950 foreign.",
+    "source_url": "https://go2andaman.com/visit/chidiyatapu-biological-park/",
+    "source_kind": "operator_official",
+    "as_of": "2026-08-20"
+   },
+   {
+    "topic": "Baratang \u2014 monsoon/September risk to the day trip",
+    "value": "'Roughly June to August the day gets genuinely difficult \u2014 heavy rain hurts the road, the boats and the cave access \u2014 and we'll usually talk you out of it rather than sell it.' September is a workable shoulder month: 'May and September are workable shoulder months: greener, quieter, cheaper, with the odd shower.' Elsewhere: 'Avoid visiting during monsoon (June to September) as heavy rains may delay the convoys and make the trekking path slippery' (Exclusive Andaman); 'the May\u2013September monsoon can suspend the ferry and boat rides at short notice' (TravelTriangle).",
+    "source_url": "https://tropicalandamans.com/destinations/baratang-island",
+    "source_kind": "operator_official",
+    "as_of": "2026-07-27"
+   },
+   {
+    "topic": "Baratang \u2014 conduct rules in the Jarawa Reserve",
+    "value": "No photography or video anywhere in the tribal reserve (strictly enforced, cameras can be confiscated); no stopping and no opening windows during the convoy; no interaction, waving or offering food or items; violations can mean removal from the tour, legal action, fine or imprisonment. All guests must carry a valid government photo ID for verification at the checkpoints.",
+    "source_url": "https://www.andamanocean.in/activities/baratang-limestone-cave-trip/",
+    "source_kind": "operator_official",
+    "as_of": "2026-08-20"
+   }
+  ],
+  "critical_claims": [
+   {
+    "claim": "BARATANG COST MODEL FOR 3 ADULTS \u2014 private cab. The cleanest published private-cab breakdown is Dekho Andaman (Port Blair local operator): \u20b95,400 for a non-shared Ertiga (max 6 pax + driver) covering Limestone Cave and Mud Volcano, with the vehicle ferry tickets, tolls, parking, driver and the Middle Andaman permit for every traveller INCLUDED, and only meals and the \u20b9800-per-person Limestone Cave boat excluded. For 3 adults that is \u20b95,400 + 3\u00d7\u20b9800 = \u20b97,800 total (\u20b92,600 per head) before food.",
+    "source_url": "https://dekhoandaman.com/to_book/baratang-island-trip/"
+   },
+   {
+    "claim": "BARATANG COST MODEL FOR 3 ADULTS \u2014 the right vehicle for 3 people is a sedan, and the published sedan round-trip rate is \u20b95,000\u2013\u20b96,500 for the car, with the vehicle ferry at Middle Strait, forest/permit fees, the \u20b9800\u2013\u20b91,200 pp shared speedboat, the \u20b9100\u2013\u20b9300 pp Mud Volcano jeep and all meals payable separately on the spot.",
+    "source_url": "https://eandamantourism.com/private-cab-fares-to-baratang-andaman/"
+   },
+   {
+    "claim": "BARATANG COST MODEL FOR 3 ADULTS \u2014 shared/joining alternative. A joining tour is \u20b92,250 per head (\u20b96,750 for three), including A/C shared cab with hotel pickup and drop, convoy permit assistance at Jirkatang, shared speedboat tickets and all tolls and parking \u2014 but excluding the \u20b914 pp vehicle ferry ticket, every meal, the professional cave guide, camera fees and GST. For a party of exactly three this is barely cheaper than a private cab, so the private cab is the better value.",
+    "source_url": "https://www.andamanocean.in/activities/baratang-limestone-cave-trip/"
+   },
+   {
+    "claim": "BARATANG COST MODEL FOR 3 ADULTS \u2014 permits. Indian nationals pay nothing for a Baratang permit: you carry a government photo ID and register at the Jirkatang forest check post, and the operator or driver handles the convoy paperwork. There is also no entry fee for Baratang Island itself.",
+    "source_url": "https://traveltriangle.com/andaman-tourism/places-to-visit/baratang-island/entry-fees"
+   },
+   {
+    "claim": "BARATANG \u2014 the speedboat at Nilambur jetty is the one substantial per-head cost on top of the cab: \u20b9900\u2013\u20b91,000 per person, booked at the counter on arrival, for a 6\u20138 seat motorboat, ~25 minutes each way through the mangrove creek.",
+    "source_url": "https://traveltriangle.com/andaman-tourism/places-to-visit/baratang-island/timings"
+   },
+   {
+    "claim": "BARATANG \u2014 return convoy. The last return convoy from the Baratang side is 3:00 PM and missing it strands you; the recent pattern is outbound convoys around 6:00, 9:00 and 11:30 AM. Timings are revised periodically and must be confirmed locally the day before.",
+    "source_url": "https://tropicalandamans.com/destinations/baratang-island"
+   },
+   {
+    "claim": "BARATANG \u2014 return convoy, the source of the 12:00/12:30 confusion. There are multiple southbound slots, not one: the published table gives Baratang\u2192Port Blair returns at approximately 12:00 PM, 3:00 PM and 4:00 PM, against Jirkatang northbound departures of 6:00 AM, 9:00 AM, 12:30 PM and 3:30 PM. So 12:00/12:30 is an early return slot and ~14:30\u201315:00 is the last one.",
+    "source_url": "https://traveltriangle.com/andaman-tourism/places-to-visit/baratang-island/timings"
+   },
+   {
+    "claim": "SATURDAY CELLULAR JAIL SHOW \u2014 on Saturday 26 September 2026 every Light & Sound Show is in HINDI. The official government schedule runs the 5:50 PM and 7:50 PM Hindi shows all days, the 6:50 PM Hindi show on Tuesday/Thursday/Saturday/Sunday, and the 6:50 PM ENGLISH show only on Monday, Wednesday and Friday. The claim that English runs only Mon/Wed/Fri is CONFIRMED.",
+    "source_url": "https://tourism.andamannicobar.gov.in/etourist/show-details"
+   },
+   {
+    "claim": "SATURDAY CELLULAR JAIL SHOW \u2014 price is \u20b9300 per adult (\u20b9900 for three), with children 5\u201311 at \u20b9150; this is a separate ticket from the \u20b930-per-Indian daytime museum entry.",
+    "source_url": "https://tourism.andamannicobar.gov.in/etourist/show-details"
+   },
+   {
+    "claim": "SATURDAY CELLULAR JAIL SHOW \u2014 tickets are bought online on the official Andaman Tourism e-Tourist portal, which is the booking channel linked from the government tourism homepage: register with visitor details, receive an acknowledgement number, choose the visit date and show, pay via SBI ePay, and print the confirmation slip.",
+    "source_url": "https://tourism.andamannicobar.gov.in/etourist"
+   },
+   {
+    "claim": "SATURDAY CELLULAR JAIL SHOW \u2014 the weekday language rule is visible in live data, not just the published table: the portal's 7-day seat grid shows the 06:50 PM English slot as 'No Show' on Saturday 22 August 2026 while both Hindi slots have seats, and shows the reverse on Monday, Wednesday and Friday.",
+    "source_url": "https://tourism.andamannicobar.gov.in/etourist/available-seats"
+   },
+   {
+    "claim": "MUNDA PAHAD CUT-OFF \u2014 entry for the trek closes at 3:00 PM and visitors must be back by 4:15\u20134:30 PM. The trail is about 1.5 km one way and takes roughly 30\u201340 minutes; entry is free.",
+    "source_url": "https://www.andamansguide.com/munda-pahad-trek"
+   },
+   {
+    "claim": "MUNDA PAHAD CUT-OFF \u2014 independently corroborated by a second operator, whose fact box reads 'Timings: Approx. 1.5 to 2 km (one way) Till 03:00 PM', with the trail starting at the Chidiya Tapu forest check post and described as a mild 30\u201340 minute hike, and an explicit warning to trek only in daylight.",
+    "source_url": "https://acquaintandaman.com/sightseeing/munda-pahad/"
+   },
+   {
+    "claim": "MUNDA PAHAD \u2014 the slower time estimate is equally well sourced: about 1.5 km one way taking roughly 45 to 60 minutes on an uneven path with a few inclines. Combined with the 30\u201340 minute readings, budget 30\u201360 minutes up and 2\u20132.5 hours round trip including time at the cliff, which means starting no later than about 14:00 to respect the 15:00 gate.",
+    "source_url": "https://www.andamantourism.org/chidiya-tapu/"
+   }
+  ],
+  "warnings": [
+   "No government or forest-department source publishes the Andaman Trunk Road convoy schedule online. I searched site:andaman.gov.in and site:tourism.andamannicobar.gov.in for convoy timings and got zero results. Every convoy time in this report comes from tour operators, and they do not fully agree. Operators themselves say the schedule is 'periodically revised' and that they confirm it the day they book. The convoy time must be reconfirmed in Port Blair the day before 26 Sep.",
+   "Return-convoy figures genuinely conflict across sources and I could not fully reconcile them: Go2Andaman says returns at 12:00 PM and 3:00 PM; Tropical Andamans says the last return is 3:00 PM; Exclusive Andaman lists a fourth convoy at 3:00 PM; TravelTriangle's table says ~12:00 PM, 3:00 PM and 4:00 PM; Localpostit reports 6:30/9:30/12:30/3:30 from the Mid Strait check post. The most authoritative of these is Tropical Andamans (a Port Blair operator whose page carries an explicit 'last checked 27 July 2026' date and a stated methodology of confirming timings on the day of booking) \u2014 treat 15:00 as the hard last return and be at the ferry queue by 13:00.",
+   "Dekho Andaman's own page contradicts itself on convoys, stating 'There are two convoys : 8.00 am and 10.00 am' in its notes while its hour-by-hour plan has a 4:00 AM departure reaching Middle Strait by 8:30 AM. Their times bullet is unreliable; their price breakdown appears sound.",
+   "Andaman Ocean quotes \u20b92,250 per person in its headline and pricing block but \u20b92,100 per person in the Terms & Conditions on the same page, and runs a second page at \u20b92,100. Get any shared-tour quote in writing before paying.",
+   "Whether there is a cave entry ticket is unresolved: TravelTriangle says there is none, ferrybooking.in says \u20b95\u201310 per person at the entry, Andaman Ocean bundles unspecified 'entry tickets'. Immaterial to the budget but do not be surprised by a small counter charge.",
+   "Chidiya Tapu Biological Park entry fee conflicts between sources: andamantourism.org says \u20b920 Indian / \u20b950 foreign, Go2Andaman says from \u20b950 adults / \u20b920 children. Both agree on 9 AM\u20134 PM and a Monday closure. Not relevant for a Saturday, but confirm at the gate.",
+   "The Munda Pahad 15:00 cut-off rests on two travel sites, neither a government source, and one of them (andamansguide.com) carries its own disclaimer that it is not the official Andaman government website. I found no forest-department notification. Also, andamansguide gives Chidiya Tapu as 17 km from Port Blair, which conflicts with the 25\u201330 km given by every other source including Go2Andaman, Experience Andamans and andamantourism.org \u2014 that page is loose with numbers, and it also internally contradicts itself (1.5 km trek in one place, 2 km in another).",
+   "26 September 2026 falls at the tail of the monsoon. Multiple operators warn that from roughly June to September heavy rain can suspend the Baratang creek boats and make the cave trail slippery, and that convoys can be delayed. Tropical Andamans calls September a 'workable shoulder month' but says of June\u2013August that they would 'talk you out of it rather than sell it'. Build in a fallback day and confirm the boat is running.",
+   "iAndaman.com lists a \u20b9600 per head boat fare and states 'Days Open/Closed: Closed: Monday' for Baratang \u2014 that page's copyright line reads 2017 and both claims are contradicted by every current source. I did not rely on it.",
+   "I found no published statement on whether Cellular Jail Light & Sound Show tickets can be bought at an on-site counter, nor how far in advance online booking opens. The official portal's availability grid only publishes 7 days ahead, so 26 Sep 2026 was not yet listed on 20 Aug 2026. Mark both as UNKNOWN; the official helpdesk numbers are +91 3192 232694 and +91 3192 230933, office hours 8:30 AM\u20135:00 PM Mon\u2013Sat.",
+   "I did not fill in, submit or pay through the e-Tourist registration form, and did not log in anywhere. All figures were read from published pages only.",
+   "Three domains blocked page-text extraction and had to be read via screenshots (andamanocean.in, dekhoandaman.com, acquaintandaman.com); azuretrailsandaman.in, enclaveandaman.com, travelourister.com and rartoursandtravel.com would not load at all. Facts from the screenshot-read pages are transcribed from the rendered page.",
+   "Some operator pages consulted (notably eandamantourism.com and trekgo.in) read as generically written content rather than first-hand local knowledge, with round-number ranges and hedged language. I have preferred Tropical Andamans, Dekho Andaman, Andaman Ocean, Go2Andaman and Experience Andamans, which publish specific, checkable figures and dated verification.",
+   "Tab 1977593512 was created for this research and closed at the end. Tabs 1977593503 (the user's own Andaman Vice site) and 1977593515 (scuba research, apparently another agent's) were present in the group and left untouched; a tab 1977593513 doing Booking.com hotel searches appeared and disappeared during the session and was not mine."
+  ]
+ }
+}
