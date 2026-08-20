@@ -7,7 +7,7 @@
   5.75,
   9.75
  ],
- "total_cost_inr": 142069,
+ "total_cost_inr": 139939,
  "risks": [
   "September is peak monsoon (388 mm avg): every ferry/boat can be weather-delayed - all bookings chosen refundable where possible (Green Ocean/Makruzz tickets are not; budget assumes they sail)",
   "Ferry prices/times captured live 2026-08-19; rebook-check all four sailings when booking",
@@ -17,7 +17,9 @@
   "Govind Nagar scuba price (Rs 3,500 pp shore Try Dive, Dive Andaman) and the snorkel gear rate are being re-confirmed live - treat Thursday's water costs as provisional",
   "VERIFIED: private ferries sail from HADDO JETTY (Gate 3), not Phoenix Bay — the plan now sends you to Haddo, but confirm the gate printed on your own ticket",
   "Late September is the tail of the SW monsoon: ferries run, but boat-based watersports at Bharatpur are weather-dependent on the day",
-  "Saturday's Cellular Jail show is Hindi-only (English runs Mon/Wed/Fri)"
+  "Saturday's Cellular Jail show is Hindi-only (English runs Mon/Wed/Fri)",
+  "Bhuma's Rs 5,685 room and Pibo's Rs 5,250 rate each show only 1 left as of 20 Aug — book the rooms before the flights",
+  "Bhuma is non-refundable and cash-only; Pibo and Blue Lagoon both allow free cancellation (24 Sep and 17 Sep respectively)"
  ],
  "days": [
   {
@@ -145,9 +147,10 @@
      "title": "Check in @ Bhuma Homestay",
      "category": "prep",
      "place": "hotel-bhuma",
-     "cost_inr": 6920,
-     "cost_note": "family room for 3, breakfast incl., CASH only — rate quoted for a Sep 25-26 search; RECHECK for Sep 23-24",
-     "notes": "9.5/10 from 226 reviews, 50 m from Govind Nagar Beach. Rs 5,000 refundable damage deposit."
+     "cost_inr": 5685,
+     "cost_note": "Family Room 23 m² (1 full + 1 king + 1 sofa bed), breakfast incl., CASH only — live Booking.com quote 20 Aug for these exact nights",
+     "notes": "9.5/10 from 226 reviews, 50 m from Govind Nagar Beach. Rs 5,000 refundable damage deposit.",
+     "tips": "Book this one early: only 1 of these rooms left and it is non-refundable. The larger Family Double (33 m², a third proper bed and a kitchenette) is Rs 6,920 with 3 left if this one goes."
     },
     {
      "start": "14:50",
@@ -314,10 +317,10 @@
      "title": "SCUBA — shore dive at Govind Nagar",
      "category": "activity",
      "place": "govind-nagar",
-     "cost_inr": 10500,
-     "cost_note": "3 x Rs 3,500 shore Try Dive (Dive Andaman, Beach No.2 Govind Nagar) — PRICE BEING RE-CONFIRMED LIVE",
+     "cost_inr": 13500,
+     "cost_note": "3 x Rs 4,500 shore Discover Scuba (Dive Andaman, Govind Nagar) — CONFIRMED live 20 Aug",
      "notes": "Briefing, kit-up and a guided shore dive on the reef the reference video rates as Havelock's best - a massive coral bed with clownfish among it. Non-swimmers can dive: you breathe, the instructor handles the rest.",
-     "tips": "Book by phone a day ahead. No alcohol the night before. No flying for 18-24 h after a dive - Sunday's 10:35 departure is comfortably clear."
+     "tips": "Book by phone a day ahead. No alcohol the night before. No flying for 18-24 h after a dive — Sunday's 10:35 departure is comfortably clear. Turquoise Dream on Neil is the same Rs 4,500 but MORNINGS ONLY, which is why the dive sits here on Havelock rather than after Thursday's ferry."
     },
     {
      "start": "10:15",
@@ -634,18 +637,19 @@
      "end": "18:40",
      "title": "Night ride back to Port Blair",
      "category": "travel",
-     "route": "ride-chidiyatapu-atlanta",
+     "route": "ride-chidiyatapu-pibo",
      "cost_inr": 0
     },
     {
      "start": "18:40",
      "end": "19:00",
-     "title": "Check in @ Hotel Atlanta (sea view)",
+     "title": "Check in @ Pibo Homestay",
      "category": "prep",
-     "place": "hotel-atlanta",
-     "cost_inr": 8845,
-     "cost_note": "Family room, 2 nights, free cancellation",
-     "notes": "Location 9.3/10, opposite the Marina Park waterfront."
+     "place": "hotel-pibo",
+     "cost_inr": 5250,
+     "cost_note": "Family Room for 3 (1 full + 1 king), 2 nights, breakfast incl., free cancellation to 24 Sep — live Booking.com quote 20 Aug",
+     "notes": "9.3/10 from 138 reviews. Rs 875 per person per night — Rs 3,595 cheaper than Hotel Atlanta, which scores 7.9, charges extra for breakfast and has no sea view despite the name.",
+     "tips": "Only 1 room left at this rate — book it before the flights if you want it."
     },
     {
      "start": "19:00",
@@ -661,7 +665,7 @@
      "end": "21:45",
      "title": "Prep for Baratang + wind down",
      "category": "buffer",
-     "place": "hotel-atlanta",
+     "place": "hotel-pibo",
      "cost_inr": 0,
      "tips": "Reconfirm the 04:00 cab, pack water/snacks/ID, keep cameras packed away for the convoy."
     },
@@ -670,7 +674,7 @@
      "end": "24:00",
      "title": "Sleep",
      "category": "sleep",
-     "place": "hotel-atlanta",
+     "place": "hotel-pibo",
      "cost_inr": 0
     }
    ]
@@ -686,7 +690,7 @@
      "end": "03:30",
      "title": "Sleep",
      "category": "sleep",
-     "place": "hotel-atlanta",
+     "place": "hotel-pibo",
      "cost_inr": 0
     },
     {
@@ -694,7 +698,7 @@
      "end": "04:00",
      "title": "Up & out",
      "category": "prep",
-     "place": "hotel-atlanta",
+     "place": "hotel-pibo",
      "cost_inr": 0
     },
     {
@@ -702,7 +706,7 @@
      "end": "06:00",
      "title": "Cab to Jirkatang Check Post",
      "category": "travel",
-     "route": "cab-atlanta-jirkatang",
+     "route": "cab-pibo-jirkatang",
      "cost_inr": 5400,
      "cost_note": "private sedan round trip, Rs 5,000-6,500 published range (ferrybooking.in lists Rs 5,400 for up to 4 pax) — includes driver, tolls, parking and the Middle Strait vehicle ferry",
      "notes": "47 km in the dark to make the 06:00 first convoy. Two-wheelers are banned past the check post. A shared joining tour is Rs 2,250 pp (Rs 6,750 for three) if you would rather split the cost than have the car to yourselves."
@@ -786,7 +790,7 @@
      "end": "15:00",
      "title": "Drive back to Port Blair",
      "category": "travel",
-     "route": "cab-atlanta-jirkatang",
+     "route": "cab-pibo-jirkatang",
      "cost_inr": 0
     },
     {
@@ -794,7 +798,7 @@
      "end": "16:30",
      "title": "Earned nap",
      "category": "sleep",
-     "place": "hotel-atlanta",
+     "place": "hotel-pibo",
      "cost_inr": 0,
      "notes": "Protects the sleep average after the 03:30 start."
     },
@@ -806,7 +810,7 @@
      "place": "marina-park",
      "cost_inr": 0,
      "notes": "Where the first tricolour rose in 1943; the waterfront is 5 min from the hotel.",
-     "route": "walk-atlanta-marina"
+     "route": "walk-pibo-marina"
     },
     {
      "start": "17:45",
@@ -826,14 +830,14 @@
      "category": "meal",
      "place": "icy-spicy",
      "cost_inr": 1000,
-     "route": "cab-atlanta-icyspicy"
+     "route": "cab-pibo-icyspicy"
     },
     {
      "start": "20:30",
      "end": "21:00",
      "title": "Pack for the flight",
      "category": "prep",
-     "place": "hotel-atlanta",
+     "place": "hotel-pibo",
      "cost_inr": 0
     },
     {
@@ -841,7 +845,7 @@
      "end": "24:00",
      "title": "Sleep",
      "category": "sleep",
-     "place": "hotel-atlanta",
+     "place": "hotel-pibo",
      "cost_inr": 0
     }
    ]
@@ -857,7 +861,7 @@
      "end": "06:45",
      "title": "Sleep (long one — 9¾ h)",
      "category": "sleep",
-     "place": "hotel-atlanta",
+     "place": "hotel-pibo",
      "cost_inr": 0
     },
     {
@@ -865,16 +869,17 @@
      "end": "07:45",
      "title": "Breakfast + pack out",
      "category": "prep",
-     "place": "hotel-atlanta",
-     "cost_inr": 300,
-     "notes": "Atlanta room rate has no breakfast — cafe next door or Annapurna (opens 07:00)."
+     "place": "hotel-pibo",
+     "cost_inr": 0,
+     "notes": "Breakfast is included here, so no need to hunt for an early cafe before the airport run.",
+     "cost_note": "breakfast included at Pibo"
     },
     {
      "start": "07:45",
      "end": "08:05",
      "title": "Cab to the airport",
      "category": "travel",
-     "route": "cab-atlanta-ixz",
+     "route": "cab-pibo-ixz",
      "cost_inr": 300,
      "notes": "2.7 km against traffic — 10 min."
     },

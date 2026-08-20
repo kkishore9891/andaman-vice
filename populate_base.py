@@ -71,6 +71,8 @@ P = [  # id, name, island, lat, lng, kind, photo, blurb
  ("neil-pump", "IndianOil Neil Kendra", "neil", 11.832, 93.031, "pump", None,
   "Neil's ONLY pump (~1 km from jetty). Practical hours ~07:00–18:00 — refuel by evening. (Position from plus code.)"),
  # stays (live Booking.com picks, 2026-08-19; positions approximate from listed distances)
+ ("hotel-pibo", "Pibo Homestay", "south_andaman", 11.6540, 92.7300, "hotel", None,
+  "Port Blair base — 9.3/10 from 138 reviews. Family room sleeping 3 (1 full + 1 king), breakfast included, free cancellation to 24 Sep. Rs 5,250 for both nights: Rs 875 per person per night, well under the Rs 2,000 target and Rs 3,595 cheaper than Hotel Atlanta. (Position approximate — 2.9 km from downtown, 1.2 km from the beach.)"),
  ("hotel-atlanta", "Hotel Atlanta — A Seaview Hotel", "south_andaman", 11.6721653, 92.7455293, "hotel", None,
   "Port Blair base. Beachfront block opposite the Marina Park–Phoenix Bay stretch (location score 9.3). Family room for 3 ≈ ₹4,423/night, free cancellation."),
  ("hotel-bhuma", "Bhuma Homestay", "havelock", 12.0314836, 92.9960689, "hotel", None,
@@ -241,6 +243,24 @@ ROUTES_V3 = [
   "NH 4 south from the jetty."),
 ]
 R = R + ROUTES_V3
+
+# --- Pibo Homestay legs (live re-pricing, 2026-08-20) ---
+ROUTES_V4 = [
+ ("ride-chidiyatapu-pibo", "chidiya-tapu", "hotel-pibo", "scooter", 24.0, 45,
+  [[11.5059682, 92.7014649], [11.56, 92.71], [11.62, 92.72], [11.6540, 92.7300]],
+  "NH 4 back north in the dark."),
+ ("cab-pibo-jirkatang", "hotel-pibo", "jirkatang", "cab", 48.0, 78,
+  [[11.6540, 92.7300], [11.70, 92.70], [11.78, 92.67], [11.8396935, 92.6538333]],
+  "NH 4. Two-wheelers are barred beyond the check post."),
+ ("cab-pibo-ixz", "hotel-pibo", "ixz", "cab", 2.0, 6,
+  [[11.6540, 92.7300], [11.641656, 92.730243]],
+  "A short hop — the homestay sits close to the airport side of town."),
+ ("walk-pibo-marina", "hotel-pibo", "marina-park", "walk", 2.6, 9, None,
+  "Short auto ride or a walk down to the waterfront."),
+ ("cab-pibo-icyspicy", "hotel-pibo", "icy-spicy", "cab", 1.2, 5, None,
+  "Junglighat is the neighbouring area."),
+]
+R = R + ROUTES_V4
 
 
 def main():
