@@ -7,7 +7,7 @@
   5.75,
   9.75
  ],
- "total_cost_inr": 142439,
+ "total_cost_inr": 143689,
  "risks": [
   "September is peak monsoon (388 mm avg): every ferry/boat can be weather-delayed - all bookings chosen refundable where possible (Green Ocean/Makruzz tickets are not; budget assumes they sail)",
   "Ferry prices/times captured live 2026-08-19; rebook-check all four sailings when booking",
@@ -23,7 +23,7 @@
    "day": 1,
    "date": "2026-09-23",
    "title": "WHEELS UP → SWARAJ DWEEP",
-   "theme": "Chennai dawn flight, island-hop by catamaran, first sunset at Asia's best beach.",
+   "theme": "Chennai dawn flight, the fast catamaran to Swaraj Dweep, then a full afternoon at the quiet end of Asia's most-photographed beach.",
    "events": [
     {
      "start": "03:45",
@@ -31,9 +31,8 @@
      "title": "Wake up & roll out (Chennai)",
      "category": "prep",
      "place": "maa",
-     "cost_inr": 0,
-     "notes": "Bags packed night before. Keep each check-in bag <=15 kg (Akasa free allowance; Nautika ferry also caps 15 kg).",
-     "tips": "Carry printed ferry tickets + DL photocopies for scooter rentals."
+     "notes": "Bags packed the night before. Keep each check-in bag at or under 15 kg (Akasa's free allowance; the Nautika ferry caps luggage at 15 kg too).",
+     "tips": "Carry printed ferry tickets and DL photocopies for the scooter rentals."
     },
     {
      "start": "04:15",
@@ -41,25 +40,23 @@
      "title": "Ride to Chennai Airport T1",
      "category": "travel",
      "place": "maa",
-     "cost_inr": 0,
-     "notes": "Own cab/Uber (~Rs 700, outside trip budget)."
+     "notes": "Own cab or Uber, roughly Rs 700 and outside the trip budget."
     },
     {
      "start": "05:15",
      "end": "06:40",
-     "title": "Check-in + security (Akasa)",
+     "title": "Check-in & security (Akasa)",
      "category": "prep",
      "place": "maa",
-     "cost_inr": 0,
-     "notes": "Akasa bag-drop closes 06:55; buffer built in."
+     "notes": "Akasa's domestic counters typically close 45-60 minutes before departure - confirm the exact cut-off on akasaair.com. Being at the desk by 05:15 clears any version of it.",
+     "tips": "Web check-in the night before to skip the queue."
     },
     {
      "start": "06:40",
      "end": "07:40",
      "title": "Gate & boarding",
      "category": "prep",
-     "place": "maa",
-     "cost_inr": 0
+     "place": "maa"
     },
     {
      "start": "07:40",
@@ -68,105 +65,124 @@
      "category": "travel",
      "route": "fly-maa-ixz",
      "cost_inr": 32163,
-     "cost_note": "3 x Rs 10,721 (Cleartrip 3-adult, 19 Aug)",
-     "notes": "Boeing 737 MAX 8, 2h15m over the Bay of Bengal. Window seats left side for the island approach."
+     "cost_note": "3 x Rs 10,721 (Cleartrip 3-adult search, 19 Aug)",
+     "notes": "Boeing 737 MAX 8, 2h15m over the Bay of Bengal. Left-side windows get the island approach."
     },
     {
      "start": "09:55",
-     "end": "10:40",
+     "end": "10:35",
      "title": "Land IXZ — bags & exit",
      "category": "prep",
      "place": "ixz",
-     "cost_inr": 0
+     "notes": "Tight-ish turnaround today: the ferry check-in closes at 11:45, so move briskly."
     },
     {
-     "start": "10:40",
-     "end": "10:55",
-     "title": "Cab toward town (Junglighat)",
+     "start": "10:35",
+     "end": "10:50",
+     "title": "Cab to Junglighat",
      "category": "travel",
      "route": "cab-ixz-icyspicy",
      "cost_inr": 350,
-     "notes": "Icy Spicy is en route between airport and jetty."
+     "cost_note": "airport taxi, ESTIMATE — no published tariff verified; carry Rs 500",
+     "notes": "Icy Spicy sits about 3 minutes from the airport on the Junglighat side."
     },
     {
-     "start": "10:55",
-     "end": "11:40",
-     "title": "Veg lunch @ Icy Spicy",
+     "start": "10:50",
+     "end": "11:30",
+     "title": "Quick veg lunch @ Icy Spicy",
      "category": "meal",
      "place": "icy-spicy",
      "cost_inr": 900,
-     "cost_note": "Ghee dosa Rs 149, mains Rs 250-350",
-     "notes": "Port Blair's top pure-veg (4.2, 3.5k reviews)."
+     "cost_note": "ghee dosa Rs 149, mains Rs 250-350 (menu prices, 19 Aug)",
+     "notes": "Port Blair's veg anchor, 4.2 stars from 3,491 reviews. Order dosas - they arrive fastest.",
+     "tips": "Ask for the bill when the food lands; the ferry counter closes at 11:45."
     },
     {
-     "start": "11:40",
-     "end": "11:55",
-     "title": "Auto to Phoenix Bay Jetty",
+     "start": "11:30",
+     "end": "11:45",
+     "title": "Cab to the ferry jetty",
      "category": "travel",
      "route": "cab-icyspicy-phoenix",
-     "cost_inr": 150
+     "cost_inr": 200,
+     "cost_note": "short auto/taxi hop, ESTIMATE — no verified tariff",
+     "tips": "CONFIRM THE JETTY ON YOUR TICKET. Private catamarans may sail from Haddo rather than Phoenix Bay — the two are adjacent parts of the same harbour but not the same gate."
     },
     {
-     "start": "11:55",
-     "end": "13:15",
-     "title": "Green Ocean check-in",
+     "start": "11:45",
+     "end": "12:30",
+     "title": "Nautika check-in",
      "category": "prep",
      "place": "phoenix-bay",
-     "cost_inr": 0,
-     "notes": "Counter opens 60 min before sailing; PRINTED ticket mandatory on Green Ocean.",
-     "tips": "Print tickets in Chennai or at a shop near the jetty."
+     "notes": "Nautika asks you to reach 45 minutes before departure; boarding shuts 15 minutes prior.",
+     "tips": "Luggage is capped at 15 kg per person, with excess at Rs 100/kg."
     },
     {
-     "start": "13:15",
-     "end": "15:30",
-     "title": "SAIL — Green Ocean 1 to Havelock",
+     "start": "12:30",
+     "end": "14:00",
+     "title": "SAIL — Nautika-Pro to Havelock",
      "category": "travel",
      "route": "ferry-pb-havelock",
-     "cost_inr": 4200,
-     "cost_note": "3 x Rs 1,400 all-in (Rs 1,050 + Rs 50 PMB + Rs 300 fuel)",
-     "notes": "Cheapest verified sailing of the day. Motion-sickness tab 30 min before if the sea is up."
+     "cost_inr": 5400,
+     "cost_note": "3 x Rs 1,800 Luxury (live operator search, 19 Aug)",
+     "notes": "Chosen over the cheaper 13:15 Green Ocean because arriving 14:00 instead of 15:30 is what makes Neil's Cove and the Radhanagar sunset both possible today.",
+     "tips": "Take a motion-sickness tablet 30 minutes before if the sea looks up."
     },
     {
-     "start": "15:30",
-     "end": "16:00",
-     "title": "Scooters at the jetty → ride out",
+     "start": "14:00",
+     "end": "14:30",
+     "title": "Scooters at the jetty, ride out",
      "category": "travel",
      "route": "ride-hljetty-bhuma",
      "cost_inr": 1000,
      "cost_note": "2 x Rs 500/24h (Go2Andaman off-season rate, valid to 30 Sep)",
-     "notes": "Booked >=48h ahead with DL copies; helmets included, fuel not.",
-     "tips": "Photograph the scooters at handover."
+     "notes": "Booked at least 48 h ahead with DL copies; two helmets included, fuel is not.",
+     "tips": "Photograph both scooters at handover."
     },
     {
-     "start": "16:00",
-     "end": "16:20",
+     "start": "14:30",
+     "end": "14:50",
      "title": "Check in @ Bhuma Homestay",
      "category": "prep",
      "place": "hotel-bhuma",
      "cost_inr": 6920,
-     "cost_note": "Family room for 3, breakfast incl., CASH only",
-     "notes": "9.5/10-rated homestay 50 m from Govind Nagar Beach. Rs 5,000 refundable damage deposit."
+     "cost_note": "family room for 3, breakfast incl., CASH only — rate quoted for a Sep 25-26 search; RECHECK for Sep 23-24",
+     "notes": "9.5/10 from 226 reviews, 50 m from Govind Nagar Beach. Rs 5,000 refundable damage deposit."
     },
     {
-     "start": "16:20",
-     "end": "16:50",
+     "start": "14:50",
+     "end": "15:20",
      "title": "Ride to Radhanagar (fuel en route)",
      "category": "travel",
      "route": "ride-bhuma-radhanagar",
      "cost_inr": 230,
-     "cost_note": "~2 L petrol Rs 200 (@Rs 88.66/L) + parking Rs 30",
-     "notes": "IndianOil pump sits ON the Radhanagar road — top both tanks.",
-     "tips": "Scooter parking stand at the beach entrance, Rs 20-30."
+     "cost_note": "~2 L petrol Rs 200 at Rs 88.66/L + parking Rs 30",
+     "notes": "Fill both tanks at the IndianOil pump on the way — Havelock effectively has one working pump.",
+     "tips": "Scooter parking at the beach entrance runs Rs 20-30."
+    },
+    {
+     "start": "15:20",
+     "end": "15:40",
+     "title": "Walk to Neil's Cove",
+     "category": "travel",
+     "route": "walk-radhanagar-cove",
+     "notes": "About 1.2 km along the sand to the right of the main beach.",
+     "tips": "Barefoot is fine on sand; carry water."
+    },
+    {
+     "start": "15:40",
+     "end": "16:50",
+     "title": "Neil's Cove — the quiet lagoon",
+     "category": "scenic",
+     "place": "neils-cove",
+     "notes": "The crowd stays behind at the main beach. Swim, float, and have the water largely to yourselves.",
+     "tips": "Exact position is approximate — there is no Google Maps listing for the cove; just keep the sea on your left walking north-west."
     },
     {
      "start": "16:50",
      "end": "17:10",
-     "title": "Neil's Cove walk",
-     "category": "scenic",
-     "place": "neils-cove",
-     "route": "walk-radhanagar-cove",
-     "cost_inr": 0,
-     "notes": "1.2 km along the sand to the quiet lagoon — the crowd stays behind."
+     "title": "Walk back to Radhanagar",
+     "category": "travel",
+     "route": "walk-radhanagar-cove"
     },
     {
      "start": "17:10",
@@ -174,8 +190,8 @@
      "title": "SUNSET @ Radhanagar Beach",
      "category": "scenic",
      "place": "radhanagar",
-     "cost_inr": 0,
-     "notes": "Sunset 17:14 (verified). Blue-Flag beach, lifeguards on duty."
+     "notes": "Sunset is 17:15 (verified). Radhanagar holds Blue Flag certification; the beach is patrolled and has changing rooms.",
+     "tips": "Stay for the afterglow — the sky keeps working for about 20 minutes after the sun goes."
     },
     {
      "start": "17:45",
@@ -183,35 +199,32 @@
      "title": "Night ride back to Govind Nagar",
      "category": "travel",
      "route": "ride-bhuma-radhanagar",
-     "cost_inr": 0,
-     "notes": "Dark by 17:36 — easy pace, high beam off for oncoming."
+     "notes": "Dark by about 17:36. Easy pace and watch for oncoming high beams."
     },
     {
      "start": "18:20",
      "end": "19:45",
-     "title": "Dinner @ Something Different (beachside)",
+     "title": "Dinner @ Something Different",
      "category": "meal",
      "place": "something-different",
      "cost_inr": 1600,
-     "cost_note": "Veg mains Rs 195-345",
-     "notes": "4.4-star beachside cafe, 400 m from Bhuma."
+     "cost_note": "veg mains Rs 195-345 (TripAdvisor menu)",
+     "notes": "Beachside cafe rated 4.4 from 5,224 reviews, a short hop from Bhuma."
     },
     {
      "start": "19:45",
      "end": "21:30",
-     "title": "Market stroll + wind down",
+     "title": "Market stroll & wind down",
      "category": "buffer",
      "place": "hotel-bhuma",
-     "cost_inr": 0,
-     "tips": "CALL Andaman Bliss TONIGHT to confirm the 03:30 kayak (full-moon week needs explicit operator sign-off). If refused: sleep till 04:15 and do Kala Pathar at sunrise instead."
+     "tips": "Call Andaman Bliss tonight to confirm the 03:30 kayak. Full-moon week means they may decline — if so, sleep through to 05:30 and take Kala Pathar at dawn instead."
     },
     {
      "start": "21:30",
      "end": "24:00",
      "title": "Sleep",
      "category": "sleep",
-     "place": "hotel-bhuma",
-     "cost_inr": 0
+     "place": "hotel-bhuma"
     }
    ]
   },
@@ -337,7 +350,7 @@
      "category": "travel",
      "route": "ride-neiljetty-bluelagoon",
      "cost_inr": 4118,
-     "cost_note": "stay Rs 3,968 (breakfast incl., free cancellation) + Rs 150 fuel",
+     "cost_note": "stay Rs 3,968 (breakfast incl., free cancellation) + Rs 150 fuel — rate quoted for a Sep 26-27 search; RECHECK for Sep 24-25",
      "notes": "Top up at IndianOil Neil Kendra on the way - it is the island's only pump and shuts around 18:00."
     },
     {
@@ -400,29 +413,29 @@
     },
     {
      "start": "16:15",
-     "end": "16:40",
+     "end": "16:30",
      "title": "Dry off & beach time",
      "category": "buffer",
      "place": "bharatpur",
      "notes": "Beach is open till 18:00, entry free."
     },
     {
-     "start": "16:40",
-     "end": "16:55",
+     "start": "16:30",
+     "end": "16:45",
      "title": "Ride to Laxmanpur Beach 1",
      "category": "travel",
      "route": "ride-bharatpur-laxmanpur"
     },
     {
-     "start": "16:55",
-     "end": "17:50",
+     "start": "16:45",
+     "end": "17:40",
      "title": "SUNSET @ Laxmanpur Beach 1",
      "category": "scenic",
      "place": "laxmanpur",
-     "notes": "Sunset 17:14 - Neil's sunset stage. Dead-coral shore, so watch rather than swim."
+     "notes": "Sunset is 17:14 (verified) — be on the sand by 16:45 so you are settled before it goes. Dead-coral shore, so watch rather than swim."
     },
     {
-     "start": "17:50",
+     "start": "17:40",
      "end": "19:00",
      "title": "Dinner @ Pure Veg Restaurant",
      "category": "meal",
@@ -625,7 +638,7 @@
      "category": "prep",
      "place": "hotel-atlanta",
      "cost_inr": 8845,
-     "cost_note": "Family room, 2 nights, free cancellation",
+     "cost_note": "family room, 2 nights, free cancellation — Booking.com quote captured for these dates on 19 Aug; RECHECK before booking",
      "notes": "Location 9.3/10, opposite the Marina Park waterfront."
     },
     {
@@ -696,7 +709,7 @@
      "route": "cab-jirkatang-middlestrait",
      "cost_inr": 0,
      "notes": "48 km escorted. Absolutely no photography, no stopping, windows up if asked.",
-     "tips": "You may glimpse Jarawa people — cameras stay down, it is a criminal offence."
+     "tips": "You may glimpse Jarawa people. Cameras stay packed — operators are absolute about it: no photographs, no stopping, windows up when asked."
     },
     {
      "start": "07:30",
@@ -724,8 +737,8 @@
      "category": "activity",
      "place": "limestone-caves",
      "cost_inr": 0,
-     "notes": "1.2 km walk from the drop point, then ~35 min inside the sculpted chambers.",
-     "tips": "Headlamp beats phone torch; floor is wet and uneven."
+     "notes": "A walk inland from the boat drop through mangrove and forest to the sculpted chambers. Operators schedule roughly 09:00-10:00 at the caves.",
+     "tips": "A headlamp beats a phone torch; the floor is wet and uneven."
     },
     {
      "start": "10:15",
@@ -742,7 +755,8 @@
      "category": "meal",
      "place": "nilambur",
      "cost_inr": 450,
-     "notes": "Simple veg meals only — eat now, the convoy won't stop."
+     "notes": "Basic canteen fare at the jetty. Confirm a veg option with your driver — carry backup snacks.",
+     "cost_note": "simple jetty meals for 3, ESTIMATE — no verified Baratang food prices"
     },
     {
      "start": "11:40",
@@ -754,15 +768,15 @@
     },
     {
      "start": "12:10",
-     "end": "13:40",
+     "end": "13:35",
      "title": "Return convoy (12:30 slot)",
      "category": "travel",
      "route": "cab-jirkatang-middlestrait",
      "cost_inr": 0,
-     "notes": "Convoy times south vary by source (12:00/12:30) — the driver knows the slot."
+     "notes": "Convoy departure times vary by source (12:00 or 12:30) — your driver knows the day's slot. The escorted run back to Jirkatang takes about 83 minutes."
     },
     {
-     "start": "13:40",
+     "start": "13:35",
      "end": "15:00",
      "title": "Drive back to Port Blair",
      "category": "travel",
@@ -785,7 +799,7 @@
      "category": "scenic",
      "place": "marina-park",
      "cost_inr": 0,
-     "notes": "Where the first tricolour rose in 1943; the waterfront is 5 min from the hotel.",
+     "notes": "Flag Point on the Marina Park waterfront — where the first tricolour was raised on Indian soil on 30 Dec 1943, per the reference video. A five-minute walk from the hotel door.",
      "route": "walk-atlanta-marina"
     },
     {
@@ -863,7 +877,7 @@
      "category": "prep",
      "place": "ixz",
      "cost_inr": 0,
-     "notes": "Akasa counter closes 09:50 — we're in with 1h45 to spare."
+     "notes": "Akasa's domestic counters typically close 45-60 minutes before departure — confirm on akasaair.com. Arriving 08:05 for a 10:35 flight clears any version of the rule."
     },
     {
      "start": "09:50",

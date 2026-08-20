@@ -1,0 +1,1157 @@
+{
+ "days": [
+  {
+   "day": 1,
+   "events_checked": 20,
+   "checked_ok": 6,
+   "day_summary": "Day 1 (2026-09-23, Chennai to Swaraj Dweep) has 20 events; the clock chain is continuous 03:45-24:00 with no gaps or overlaps, and the two big money items (Akasa QP 1145 at Rs 32,163 and Green Ocean 1 13:15-15:30 at Rs 4,200 all-in) are exactly supported by factbase. Six events are clean. 26 defects found: 3 critical (Green Ocean sent to Phoenix Bay when the only jetty fact in factbase says all four private catamarans sail from Haddo; the Neil's Cove walk requires being in two places at 17:10; an unsupported \"Akasa bag-drop closes 06:55\"), 11 major (two routes with wrong endpoints, Rs 350 + Rs 150 cab fares with no source, Bhuma's Rs 6,920 rate quoted for Sep 25-26 not Sep 23-24, petrol/parking arithmetic, and four unsupported hard claims: pump on Radhanagar road, 1.2 km to a cove whose position factbase marks UNKNOWN, \"Blue-Flag beach, lifeguards on duty\", \"400 m from Bhuma\"), and 12 minor. Post-fix the day's cost should rise by roughly Rs 500-1,000 (second scooter slot) plus the parking correction.",
+   "defects": [
+    {
+     "event_title": "Green Ocean check-in",
+     "event_time": "11:55-13:15",
+     "category": "place",
+     "severity": "critical",
+     "problem": "The event (and the ferry route ferry-pb-havelock, and the auto ride before it) puts the crew at Phoenix Bay Jetty for a Green Ocean sailing. The only jetty fact in factbase says the opposite: private catamarans sail from Haddo, and Phoenix Bay is the government-ferry jetty. Arriving at the wrong jetty at 11:55 for a 13:15 sailing with printed-ticket-only boarding would lose the crossing and the whole Havelock night.",
+     "evidence": "factbase research.ferries 'Port Blair jetty for private ferries': \"Haddo Jetty per google search result snippets (BookYourFerry, Ferryhopper, FerryBooking.in: 'All four private catamaran operators depart from Haddo: Makruzz, Nautika, Green Ocean, ITT Majestic'). Phoenix Bay Jetty is the government-ferry jetty and a backup; not confirmed on an operator's own site.\"",
+     "fix": "Confirm the departure jetty on the Green Ocean ticket/portal before travel. If it is Haddo, add a 'haddo-jetty' place to P in populate_base.py (with its own cab route from Junglighat) and repoint events 8, 9, 10 and route ferry-pb-havelock to it; if Green Ocean's own ticket says Phoenix Bay, add that confirmation as a fact so the record stops contradicting the plan."
+    },
+    {
+     "event_title": "Neil's Cove walk",
+     "event_time": "16:50-17:10",
+     "category": "timing",
+     "severity": "critical",
+     "problem": "The block is 20 minutes long and route walk-radhanagar-cove is 1.2 km / 20 min one way, so the crew reaches the cove exactly at 17:10 with zero time there - and the very next event requires them to be back at Radhanagar Beach at 17:10 for sunset, 1.2 km (another 20 min) away. Impossible as written; in practice they miss the 17:15 sunset or skip the cove.",
+     "evidence": "populate_base.py R: (\"walk-radhanagar-cove\", \"radhanagar\", \"neils-cove\", \"walk\", 1.2, 20, ...); next event 'SUNSET @ Radhanagar Beach' starts 17:10 at place radhanagar. factbase weather_astro: 'Sunrise/sunset Sep 23 2026 :: Sunrise 05:09, Sunset 17:15 IST'.",
+     "fix": "Re-cut the Radhanagar block: ride 16:05-16:35, walk to Neil's Cove 16:35-16:55, cove 16:55-17:00, walk back 17:00-17:20 hmm - simplest safe version is arrive Radhanagar 16:20, walk out 16:20-16:40, cove 16:40-16:50, walk back 16:50-17:10, sunset 17:10-17:45. That means moving the Bhuma check-in and the Radhanagar ride ~30 min earlier (check-in 15:50-16:05, ride 16:05-16:20)."
+    },
+    {
+     "event_title": "Check-in + security (Akasa)",
+     "event_time": "05:15-06:40",
+     "category": "fact",
+     "severity": "critical",
+     "problem": "'Akasa bag-drop closes 06:55' is a hard operational time with no support anywhere in factbase - the only Akasa facts are baggage allowances. If the real domestic cut-off is 60 min (06:40) rather than 45 min, the note is the kind of reassurance that gets a bag rejected. It also sits oddly beside the app's own MAA blurb, which says 'be at bag-drop by 06:10'.",
+     "evidence": "factbase research.flights contains only 'Akasa Air free baggage allowance (domestic) :: Check-in: 15 kg per customer, 1 piece only...' - no check-in/bag-drop cut-off fact exists. UNSUPPORTED.",
+     "fix": "Either add a verified fact from akasaair.com's check-in page to factbase and cite it, or soften the note to 'Akasa domestic counters close 45-60 min before departure - confirm on akasaair.com; we are at the desk by 05:15 either way.'"
+    },
+    {
+     "event_title": "Cab toward town (Junglighat)",
+     "event_time": "10:40-10:55",
+     "category": "route",
+     "severity": "major",
+     "problem": "The event uses route cab-ixz-aberdeen (ixz -> aberdeen), but the crew's actual destination is Icy Spicy in Junglighat, which is 1.9 km from the airport in a different direction; Aberdeen Bazaar is a further 1.5 km north-east beyond it. The drawn line and the 2.7 km / 7 min stats describe a leg the crew never takes.",
+     "evidence": "populate_base.py R: (\"cab-ixz-aberdeen\", \"ixz\", \"aberdeen\", \"cab\", 2.7, 7, ...). Places: ixz 11.641656,92.730243; icy-spicy 11.6587633,92.7313498 (1.91 km apart); aberdeen 11.6675019,92.7412765. factbase food: 'Junglighat flagship (Island Arcade, opp. SBI, 3 min from airport)'.",
+     "fix": "Add a route ('cab-ixz-icyspicy', 'ixz', 'icy-spicy', 'cab', 2.2, 6, [[11.641656,92.730243],[11.650,92.730],[11.6587633,92.7313498]], 'VIP Rd / Junglighat, ~3 min from the airport per Icy Spicy\\'s own site') and point this event at it."
+    },
+    {
+     "event_title": "Cab toward town (Junglighat)",
+     "event_time": "10:40-10:55",
+     "category": "cost",
+     "severity": "major",
+     "problem": "cost_inr 350 for the airport cab has no cost_note and no backing price in factbase. The only Port Blair road-fare data point in the research is Chidiya Tapu (~25 km): cab Rs 1,500-3,500, auto Rs 800-1,200 - which implies a ~2 km hop is nothing like a verified Rs 350. The number is invented.",
+     "evidence": "factbase research.activities 'F: Chidiya Tapu fees & timings :: ... cab from Port Blair Rs.1,500-3,500 (45-60 min, ~25 km); auto Rs.800-1,200'. No airport-taxi tariff fact exists. UNSUPPORTED.",
+     "fix": "Add cost_note 'airport taxi to Junglighat, operator-range estimate - no published tariff verified' and either research the IXZ prepaid-taxi board into factbase or widen the line to Rs 300-500. Also confirm one vehicle takes 3 adults plus three 15 kg check-in bags."
+    },
+    {
+     "event_title": "Auto to Phoenix Bay Jetty",
+     "event_time": "11:40-11:55",
+     "category": "route",
+     "severity": "major",
+     "problem": "The event uses route cab-ixz-phoenix, whose from_place is the airport - but the crew is at Icy Spicy, having already left the airport an hour earlier. This is not a reversed route, it is a different origin: the real leg is icy-spicy -> jetty, about 1.6 km, versus the route's 3.4 km / 8 min from IXZ.",
+     "evidence": "populate_base.py R: (\"cab-ixz-phoenix\", \"ixz\", \"phoenix-bay\", \"cab\", 3.4, 8, ...); factbase distances: 'route:Veer Savarkar Airport->Phoenix Bay Jetty :: 3.4 km, 8 min via VIP Rd'. Crew position at 11:40 is place icy-spicy (11.6587633,92.7313498); icy-spicy -> phoenix-bay is 1.59 km straight-line.",
+     "fix": "Add a route from icy-spicy to the actual ferry jetty (e.g. ('auto-icyspicy-jetty','icy-spicy','phoenix-bay','cab',2.0,6,[[11.6587633,92.7313498],[11.665,92.732],[11.6726921,92.7345295]],'Junglighat -> jetty')) and point this event at it - and repoint it to Haddo if the jetty defect above resolves that way."
+    },
+    {
+     "event_title": "Auto to Phoenix Bay Jetty",
+     "event_time": "11:40-11:55",
+     "category": "cost",
+     "severity": "major",
+     "problem": "cost_inr 150 has no cost_note and no supporting price in factbase. Nothing in the research covers Port Blair auto fares for short hops, and an auto for 3 adults with three check-in bags is itself doubtful.",
+     "evidence": "No auto/taxi tariff fact for Port Blair short trips exists in factbase; the only comparable is Chidiya Tapu 'auto Rs.800-1,200' for ~25 km. UNSUPPORTED.",
+     "fix": "Add cost_note 'short auto hop, estimate - no verified tariff' and budget Rs 150-250, or book the same cab as the airport leg for the whole airport-lunch-jetty run and price it once."
+    },
+    {
+     "event_title": "Check in @ Bhuma Homestay",
+     "event_time": "16:00-16:20",
+     "category": "cost",
+     "severity": "major",
+     "problem": "Rs 6,920 is real, but factbase quotes it for the night of Sep 25-26 - the dates of the earlier Port-Blair-first plan. This itinerary sleeps at Bhuma on Sep 23-24, and no rate for that night was ever checked. Peak-arrival-day pricing and the '3 rooms left' note make it a genuinely stale number, not a rounding issue.",
+     "evidence": "factbase research.budget_stays: 'Havelock best pick: Bhuma (Sep 25-26, 1 night) :: Family Double Room ... Rs 6,920 taxes included ... NON-REFUNDABLE, pay property before arrival, cash-only, Rs 5,000 refundable damage deposit ... 3 rooms left at time of check'. Same fact set's 'Trip lodging total' assumes Port Blair Sep 23-25 + Havelock Sep 25-26 - the opposite shape from this v2 Havelock-first itinerary.",
+     "fix": "Re-price Bhuma's Family Double Room for 2026-09-23 to 2026-09-24 on Booking.com, record it as a new fact, and update cost_inr. Until then mark cost_note '(rate verified for Sep 25-26 only - RE-CHECK for Sep 23-24)'."
+    },
+    {
+     "event_title": "Ride to Radhanagar (fuel en route)",
+     "event_time": "16:20-16:50",
+     "category": "cost",
+     "severity": "major",
+     "problem": "Two arithmetic errors in one line. (a) '~2 L petrol Rs 200 (@Rs 88.66/L)' - 2 L at Rs 88.66 is Rs 177.32, not Rs 200 (Rs 200 buys 2.26 L). (b) Parking Rs 30 covers one scooter, but the crew of 3 is on TWO scooters, so parking is Rs 40-60. Correct total is about Rs 237, not Rs 230, and the note misstates both components.",
+     "evidence": "populate_base.py PETROL = 88.66 (\"Rs/L, A&N, 2026-08-19 (NDTV fuel prices)\"); factbase rentals_fuel 'Radhanagar Beach parking :: ... scooter parking roughly Rs 20-30 per search snippets'; this day rents 2 scooters (event 15:30 'Scooters at the jetty', cost_note '2 x Rs 500/24h').",
+     "fix": "Set cost_note to '~2 L petrol Rs 177 (2 x 88.66) + parking Rs 60 (2 scooters x Rs 30)' and cost_inr to 237."
+    },
+    {
+     "event_title": "Ride to Radhanagar (fuel en route)",
+     "event_time": "16:20-16:50",
+     "category": "fact",
+     "severity": "major",
+     "problem": "'IndianOil pump sits ON the Radhanagar road - top both tanks' is a location claim factbase does not make. The research places Havelock's two working pumps at Krishna Nagar / Havelock Bazar and at Havelock No.2 (Govind Nagar area) - i.e. near the start of the ride, not on the SH4 stretch toward Radhanagar. The same unverified claim is baked into the hl-pump place record.",
+     "evidence": "factbase rentals_fuel 'Havelock petrol pumps :: Google Maps shows 2 IndianOil pumps + 1 closed: (1) IndianOil, Krishna Nagar, Havelock Bazar ... (2) IndianOil, Havelock No.2 (Govind Nagar area) ... opens 6am'. Nothing says 'Radhanagar road'. UNSUPPORTED.",
+     "fix": "Reword to 'Fill up at the IndianOil in the Govind Nagar / Havelock Bazar area before turning onto SH4 - it is the island's only reliable pump (opens 06:00)' and rename the hl-pump place accordingly, or verify the pump's position on Maps and add it as a fact."
+    },
+    {
+     "event_title": "Neil's Cove walk",
+     "event_time": "16:50-17:10",
+     "category": "fact",
+     "severity": "major",
+     "problem": "'1.2 km along the sand to the quiet lagoon' states a distance for a place factbase explicitly could not locate. The 1.2 km / 20 min in route walk-radhanagar-cove and the neils-cove coordinates (11.9922, 92.9430) are both invented - populate_base.py even admits '(Position approximate - no Maps listing exists.)'.",
+     "evidence": "factbase distances: \"coords:Neil's Cove (Havelock) :: UNKNOWN - Google Maps has no place listing named Neil's Cove; three separate searches resolved to unrelated places (a resort, Corbyn's Cove, Bharatpur Beach). Use Radhanagar Beach (11.9844552,92.9508454) as the access point.\" UNSUPPORTED distance.",
+     "fix": "Drop the hard number: 'A 15-20 min walk right (north-west) along the sand from Radhanagar reaches the sheltered cove - no Maps listing, ask at the beach entrance.' Mark the route's km/minutes as estimated in its note so the app does not present them as verified."
+    },
+    {
+     "event_title": "SUNSET @ Radhanagar Beach",
+     "event_time": "17:10-17:45",
+     "category": "fact",
+     "severity": "major",
+     "problem": "'Blue-Flag beach, lifeguards on duty' - neither claim appears anywhere in factbase (a case-insensitive scan finds no 'Blue Flag' and no 'lifeguard' at all). 'Lifeguards on duty' is the riskier half: it invites monsoon swimming on an unverified assumption. The day's theme line 'Asia's best beach' and the radhanagar place blurb 'Blue-Flag certified, among Asia's best beaches' carry the same unsourced claims.",
+     "evidence": "grep of data/factbase.json for 'blue' returns only hotel names (Blue Lagoon, Blue Bird, Blue Bridge, Blue Fin) and 'blueandamantour'; 'lifeguard' returns nothing. The only Radhanagar facts are parking (Rs 20-30, free entry) and distances. UNSUPPORTED.",
+     "fix": "Either add sourced facts (Blue Flag certification listing, A&N lifeguard posting) to factbase, or reduce the note to what is verified: 'Free entry, designated parking near the entrance (Rs 20-30 per scooter). Swim only where locals do - September surf is monsoon surf.' Soften the theme line to 'first sunset at Radhanagar'."
+    },
+    {
+     "event_title": "Dinner @ Something Different (beachside)",
+     "event_time": "18:20-19:45",
+     "category": "fact",
+     "severity": "major",
+     "problem": "'400 m from Bhuma' contradicts the app's own coordinates: Bhuma (12.0314836, 92.9960689) to Something Different (12.035727, 92.989741) is 0.83 km straight-line, so more like 900 m-1 km by road. factbase has no Bhuma-to-restaurant distance at all; it only places Bhuma 50 m from Govind Nagar Beach and the cafe at Beach No. 2.",
+     "evidence": "populate_base.py P coordinates as above (haversine 0.834 km). factbase budget_stays: 'Location: Govind Nagar Beach 50 m, Vijay Nagar Beach 100 m, Havelock Jetty 2.3 km, main market 50 m'; factbase food: 'Havelock - Something Different ... Beach No. 2 behind Havelock Power House'. UNSUPPORTED as 400 m.",
+     "fix": "Change to '4.4-star beachside cafe at Beach No. 2, ~1 km from Bhuma - take the scooters after dark' (and add the 5-min ride to the schedule, see the transfer defect below)."
+    },
+    {
+     "event_title": "Scooters at the jetty -> ride out",
+     "event_time": "15:30-16:00",
+     "category": "cost",
+     "severity": "major",
+     "problem": "Rs 1,000 assumes one 24-hour rental, but Go2Andaman's slot is fixed 10:00-10:00. Picking up at 15:30 on the 23rd burns slot 1, and Day 2 keeps the scooters until the ~13:00 jetty return - which falls in slot 2. Two scooters x two slots is Rs 2,000; Day 2 books only Rs 500 for the 'possible 2nd-slot charge', i.e. one scooter, so the trip is short Rs 500-1,000 and the Day 1 cost_note never mentions the slot rule at all.",
+     "evidence": "factbase rentals_fuel 'Go2Andaman terms :: 24h slot fixed 10am-10am; hotel/jetty delivery and pickup included (service hours 10am-6pm) ...'; Day 2 event 13:00 'Bags + jetty, return scooters' cost_inr 500, cost_note 'possible 2nd-slot charge (10am-10am rental windows)'.",
+     "fix": "State the rule here - cost_note '2 x Rs 500 for the 23rd's 10am-10am slot (Go2Andaman off-season, valid to 30 Sep); the 24th until ~13:00 falls in a second slot - see Day 2' - and raise Day 2's second-slot line from Rs 500 to Rs 1,000 (2 scooters), or negotiate a 2-day rate at booking."
+    },
+    {
+     "event_title": "Wake up & roll out (Chennai)",
+     "event_time": "03:45-04:15",
+     "category": "place",
+     "severity": "minor",
+     "problem": "place is 'maa' (Chennai Airport), but the crew is at home packing - the airport leg is the next event. The map pin and the event text disagree.",
+     "evidence": "populate_base.py P: (\"maa\", \"Chennai Airport (MAA)\", \"chennai\", None, None, \"airport\", ...). Event title: 'Wake up & roll out (Chennai)'.",
+     "fix": "Leave place unset for this prep block (the app already renders place-less prep events), or add a coordinate-free 'home-chennai' place so the pin does not claim they start at the terminal."
+    },
+    {
+     "event_title": "Ride to Chennai Airport T1",
+     "event_time": "04:15-05:15",
+     "category": "fact",
+     "severity": "minor",
+     "problem": "Two unsourced specifics: the terminal ('T1' - the app's own MAA blurb instead calls it the 'Kamaraj Domestic Terminal', and Chennai's domestic operations are split across terminals) and the fare ('~Rs 700'). Neither appears in factbase.",
+     "evidence": "factbase research.flights has no terminal or ground-transport fact; a scan for 'Kamaraj' and 'prepaid' returns nothing. UNSUPPORTED.",
+     "fix": "Check the departure terminal on the Akasa PNR and cite it, or write 'Chennai domestic terminal (check the terminal on your PNR - Akasa uses the Kamaraj domestic complex)'. Mark the fare as 'own cab/Uber, ~Rs 600-900 at 04:15, outside trip budget'."
+    },
+    {
+     "event_title": "Veg lunch @ Icy Spicy",
+     "event_time": "10:55-11:40",
+     "category": "timing",
+     "severity": "minor",
+     "problem": "The block starts at 10:55, five minutes before the restaurant opens. factbase gives the Junglighat flagship's hours twice as 11:00 AM.",
+     "evidence": "factbase food: 'Port Blair - Icy Spicy - Pure Veg listing :: ... Maps hours: opens 11 am (restaurant)' and 'Icy Spicy outlets/hours (official site) :: Junglighat flagship (Island Arcade, opp. SBI, 3 min from airport): 11:00 AM-10:00 PM daily'.",
+     "fix": "Shift to 11:00-11:40 (absorb the 5 min into the cab block, 10:40-11:00), so the crew is not standing outside a shut door with luggage."
+    },
+    {
+     "event_title": "Veg lunch @ Icy Spicy",
+     "event_time": "10:55-11:40",
+     "category": "cost",
+     "severity": "minor",
+     "problem": "cost_inr 900 does not follow from cost_note 'Ghee dosa Rs 149, mains Rs 250-350' - the note gives no crew-of-3 arithmetic. The Rs 250 floor is also not in factbase; the two mains actually priced are Rs 280 and Rs 350 (the Rs 200-400 figure is the Maps per-person band, not a dish price).",
+     "evidence": "factbase food: 'Icy Spicy dish prices :: Ghee Dosa Rs 149 ...; Veg Manchurian Gravy Rs 280, Paneer Manchurian Dry Rs 350 ...; Dinner for 3 veg adults = Rs 700-1,100'; 'Rs 200-400 per person (reported by 1,063 people)'.",
+     "fix": "Rewrite cost_note as '3 x ~Rs 300 (Maps band Rs 200-400 pp; ghee dosa Rs 149, veg Manchurian Rs 280) - factbase range for 3 is Rs 700-1,100'. Rs 900 itself is a fair mid-range pick."
+    },
+    {
+     "event_title": "Veg lunch @ Icy Spicy",
+     "event_time": "10:55-11:40",
+     "category": "fact",
+     "severity": "minor",
+     "problem": "\"Port Blair's top pure-veg (4.2, 3.5k reviews)\" overstates the ranking - by rating it is not the top pure-veg place in the researched list; it is the busiest.",
+     "evidence": "factbase food 'Port Blair - other top pure veg :: ... Delhi wala restaurant (Pure Veg) 4.8 (376) ...; Rajasthani Dhaba Andaman 4.2 (1,186)' vs Icy Spicy '4.2 stars, 3,491 reviews'.",
+     "fix": "Reword to \"Port Blair's busiest pure-veg (4.2 stars, 3,491 reviews) - Jain menu, 100% eggless bakery\"."
+    },
+    {
+     "event_title": "Green Ocean check-in",
+     "event_time": "11:55-13:15",
+     "category": "timing",
+     "severity": "minor",
+     "problem": "The block's own note undercuts it: the crew arrives 80 minutes before the 13:15 sailing but 'Counter opens 60 min before sailing' (12:15), so the first 20 minutes are spent waiting outside a closed counter. The block also runs right up to the 13:15 departure, though Green Ocean's counter closes 15 min prior and boarding starts 20 min prior.",
+     "evidence": "factbase ferry_gapfill 'E) Green Ocean luggage & check-in lead time :: ... check-in opens 60 min before sailing, arrive 45-60 min early (75-90 min peak), counter closes 15 min before departure, boarding starts 20 min before; PRINTED ticket mandatory (mobile tickets rejected).'",
+     "fix": "Split it: 11:55-12:15 'Jetty buffer / print tickets', 12:15-12:55 'Green Ocean counter + bag X-ray', 12:55-13:15 'Boarding'. Keeps the same clock chain and matches the operator's published sequence."
+    },
+    {
+     "event_title": "SAIL - Green Ocean 1 to Havelock",
+     "event_time": "13:15-15:30",
+     "category": "timing",
+     "severity": "minor",
+     "problem": "The event's 135-minute duration is correct for GO1, but the route it uses declares 90 minutes, so the app's route stats contradict the event. The 90 min figure describes Makruzz/Nautika, as the route's own note admits.",
+     "evidence": "populate_base.py R: (\"ferry-pb-havelock\", \"phoenix-bay\", \"havelock-jetty\", \"ferry\", 74, 90, ..., \"Private catamaran (Makruzz/Nautika). ...\"). factbase ferries: 'GO1 06:30->08:45 ... GO1 13:15->15:30 same as morning GO1' (2h15m).",
+     "fix": "Set the route's minutes to 135 with a note 'Green Ocean 1 crossing 2h15m (Makruzz/Nautika run the same water in 1h30m)', or add a separate ferry-pb-havelock-go route so the fast operators keep an accurate record."
+    },
+    {
+     "event_title": "SAIL - Green Ocean 1 to Havelock",
+     "event_time": "13:15-15:30",
+     "category": "fact",
+     "severity": "minor",
+     "problem": "'Cheapest verified sailing of the day' is not quite right - GO1 06:30 sells the identical Rs 1,050 Economy fare. 13:15 is the cheapest sailing that fits the post-landing window, which is the real reason it was chosen.",
+     "evidence": "factbase ferry_gapfill 'D) Cheapest bookable class per leg :: PB->HL 23 Sep: Green Ocean 1 Economy Rs 1,050 (06:30 or 13:15); cheapest inside 11:30-14:00 window = GO1 13:15 Rs 1,050'.",
+     "fix": "Reword to 'Cheapest fare on the water (Rs 1,050 Economy) and the only cheap sailing that clears a 09:55 landing - the same fare's 06:30 run is long gone by then.'"
+    },
+    {
+     "event_title": "SUNSET @ Radhanagar Beach",
+     "event_time": "17:10-17:45",
+     "category": "fact",
+     "severity": "minor",
+     "problem": "'Sunset 17:14 (verified)' is the wrong day's value - 17:14 is Sep 24/25. Sep 23, this day, is 17:15. The same 17:14 is hard-coded into the radhanagar place blurb.",
+     "evidence": "factbase weather_astro: 'Sunrise/sunset Sep 23 2026 :: Sunrise 05:09, Sunset 17:15 IST (day 12h06m); civil twilight 04:48-17:36' and 'Sep 24: 05:09/17:14; Sep 25: 05:09/17:14; Sep 26: 05:09/17:13'.",
+     "fix": "Change the note to 'Sunset 17:15, last light 17:36 (verified for 23 Sep)' and fix the radhanagar blurb in populate_base.py to 'Sunset ~17:15 in late September'."
+    },
+    {
+     "event_title": "Scooters at the jetty -> ride out",
+     "event_time": "15:30-16:00",
+     "category": "timing",
+     "severity": "minor",
+     "problem": "The block starts at 15:30, the ferry's scheduled arrival minute, leaving zero time to dock, disembark and retrieve hold luggage before the handover paperwork. Green Ocean puts large bags in the hold and X-rays them, so 10-15 minutes is realistic - and the rest of the day is already tight against a 17:15 sunset.",
+     "evidence": "factbase ferry_gapfill 'E) Green Ocean luggage & check-in lead time :: 20 kg per person ... large bags ... bags X-rayed'; event 'SAIL - Green Ocean 1 to Havelock' ends 15:30 at havelock-jetty.",
+     "fix": "Start the rental block at 15:45 and run it to 16:05, or lengthen it to 15:30-16:05 with the note 'disembark + bags 15:30-15:45, then Go2Andaman handover at the gate (delivery service hours 10:00-18:00)'."
+    },
+    {
+     "event_title": "Dinner @ Something Different (beachside)",
+     "event_time": "18:20-19:45",
+     "category": "timing",
+     "severity": "minor",
+     "problem": "The previous event drops the crew at Govind Nagar at 18:20 and dinner begins at 18:20 at Beach No. 2, roughly 0.8-1 km away - a transfer with no minutes allocated to it.",
+     "evidence": "Preceding event 'Night ride back to Govind Nagar' uses route ride-govind-radhanagar and ends 18:20 at govind-nagar (12.0306216,93.000842); something-different is at 12.035727,92.989741 (0.83 km). No route or gap between the two events.",
+     "fix": "End the night ride at 18:10 and add 'Ride to Beach No. 2 (5 min)' 18:10-18:20, or simply start dinner at 18:30 and note 'short ride/walk north along SH4 to Beach No. 2'."
+    },
+    {
+     "event_title": "Dinner @ Something Different (beachside)",
+     "event_time": "18:20-19:45",
+     "category": "fact",
+     "severity": "minor",
+     "problem": "cost_note calls Rs 195-345 the 'veg mains' band, but in factbase those three prices are all salads. The dinner total is fine; the label misdescribes what the money buys (the cafe is a pizza/pasta multicuisine place).",
+     "evidence": "factbase food: 'Havelock - Something Different - A Beachside Cafe :: ... TripAdvisor menu prices: Green Salad Rs 195, Raw Papaya Salad Rs 320, Moroccan Chickpea Salad Rs 345; veg-friendly multicuisine (pizza/pasta); dinner for 3 = Rs 1,400-1,800'.",
+     "fix": "Change cost_note to 'Dinner for 3 = Rs 1,400-1,800 (TripAdvisor menu: salads Rs 195-345; veg-friendly pizza/pasta)' - Rs 1,600 sits mid-range and stays correct."
+    }
+   ]
+  },
+  {
+   "day": 2,
+   "events_checked": 29,
+   "checked_ok": 11,
+   "day_summary": "Day 2 (Thu 24 Sep 2026, Swaraj Dweep -> Shaheed Dweep), 29 events; the clock is perfectly contiguous 00:00-24:00 with no gaps or overlaps. The ferry leg is the strongest part of the day: Nautika-Pro 15:00->15:45 at 3 x Rs 1,600 Luxury matches the live-verified Leg A board for Thu 24 Sep to the rupee and the minute. Two critical breaks: (1) the Elephant Beach trek, which the day's theme is built on, is the subject of a REFUTED verification entry - \"the trail closes in monsoon and the final stretch can be covered by tide\" - while the event text still calls it merely \"monsoon-muddy\"; (2) the crew is scheduled to reach Laxmanpur at 17:15, one minute AFTER the verified 17:14 sunset, so the headline sunset event cannot happen as written. The Neil evening is also structurally wrong: three legs (16:05, 16:20, 19:00) use routes whose from_place is the jetty when the crew is at the Sitapur-side hotel or at Bharatpur/Lakshmanpur; the 16:05-16:20 \"flash check-in\" allots 15 minutes for a 10-minute ride plus a fuel stop plus a 3-person hotel check-in; and Blue Lagoon's Sitapur-side pin contradicts the factbase (\"2 km from downtown/jetty near Laxmanpur side\", distance explicitly NOT verified). Money: the Elephant Beach Rs 800 pp snorkel rate exists nowhere in the factbase, the scooter second-slot charge bills one scooter when the crew has two, and the Blue Lagoon Rs 3,968 is the rate researched for the night of Sep 26-27, not the Sep 24-25 night actually booked. 11 events are clean.",
+   "defects": [
+    {
+     "event_title": "NIGHT KAYAK - dark-window glow attempt + sunrise on the water",
+     "event_time": "03:30-05:45",
+     "category": "timing",
+     "severity": "major",
+     "problem": "The block is 2 h 15 min, but the only verified operator description is a 1-2 hour trip. The payoff promised in the notes ('then sunrise 05:09 from the kayaks') requires the paddle to run at least 1 h 39 min past the 03:30 start, which the operator does not advertise. If Andaman Bliss runs its normal ~1.5 h trip the crew is off the water by ~05:00 and misses the sunrise the note sells.",
+     "evidence": "factbase research.activities: 'B: Bioluminescence kayaking operator price/timing (Andaman Bliss) :: Rs.3,500 pp all taxes; duration 1-2 hrs (~1.5 hr); Kayak Timing: Starts From 3:30 AM'. Cost 3 x Rs 3,500 = Rs 10,500 is correct; moonset 02:54, civil dawn 04:47 and sunrise 05:09 are all supported by weather_astro.",
+     "fix": "In the Wednesday-evening confirmation call, explicitly book the extended/sunrise-return slot and note 'operator standard is 1-2 h; sunrise return confirmed by phone'. If they will not extend, shorten the block to 03:30-05:10 and take the sunrise at Kala Pathar instead (arrive 04:45)."
+    },
+    {
+     "event_title": "Ride to Kala Pathar",
+     "event_time": "05:45-06:10",
+     "category": "route",
+     "severity": "minor",
+     "problem": "Route 'ride-govind-kalapathar' has from_place=govind-nagar, but at 05:45 the crew is at kayak-point (the Beach No.5 night-launch spot), not Govind Nagar. The drawn line starts at the wrong end.",
+     "evidence": "populate_base.py R: ('ride-govind-kalapathar', 'govind-nagar', 'kalapathar', 'scooter', 3.7, 8, ...). Preceding event place = 'kayak-point' (12.026, 93.003), described as the 'Andaman Bliss night-kayak meet point (Beach No.5 area)'.",
+     "fix": "Add a kayak-point -> kalapathar route (~4.5 km, ~10 min via SH5), or insert a short kayak-point -> govind-nagar hop before this leg."
+    },
+    {
+     "event_title": "Ride to Kala Pathar",
+     "event_time": "05:45-06:10",
+     "category": "fact",
+     "severity": "major",
+     "problem": "Notes assert 'Golden hour is 05:45-06:45'. UNSUPPORTED - the factbase carries no golden-hour data at all, and the window is inconsistent with the sunrise it would derive from: with sunrise at 05:09 the soft-light hour runs roughly 05:09-06:10, so the 06:10 arrival lands at the END of golden hour, not the start.",
+     "evidence": "Only relevant fact is weather_astro 'Sunrise/sunset Sep 24-27 2026 :: Sep 24: 05:09/17:14 ... Civil dawn ~04:47-04:48'. No 'golden hour' string exists anywhere in data/factbase.json.",
+     "fix": "Delete the invented window; replace with 'Sunrise was 05:09 - light is already high by 06:10; shoot the black rocks backlit rather than expecting golden hour.'"
+    },
+    {
+     "event_title": "Kala Pathar - fallen trees & black rocks",
+     "event_time": "06:10-06:50",
+     "category": "consistency",
+     "severity": "minor",
+     "problem": "The day title/theme sells 'Kala Pathar driftwood dawn' and the place record says to be there at 04:45, but the plan arrives at 06:10 - 61 minutes after sunrise. Nothing on Day 2 is actually a dawn at Kala Pathar.",
+     "evidence": "itinerary days[1].theme: '...Kala Pathar driftwood dawn...'; populate_base.py P: ('kalapathar', ... 'Sunrise beach with fallen trees and black rocks. Be there 04:45; sunrise 05:09.'); weather_astro Sep 24 sunrise 05:09.",
+     "fix": "Either shorten the kayak (see 03:30 event) and arrive ~05:20, or reword theme and event to 'Kala Pathar black rocks in early light' so the plan stops promising a dawn it does not deliver."
+    },
+    {
+     "event_title": "Checkout - bags stored at Bhuma",
+     "event_time": "07:55-08:15",
+     "category": "consistency",
+     "severity": "minor",
+     "problem": "Tips say 'settle the cash bill now', but the Rs 6,920 is already carried as a cost on Day 1's 16:00 check-in event and the verified rate is prepaid-before-arrival; meanwhile the Rs 5,000 refundable damage deposit that Day 1 flags is never reclaimed anywhere in the itinerary. The luggage-hold-till-13:00 arrangement is also not in the factbase.",
+     "evidence": "factbase research.budget_stays: 'Rs 6,920 taxes included ... NON-REFUNDABLE, pay property before arrival, cash-only, Rs 5,000 refundable damage deposit'. itinerary days[0] 16:00 event already books cost_inr 6920.",
+     "fix": "Change tips to: 'Collect the Rs 5,000 damage-deposit refund before leaving (room bill was prepaid at check-in). Confirm at check-in that Bhuma will hold the bags until the 13:00 pickup - not a documented service.'"
+    },
+    {
+     "event_title": "TREK - giant trees to Elephant Beach",
+     "event_time": "08:35-09:15",
+     "category": "fact",
+     "severity": "critical",
+     "problem": "The day's centrepiece walk is presented as merely muddy, but the factbase's own verification pass REFUTED that: the trail closes in monsoon and the last stretch can be under water. Late September is the wettest month of the year, so the crew can reach the trailhead at 08:35 and find no walkable trail, with no boat booked and the ferry to Neil at 15:00.",
+     "evidence": "factbase verification[from='activities', verdict='refuted'] corrected_value: 'The ~2 km trek is NOT an all-weather fallback: the trail closes in monsoon and the final stretch can be covered by tide.' (evidence_url bookyourferry.com/elephant-beach-boat-ride). research.weather_astro: 'September climate, Port Blair ... Precipitation 388.2 mm (wettest month of the year)'. The itinerary's own risks[] repeats the refuted line: 'Elephant Beach trek is officially open but monsoon-muddy'.",
+     "fix": "Make the speedboat primary: 3 x Rs 1,250 = Rs 3,750 round trip (snorkel dip included, verified effective 1 Sep 2026), departures ~08:30-14:00 from Havelock jetty. Keep the trek only as a same-morning alternative confirmed by phone, and rewrite the tip to 'trail closes in monsoon - confirm it is open the night before; boat is the fallback'. Fix the risks[] line too."
+    },
+    {
+     "event_title": "TREK - giant trees to Elephant Beach",
+     "event_time": "08:35-09:15",
+     "category": "fact",
+     "severity": "minor",
+     "problem": "Notes state '1.7 km forest trail'. The factbase gives 2-2.5 km (and the verification correction says '~2 km'), while populate_base's own place blurb says '1.5 km trek' - three different numbers for the same trail, none of which is 1.7 km except the route row itself.",
+     "evidence": "factbase research.activities: 'Trek (2-2.5 km, 30-40 min from Radhanagar road)'; verification[activities, refuted]: 'The ~2 km trek...'; populate_base.py P ('elephant-beach', ... 'or 1.5 km trek'); populate_base.py R ('walk-elephant', ..., 1.7, 35, ...).",
+     "fix": "Standardise on the sourced figure: '~2 km (2-2.5 km per sources), 30-40 min'. Update route walk-elephant km to 2.0 and the elephant-beach blurb to match."
+    },
+    {
+     "event_title": "ELEPHANT BEACH - snorkel the coral garden",
+     "event_time": "09:15-11:00",
+     "category": "cost",
+     "severity": "major",
+     "problem": "cost_inr 2400 = 3 x Rs 800 for 'gear+guide on the beach'. The Rs 800 pp figure appears nowhere in the factbase - it is invented. Every sourced snorkel price is higher, so the day is under-budgeted by roughly Rs 2,100-8,100.",
+     "evidence": "factbase research.activities: 'C: Guided snorkelling price :: Starting at Rs.3,500 including gear and guide (Go2Andaman)'; 'D: Elephant Beach snorkel combo / activity prices :: Extended snorkelling with photos Rs.1,500-1,800; ... lockers Rs.100'. Nothing at Rs 800.",
+     "fix": "Set cost_inr 4500-5400 with cost_note '3 x Rs 1,500-1,800 extended snorkelling (Go2Andaman list) - on-spot rate, unverified for Elephant Beach vendors', or Rs 0 with own masks. Add the sourced caveat: 'June-Sept water activities may be suspended by sea conditions, decided each morning.'"
+    },
+    {
+     "event_title": "Trek back to the trailhead",
+     "event_time": "11:00-11:40",
+     "category": "timing",
+     "severity": "major",
+     "problem": "The return walk starts at 11:00 on a rising tide - exactly the hazard the verified correction names. Interpolating the verified Sep 24 tide table (low 08:23 at 0.53 m, high 14:32 at 1.91 m) puts the water at ~1.06 m and climbing at 11:00 versus ~0.6 m when they walked in at 08:35. The plan gives no tide cut-off.",
+     "evidence": "factbase verification[activities, refuted]: '...the final stretch can be covered by tide'; research.weather_astro 'Tides Sep 24 2026 :: High 02:08 (1.95 m), Low 08:23 (0.53 m), High 14:32 (1.91 m), Low 20:31 (0.57 m)'.",
+     "fix": "Move the beach block to 09:15-10:20 and walk back 10:20-11:00, adding 'tide rises from the 08:23 low to the 14:32 high - be off the shore section by ~10:30'. If the boat option is taken, this leg disappears."
+    },
+    {
+     "event_title": "Lunch @ Something Different",
+     "event_time": "12:00-13:00",
+     "category": "cost",
+     "severity": "minor",
+     "problem": "cost_inr 1600 carries no cost_note (every other priced event on the day has one), so the crew-of-3 arithmetic is unshown. The note also calls Rs 195-345 the 'veg mains' band when the sourced prices in that band are salads; pizza/pasta mains are not priced in the factbase.",
+     "evidence": "factbase research.food: 'Havelock - Something Different - A Beachside Cafe :: ... opens 11:30 am; TripAdvisor menu prices: Green Salad Rs195, Raw Papaya Salad Rs320, Moroccan Chickpea Salad Rs345; veg-friendly multicuisine (pizza/pasta); dinner for 3 = Rs1,400-1,800'. Rs 1,600 sits correctly inside that band.",
+     "fix": "Add cost_note '3 x ~Rs 535; sourced band Rs 1,400-1,800 for 3' and reword to 'salads Rs 195-345, pizza/pasta higher'."
+    },
+    {
+     "event_title": "Lunch @ Something Different",
+     "event_time": "12:00-13:00",
+     "category": "place",
+     "severity": "minor",
+     "problem": "The preceding leg is titled 'Ride back to Govind Nagar' and its route ends at govind-nagar, but Something Different is at Beach No.2 (12.035727, 92.989741), roughly 1.5-2 km further north-west. No time is allotted to get from Govind Nagar to the restaurant, and the crew must double back to Govind Nagar afterwards for the bags.",
+     "evidence": "populate_base.py P: ('something-different', ... 'Beach No.2'); ('govind-nagar', 12.0306216, 93.000842); factbase research.food: 'Beach No. 2 behind Havelock Power House'.",
+     "fix": "Retitle the 11:40 leg 'Ride back to Beach No.2 (lunch)' and extend it to 12:05, starting lunch 12:05; or swap to a Govind Nagar veg option (Rajasthani pure-veg dhaba, SH4, Rs 600-900 for 3) to avoid the double-back before the 13:00 bag pickup."
+    },
+    {
+     "event_title": "Bags + jetty, return scooters",
+     "event_time": "13:00-13:20",
+     "category": "cost",
+     "severity": "major",
+     "problem": "cost_inr 500 for 'possible 2nd-slot charge' bills ONE scooter, but the crew of 3 rented TWO. Day 1 collected them at 15:30 on Sep 23; with the fixed 10am-10am slot, returning at 13:00 on Sep 24 crosses into a second slot for both bikes, i.e. Rs 1,000, not Rs 500.",
+     "evidence": "factbase research.rentals_fuel: 'Go2Andaman terms :: 24h slot fixed 10am-10am ...'; 'off-season price Rs500/day valid until 30 Sep 2026'. itinerary days[0] 15:30 event cost_note: '2 x Rs 500/24h (Go2Andaman off-season rate, valid to 30 Sep)'.",
+     "fix": "Set cost_inr 1000, cost_note '2 x Rs 500 for the second 10am-10am slot (pickup 15:30 Sep 23, return 13:00 Sep 24) - or negotiate a part-day rate at booking'."
+    },
+    {
+     "event_title": "Nautika check-in (45 min)",
+     "event_time": "13:20-14:15",
+     "category": "timing",
+     "severity": "minor",
+     "problem": "The block is 55 minutes, not the 45 in its own title, and it is in the wrong window: it puts the crew at the jetty 100 minutes before the 15:00 sailing, then labels 14:15-15:00 - the window in which check-in must actually happen - as 'Jetty wait'. The two blocks are effectively swapped and 55 minutes are burned on the apron.",
+     "evidence": "factbase research.ferries: 'Check-in lead time :: Nautika FAQ: reach jetty 45 min before departure, boarding closes 15 min prior.'",
+     "fix": "Retitle: 13:20-14:10 'Jetty buffer / bag re-pack', 14:10-14:45 'Nautika check-in (45 min lead, boarding closes 14:45)'. Or push lunch and the bag pickup 30 min later and arrive at 14:05."
+    },
+    {
+     "event_title": "SAIL - Nautika-Pro to Neil",
+     "event_time": "15:00-15:45",
+     "category": "consistency",
+     "severity": "minor",
+     "problem": "The event's 45-minute crossing is correct and matches the live-verified sailing, but the route it points at carries minutes=60, so the app's route stats contradict the event by 15 minutes.",
+     "evidence": "factbase research.ferry_gapfill: 'Leg A: Havelock->Neil, Thu 24 Sep 2026 - Nautika ... Nautika-Pro 15:00->15:45 (Luxury Rs1,600/186, Royal Rs1,800/88, Business Rs3,100/8). All 45-min crossings.' populate_base.py R: ('ferry-havelock-neil', 'havelock-jetty', 'neil-jetty', 'ferry', 40, 60, ...). Cost 3 x Rs 1,600 = Rs 4,800 is exact.",
+     "fix": "Change the route row to 45 minutes: ('ferry-havelock-neil', ..., 40, 45, ...)."
+    },
+    {
+     "event_title": "Ride via the pump - flash check-in @ Blue Lagoon",
+     "event_time": "16:05-16:20",
+     "category": "timing",
+     "severity": "major",
+     "problem": "15 minutes is allotted for a 5.6 km / 10-minute ride PLUS a petrol stop for two scooters PLUS a hotel check-in with luggage for three. That is impossible - realistically 30-40 minutes - and every downstream event (jet ski, sunset) inherits the slip.",
+     "evidence": "populate_base.py R: ('ride-neiljetty-sitapur', 'neil-jetty', 'sitapur', 'scooter', 5.6, 10, ...); factbase research.rentals_fuel: 'IndianOil, Neil Kendra ... the only pump on Shaheed Dweep and sometimes not working'.",
+     "fix": "Reorder: ride straight from the ferry to Bharatpur (3 min) for the jet ski 16:00-16:30, Laxmanpur for sunset, and check in at Blue Lagoon after dinner on the way home - it removes ~12 km of backtracking. If the order is kept, widen this block to 16:05-16:40."
+    },
+    {
+     "event_title": "Ride via the pump - flash check-in @ Blue Lagoon",
+     "event_time": "16:05-16:20",
+     "category": "place",
+     "severity": "major",
+     "problem": "The whole Neil evening and the Day 3 sunrise are routed on the assumption that Blue Lagoon sits on the Sitapur side. The factbase says the opposite and explicitly marks the distance unverified, yet this event uses a route whose to_place is Sitapur Beach, 5.6 km from the jetty.",
+     "evidence": "factbase research.budget_stays: 'Blue Lagoon Resort (8.6/256) ... 2 km from downtown/jetty near Laxmanpur side' and 'Blue Lagoon Resort (Neil) property page could not be opened directly ... Its exact distance to Laxmanpur Beach and the Neil jetty was NOT verified - only 2 km from downtown'. populate_base.py pins it at 11.8178389, 93.0530135 with the unsupported blurb 'on the SITAPUR side: sunrise beach is a 3-min ride'.",
+     "fix": "Confirm the property's exact address on Booking before locking Day 2/3 timings. Until then move the pin to ~2 km from the jetty, drop the '3-min ride' claim, and re-time Day 3's 04:42-04:47 Sitapur run using the verified jetty->Sitapur figure (5.6 km, 10 min)."
+    },
+    {
+     "event_title": "Ride via the pump - flash check-in @ Blue Lagoon",
+     "event_time": "16:05-16:20",
+     "category": "cost",
+     "severity": "major",
+     "problem": "cost_inr 4118 = Rs 3,968 stay + Rs 150 fuel (arithmetic correct), but the Rs 3,968 is a stale-date price: it was quoted live for the night of Sep 26-27, whereas Day 2 books the night of Sep 24-25. Neil rates differ by night, and the researched room is a single king bed for three adults.",
+     "evidence": "factbase research.budget_stays: 'Neil best pick: Blue Lagoon Resort, Neil Island (Sep 26-27, 1 night) :: King Room with Balcony (AC), Rs 3,968 taxes included (~Rs 1,323/person), breakfast included, FREE cancellation', plus the caveat 'note the room shows 1 king bed for 3 adults'. Petrol Rs 88.66/L supports the Rs 150 two-scooter top-up.",
+     "fix": "Re-quote Booking for checkin=2026-09-24 & checkout=2026-09-25, 3 adults, then update cost_inr/cost_note. Mark the current figure 'Sep 26-27 rate, re-check for Sep 24-25' and confirm bedding for 3."
+    },
+    {
+     "event_title": "Ride to Bharatpur",
+     "event_time": "16:20-16:35",
+     "category": "route",
+     "severity": "major",
+     "problem": "Route 'ride-neiljetty-bharatpur' starts at the jetty, but at 16:20 the crew is at Blue Lagoon on the Sitapur side. The real leg is hotel -> jetty -> Bharatpur, about 6.7 km, not the 1.1 km the route claims - map line and distance stat are both wrong.",
+     "evidence": "populate_base.py R: ('ride-neiljetty-bharatpur', 'neil-jetty', 'bharatpur', 'scooter', 1.1, 3, ...) and ('ride-neiljetty-sitapur', 'neil-jetty', 'sitapur', 'scooter', 5.6, 10, ...); previous event's place is the Sitapur-side hotel.",
+     "fix": "Split into two legs (reverse ride-neiljetty-sitapur, then ride-neiljetty-bharatpur, ~13 min total), or adopt the reorder above - going to Bharatpur straight off the ferry makes this route correct exactly as written."
+    },
+    {
+     "event_title": "JET SKI @ Bharatpur",
+     "event_time": "16:35-17:05",
+     "category": "fact",
+     "severity": "major",
+     "problem": "The note says 'Beach open till 18:00', true of the beach but not of the water-sports counters: the only counter timings in the factbase are 08:00-15:00. A 16:35 jet-ski start risks arriving after the operators have packed up, with Rs 2,400 budgeted for it. Pricing itself is fine (3 x Rs 800 within the verified Rs 800-1,200 range) and the '~1.5 m tide' claim checks out (interpolating the verified Sep 24 high 14:32 at 1.91 m to low 20:31 at 0.57 m gives ~1.56 m at 16:35).",
+     "evidence": "factbase research.activities: 'C: Bharatpur Beach (Neil) entry & timings :: Entry fee: Free; beach timings 5:00 AM-6:00 PM; water sports counters at beach entrance (jet ski, banana/sofa rides...)'; 'C: Guided snorkelling price :: ... same Rs.3,500 starting fee listed on Bharatpur Beach page, timings 08:00 am-03:00 pm'; 'C: Jet ski price/duration :: Rs.800 to Rs.1,200 per ride for 10-15 minutes'.",
+     "fix": "Phone the Bharatpur counter (or DIVEIndia, 50 m from the jetty) to confirm the last ride of the day and move the jet ski to 16:00-16:30 straight off the ferry. Reword: 'Beach open 05:00-18:00, but sourced water-sports counter timings are 08:00-15:00 - confirm before counting on a late ride.'"
+    },
+    {
+     "event_title": "Hop to Laxmanpur",
+     "event_time": "17:05-17:15",
+     "category": "route",
+     "severity": "minor",
+     "problem": "Route 'ride-neiljetty-laxmanpur' starts at the jetty; the crew starts at Bharatpur, 1.1 km beyond it. Destination is right, origin is not, so the leg reads 2.7 km when it is ~3.8 km.",
+     "evidence": "populate_base.py R: ('ride-neiljetty-laxmanpur', 'neil-jetty', 'laxmanpur', 'scooter', 2.7, 5, ...) and ('ride-neiljetty-bharatpur', ..., 1.1, 3, ...).",
+     "fix": "Chain the two legs (reverse ride-neiljetty-bharatpur then ride-neiljetty-laxmanpur, ~8 min) or add a bharatpur -> laxmanpur route of ~3.8 km / 8 min."
+    },
+    {
+     "event_title": "SUNSET @ Laxmanpur Beach 1",
+     "event_time": "17:15-17:50",
+     "category": "timing",
+     "severity": "critical",
+     "problem": "The event starts at 17:15 and the verified sunset on 24 Sep is 17:14 - the crew arrives one minute AFTER the sun has gone. The event's own note quotes the correct 17:14, so the plan contradicts itself and the day's headline 'sunset stage' is missed by the entire approach ride.",
+     "evidence": "factbase research.weather_astro: 'Sunrise/sunset Sep 24-27 2026 :: Sep 24: 05:09/17:14'. Event notes: 'Sunset 17:14 - Neil's sunset stage.'",
+     "fix": "Be on the sand by 16:45 - leave Bharatpur by 16:35 at the latest. Reset the block to 16:45-17:35 (sun down 17:14, afterglow ~20 min) and pull the jet ski forward to 16:00-16:30."
+    },
+    {
+     "event_title": "Dinner @ Pure Veg Restaurant",
+     "event_time": "17:50-19:00",
+     "category": "cost",
+     "severity": "minor",
+     "problem": "cost_note 'thali Rs 240 pp' attributes to Pure Veg Restaurant (Lakshmanpur) a price the factbase records for a DIFFERENT restaurant - VEERA Pure Veg at Bharatpur Beach. The Rs 800 total is still defensible from the sourced band, but the per-head figure is mis-sourced. Separately, dinner starts the same minute the sunset block ends, with no time for the ~0.7 km hop from the beach to the restaurant.",
+     "evidence": "factbase research.food: 'PURE VEG RESTAURANT (Lakshmanpur, near Hotel Samsaara): 4.8 (254), Rs200-400, opens 8 am'; 'VEERA Pure Veg (Bharatpur Beach): review states veg thali at rs 240'; 'Neil Island thali cost benchmark :: ... dinner for 3 veg adults = Rs700-900'.",
+     "fix": "cost_note -> '3 x ~Rs 265; Neil veg dinner band Rs 700-900 (Maps Rs 200-400 pp)'. Start dinner at 17:55 to absorb the ride from the beach."
+    },
+    {
+     "event_title": "Ride home",
+     "event_time": "19:00-19:20",
+     "category": "route",
+     "severity": "major",
+     "problem": "Route 'ride-neiljetty-sitapur' starts at the jetty, but the crew is leaving Pure Veg Restaurant in Lakshmanpur. A correct route for exactly this leg already exists in populate_base and is not used, so the map draws the wrong line and the distance stat reads 5.6 km instead of 7.4 km.",
+     "evidence": "populate_base.py R: ('ride-laxmanpur-sitapur', 'laxmanpur', 'sitapur', 'scooter', 7.4, 12, [...], 'Via SH6.') - matches factbase research.distances 'route:Laxmanpur Beach 1->Sitapur Beach :: 7.4 km, 12 min via SH6'.",
+     "fix": "Change the event's route to 'ride-laxmanpur-sitapur'. The 20-minute block still covers the verified 12-minute night ride."
+    }
+   ]
+  },
+  {
+   "day": 3,
+   "events_checked": 22,
+   "checked_ok": 6,
+   "day_summary": "Day 3 (2026-09-25, Neil \u2192 Port Blair) has a contiguous, gap-free 00:00\u201324:00 timeline and its two anchor facts are solid: sunrise 05:09 and sunset 17:14 (factbase weather_astro \"Sep 25: 05:09/17:14\") and the 08:51 / 0.40 m low tide for the Natural Bridge (factbase \"Tides Sep 25 2026: ... Low 08:51 (0.40 m)\"). The Makruzz 11:30\u219212:30 Neil\u2192PB sailing and its \u20b96,525 (3 \u00d7 [1,850 + 325]) are exactly right per factbase ferry_gapfill Leg B. The problems cluster in four places: (1) every Neil scooter leg is attached to a route that starts at Shaheed Dweep Jetty even though the crew is based at Blue Lagoon on the Sitapur side \u2014 three wrong-origin routes with mismatched durations; (2) the Munda Pahad block contradicts the only Munda Pahad source in the factbase (1.5 km / 45\u201360 min each way, not \"1.3 km, ~30 min\"), leaving a 105-min slot with zero summit time; (3) money: the Port Blair scooters are priced at a rate Eternal Andamans does not publish and are never returned anywhere in Days 3\u20135, the Hotel Atlanta \u20b98,845 is a live quote for Sep 23\u201325 while the stay is Sep 25\u201327, and the Chidiya Tapu fuel arithmetic does not reconcile; (4) unsupported text: an invented \u20b9500 Natural Bridge guide fee, \"200 m from the hotel\" for Annapurna (really ~660 m), a crocodile warning with zero factbase support, a \"65-min margin\" that contradicts the trek event's own \"50-min margin\", and the pink sand / cave / shipwreck claims at Sitapur. Six events are clean.",
+   "defects": [
+    {
+     "event_title": "Up before the sun",
+     "event_time": "04:30\u201304:42",
+     "category": "timing",
+     "severity": "minor",
+     "problem": "12 minutes for three people to wake, dress, grab lights and be moving on scooters in full darkness. Every comparable prep block on the trip is longer (Day 4 'Up & out' 03:30\u201304:00 is 30 min).",
+     "evidence": "itinerary days[2].events[1] start 04:30 end 04:42; Day 4 events[1] 03:30\u219204:00 for the same kind of pre-dawn start. Factbase weather_astro: civil dawn ~04:47-04:48, sunrise 05:09 \u2014 there is slack before sunrise.",
+     "fix": "Move the block to 04:25\u201304:50 (25 min) and depart 04:50; with the corrected ~8-min hotel\u2192Sitapur ride the crew still lands ~04:58, 11 min before sunrise."
+    },
+    {
+     "event_title": "3-minute ride to Sitapur",
+     "event_time": "04:42\u201304:47",
+     "category": "route",
+     "severity": "major",
+     "problem": "The attached route 'ride-neiljetty-sitapur' runs Shaheed Dweep Jetty \u2192 Sitapur, but the crew starts the day at Blue Lagoon Resort, not the jetty. Wrong origin: the map will draw a 5.6 km line the crew never rides, and the route's own 10 min contradicts both the 5-min slot and the '3-minute' in the title. No hotel\u2192Sitapur distance exists in the factbase at all.",
+     "evidence": "populate_base.py R: (\"ride-neiljetty-sitapur\",\"neil-jetty\",\"sitapur\",\"scooter\",5.6,10,...); factbase distances: \"route:Neil Jetty->Sitapur Beach :: 5.6 km, 10 min via SH6\". Previous event ends at place hotel-bluelagoon. Factbase budget_stays only says Blue Lagoon is \"2 km from downtown\" and \"Sitapur Beach is ~5 km from Neil jetty/market\" \u2014 the '3-min ride' comes from the populate_base blurb, not from any fact. Hotel\u2192Sitapur straight-line from the stored coords is 1.6 km.",
+     "fix": "Add a route ride-bluelagoon-sitapur (hotel-bluelagoon \u2192 sitapur) with a measured km/min and attach it here; until measured, budget 8 min (04:50\u201304:58) and drop the unsourced '3-minute' from the title."
+    },
+    {
+     "event_title": "SUNRISE @ Sitapur Beach + cave & shipwreck",
+     "event_time": "04:47\u201306:15",
+     "category": "fact",
+     "severity": "minor",
+     "problem": "'pink-tinged sand', the 'photo-frame cave', the 'shipwreck' and the '~500 m' walk are all UNSUPPORTED \u2014 none of them appears anywhere in factbase.json. Only 'Sunrise 05:09' is backed.",
+     "evidence": "grep over data/factbase.json: 'pink' \u2192 0 hits, 'shipwreck' \u2192 0 hits; the only Sitapur facts are hotel-distance snippets (\"Sitapur Beach is ~5 km from Neil jetty/market at the island tip\"). Supported part: weather_astro \"Sep 25: 05:09/17:14\".",
+     "fix": "Either add a sourced fact for the cave/shipwreck/500 m walk (the reference video timestamp in populate_base yt_links is not in the factbase), or soften to 'walk the shore north for rock formations' with no distance claim."
+    },
+    {
+     "event_title": "Ride back",
+     "event_time": "06:15\u201306:25",
+     "category": "route",
+     "severity": "major",
+     "problem": "Same wrong-origin route reused in reverse (neil-jetty \u2194 sitapur) for what is really Sitapur \u2192 Blue Lagoon, and it is given 10 minutes while the outbound leg of the identical distance was given 5 minutes and called '3-minute'.",
+     "evidence": "itinerary events[4] route 'ride-neiljetty-sitapur'; events[2] same route, 04:42\u219204:47. populate_base.py route = neil-jetty \u2192 sitapur, 5.6 km / 10 min \u2014 neither endpoint is the hotel.",
+     "fix": "Point both legs at the new hotel-bluelagoon \u2194 sitapur route and give them the same duration (~8 min each): 06:15\u201306:23."
+    },
+    {
+     "event_title": "Breakfast (incl.) + pack + checkout",
+     "event_time": "06:25\u201307:30",
+     "category": "fact",
+     "severity": "minor",
+     "problem": "Breakfast at 06:25 assumes the resort serves before 06:30. The factbase records 'breakfast included' for Blue Lagoon but no service hours, and separately warns that nothing on any island opens before 7 am.",
+     "evidence": "factbase budget_stays: \"Blue Lagoon Resort ... King Room with Balcony (AC), Rs 3,968 taxes included ..., breakfast included\" (no hours). factbase food: \"Food before 6 AM :: NO restaurant found open before 6 am on any island. Earliest openings ... Neil: 7 am\".",
+     "fix": "Phone-confirm an early/packed breakfast when booking; if unconfirmed, drop '(incl.)' and carry fruit from the previous evening (the kit list already says to do this for dawn starts)."
+    },
+    {
+     "event_title": "Breakfast (incl.) + pack + checkout",
+     "event_time": "06:25\u201307:30",
+     "category": "cost",
+     "severity": "minor",
+     "problem": "The Blue Lagoon booking the crew is checking out of is priced in the factbase for Sep 26\u201327, but the itinerary uses the room on the night of Sep 24\u219225. The \u20b93,968 rate and the availability are unverified for the night actually slept.",
+     "evidence": "factbase budget_stays: \"Neil best pick: Blue Lagoon Resort, Neil Island (Sep 26-27, 1 night) :: King Room with Balcony (AC), Rs 3,968 taxes included ..., FREE cancellation\". Itinerary Day 2 charges it on 2026-09-24 (days[1] 'flash check-in @ Blue Lagoon', cost_note 'stay Rs 3,968').",
+     "fix": "Re-run the Booking search for check-in 2026-09-24 / check-out 2026-09-25 and update the Day 2 cost; also verify a King Room sleeps 3."
+    },
+    {
+     "event_title": "Ride to Natural Bridge",
+     "event_time": "07:30\u201307:50",
+     "category": "route",
+     "severity": "major",
+     "problem": "Route 'ride-neiljetty-bridge' starts at Shaheed Dweep Jetty (2.1 km, 4 min), but the crew is leaving Blue Lagoon on the far Sitapur side of the island \u2014 the real leg crosses Neil end to end (~4.5 km straight-line from the stored coords, realistically ~7 km / ~15 min by road). Wrong origin, and the route's 4 min is nothing like the 20 min booked.",
+     "evidence": "populate_base.py R: (\"ride-neiljetty-bridge\",\"neil-jetty\",\"natural-bridge\",\"scooter\",2.1,4,...); factbase distances \"route:Neil Jetty->Natural Bridge (Laxmanpur Beach 2) :: 2.1 km, 4 min drive via Village road\". Previous event place = hotel-bluelagoon.",
+     "fix": "Add a hotel-bluelagoon \u2192 natural-bridge route (or chain hotel\u2192neil-jetty\u2192bridge). The 20-min slot is right for the real distance; only the route id/geometry is wrong."
+    },
+    {
+     "event_title": "NATURAL BRIDGE at low tide",
+     "event_time": "07:50\u201309:35",
+     "category": "cost",
+     "severity": "major",
+     "problem": "'Optional guide Rs 500/group' is an invented price \u2014 there is no Natural Bridge guide fee anywhere in factbase.json. The only guide figure in the entire factbase is \u20b9300, and it belongs to the Red Skin / MGMNP snorkelling package.",
+     "evidence": "factbase redskin: \"Costs (Indian nationals) :: Permit Rs 50 ...; optional guide Rs 300; total ~Rs 850-1,350/person (Andaman Bliss)\". No Neil/Natural Bridge guide price exists in any topic.",
+     "fix": "Delete the figure, or write 'local guides offer to walk you out \u2014 price unverified, agree it before starting'."
+    },
+    {
+     "event_title": "NATURAL BRIDGE at low tide",
+     "event_time": "07:50\u201309:35",
+     "category": "fact",
+     "severity": "minor",
+     "problem": "'(verified)' overstates the tide's status, and the supporting side-claims are unsourced. The Sep 25 tide is a single-source research fact; the verification pass covered only Sep 26 and Sep 27. Also 'Tide pools hold trapped fish' and 'dead coral is slippery' have no factbase backing.",
+     "evidence": "factbase weather_astro: \"Tides Sep 25 2026 :: High 02:36 (2.07 m), Low 08:51 (0.40 m) ...\" (tidetime.org, single source). verification[] contains confirmed entries for Sep 26 tides only, and that entry warns \"treat times as +/-15 min for planning\" and \"Tide times are for Port Blair; Neil Island (Natural Bridge) and Havelock will differ slightly\". Factbase distances says only \"final approach to the bridge is on foot over shore rocks\" \u2014 no mention of dead coral, slipperiness, or tide pools.",
+     "fix": "Reword to 'Low tide 08:51 at 0.40 m (Port Blair table, \u00b115 min; Neil differs by minutes)'; keep the grip-shoe advice as a tip rather than a sourced fact. The 07:50 arrival is safely inside the window either way."
+    },
+    {
+     "event_title": "Jetty: return scooters + refuel-as-agreed",
+     "event_time": "09:35\u201310:00",
+     "category": "cost",
+     "severity": "minor",
+     "problem": "\u20b9100 has no cost_note and no basis in the factbase \u2014 Neil On Wheels' fuel/return terms are not recorded anywhere (only name, rating and phone). The event also carries no route for the Natural Bridge \u2192 jetty leg it actually contains.",
+     "evidence": "factbase rentals_fuel: \"Neil Island scooter operator :: 'Neil On Wheels (Scooter Rentals)', Neil Kendra, rated 5.0 (17 reviews), listed Open 24 hours, ph +91 94742 68205\" \u2014 no rate, no fuel policy. Petrol price that IS in the factbase: \"Rs 88.66 per litre, dated Aug 19, 2026\".",
+     "fix": "Add cost_note '~1.1 L top-up for 2 scooters @ \u20b988.66' and attach ride-neiljetty-bridge (reversed) so the 2.1 km leg is drawn. Timing is fine: the pump (IndianOil Neil Kendra, practical hours ~07:00\u201318:00) is open at 09:35."
+    },
+    {
+     "event_title": "SAIL \u2014 Makruzz to Port Blair",
+     "event_time": "11:30\u201312:30",
+     "category": "consistency",
+     "severity": "major",
+     "problem": "'a 65-min margin on the Munda Pahad gate' contradicts the trek event four events later, which says 'we arrive 14:10 \u2014 50-min margin', and the Makruzz-vs-Green-Ocean gain is only 15 minutes (12:30 vs 12:45), not 65.",
+     "evidence": "itinerary events[10] notes: \"Chosen over the Rs 1,400 Green Ocean (arrives 12:45) for a 65-min margin on the Munda Pahad gate\"; events[14] notes: \"Gate entry BEFORE 15:00 (we arrive 14:10 \u2014 50-min margin)\". Factbase ferry_gapfill Leg B: Makruzz 11:30\u219212:30; Green Ocean GO1 11:00\u219212:45 Economy \u20b91,050 (+\u20b9350 = \u20b91,400 all-in) \u2014 both figures in the note are otherwise correct.",
+     "fix": "Rewrite as: 'Chosen over the \u20b91,400 Green Ocean (arrives 12:45) \u2014 15 minutes earlier ashore, which is what keeps the 50-min cushion at the 15:00 trek gate.'"
+    },
+    {
+     "event_title": "SAIL \u2014 Makruzz to Port Blair",
+     "event_time": "11:30\u201312:30",
+     "category": "place",
+     "severity": "major",
+     "problem": "The sailing lands at place/route endpoint 'phoenix-bay', but the factbase says private catamarans use Haddo Jetty and explicitly demotes Phoenix Bay to the government-ferry jetty. The next event then collects rented scooters at the same possibly-wrong jetty.",
+     "evidence": "factbase ferries: \"Port Blair jetty for private ferries :: Haddo Jetty per google search result snippets (BookYourFerry, Ferryhopper, FerryBooking.in: 'All four private catamaran operators depart from Haddo: Makruzz, Nautika, Green Ocean, ITT Majestic'). Phoenix Bay Jetty is the government-ferry jetty and a backup; not confirmed on an operator's own site.\" populate_base.py nevertheless blurbs phoenix-bay as \"Private ferry terminal (Makruzz/Nautika/Green Ocean)\".",
+     "fix": "Confirm the arrival jetty printed on the Makruzz ticket. If Haddo, add a 'haddo' place, repoint ferry-neil-pb (and ferry-pb-havelock on Day 1) to it, and move the 12:30 scooter handover there."
+    },
+    {
+     "event_title": "SAIL \u2014 Makruzz to Port Blair",
+     "event_time": "11:30\u201312:30",
+     "category": "timing",
+     "severity": "minor",
+     "problem": "The attached route carries minutes=75 and a note about a completely different sailing, while this event is a 60-minute crossing. The route metadata is stale relative to the day it is used on.",
+     "evidence": "populate_base.py R: (\"ferry-neil-pb\",\"neil-jetty\",\"phoenix-bay\",\"ferry\",60,75,...,\"Nautika 09:30\u219210:45 verified for Sun Sep 27.\"). Factbase ferry_gapfill Leg B: \"Makruzz ... One sailing: 11:30\u219212:30 (1h)\".",
+     "fix": "Either set the route to 60 min and note both sailings, or split into ferry-neil-pb-makruzz (60 min) and ferry-neil-pb-nautika (75 min) so Day 3 and Day 5 each cite their own boat."
+    },
+    {
+     "event_title": "PB scooters near jetty + snack grab",
+     "event_time": "12:30\u201313:10",
+     "category": "cost",
+     "severity": "major",
+     "problem": "'2 x ~Rs 600/day (Eternal Andamans)' quotes a rate Eternal Andamans does not publish. Their listed scooters are \u20b9500 (Activa, Fascino) or \u20b9700 (Vespa, Jupiter, Dio), with booking cards at \u20b9699/day. The \u20b91,200 arithmetic is internally consistent but the unit price is invented for the named operator.",
+     "evidence": "factbase rentals_fuel: \"Alternative 2: Eternal Andamans - models and prices per 24h :: Honda Activa \u20b9500, Yamaha Fascino \u20b9500, Vespa \u20b9700, TVS Jupiter \u20b9700, Honda Dio \u20b9700 ... (booking cards show \u20b9699/day for scooters)\". The \u20b9500 deposit in the note IS supported: \"Security deposit \u20b9500 refunded on return\".",
+     "fix": "Name the model and use a published rate: \u20b91,000 (2 \u00d7 Activa \u20b9500) or \u20b91,398 (2 \u00d7 \u20b9699), and note that \u20b9600 is only the generic Port Blair market band from the Reddit/Justdial snippet."
+    },
+    {
+     "event_title": "PB scooters near jetty + snack grab",
+     "event_time": "12:30\u201313:10",
+     "category": "consistency",
+     "severity": "major",
+     "problem": "The two Port Blair scooters are picked up here and never returned anywhere in Days 3, 4 or 5 \u2014 there is no drop-off event \u2014 yet only one day is charged. Day 4 is the Baratang cab day (04:00 departure, back ~15:00) so Eternal's 09:00-next-morning return is physically impossible, triggering overtime.",
+     "evidence": "Grep of Days 3\u20135: the only scooter events are this pickup (Day 3 12:30) \u2014 nothing returns them (Day 4 is cab-only, Day 5 is 'Cab to the airport'). Factbase rentals_fuel: \"Eternal Andamans terms :: ... return by 9am next day else \u20b9499 full-day overtime ... min 24h booking\" and \"Baratang two-wheeler restriction :: Two-wheelers are NOT allowed past the forest check-post ... do not plan a scooter for the Baratang day\".",
+     "fix": "Add a return event at 18:40 on Day 3 (hand back at the hotel \u2014 Eternal does hotel delivery/pickup), or budget a second day (+\u20b9998\u20131,398 overtime/day-2) and insert an explicit return before the 07:45 Day-5 airport cab."
+    },
+    {
+     "event_title": "PB scooters near jetty + snack grab",
+     "event_time": "12:30\u201313:10",
+     "category": "cost",
+     "severity": "minor",
+     "problem": "The 'snack grab' is unfunded \u2014 the whole \u20b91,200 is attributed to scooters in cost_note \u2014 and Day 3 has no lunch event at all: the crew eats breakfast at 06:25 and nothing else until dinner at 19:00, with a cliff trek in between.",
+     "evidence": "itinerary events[11] cost_inr 1200 with cost_note \"2 x ~Rs 600/day (Eternal Andamans; Rs 500 refundable deposit each)\", notes \"...lunch is light today\". No meal-category event exists between 06:25 and 19:00 in days[2].events. Factbase food: Port Blair pure-veg places are \u20b9200-400 per person.",
+     "fix": "Add ~\u20b9300\u2013600 for a packed lunch/snacks (separate cost line), or convert 12:30\u201313:10 into a proper 20-min meal stop plus a shorter scooter handover."
+    },
+    {
+     "event_title": "Ride south to Chidiya Tapu",
+     "event_time": "13:10\u201314:00",
+     "category": "cost",
+     "severity": "minor",
+     "problem": "The cost_note arithmetic does not work in any reading: 55 km at the project's 45 kmpl is 1.22 L (one scooter) or 2.44 L (two), not 2.7 L; and 2.7 L \u00d7 \u20b988.66 = \u20b9239, not \u20b9250. The real round trip is 2 \u00d7 (24.0 + 2.2) = 52.4 km per scooter \u2192 2.33 L for two \u2192 \u20b9207.",
+     "evidence": "populate_base.py PETROL = 88.66 (factbase rentals_fuel: \"Rs 88.66 per litre, dated Aug 19, 2026\"), KMPL = 45.0; routes ride-pb-chidiyatapu 24.0 km and ride-chidiyatapu-munda 2.2 km; factbase distances \"route:Aberdeen Bazaar->Chidiya Tapu :: 24.0 km, 44 min via NH 4\".",
+     "fix": "Set cost_inr 210 with cost_note '2 scooters \u00d7 52 km \u00f7 45 kmpl = 2.3 L \u00d7 \u20b988.66'. The note's '24 km, 44 min on NH4' is correct and can stay."
+    },
+    {
+     "event_title": "Ride south to Chidiya Tapu",
+     "event_time": "13:10\u201314:00",
+     "category": "route",
+     "severity": "minor",
+     "problem": "Route ride-pb-chidiyatapu starts at 'aberdeen', but the crew departs from the jetty (previous event place = phoenix-bay), ~0.9 km further north; the 24.0 km / 44 min is measured from Aberdeen Bazaar, so the drawn line starts at a point the crew never passes.",
+     "evidence": "populate_base.py R: (\"ride-pb-chidiyatapu\",\"aberdeen\",\"chidiya-tapu\",...24.0,44); factbase distances \"route:Aberdeen Bazaar->Chidiya Tapu :: 24.0 km, 44 min via NH 4\". Previous event place = phoenix-bay (11.6726921,92.7345295).",
+     "fix": "Acceptable as an approximation, but either extend the polyline from phoenix-bay or add ~4 min; the 50-min slot already absorbs it, so this is cosmetic/map-accuracy only."
+    },
+    {
+     "event_title": "MUNDA PAHAD TREK",
+     "event_time": "14:10\u201315:55",
+     "category": "fact",
+     "severity": "major",
+     "problem": "'1.3 km, ~30 min up' contradicts the only Munda Pahad source in the factbase, which gives 1.5 km and 45\u201360 min. At the sourced pace the 105-min block covers ascent + descent with zero time at the viewpoint, and a 60-min pace puts the crew back at the gate ~16:10 \u2014 past this same event's claimed 16:00 clear-out.",
+     "evidence": "factbase activities: \"F: Munda Pahad trek rules :: Trek strictly open 11:00 AM-3:00 PM, gate closes 3:00 PM sharp (start before then); moderate 1.5 km trail, 45-60 min, 300 ft viewpoint; slippery after rain (monsoon trekking called risky)\". The 'Gate entry BEFORE 15:00' and '50-min margin' parts ARE correct. populate_base.py repeats the wrong '1.3 km clifftop trek (~30 min each way)' in the place blurb.",
+     "fix": "Quote the sourced figures ('1.5 km, 45\u201360 min each way, 300 ft viewpoint'), trim the Port Blair stop to reach the trailhead by ~13:50, and widen the block to 13:50\u201316:00; fix the same numbers in the munda-pahad place blurb."
+    },
+    {
+     "event_title": "MUNDA PAHAD TREK",
+     "event_time": "14:10\u201315:55",
+     "category": "fact",
+     "severity": "minor",
+     "problem": "'Area clears by 16:00' is UNSUPPORTED. The factbase documents a 15:00 trek-gate close and a Chidiya Tapu area that clears by 19:00 \u2014 no 16:00 rule exists anywhere.",
+     "evidence": "factbase activities: \"F: Chidiya Tapu fees & timings :: Beach entry free; beach timings 5:00 AM-6:00 PM (area closes by 7:00 PM)\"; summary line: \"(F) Chidiya Tapu: beach free (5 AM-6 PM, area clears by 7 PM) ... Munda Pahad trek strictly 11 AM-3 PM with gate closing 3 PM sharp\".",
+     "fix": "Replace with 'Trek gate closes 15:00 sharp; the beach itself is open till 18:00 and the area clears by 19:00.' Fix the same '(area by 16:00)' claim in the munda-pahad place blurb."
+    },
+    {
+     "event_title": "Munda Pahad beach + ride back to Chidiya Tapu",
+     "event_time": "15:55\u201316:40",
+     "category": "consistency",
+     "severity": "minor",
+     "problem": "The event spends 15:55\u2013~16:30 at Munda Pahad Beach, directly contradicting the previous event's 'Area clears by 16:00'. It also carries no route despite containing the Munda Pahad \u2192 Chidiya Tapu ride, and its place is tagged as the destination (chidiya-tapu) rather than where the time is spent.",
+     "evidence": "itinerary events[14] notes \"Area clears by 16:00\" vs events[15] 15:55\u201316:40 titled 'Munda Pahad beach + ride back'. Available route: populate_base.py (\"ride-chidiyatapu-munda\",\"chidiya-tapu\",\"munda-pahad\",\"scooter\",2.2,8) \u2014 reverse use would be correct here.",
+     "fix": "Attach ride-chidiyatapu-munda (reversed) to this event, or split into 'Munda Pahad Beach 15:55\u201316:25' (place munda-pahad) + 'Ride back 16:25\u201316:35' (route), and drop the contradicting 16:00 claim in the trek note."
+    },
+    {
+     "event_title": "SUNSET @ Chidiya Tapu",
+     "event_time": "16:40\u201317:40",
+     "category": "fact",
+     "severity": "minor",
+     "problem": "'NO swimming \u2014 saltwater crocodiles are spotted here' is UNSUPPORTED \u2014 the string 'crocod' appears zero times in factbase.json. It is copied from the populate_base place blurb, which has no source either. (The parking tip and 'sunset 17:14' are both fine.)",
+     "evidence": "grep -i 'crocod' data/factbase.json \u2192 0 hits. Supported parts: weather_astro \"Sep 25: 05:09/17:14\"; rentals_fuel \"Chidiya Tapu parking :: Parking area exists - Tripadvisor reviewer: 'medium walk from parking to the beach through tall trees'\".",
+     "fix": "Add a sourced crocodile/no-swimming fact to the factbase (A&N forest-department advisories exist) or reword to 'treat it as a look-only beach \u2014 no lifeguards, no swimming', and fix the same unsourced line in the chidiya-tapu place blurb."
+    },
+    {
+     "event_title": "SUNSET @ Chidiya Tapu",
+     "event_time": "16:40\u201317:40",
+     "category": "timing",
+     "severity": "minor",
+     "problem": "Arrival at 16:40 is after the arrive-by time the factbase's own Chidiya Tapu source recommends for getting a spot on the sunset rocks.",
+     "evidence": "factbase activities: \"F: Munda Pahad trek rules :: ... sunset viewing at beach rocks ~5:30-6:00 PM, arrive by ~4:30 PM for a spot\" (the source's 5:30-6:00 PM sunset is guidebook-loose; the astronomical 17:14 in the note is the better number and is correctly used).",
+     "fix": "Pull the block to 16:30\u201317:40, which falls out naturally once the trek block is fixed to 13:50\u201316:00 plus a 10-min ride."
+    },
+    {
+     "event_title": "Check in @ Hotel Atlanta (sea view)",
+     "event_time": "18:40\u201319:00",
+     "category": "cost",
+     "severity": "major",
+     "problem": "\u20b98,845 is the live Booking quote for Sep 23\u201325, but on this itinerary the crew checks in on Sep 25 and out on Sep 27. The price is a real number attached to the wrong dates; no Sep 25\u201327 Atlanta rate exists in the factbase.",
+     "evidence": "factbase budget_stays: \"Port Blair best pick: Hotel Atlanta - A Seaview Hotel (Sep 23-25, 2 nights, 3 adults) :: Family Room (2 full beds), Rs 8,845 total for 2 nights taxes included (Rs 4,423/night ...), free cancellation, breakfast not included; score 7.9 from 197 reviews, location 9.3, tagged Beachfront\". The only Sep 26-27 Port Blair data point is \"Sep26-27 unfiltered: Seaview Residency Rs 4,158, SeaShell PB Rs 14,337\". The note's 'Location 9.3/10, opposite the Marina Park waterfront' and cost_note 'Family room, 2 nights, free cancellation' ARE supported.",
+     "fix": "Re-quote Hotel Atlanta for check-in 2026-09-25 / check-out 2026-09-27 (3 adults) and replace cost_inr; flag in risks that the Sep 25\u201327 rate is unpriced until re-checked."
+    },
+    {
+     "event_title": "Dinner @ Annapurna Cafeteria",
+     "event_time": "19:00\u201320:15",
+     "category": "fact",
+     "severity": "major",
+     "problem": "'200 m from the hotel' is wrong by roughly 3x. Annapurna is at 71 MA Rd in Aberdeen Bazaar; from the project's own coordinates it is ~660 m straight-line from Hotel Atlanta, and the factbase places the hotel 1.4 km from downtown. A tired crew told '200 m' will plan a 3-min stroll for a 10\u201318 min walk in the dark.",
+     "evidence": "populate_base.py: hotel-atlanta 11.6721653,92.7455293; annapurna 11.6671159,92.7423254 \u2192 0.661 km haversine. factbase budget_stays: Hotel Atlanta \"1.4 km from downtown (Aberdeen/Marina Park - Phoenix Bay area)\"; factbase food: \"Annapurna Cafeteria Pure Veg 3.7 (4,487), \u20b9200-400, 71 MA Rd, opens 7 am\". Cost is fine: \u20b9900 for 3 sits inside the \u20b9200-400 pp band.",
+     "fix": "Change to '~700 m, a 10-minute walk into Aberdeen Bazaar' (or ride, since the scooters are still with the crew)."
+    },
+    {
+     "event_title": "Dinner @ Annapurna Cafeteria",
+     "event_time": "19:00\u201320:15",
+     "category": "fact",
+     "severity": "minor",
+     "problem": "Annapurna's closing time is unknown \u2014 the factbase records only 'opens 7 am' \u2014 so a 19:00\u201320:15 dinner is unverified. The factbase describes it as the early-opening breakfast option, which is how Day 5 correctly uses it.",
+     "evidence": "factbase food: \"Annapurna Cafeteria Pure Veg 3.7 (4,487), \u20b9200-400, 71 MA Rd, opens 7 am\" \u2014 no closing hour anywhere. Contrast the fully-sourced alternative: \"Icy Spicy outlets/hours (official site) :: Junglighat flagship ... 11:00 AM-10:00 PM daily\".",
+     "fix": "Verify evening hours, or name Icy Spicy (11:00\u201322:00 confirmed) as the fallback in the note; Day 4 already dines there, so vary the order rather than the plan."
+    }
+   ]
+  },
+  {
+   "day": 4,
+   "events_checked": 18,
+   "checked_ok": 7,
+   "day_summary": "Day 4 (Sat 2026-09-26, Baratang) has a clean skeleton \u2014 18 events, zero clock gaps or overlaps (00:00\u219224:00 contiguous, and it joins Day 3's 24:00 sleep and Day 5's 00:00 sleep correctly), all four route ids resolve, all places are on the right island, and the ferry-only island change to Baratang and back is modelled properly. The defects are in three clusters. (1) COST: the Rs 7,500 cab figure and its \"verified range Rs 6,500\u20139,000\" match no price in factbase (verified figures are Rs 4,500 cab-only round trip, Rs 6,300/7,300 two-pax packages, Rs 8,400 Go2Andaman private for up to 2 pax), and calling it a \"day-tour\" double-counts the Rs 2,700 speedboat, which every verified package price already includes; the Rs 450 Baratang lunch is invented outright (factbase has zero Baratang food data). (2) UNSUPPORTED HARD FACTS: \"1.2 km walk from the drop point\", \"~35 min inside\", \"it is a criminal offence\", \"the first tricolour rose in 1943\", \"Simple veg meals only\" and \"Fee included in cab tour\" have no backing in factbase.json. (3) TIMING: the return convoy block (12:10\u201313:40) is 13 min shorter than a 12:30 departure over the 83-min convoy route allows; the Cellular Jail block ignores the verified show schedule (17:45 arrival for a 17:50 show, 90-min block for a ~45-min show, and no English show exists on a Saturday); walk-atlanta-marina is 1.4 km in 3 min on foot (28 km/h \u2014 impossible, and it contradicts the event's own \"5 min\"); and the day has NO food at all from Day 3's 19:00 dinner to the 11:00 lunch, ~16 hours, despite factbase saying nothing opens before 07:00 and to carry food from the previous evening.",
+   "defects": [
+    {
+     "event_title": "Cab to Jirkatang Check Post",
+     "event_time": "04:00\u201306:00",
+     "category": "cost",
+     "severity": "major",
+     "problem": "cost_inr 7500 and cost_note \"Private AC cab day-tour for 3 (verified range Rs 6,500-9,000)\" match no price in factbase.json. The Rs 6,500 lower bound and the Rs 7,500 point value are both invented \u2014 no fact states either. The verified numbers are: Rs 4,500 round-trip taxi per cab, Rs 6,300 (caves only) / Rs 7,300 (caves + mud volcano) for TWO persons, and Rs 8,400 (from Rs 9,000) private AC car for UP TO 2 PAX. factbase itself flags that a 3-adult tier is unknown.",
+     "evidence": "research.activities \"E: Baratang cab + boat fares (Andaman Ocean)\": \"Round-trip taxi Port Blair-Baratang Rs.4,500 per cab; speedboat ticket to limestone caves Rs.900 pp; packages for 2 persons Rs.6,300 (caves only) / Rs.7,300 (caves + mud volcano)\" (https://www.andamanocean.in/baratang-limestone-cave-trip/). research.activities \"E: Baratang private tour price (Go2Andaman)\": \"Rs.8,400 (discounted from Rs.9,000) for up to 2 pax ... 3 adults will likely need a higher-pax price tier - confirm\".",
+     "fix": "Set cost_inr to 4500 and cost_note to \"Round-trip Port Blair\u2194Baratang taxi Rs 4,500 per cab (Andaman Ocean, verified 2026-08-19); speedboat billed separately\" \u2014 day total Rs 7,200 for cab+boat. If you prefer the private-package model instead, use cost_inr 8400 with cost_note \"Go2Andaman private AC car, quoted for up to 2 pax \u2014 3-adult tier UNCONFIRMED, phone to lock\" and zero out the separate boat line (see next defect)."
+    },
+    {
+     "event_title": "Cab to Jirkatang Check Post",
+     "event_time": "04:00\u201306:00",
+     "category": "consistency",
+     "severity": "major",
+     "problem": "The cost model double-counts. cost_note calls the Rs 7,500 a \"day-tour\" (package language), yet the 08:00 speedboat event separately charges Rs 2,700 and the 07:30 ferry event says its fee is \"included in cab tour\". Every verified Baratang PACKAGE price already bundles the boat tickets and entry fees; only the bare Rs 4,500 taxi figure excludes them. As written the day charges Rs 10,200 for something factbase prices at Rs 7,200 (taxi + boat) or Rs 8,400 (all-in package for 2).",
+     "evidence": "research.activities \"E: Baratang private tour price (Go2Andaman)\": \"Rs.8,400 ... private AC car incl. all entry fees, boat tickets and permits\". research.activities \"E: Baratang cab + boat fares (Andaman Ocean)\": \"Round-trip taxi ... Rs.4,500 per cab; speedboat ticket to limestone caves Rs.900 pp\" \u2014 i.e. the two are priced separately only in the cab-only model.",
+     "fix": "Commit to one model. Cab-only: cab Rs 4,500 + boat Rs 2,700 = Rs 7,200, and change the ferry note to \"vehicle-ferry fee \u2014 confirm it is inside the cab quote\". Package: cab Rs 8,400 (flagged as a 2-pax quote), boat cost_inr 0 with cost_note \"boat tickets + entry fees included in the private-tour price\"."
+    },
+    {
+     "event_title": "Cab to Jirkatang Check Post",
+     "event_time": "04:00\u201306:00",
+     "category": "consistency",
+     "severity": "major",
+     "problem": "The crew eats nothing between Day 3's dinner (ends 20:15 on 2026-09-25) and the 11:00 lunch on Baratang \u2014 about 15h45m, across a 03:30 wake-up and a 6-hour road/boat push. There is no breakfast event and no note about food, even though the Jirkatang gate wait (arrival ~05:20 for the 06:00 convoy, i.e. ~40 min of unmodelled slack inside this 120-min block) is exactly the slot the verified operator itinerary uses for it.",
+     "evidence": "research.food \"Food before 6 AM\": \"NO restaurant found open before 6 am on any island. Earliest openings - Port Blair: 7 am ... For sunrise/kayak/Baratang starts: carry food from the previous evening\". research.activities \"E: Baratang timings door-to-door\": \"Go2Andaman itinerary: hotel pickup 4:30 AM -> Jirkatang check post 6:00 AM (breakfast)\".",
+     "fix": "Add to this event's notes: \"Nothing in Port Blair opens before 07:00 \u2014 carry breakfast bought the previous evening and eat it during the ~40-min wait at the Jirkatang gate (the operator itinerary schedules breakfast there at 06:00).\" Day 3's 20:15 prep tip mentions snacks but never a full breakfast."
+    },
+    {
+     "event_title": "Cab to Jirkatang Check Post",
+     "event_time": "04:00\u201306:00",
+     "category": "fact",
+     "severity": "minor",
+     "problem": "notes say \"47 km in the dark\" but the route now attached to this event, cab-atlanta-jirkatang, is 48.3 km / 79 min. The 47.4 km figure in factbase is measured from Aberdeen Bazaar, not from Hotel Atlanta, so the text quotes a distance for an origin the crew is not leaving from. The 48.3 km / 79 min values themselves appear only in populate_base.py (v2.3 block, comment claims a live Maps read on 2026-08-20) and are not in factbase.json.",
+     "evidence": "populate_base.py ROUTES_V2: (\"cab-atlanta-jirkatang\", \"hotel-atlanta\", \"jirkatang\", \"cab\", 48.3, 79, ...). research.distances \"route:Aberdeen Bazaar->Jirkatang Check Post\": \"47.4 km, 1 hr 12 min via NH 4\" \u2014 Aberdeen origin, not the hotel.",
+     "fix": "Change notes to \"48 km in the dark to make the 06:00 first convoy\", and add the Hotel Atlanta\u2192Jirkatang leg (48.3 km / 79 min) to factbase.json with its source URL so the route table has backing."
+    },
+    {
+     "event_title": "CONVOY through the Jarawa reserve",
+     "event_time": "06:00\u201307:30",
+     "category": "fact",
+     "severity": "critical",
+     "problem": "tips assert \"it is a criminal offence\" \u2014 a specific legal claim with ZERO support anywhere in factbase.json (grep for \"criminal\" returns 0 hits). factbase supports the behaviour rule but never its legal status.",
+     "evidence": "research.activities \"E: Baratang timings door-to-door\" supports only: \"Jarawa-reserve convoy drive ~45-60 min, windows shut, no stops, no photography; ID compulsory\". No factbase fact mentions prosecution, penalty, or offence.",
+     "fix": "Reword to the supported version: \"You may glimpse Jarawa people \u2014 cameras stay packed. Operators are absolute: no photos, no stops, windows shut.\" If you want to keep the legal framing, add a sourced fact for the Andaman & Nicobar (Protection of Aboriginal Tribes) Regulation to factbase.json first."
+    },
+    {
+     "event_title": "CONVOY through the Jarawa reserve",
+     "event_time": "06:00\u201307:30",
+     "category": "fact",
+     "severity": "minor",
+     "problem": "The notes list the reserve rules but omit the one hard requirement factbase records for the check post: government photo ID is compulsory. Day 3's 20:15 prep tip mentions packing ID, but the event where it is actually checked does not say so.",
+     "evidence": "research.activities \"E: Baratang timings door-to-door\": \"... windows shut, no stops, no photography; ID compulsory\".",
+     "fix": "Append to notes: \"Government photo ID is compulsory at the check post \u2014 have it in hand, not in the boot.\""
+    },
+    {
+     "event_title": "Vehicle ferry across Middle Strait",
+     "event_time": "07:30\u201308:00",
+     "category": "fact",
+     "severity": "major",
+     "problem": "notes state flatly \"Fee included in cab tour.\" No factbase fact says the vehicle-ferry fee is included in a cab hire. The only inclusion statement in factbase attaches to the Go2Andaman PACKAGE (Rs 8,400), not to the Rs 4,500 taxi \u2014 and this itinerary bills the speedboat separately, i.e. it is using the taxi model, under which nothing is stated to be included.",
+     "evidence": "research.activities \"E: Baratang private tour price (Go2Andaman)\": \"private AC car incl. all entry fees, boat tickets and permits\" \u2014 package only. research.activities \"E: Baratang cab + boat fares (Andaman Ocean)\" itemises taxi and boat separately with no ferry line at all.",
+     "fix": "Change notes to \"Vehicle-ferry fee \u2014 confirm in writing that it is inside the cab quote (only the all-in private-package price is documented as including fees/permits).\" Or switch to the package cost model and make the inclusion claim true."
+    },
+    {
+     "event_title": "Speedboat into the mangroves",
+     "event_time": "08:00\u201308:45",
+     "category": "timing",
+     "severity": "minor",
+     "problem": "An 08:00 speedboat departure runs ahead of BOTH verified operator timelines, which both start from the same 06:00 convoy: Go2Andaman puts the crew at Middle Strait jetty at 08:00 and on the boat only at 08:30 (caves 09:00); Andaman Ocean puts the caves at 09:00\u201310:00. The plan gets to the jetty at 07:30 and boards instantly, so the 30-min ferry block carries only 15 min of slack over the 15-min crossing for the vehicle-ferry queue, and the whole morning has zero recovery margin.",
+     "evidence": "research.activities \"E: Baratang timings door-to-door\": \"Go2Andaman itinerary: ... Jirkatang check post 6:00 AM -> Middle Strait jetty 8:00 AM -> boat 8:30 AM -> limestone caves 9:00 AM ... Andaman Ocean: pickup 4:00 AM, convoy crossing 6:00 AM, caves 9-10 AM\". populate_base.py: boat-middlestrait-nilambur ferry 1.5 km / 15 min.",
+     "fix": "Shift to the verified operator clock: ferry 07:30\u201308:15, speedboat 08:15\u201308:45 (or 08:30\u201309:00), caves 09:00\u201310:15. There is room \u2014 the return convoy is not until 12:00/12:30 \u2014 and it buys ~30 min of vehicle-ferry queue slack."
+    },
+    {
+     "event_title": "LIMESTONE CAVES",
+     "event_time": "08:45\u201310:15",
+     "category": "fact",
+     "severity": "critical",
+     "problem": "notes make two specific quantitative claims \u2014 \"1.2 km walk from the drop point\" and \"~35 min inside the sculpted chambers\" \u2014 and NEITHER is in factbase.json. A grep for \"1.2 km\" across factbase returns 0 hits; no fact gives any walk length or in-cave duration for Baratang. The 1.2 km figure exists only in populate_base.py's own unsourced blurb and route note, which is circular, not evidence.",
+     "evidence": "factbase.json contains no fact stating any walking distance or cave-visit duration at Baratang. The only Baratang-mechanics fact is research.activities \"E: Baratang cab + boat fares\": \"speedboat ticket to limestone caves Rs.900 pp\", and \"E: Baratang timings door-to-door\": \"limestone caves 9:00-10:00 AM by shared speedboat\" \u2014 a 60-min slot, with no split between walk and cave.",
+     "fix": "Either add a sourced fact for the jetty-to-cave walk to factbase.json (operator pages typically quote 1.2\u20131.5 km each way) and cite it, or soften the text to what IS verified: \"Operators allot ~1 hr at the caves (09:00\u201310:00) \u2014 a walk in through mangrove boardwalk, then the chambers.\""
+    },
+    {
+     "event_title": "LIMESTONE CAVES",
+     "event_time": "08:45\u201310:15",
+     "category": "cost",
+     "severity": "minor",
+     "problem": "cost_inr is 0 with no cost_note, silently asserting the caves are free. factbase never says entry is free at Baratang \u2014 it says the opposite by implication, that entry fees and permits exist and are bundled into the private-tour price, which is NOT the pricing model this day uses (the day bills the boat separately, i.e. taxi-only).",
+     "evidence": "research.activities \"E: Baratang private tour price (Go2Andaman)\": \"private AC car incl. all entry fees, boat tickets and permits\" \u2014 fees and permits exist. Contrast research.activities \"C: Bharatpur Beach\", where factbase does state \"Entry fee: Free\"; no equivalent statement exists for the limestone caves.",
+     "fix": "Add cost_note \"Forest entry/permit fees not separately verified \u2014 confirm they are inside the cab quote; the all-in private package is the only price documented as including them.\" Budget a contingency rather than assuming zero."
+    },
+    {
+     "event_title": "Early lunch @ Baratang jetty",
+     "event_time": "11:00\u201311:40",
+     "category": "cost",
+     "severity": "major",
+     "problem": "cost_inr 450 (Rs 150 pp) is invented. factbase.json has no food data for Baratang at all \u2014 every food fact covers Port Blair, Havelock or Neil only. Worse, factbase records that lunch is EXCLUDED from both verified operators' packages and only \"arranged on request\", so there is no operator price to fall back on either. There is also no cost_note showing the crew-of-3 arithmetic, unlike the other priced events on this day.",
+     "evidence": "research.food contains 12 facts, all for Port Blair / Havelock / Neil \u2014 none for Baratang or Nilambur. verification[from=activities, Baratang claim, verdict=confirmed] notes: \"Vegetarian food note: lunch is excluded on both operators' packages (arranged on request).\"",
+     "fix": "Either pre-order lunch with the cab operator and use their quoted price, or mark it explicitly unverified: cost_inr 600, cost_note \"3 \u00d7 ~Rs 200 \u2014 ESTIMATE ONLY, no Baratang food price is verified; operators exclude lunch and arrange it on request.\""
+    },
+    {
+     "event_title": "Early lunch @ Baratang jetty",
+     "event_time": "11:00\u201311:40",
+     "category": "fact",
+     "severity": "major",
+     "problem": "notes claim \"Simple veg meals only\" at the Baratang jetty. Nothing in factbase.json describes food availability, cuisine or hours at Nilambur/Baratang jetty \u2014 this is an unsupported availability claim, and it is load-bearing because the crew is vegetarian and this is their first food in ~16 hours.",
+     "evidence": "research.food has zero Baratang facts (see previous defect). verification[activities/Baratang]: \"lunch is excluded on both operators' packages (arranged on request)\" \u2014 the only food-related Baratang statement in the entire factbase, and it says the opposite of 'assume something is there'.",
+     "fix": "Reword to \"No Baratang food option is verified \u2014 pre-order the veg lunch with the operator when booking (both verified operators exclude lunch and arrange it on request), or carry it from Port Blair.\""
+    },
+    {
+     "event_title": "Return convoy (12:30 slot)",
+     "event_time": "12:10\u201313:40",
+     "category": "timing",
+     "severity": "major",
+     "problem": "The arithmetic does not close. The title fixes departure at 12:30, and the attached route cab-jirkatang-middlestrait is 47.7 km / 83 min, so arrival at Jirkatang is 13:53 \u2014 but the block ends at 13:40 and the next event starts there. Only 70 of the block's 90 minutes fall after the stated departure, i.e. the convoy is given 70 min to cover an 83-min leg. Every downstream event on the day inherits the 13-minute shortfall.",
+     "evidence": "populate_base.py: (\"cab-jirkatang-middlestrait\", \"jirkatang\", \"middle-strait\", \"convoy\", 47.7, 83, ...). research.distances \"route:Jirkatang Check Post->Middle Strait (Nilambur) Jetty\": \"47.7 km, 1 hr 23 min via NH 4\". 12:30 + 83 min = 13:53.",
+     "fix": "End this event at 13:55 (12:30 departure + 83 min) and push \"Drive back to Port Blair\" to 13:55\u201315:15, nap 15:15\u201316:30. Alternatively start the block at 12:20 and end 13:55 to make the gate wait explicit."
+    },
+    {
+     "event_title": "Return convoy (12:30 slot)",
+     "event_time": "12:10\u201313:40",
+     "category": "timing",
+     "severity": "minor",
+     "problem": "The plan reaches the Middle Strait jetty at 12:10, which has already missed the 12:00 southbound slot that one of factbase's two sources documents. The note correctly flags the 12:00/12:30 ambiguity but does not state the consequence: if 12:00 is the real slot, the next convoy is 14:30/15:00, which pushes the Port Blair arrival past 17:00 and destroys the nap, the Marina dusk window and the Cellular Jail show.",
+     "evidence": "research.activities \"E: Jirkatang convoy schedule (approximate, conflicting sources)\": \"traveltourister.com says 4 daily convoys from Jirkatang at 6:00 AM, 9:00 AM, 12:30 PM, 3:30 PM; andamantourtravelpackage.com says 6:00 AM, 9:00 AM, 12:00 PM, 2:30 PM with returns 12:00 PM and 3:00 PM ... only the first 6:00 AM convoy is consistent everywhere\".",
+     "fix": "Pull the morning ~20 min earlier so the crew is jetty-side by 11:45, and extend the note: \"Convoy times south vary by source (12:00/12:30) \u2014 the driver knows the slot. Missing it means the next convoy (14:30\u201315:30) and a post-17:00 return, which kills the evening; confirm the slot with the driver at the caves.\""
+    },
+    {
+     "event_title": "Drive back to Port Blair",
+     "event_time": "13:40\u201315:00",
+     "category": "timing",
+     "severity": "minor",
+     "problem": "80 minutes for a 79-minute route is one minute of buffer on a 48 km NH4 run, and the block inherits the 13-minute shortfall from the preceding convoy leg, so in practice it starts at ~13:53 and lands at ~15:12 rather than 15:00. Route direction (jirkatang\u2192hotel-atlanta, reverse of cab-atlanta-jirkatang) is correct and fine.",
+     "evidence": "populate_base.py: (\"cab-atlanta-jirkatang\", \"hotel-atlanta\", \"jirkatang\", \"cab\", 48.3, 79, ...). Preceding convoy needs 83 min from a 12:30 departure = 13:53 arrival.",
+     "fix": "Retime to 13:55\u201315:20 (85 min, ~6 min buffer) and start the nap at 15:20. Note the verified operator drop time is ~15:30, so this is still ahead of schedule."
+    },
+    {
+     "event_title": "Marina Park + Flag Point at dusk",
+     "event_time": "16:30\u201317:45",
+     "category": "fact",
+     "severity": "critical",
+     "problem": "notes assert \"Where the first tricolour rose in 1943\" \u2014 a specific historical date claim with ZERO support in factbase.json. Grep returns 0 hits for \"tricolour\", 0 for \"1943\", and the single \"Netaji\" hit is an unrelated map-polygon label for Ross Island. The claim exists only in populate_base.py's own place blurb, which carries no source_url \u2014 circular, not evidence.",
+     "evidence": "factbase.json: 0 occurrences of \"tricolour\"/\"1943\"; the only \"Netaji\" occurrence is in map: \"Ross Island / Netaji Subhash Dweep (ring #44, 6 pts)\". The two \"Marina Park\" mentions are hotel-location facts only: \"beachfront opposite Marina Park/Phoenix Bay area\" and \"sits on Marine Hill Road facing the Marina Park/Phoenix Bay waterfront 1.4 km from downtown\".",
+     "fix": "Add a sourced fact for the 30 Dec 1943 flag hoisting to factbase.json and cite it, or drop the date: \"Flag Point on the Marina Park waterfront \u2014 the evening walk from the hotel door.\" The same unsourced sentence should be removed from the marina-park blurb in populate_base.py."
+    },
+    {
+     "event_title": "Marina Park + Flag Point at dusk",
+     "event_time": "16:30\u201317:45",
+     "category": "route",
+     "severity": "critical",
+     "problem": "The attached route walk-atlanta-marina is 1.4 km covered in 3 minutes on foot \u2014 28 km/h, physically impossible. The 1.4 km is also the wrong number: it is factbase's Hotel Atlanta \"1.4 km from downtown\" (Aberdeen Bazaar) figure, not the distance to Marina Park, whose coordinates are 0.33 km straight-line from the hotel. The route also contradicts this event's own note, which says \"5 min from the hotel\" while the route says 3 min.",
+     "evidence": "populate_base.py ROUTES_V2: (\"walk-atlanta-marina\", \"hotel-atlanta\", \"marina-park\", \"walk\", 1.4, 3, ...). research.budget_stays \"Port Blair best pick: Hotel Atlanta\": \"tagged Beachfront, 1.4 km from downtown (Aberdeen/Marina Park - Phoenix Bay area)\" \u2014 a downtown distance, not a Marina Park distance. Haversine hotel-atlanta (11.6721653, 92.7455293) \u2192 marina-park (11.6698312, 92.7474232) = 0.332 km.",
+     "fix": "Change the route to approximately (\"walk-atlanta-marina\", \"hotel-atlanta\", \"marina-park\", \"walk\", 0.4, 6, ...) \u2014 ~0.4 km street distance at walking pace \u2014 and align the event note to \"a 5-min walk from the hotel\". Do not reuse the 1.4 km downtown figure for this leg."
+    },
+    {
+     "event_title": "Marina Park + Flag Point at dusk",
+     "event_time": "16:30\u201317:45",
+     "category": "fact",
+     "severity": "minor",
+     "problem": "The event is titled \"at dusk\" but never states the sunset time, unlike the other scenic events in this itinerary (e.g. the radhanagar and kalapathar entries carry explicit times). The window happens to be correct \u2014 sunset 17:13, civil dusk ~17:34, block ends 17:45 \u2014 so this is polish, not an error.",
+     "evidence": "research.weather_astro \"Sunrise/sunset Sep 24-27 2026\": \"Sep 26: 05:09/17:13 (IST). Civil dawn ~04:47-04:48\" (https://www.timeanddate.com/sun/india/port-blair?month=9&year=2026).",
+     "fix": "Add to notes: \"Sunset 17:13, light gone by ~17:35 \u2014 be on the waterfront by 16:45.\""
+    },
+    {
+     "event_title": "Optional: Cellular Jail light & sound",
+     "event_time": "17:45\u201319:15",
+     "category": "timing",
+     "severity": "major",
+     "problem": "The 90-minute block does not fit any verified show. 2026-09-26 is a SATURDAY. Per factbase the shows are Hindi at 17:50 / 19:50 / 20:50 daily plus 18:50 on Tue/Thu/Sat/Sun, with the English show at 18:50 on Mon/Wed/Fri ONLY \u2014 so no English show exists on this date, which the notes never mention. Arriving at 17:45 for the 17:50 show also violates the source's own \"arrive ~30 min early\" guidance (be there 17:20), and a ~45-min show inside a 90-min block leaves ~40 min dead.",
+     "evidence": "research.activities \"G: Cellular Jail light & sound show\": \"Tickets: Rs.300 adult, Rs.150 child (5-12 yrs); ~45-min show; Hindi shows 5:50 PM, 7:50 PM, 8:50 PM all days + 6:50 PM Tue/Thu/Sat/Sun; English show 6:50 PM Mon/Wed/Fri; closed on national holidays; carry govt ID; arrive ~30 min early\" (https://go2andaman.com/visit/cellular-jail-light-and-sound-show/). 2026-09-26 = Saturday. The Rs 300 pp figure in the note IS supported.",
+     "fix": "Retime to 18:20\u201319:35 for the Saturday 18:50 Hindi show (arrive ~18:20 per the 30-min guidance, ~45-min show ends ~19:35), shift dinner to 19:45\u201321:00 and packing to 21:00\u201321:30. Add to notes: \"Saturday = Hindi show only (English runs Mon/Wed/Fri); carry govt photo ID; Rs 300 pp if you go.\""
+    },
+    {
+     "event_title": "Farewell dinner @ Icy Spicy",
+     "event_time": "19:15\u201320:30",
+     "category": "route",
+     "severity": "minor",
+     "problem": "The attached route cab-atlanta-icyspicy runs hotel-atlanta \u2192 icy-spicy, but at 19:15 the crew is at Cellular Jail, not the hotel. Walking the day in order, the actual leg is cellular-jail \u2192 icy-spicy (~2.5 km); the hotel is only a proxy origin 0.55 km away. Reverse use for the return leg would be correct, but the outbound origin is wrong.",
+     "evidence": "Preceding event place = cellular-jail (11.6747447, 92.7478601). populate_base.py ROUTES_V2: (\"cab-atlanta-icyspicy\", \"hotel-atlanta\", \"icy-spicy\", \"cab\", 2.9, 9, ...). Haversine cellular-jail \u2192 icy-spicy = 2.53 km; cellular-jail \u2192 hotel-atlanta = 0.55 km.",
+     "fix": "Add a cellular-jail \u2192 icy-spicy cab leg (~2.9 km / 9 min) and use it here, keeping cab-atlanta-icyspicy for the return to the hotel. Or drop the Cellular Jail stop back at the hotel first so the existing route's origin is true."
+    },
+    {
+     "event_title": "Farewell dinner @ Icy Spicy",
+     "event_time": "19:15\u201320:30",
+     "category": "timing",
+     "severity": "minor",
+     "problem": "No travel time is budgeted at either end. The Cellular Jail block ends at 19:15 and dinner starts at 19:15 with a 9-min cab in between; dinner ends at 20:30 and \"Pack for the flight\" at the hotel starts at 20:30, again with a 9-min cab unaccounted for. Icy Spicy is 2.9 km from the hotel, not walkable in zero minutes.",
+     "evidence": "populate_base.py ROUTES_V2: (\"cab-atlanta-icyspicy\", \"hotel-atlanta\", \"icy-spicy\", \"cab\", 2.9, 9, ...) \u2014 9 min each way.",
+     "fix": "End dinner at 20:20 and start packing at 20:30, or extend the dinner block to 20:40 and packing to 20:40\u201321:10 (sleep from 21:10 still yields 9.5 h before the 06:45 Day-5 wake)."
+    },
+    {
+     "event_title": "Farewell dinner @ Icy Spicy",
+     "event_time": "19:15\u201320:30",
+     "category": "cost",
+     "severity": "minor",
+     "problem": "cost_inr 1000 has no cost_note, so the crew-of-3 arithmetic is not shown \u2014 every other priced event on this day carries one. The amount itself is inside the verified band, so this is a documentation gap rather than a wrong number.",
+     "evidence": "research.food \"Icy Spicy dish prices\": \"Dinner for 3 veg adults \u2248 \u20b9700-1,100\"; research.food \"Port Blair - Icy Spicy - Pure Veg listing\": \"\u20b9200-400 per person (reported by 1,063 people)\". Hours are fine: \"Junglighat flagship ... 11:00 AM-10:00 PM daily\", so 19:15\u201320:30 is inside opening hours.",
+     "fix": "Add cost_note \"3 \u00d7 ~Rs 335 \u2014 factbase band for 3 veg adults is Rs 700\u20131,100 (Maps Rs 200\u2013400 pp)\"."
+    },
+    {
+     "event_title": "Farewell dinner @ Icy Spicy",
+     "event_time": "19:15\u201320:30",
+     "category": "consistency",
+     "severity": "minor",
+     "problem": "Icy Spicy is already used on Day 1 (10:55\u201311:40 veg lunch, Rs 900), so the \"farewell dinner\" sends the crew to the only restaurant they have already eaten at, on a trip where factbase verified several other Port Blair pure-veg options. Minor variety/polish issue only.",
+     "evidence": "days[0] event 10:55\u201311:40 \"Veg lunch @ Icy Spicy\", place icy-spicy, cost 900. research.food \"Port Blair - other top pure veg\": \"Delhi wala restaurant (Pure Veg) 4.8 (376), \u20b9200-400, 35 MA Rd, opens 10 am; Rajasthani Dhaba Andaman 4.2 (1,186) ... Shree Bikaner Pure Veg 4.1 (633)\".",
+     "fix": "Either keep Icy Spicy and reframe the title (\"Last dinner \u2014 back to Icy Spicy\"), or swap in Delhi wala restaurant (4.8\u2605, MA Rd, Rs 200\u2013400 pp) for the farewell so the trip closes on somewhere new."
+    }
+   ]
+  },
+  {
+   "day": 5,
+   "events_checked": 7,
+   "checked_ok": 1,
+   "day_summary": "Day 5 (Sun 2026-09-27, EXFIL) has 7 events, all on South Andaman/Chennai, fully contiguous 00:00\u219213:20 with no gaps or overlaps. The spine is right: Akasa QP 1146 IXZ\u2192MAA 10:35\u219212:55 (2h20m) and Rs 27,618 = 3 x Rs 9,206 both match factbase research.flights (Cleartrip 3-adult) and verification[0] \"confirmed\"; QP 1146 operates Sunday (factbase notes it does NOT operate Saturday); place ids (hotel-atlanta, ixz, maa) and route directions (cab-atlanta-ixz, fly-ixz-maa) are all correct; the airport arrival at 08:05 matches the factbase critical claim that the mid-morning return \"forc[es] the last island day to end by ~08:30 at the airport\"; \"since Wednesday 03:45\" checks out (Day 1 first event 03:45, 2026-09-23 is a Wednesday); day costs foot to 28,218 and the trip total 133,319 sums exactly. 10 defects found: 1 critical (the \"Akasa counter closes 09:50\" rule has no support anywhere in factbase \u2014 the only counter-closing facts in the file are ferry operators), 3 major (breakfast window can't fit the only factbase-verified breakfast option; the cab note's \"2.7 km / 10 min\" contradicts the route record's 3.2 km / 8 min and is lifted from a different leg; the two Port Blair scooters rented Day 3 13:10 for Rs 1,200 are never returned anywhere in the itinerary and Day 5 exfils by cab), and 6 minor. Only the \"Gate\" event is clean. CROSS-DAY FLAG for the Day 3/4 auditors (not counted here): the Rs 8,845 Hotel Atlanta charge on Day 3 is factbase's Sep 23-25 2-night quote (\"Rs 8,845 taxes included for BOTH nights Sep 23-25\"), but Day 5's checkout means the stay is actually Sep 25-27; factbase's Sep 26-27 sweep does not list Atlanta at all, so that price is date-mismatched.",
+   "defects": [
+    {
+     "event_title": "Check-in + security",
+     "event_time": "08:05\u201309:50",
+     "category": "fact",
+     "severity": "critical",
+     "problem": "The note asserts a hard operational rule \u2014 \"Akasa counter closes 09:50\" \u2014 that is UNSUPPORTED by factbase.json. research.flights contains only schedules, fares and baggage allowances from akasaair.com (facts[9] is the baggage page: \"Check-in: 15 kg per customer, 1 piece only...\"); there is no airline check-in-window fact anywhere in the file. The only \"counter closes\" facts in factbase belong to ferry operators (Green Ocean: \"counter closes 15 min before departure\"; Nautika: \"reach jetty 45 min before departure, boarding closes 15 min prior\"), which is almost certainly where the shape of this claim came from. Nothing supports a counter OPENING time either, so the 08:05 arrival (2h30 before departure) may land before Akasa staff open the desk at IXZ. Secondary wording issue: \"we're in with 1h45 to spare\" \u2014 08:05\u219209:50 is exactly the block length, i.e. the check-in window itself, not spare time.",
+     "evidence": "factbase research.flights.facts[9] (akasaair.com/quick-links/baggage) covers baggage only; no check-in cutoff fact exists. Contrast the supported ferry rule: research.ferry_gapfill.facts[12] \"check-in opens 60 min before sailing, arrive 45\u201360 min early (75\u201390 min peak), counter closes 15 min before departure, boarding starts 20 min before\".",
+     "fix": "Either add a sourced fact to factbase (Akasa domestic check-in opens/closes X min before departure, from akasaair.com's travel-guidelines page) and cite it, or rewrite the note without inventing a time: \"At the counter by 09:35 (assume a 60-min domestic cutoff); confirm Akasa's IXZ check-in window when booking.\" Also change \"1h45 to spare\" to \"1h45 of buffer before the cutoff\"."
+    },
+    {
+     "event_title": "Cab to the airport",
+     "event_time": "07:45\u201308:05",
+     "category": "fact",
+     "severity": "major",
+     "problem": "The note says \"2.7 km against traffic \u2014 10 min\", which contradicts the app's own route record for the leg this event uses. cab-atlanta-ixz is defined as 3.2 km / 8 min (populate_base.py:181). The 2.7 km figure is the factbase distance for a DIFFERENT leg \u2014 Veer Savarkar Airport\u2192Marina Park/Aberdeen Bazaar \u2014 so the map panel and the text will disagree by 0.5 km and 2 min. Neither \"10 min\" nor \"against traffic\" is supported by anything in factbase (research.distances has no Hotel Atlanta entry at all; the route table's 3.2 km was read live on 2026-08-20 and never made it into factbase).",
+     "evidence": "populate_base.py:181 \u2014 (\"cab-atlanta-ixz\", \"hotel-atlanta\", \"ixz\", \"cab\", 3.2, 8, ... \"VIP Rd.\"). factbase research.distances.facts: \"route:Veer Savarkar Airport->Marina Park/Aberdeen Bazaar\" = \"2.7 km, 7 min via VIP Rd\" \u2014 a different origin/destination pair.",
+     "fix": "Change the note to \"3.2 km down VIP Rd \u2014 8 min\", matching cab-atlanta-ixz, and add the Atlanta\u2192IXZ Maps read to factbase (research.distances) so the number has a citation. Drop \"against traffic\" unless a traffic direction is sourced."
+    },
+    {
+     "event_title": "Breakfast + pack out",
+     "event_time": "06:45\u201307:45",
+     "category": "timing",
+     "severity": "major",
+     "problem": "The 60-minute block has to cover checkout, packing three bags AND a meal, but the only factbase-verified breakfast option it names does not open until 07:00 and is 1.1 km away on foot. That leaves at most ~30 min of eating time inside a walk-there/walk-back round trip that realistically costs ~26-28 min at 5 km/h, before the 07:45 cab. Note also that the underlying route record is itself wrong: walk-atlanta-annapurna claims 1.1 km in 4 min (populate_base.py:175) = 16.5 km/h, which is a run, not a walk \u2014 so any duration derived from it understates the trip by ~10 min each way.",
+     "evidence": "factbase research.food.facts[2]: \"Annapurna Cafeteria Pure Veg 3.7 (4,487), \u20b9200-400, 71 MA Rd, opens 7 am\". populate_base.py:175 \u2014 (\"walk-atlanta-annapurna\", \"hotel-atlanta\", \"annapurna\", \"walk\", 1.1, 4).",
+     "fix": "Move the block to 06:30\u201307:45 (pack 06:30\u201307:00, eat 07:00\u201307:35, back by 07:45), attach route walk-atlanta-annapurna to it, and fix that route's minutes from 4 to 14 in populate_base.py:175. Cheaper alternative: state that breakfast is a takeaway grabbed at 07:00 and eaten at the airport."
+    },
+    {
+     "event_title": "Breakfast + pack out",
+     "event_time": "06:45\u201307:45",
+     "category": "consistency",
+     "severity": "major",
+     "problem": "The two Port Blair scooters rented on Day 3 (13:10 \"PB scooters near jetty + snack grab\", Rs 1,200) are never returned anywhere in the itinerary. Day 4 is a cab day (two-wheelers are banned past Jirkatang) and Day 5 exfils by cab with no drop-off event, so the crew flies out still holding rented vehicles. The itinerary models this correctly for Neil (Day 3 09:35 \"Jetty: return scooters + refuel-as-agreed\"), which makes the Port Blair omission a clear gap. Factbase rental terms are 24-hour slots with overtime penalties and pickup only within business hours, so a 07:45 departure cannot include a hand-back.",
+     "evidence": "factbase research.rentals_fuel.facts[4] (Eternal Andamans terms): \"return by 9am next day else \u20b9499 full-day overtime\"; facts[2] (Go2Andaman terms): \"24h slot fixed 10am-10am; hotel/jetty delivery and pickup included (service hours 10am-6pm)\". Day 3 event 12:30\u201313:10 rents PB scooters for Rs 1,200 with no matching return event on Day 4 or Day 5.",
+     "fix": "Add a scooter hand-back \u2014 best on Day 4 evening (e.g. 20:15\u201320:30, before the 24h slot lapses), or a 07:30\u201307:45 hotel pickup on Day 5 if the operator confirms an out-of-hours collection \u2014 and reconcile the Rs 1,200 against the actual number of rental days (Day 3 13:10 \u2192 Day 4 evening is one 24h slot; anything longer needs a second day billed)."
+    },
+    {
+     "event_title": "Sleep (long one \u2014 9\u00be h)",
+     "event_time": "00:00\u201306:45",
+     "category": "consistency",
+     "severity": "minor",
+     "problem": "The event itself is correct (21:00 Day 4 \u2192 06:45 Day 5 = 9h45, matching sleep_hours[3] = 9.75), but the night it closes out makes the trip-level sleep claim wrong: philosophy states \"Sleep averages 7.3 h/night (min 5.75)\" while sleep_hours [5.5, 7.0, 5.75, 9.75] averages exactly 7.0.",
+     "evidence": "itinerary.json philosophy: \"Sleep averages 7.3 h/night (min 5.75)\"; sleep_hours = [5.5, 7.0, 5.75, 9.75] \u2192 (5.5+7.0+5.75+9.75)/4 = 7.0.",
+     "fix": "Change the philosophy text to \"Sleep averages 7.0 h/night (min 5.75)\"."
+    },
+    {
+     "event_title": "Breakfast + pack out",
+     "event_time": "06:45\u201307:45",
+     "category": "fact",
+     "severity": "minor",
+     "problem": "\"cafe next door\" is UNSUPPORTED \u2014 factbase contains no cafe adjacent to Hotel Atlanta, and the food research explicitly concluded that nothing in Port Blair opens before 07:00, so a 06:45 breakfast start has no verified venue at all.",
+     "evidence": "factbase research.food.facts[9]: \"NO restaurant found open before 6 am on any island. Earliest openings - Port Blair: 7 am (Rajasthani Dhaba Andaman, Annapurna Cafeteria, Prabha's Manasara, Lazeez Rooftop)\".",
+     "fix": "Delete \"cafe next door\" or replace it with a verified 07:00 opener (Rajasthani Dhaba Andaman, Goalghar, or Prabha's Manasara), and shift the eating portion of the block to 07:00 or later."
+    },
+    {
+     "event_title": "Breakfast + pack out",
+     "event_time": "06:45\u201307:45",
+     "category": "cost",
+     "severity": "minor",
+     "problem": "cost_inr 300 for a crew of 3 has no cost_note and no matching price in factbase \u2014 it cannot be checked arithmetically and it sits below the only researched band for the named restaurant. Compare Day 3's dinner at the same Annapurna, budgeted Rs 900 for 3.",
+     "evidence": "factbase research.food.facts[2]: Annapurna \"\u20b9200-400\" (Google price band, conventionally for two). Day 3 event 19:00 \"Dinner @ Annapurna Cafeteria\" = Rs 900 for the same 3 people.",
+     "fix": "Add a cost_note and raise to a defensible figure, e.g. cost_inr 450 with cost_note \"3 x ~Rs 150 (Annapurna \u20b9200-400 band, factbase food.facts[2])\"."
+    },
+    {
+     "event_title": "Cab to the airport",
+     "event_time": "07:45\u201308:05",
+     "category": "cost",
+     "severity": "minor",
+     "problem": "cost_inr 300 has no cost_note and no factbase support \u2014 the file contains no Port Blair short-hop cab fare at all (only Chidiya Tapu \"cab from Port Blair Rs.1,500-3,500 (45-60 min, ~25 km); auto Rs.800-1,200\" and Baratang \"Round-trip taxi Port Blair-Baratang Rs.4,500 per cab\"). It is also internally inconsistent with Day 1, which budgets Rs 350 for the 0.65 km airport\u2192Icy Spicy hop \u2014 a fifth of the distance for more money.",
+     "evidence": "factbase research.activities.facts[20]: \"cab from Port Blair Rs.1,500-3,500 (45-60 min, ~25 km); auto Rs.800-1,200\"; no short-hop fare researched. Day 1 event 10:40 \"Cab toward town (Junglighat)\" route cab-ixz-icyspicy (0.65 km) = Rs 350 vs Day 5's 3.2 km = Rs 300.",
+     "fix": "Research and add a Port Blair city cab/auto tariff to factbase, then set both hops from it with a cost_note (e.g. \"Rs 300 flat, hotel-arranged airport drop \u2014 confirm at reception\"), so the two airport hops are consistent."
+    },
+    {
+     "event_title": "FLY \u2014 Akasa QP 1146 to Chennai",
+     "event_time": "10:35\u201312:55",
+     "category": "route",
+     "severity": "minor",
+     "problem": "The event duration is correct (140 min = the verified 2h20m block time) but the route record it renders from stores minutes=130, so the map/stat panel will report 2h10m for a flight the note correctly calls \"2h20m home\". Cost, flight number and times are all verified and correct.",
+     "evidence": "populate_base.py:97 \u2014 (\"fly-ixz-maa\", \"ixz\", \"maa\", \"flight\", 1355, 130, ...) vs factbase research.flights.facts[3]: \"Return nonstop 1: Akasa Air QP 1146, IXZ-MAA, Sun 2026-09-27 \u2014 10:35 -> 12:55, 2h20m, Boeing 737 MAX 8\".",
+     "fix": "Change the minutes field on populate_base.py:97 from 130 to 140."
+    },
+    {
+     "event_title": "Land MAA \u2014 trip complete",
+     "event_time": "12:55\u201313:20",
+     "category": "consistency",
+     "severity": "minor",
+     "problem": "Two polish issues. (1) category is \"prep\" for a post-landing wrap-up block \u2014 the itinerary uses \"buffer\" for unstructured slack elsewhere (Day 4 17:45 Cellular Jail), and nothing is being prepared for. (2) The maa place record shown on this card carries outbound-only text \u2014 \"Akasa QP 1145 departs 07:40 \u2014 be at bag-drop by 06:10\" \u2014 so the final event of the trip displays boarding instructions for the flight taken four days earlier; that bag-drop time is also not supported by any factbase fact.",
+     "evidence": "populate_base.py:13-14 \u2014 (\"maa\", \"Chennai Airport (MAA)\", \"chennai\", ... \"Kamaraj Domestic Terminal. Akasa QP 1145 departs 07:40 \u2014 be at bag-drop by 06:10.\"); itinerary Day 5 final event category \"prep\".",
+     "fix": "Set category to \"buffer\", and rewrite the maa blurb direction-neutrally, e.g. \"Kamaraj Domestic Terminal \u2014 Akasa QP 1145 out (07:40 Wed), QP 1146 back in (12:55 Sun).\""
+    }
+   ]
+  }
+ ],
+ "synthesis": {
+  "critical": [
+   "JETTY IDENTITY (Day 1 events 8-10 + Day 3 events 10-12, routes ferry-pb-havelock / ferry-neil-pb / ride-phoenix-chidiyatapu): the plan boards and lands at phoenix-bay, but the only jetty fact in factbase says all four private catamarans (Makruzz/Nautika/Green Ocean/ITT) sail from HADDO and Phoenix Bay is the government-ferry jetty \u2014 wrong jetty at 11:55 for a printed-ticket-only 13:15 Green Ocean sailing loses the crossing and the Havelock night.",
+   "DAY 1 RADHANAGAR CLOCK IS IMPOSSIBLE (16:50-17:10 'Neil's Cove walk' then 17:10 'SUNSET @ Radhanagar'): route walk-radhanagar-cove is 20 min one way, so the crew arrives at the cove exactly at 17:10 with zero time there \u2014 and the next event needs them back at Radhanagar, 1.2 km away, at that same 17:10 minute.",
+   "DAY 2 WATERSPORTS BOOKED AFTER THE COUNTERS SHUT (15:00-15:45 SNORKEL + 15:45-16:15 JET SKI, Rs 5,400): the only Bharatpur counter timings in factbase are 08:00-15:00 (Go2Andaman Bharatpur page, same source as the Rs 3,500 snorkel and Rs 800-1,200 jet-ski figures the plan cites) \u2014 the day's headline block starts at the minute the counters close."
+  ],
+  "major": [
+   "DAY 2 SCUBA PRICE MIS-ATTRIBUTED (Rs 10,500 = 3 x Rs 3,500 'shore try-dive, DiveIndia's Neil branch'): Rs 3,500 is Dive Andaman's shore Try Dive at Beach No.2, Govind Nagar, HAVELOCK; DiveIndia's only published beginner price is Rs 14,000 pp Intro to Scuba \u2014 the trip's largest activity line could be 4x under.",
+   "DAY 2 SNORKEL Rs 1,000 pp INVENTED: factbase's only guided-snorkel price is 'starting at Rs 3,500 including gear and guide', quoted twice including on the Bharatpur page itself.",
+   "THREE LODGING COSTS ARE QUOTED FOR THE WRONG NIGHTS: Bhuma Rs 6,920 is the Sep 25-26 quote used for the Sep 23-24 night; Blue Lagoon Rs 3,968 is the Sep 26-27 quote used for Sep 24-25; Hotel Atlanta Rs 8,845 is the Sep 23-25 two-night quote used for a Sep 25-27 stay (factbase's Sep 26-27 sweep does not list Atlanta at all).",
+   "BLUE LAGOON POSITION UNVERIFIED AND SELF-CONTRADICTORY: place blurb and Day 2 notes claim 'on the SITAPUR side, sunrise beach is a 3-min ride' while factbase says '2 km from downtown (Neil center/Bharatpur jetty area)', and route ride-bluelagoon-sitapur claims 1.4 km against a 1.61 km straight-line \u2014 physically impossible; Day 3's 04:42-04:47 dawn run rests on it.",
+   "DAY 4 BARATANG CAB Rs 7,500 / 'verified range Rs 6,500-9,000' matches no price in factbase: verified figures are Rs 4,500 round-trip taxi per cab, Rs 6,300/7,300 two-person packages, Rs 8,400 private AC car for UP TO 2 PAX (with an explicit 'confirm the 3-adult tier' caveat).",
+   "DAY 4 COST MODEL DOUBLE-COUNTS: cost_note calls it a 'day-tour' (package language) while the speedboat is billed separately at Rs 2,700 and the ferry note says 'Fee included in cab tour' \u2014 every verified package price already bundles boat tickets, entry fees and permits; the day charges Rs 10,200 for what factbase prices at Rs 7,200 (taxi+boat) or Rs 8,400 (all-in, 2 pax).",
+   "DAY 4 'Fee included in cab tour' (vehicle ferry, 07:30) is unsupported \u2014 the only inclusion statement in factbase attaches to the Go2Andaman package, not to the Rs 4,500 taxi model this day is actually using.",
+   "DAY 4 BARATANG LUNCH Rs 450 IS INVENTED and 'Simple veg meals only' is an unsupported availability claim: factbase has zero food facts for Baratang/Nilambur, and its one relevant note says lunch is EXCLUDED from both operators' packages and only arranged on request \u2014 for a vegetarian crew on their first food in ~16 h.",
+   "DAY 4 RETURN CONVOY ARITHMETIC FAILS: the title fixes a 12:30 departure and route cab-jirkatang-middlestrait is 83 min (47.7 km, factbase-verified), so arrival is 13:53 \u2014 but the block ends 13:40 and the next event starts there; the 13-minute shortfall cascades into the nap, the Marina dusk window and the Cellular Jail show.",
+   "DAY 4 CELLULAR JAIL BLOCK FITS NO ACTUAL SHOW: 2026-09-26 is a Saturday, and factbase gives Hindi 17:50/19:50/20:50 daily + 18:50 Tue/Thu/Sat/Sun with English ONLY Mon/Wed/Fri; a 17:45 arrival for a 17:50 show violates the source's 'arrive ~30 min early', and a ~45-min show sits in a 90-min block.",
+   "DAY 4 HAS NO FOOD FROM DAY 3's 20:15 DINNER TO THE 11:00 BARATANG LUNCH (~15h45) across a 03:30 wake-up, despite factbase stating nothing opens before 07:00 in Port Blair and advising food carried from the previous evening \u2014 and the ~40-min Jirkatang gate wait (the slot operators use for breakfast) is unmodelled inside the 04:00-06:00 block.",
+   "DAY 4 'it is a criminal offence' (convoy tips) is an unsupported legal claim \u2014 factbase supports only the operator rules (windows shut, no stops, no photography) plus compulsory government photo ID, which the event never mentions. [Reclassified from the auditor's critical: the behaviour advice itself is correct.]",
+   "DAY 4 '1.2 km walk from the drop point' and '~35 min inside' (limestone caves) have no factbase support at all \u2014 the only mechanics fact is 'limestone caves 9:00-10:00 AM by shared speedboat'; the 1.2 km also propagates into the boat-nilambur-caves route note and the limestone-caves place blurb. [Reclassified from critical: unsourced, not plan-breaking.]",
+   "DAY 3 MUNDA PAHAD FIGURES CONTRADICT THE SOURCE: notes say '1.3 km, ~30 min up' (and the place blurb repeats it) where factbase gives 'moderate 1.5 km trail, 45-60 min, 300 ft viewpoint' \u2014 at the sourced pace the 14:10-15:55 block covers ascent+descent with zero summit time and can return past the gate.",
+   "DAY 3 'Optional guide Rs 500/group' at Natural Bridge is invented \u2014 the only guide price anywhere in factbase is Rs 300, and it belongs to the Red Skin / MGMNP package.",
+   "DAY 3 'Annapurna, 200 m from the hotel' is wrong by ~3x: the app's own coordinates give 0.66 km straight-line (10-18 min on foot in the dark), and factbase puts Atlanta 1.4 km from downtown.",
+   "DAY 3 PORT BLAIR SCOOTERS PRICED AT A RATE THE NAMED OPERATOR DOES NOT PUBLISH: '2 x ~Rs 600/day (Eternal Andamans)' vs Eternal's published Rs 500 (Activa/Fascino), Rs 700 (Vespa/Jupiter/Dio), booking cards Rs 699 \u2014 Rs 600 is only the generic Reddit/Justdial market band.",
+   "THE PORT BLAIR SCOOTERS ARE NEVER RETURNED: rented Day 3 12:30 for Rs 1,200, but Day 4 is cab-only (two-wheelers banned past Jirkatang) and Day 5 exfils by cab with no drop-off event \u2014 Eternal's terms are 24h slots with Rs 499/day overtime, so the crew flies out still holding them and the line is under-billed.",
+   "DAY 3 '65-min margin on the Munda Pahad gate' contradicts the same day's trek note ('we arrive 14:10 - 50-min margin'), and the real Makruzz-over-Green-Ocean gain is 15 minutes (12:30 vs 12:45), not 65.",
+   "UNSOURCED PORT BLAIR ROAD FARES, INTERNALLY INCONSISTENT: Day 1 Rs 350 airport cab and Rs 150 auto, Day 5 Rs 300 airport cab \u2014 none carries a cost_note and factbase holds no PB short-hop tariff (only Chidiya Tapu Rs 1,500-3,500 / auto Rs 800-1,200 for ~25 km); Rs 350 for the ~2 km airport-Junglighat hop against Rs 300 for the ~4.5 km hotel-airport run cannot both be right.",
+   "DAY 1 FUEL/PARKING ARITHMETIC WRONG TWICE: '~2 L petrol Rs 200 (@Rs 88.66/L)' is Rs 177.32, and 'parking Rs 30' covers one scooter when the crew of 3 rents TWO (factbase: Rs 20-30 per scooter) \u2014 correct total ~Rs 237, not Rs 230.",
+   "DAY 1 'IndianOil pump sits ON the Radhanagar road' is unsupported: factbase places Havelock's two working pumps at Krishna Nagar/Havelock Bazar and Havelock No.2 (Govind Nagar area) \u2014 near the start of the ride, not on the SH4 stretch; the same claim is baked into the hl-pump place NAME and blurb.",
+   "DAY 1 '1.2 km along the sand to the quiet lagoon': factbase explicitly marks Neil's Cove's position UNKNOWN (three searches resolved to unrelated places), so the neils-cove coordinates and the 1.2 km / 20 min route are both invented \u2014 populate_base.py even says so in the blurb.",
+   "DAY 1 'Blue-Flag beach, lifeguards on duty' has zero factbase support (no 'blue flag' and no 'lifeguard' anywhere); 'lifeguards on duty' invites monsoon swimming on an invented assumption, and the radhanagar place blurb carries the same claim.",
+   "DAY 1 'Something Different, 400 m from Bhuma' contradicts the app's own coordinates: 0.83 km straight-line, ~1 km by road, and factbase has no Bhuma-to-restaurant distance at all.",
+   "AKASA CHECK-IN CUTOFFS INVENTED ON BOTH ENDS: Day 1 'Akasa bag-drop closes 06:55' and Day 5 'Akasa counter closes 09:50' \u2014 factbase's only Akasa facts are baggage allowances; the only 'counter closes' facts in the file belong to ferry operators, which is the shape these were copied from.",
+   "DAY 5 BREAKFAST WINDOW CANNOT WORK: 06:45-07:45 must cover checkout, packing and a meal, but the only verified option (Annapurna) opens 07:00 and route walk-atlanta-annapurna claims 1.1 km in 4 min on foot (16.5 km/h) when the real walk is ~0.8 km / ~10 min each way.",
+   "DAY 5 CAB NOTE CONTRADICTS ITS OWN ROUTE: '2.7 km against traffic - 10 min' vs cab-atlanta-ixz at 3.2 km / 8 min \u2014 and 2.7 km is lifted from a different leg (airport->Marina Park/Aberdeen); worse, 3.2 km is BELOW the 3.78 km straight-line, so the route record is itself impossible (real ~4.5 km).",
+   "FIVE ROUTES CARRY PHYSICALLY IMPOSSIBLE METRICS and none of the v2.3 hotel-anchored legs is recorded in factbase: walk-atlanta-marina 1.4 km in 3 min on foot (28 km/h; real ~0.4 km \u2014 the 1.4 km is Atlanta's 'distance from downtown'), walk-atlanta-annapurna 1.1 km/4 min, cab-ixz-icyspicy 0.65 km against a 1.91 km straight-line, cab-atlanta-ixz 3.2 km against 3.78 km, ride-bluelagoon-sitapur 1.4 km against 1.61 km.",
+   "DAY 2 NIGHT KAYAK BLOCK IS 2h15 AGAINST A 1-2 h OPERATOR TRIP (Andaman Bliss, 'duration 1-2 hrs (~1.5 hr)', starts 03:30): the promised 05:09 sunrise-from-the-kayak needs the paddle to run 1h39 past the start, which the operator does not advertise \u2014 Rs 10,500 riding on an unconfirmed extension."
+  ],
+  "minor": [
+   "Day 1 event[0] 'Wake up & roll out (Chennai)' is pinned to place 'maa' (the airport) while the crew is at home packing.",
+   "Day 1 'Chennai Airport T1' and '~Rs 700' are both unsourced; the app's own MAA blurb calls it the Kamaraj Domestic Terminal.",
+   "Day 1 lunch starts 10:55, five minutes before Icy Spicy's factbase-verified 11:00 opening (stated twice, incl. the official site).",
+   "Day 1 Icy Spicy cost_note 'mains Rs 250-350' has no crew-of-3 arithmetic and no Rs 250 floor in factbase (sourced dishes are Rs 280 and Rs 350; Rs 200-400 is the per-person Maps band).",
+   "Day 1 \"Port Blair's top pure-veg (4.2, 3.5k reviews)\" \u2014 it is the busiest, not the top-rated (Delhi wala 4.8, Rajasthani Dhaba 4.2/1,186).",
+   "Day 1 Green Ocean block 11:55-13:15 starts 20 min before the counter opens (60 min prior = 12:15) and runs to the departure minute though the counter closes 13:00 and boarding starts 12:55.",
+   "Day 1 'Cheapest verified sailing of the day' \u2014 GO1 06:30 sells the identical Rs 1,050 Economy fare; 13:15 is the cheapest that clears a 09:55 landing.",
+   "Day 1 sunset note says 17:14; Sep 23 is 17:15 (17:14 is Sep 24/25) \u2014 the radhanagar place blurb hard-codes the same 17:14.",
+   "Day 1 scooter handover starts 15:30, the ferry's scheduled arrival minute, with no time to dock, disembark and clear X-rayed hold bags.",
+   "Day 1 dinner starts 18:20 at Beach No.2 while the preceding ride ends 18:20 at Govind Nagar ~1 km away \u2014 no minutes allocated.",
+   "Day 1 cost_note calls Rs 195-345 the 'veg mains' band; in factbase all three of those prices are salads (the cafe is pizza/pasta multicuisine).",
+   "Day 2 event[4] 'Ride to Kala Pathar' uses route ride-bhuma-kalapathar while the crew is at kayak-point.",
+   "Day 2 'Golden hour runs to about 06:45' is unsupported \u2014 no golden-hour data exists in factbase, and with sunrise 05:09 the soft light is gone by ~06:10, i.e. the 06:10 arrival is the END of it.",
+   "Day 2 theme sells a 'Kala Pathar driftwood dawn' and the place blurb says be there 04:45, but the plan arrives 06:10 \u2014 61 min after sunrise.",
+   "Day 2 route ferry-havelock-neil declares 60 min against the event's (correct) 75-min GO1 09:15->10:30 crossing.",
+   "Day 2 event[16] 'Ride to Bharatpur' uses ride-bluelagoon-bharatpur (hotel origin) while the crew is at Pure Veg Restaurant in Lakshmanpur.",
+   "Day 2 lunch and dinner both cite a 'Rs 240 thali' that factbase attributes to VEERA Pure Veg at Bharatpur Beach, not to Pure Veg Restaurant (Lakshmanpur); the dinner line shows no crew-of-3 arithmetic.",
+   "Day 2 dinner starts 17:50, the same minute the Laxmanpur sunset block ends ~0.8 km away.",
+   "Day 2 'Neil scooters 2 x ~Rs 500/day' \u2014 factbase records Neil On Wheels' name, rating and phone only, no rate.",
+   "Day 3 'Up before the sun' allots 12 minutes (04:30-04:42) for three people to wake, dress and be riding in the dark; the comparable Day 4 block is 30 min.",
+   "Day 3 Sitapur 'pink-tinged sand', 'photo-frame cave', 'shipwreck' and '~500 m' are all unsupported (zero hits for pink/shipwreck in factbase); the sitapur place blurb repeats them.",
+   "Day 3 breakfast at 06:25 assumes Blue Lagoon serves before 06:30 \u2014 factbase records 'breakfast included' with no hours and separately warns nothing on any island opens before 07:00.",
+   "Day 3 '(verified)' overstates the Sep 25 tide (single-source, Port Blair table, +/-15 min, Neil differs); 'tide pools hold trapped fish' and 'dead coral is slippery' are unsourced.",
+   "Day 3 Rs 100 'refuel-as-agreed' has no cost_note and no basis (Neil On Wheels' fuel terms are not in factbase).",
+   "Day 3 route ferry-neil-pb carries 75 min and a Nautika note while being used for a 60-min Makruzz sailing.",
+   "Day 3 the 'snack grab' is unfunded (whole Rs 1,200 attributed to scooters) and the day has no lunch at all between 06:25 breakfast and 19:00 dinner, with a cliff trek in between.",
+   "Day 3 'NO swimming - saltwater crocodiles are spotted here' is unsupported ('crocod' returns zero hits); the chidiya-tapu place blurb carries the same line.",
+   "Day 3 'Area clears by 16:00' (trek note and munda-pahad blurb) is unsupported and contradicts the next event: factbase gives a 15:00 gate close, beach to 18:00, area clearing by 19:00.",
+   "Day 3 Chidiya Tapu arrival 16:40 is later than the source's 'arrive by ~16:30 for a spot' on the sunset rocks.",
+   "Day 3 event[15] contains the Munda Pahad->Chidiya Tapu ride with no route attached and is place-tagged at the destination rather than where the time is spent.",
+   "Day 4 '47 km in the dark' quotes the Aberdeen-origin factbase figure while the attached route cab-atlanta-jirkatang is 48.3 km.",
+   "Day 4 08:00 speedboat runs ahead of both verified operator timelines (Middle Strait jetty 08:00 -> boat 08:30 -> caves 09:00), leaving 15 min of slack for the vehicle-ferry queue.",
+   "Day 4 limestone caves cost 0 with no note, silently asserting free entry, while factbase implies entry fees and permits exist (bundled only into the package price).",
+   "Day 4 12:10 jetty arrival has already missed the 12:00 southbound slot in one of the two sources, and the note never states the consequence (next convoy 14:30-15:00, post-17:00 return, evening destroyed).",
+   "Day 4 dinner has zero travel minutes at both ends (2.9 km each way), no cost_note, and uses a hotel-origin route while the crew is leaving Cellular Jail.",
+   "Day 4 'Marina Park at dusk' never states sunset 17:13 / civil dusk ~17:34, unlike every other scenic event.",
+   "Day 5 'cafe next door' is unsupported \u2014 no cafe adjacent to Atlanta is in factbase and nothing in Port Blair opens before 07:00.",
+   "Day 5 route fly-ixz-maa stores 130 min against the verified 2h20m block time the note correctly quotes.",
+   "Day 5's final card shows the maa blurb's outbound-only text ('Akasa QP 1145 departs 07:40 - be at bag-drop by 06:10'), which is also itself unsourced.",
+   "Trip-level self-contradiction: philosophy says 'Sleep averages 7.3 h/night (min 5.75)' against sleep_hours [5.5, 7.0, 5.75, 9.75] (= 7.0, min 5.5) and 'Cost ~Rs 40,400/person' against total_cost_inr 142,439 (= Rs 47,480/person, which the risks[] line states correctly)."
+  ],
+  "patch_plan": [
+   "BLOCKING VERIFICATION 1 - confirm the departure/arrival jetty printed on the Green Ocean (23 Sep) and Makruzz (25 Sep) tickets; if Haddo, add to populate_base.py P: (\"haddo\", \"Haddo Jetty\", \"south_andaman\", <live lat>, <live lng>, \"jetty\", None, \"Private catamaran terminal (Makruzz/Nautika/Green Ocean/ITT).\") and repoint routes ferry-pb-havelock, ferry-neil-pb, ride-phoenix-chidiyatapu and cab-icyspicy-phoenix plus itinerary Day 1 events[8],[9],[10] and Day 3 events[10],[11] to it; if the tickets say Phoenix Bay, add that confirmation as a factbase fact under research.ferries.",
+   "BLOCKING VERIFICATION 2 - re-quote on Booking.com and record as new facts: Bhuma Family Double 2026-09-23/24, Blue Lagoon King w/ Balcony 2026-09-24/25 (3 adults, confirm bedding for 3), Hotel Atlanta Family Room 2026-09-25/27; also confirm Blue Lagoon's exact address, and phone DIVEResort Bharatpur (DiveIndia Neil) for its shore-dive rate and the Bharatpur water-sports counters' last ride of the day.",
+   "data/factbase.json - add a research.distances fact for every v2.3 leg read live on 2026-08-20 (cab-ixz-icyspicy, cab-icyspicy-phoenix, ride-phoenix-chidiyatapu, ride-chidiyatapu-atlanta, cab-atlanta-jirkatang, walk-atlanta-annapurna, walk-atlanta-marina, cab-atlanta-ixz, cab-atlanta-icyspicy, ride-hljetty-bhuma, ride-bhuma-*, ride-neiljetty-bluelagoon, ride-bluelagoon-*, ride-bharatpur-laxmanpur, ride-bridge-neiljetty) with source_url, so no route stat is unsourced.",
+   "populate_base.py:178 - walk-atlanta-marina: change 1.4, 3 -> 0.4, 6 (1.4 km was Atlanta's 'distance from downtown', not to Marina Park; haversine is 0.33 km).",
+   "populate_base.py:175 - walk-atlanta-annapurna: change 1.1, 4 -> 0.8, 10 (0.66 km haversine; 16.5 km/h is a run).",
+   "populate_base.py:160 - cab-ixz-icyspicy: change 0.65, 2 -> 2.2, 6 (0.65 km is below the 1.91 km straight-line; note 'VIP Rd / Junglighat, ~3 min from the airport per Icy Spicy's own site').",
+   "populate_base.py:181 - cab-atlanta-ixz: change 3.2, 8 -> 4.5, 10 (3.2 km is below the 3.78 km straight-line).",
+   "populate_base.py:205 - ride-bluelagoon-sitapur: change 1.4, 3 -> 4.5, 9 pending the address check (1.4 km is below the 1.61 km straight-line), and update the note to 'SH6 east - distance provisional until the property address is confirmed'.",
+   "populate_base.py:123 - ferry-pb-havelock: change minutes 90 -> 135, note -> 'Green Ocean 1 crossing 2h15m (Makruzz/Nautika run the same water in 1h30m).'",
+   "populate_base.py:126 - ferry-havelock-neil: change minutes 60 -> 75, note -> 'Green Ocean 1 09:15->10:30 (Nautika does it in 45 min).'",
+   "populate_base.py:128 - ferry-neil-pb: change minutes 75 -> 60, note -> 'Makruzz 11:30->12:30 verified for Fri Sep 25 (Nautika 09:30->10:45 = 75 min).'",
+   "populate_base.py:97 - fly-ixz-maa: change minutes 130 -> 140 (verified 2h20m block).",
+   "populate_base.py:143 - walk-radhanagar-cove: keep 1.2, 20 but change the note to 'Walk right (north-west) along the sand - distance/time ESTIMATED, Google Maps has no Neil's Cove listing.'",
+   "populate_base.py:47 - neils-cove blurb -> 'Sheltered lagoon a 15-20 min walk north-west along the sand from Radhanagar. No Maps listing exists - ask at the beach entrance. (Position approximate.)'",
+   "populate_base.py:45 - radhanagar blurb -> 'Among Asia's best-known beaches. Sunset ~17:15 in late September; free entry, designated parking near the entrance (Rs 20-30 per scooter).' (drop Blue-Flag and the 17:14).",
+   "populate_base.py:55 - hl-pump: rename to \"IndianOil Havelock (Govind Nagar / Havelock Bazar)\" and blurb -> 'The island's working pump (opens 06:00) - fill up before turning onto SH4 toward Radhanagar.'",
+   "populate_base.py:76 - hotel-bluelagoon blurb -> 'Neil base - 8.6/10 from 256 reviews, ~2 km from the island centre (exact address to be confirmed on Booking). King room w/ balcony + breakfast Rs 3,968 (Sep 26-27 quote - re-price for Sep 24-25).' (drop 'SITAPUR side' and '3-min ride').",
+   "populate_base.py:27 - munda-pahad blurb -> '1.5 km trail, 45-60 min each way, to a 300 ft clifftop viewpoint. Trek gate 11:00-15:00, closes 15:00 sharp; beach open to 18:00, area clears by 19:00.'",
+   "populate_base.py:25 - chidiya-tapu blurb -> 'Sunset amphitheatre of South Andaman. No lifeguards - treat it as look-only, not a swim.' (drop the crocodile claim unless a sourced A&N advisory is added to factbase).",
+   "populate_base.py:33 - limestone-caves blurb -> 'Sedimentary cathedral shaped over millions of years. Speedboat from Nilambur, then a mangrove boardwalk in.' (drop '~1.2 km walk'); same for the boat-nilambur-caves note at line 111.",
+   "populate_base.py:23 - marina-park blurb: either add a sourced fact for the 30 Dec 1943 flag hoisting to factbase and cite it, or shorten to 'Flag Point on the Marina Park waterfront - the evening walk from the hotel door.'",
+   "populate_base.py:13 - maa blurb -> 'Kamaraj Domestic Terminal - Akasa QP 1145 out (07:40 Wed), QP 1146 back in (12:55 Sun).'",
+   "populate_base.py ROUTES_V2 - add (\"ride-kayak-kalapathar\", \"kayak-point\", \"kalapathar\", \"scooter\", 4.3, 10, [[12.026,93.003],[12.0006111,93.0070952]], \"SH5 south from the night-launch spot.\") and (\"cab-jail-icyspicy\", \"cellular-jail\", \"icy-spicy\", \"cab\", 2.9, 9, [[11.6747447,92.7478601],[11.6587633,92.7313498]], \"MA Rd then Great Andaman Trunk Rd.\").",
+   "data/itinerary.json Day 1 events[2] notes -> 'Akasa domestic counters close 45-60 min before departure - confirm on akasaair.com; we are at the desk by 05:15 either way.'",
+   "data/itinerary.json Day 1 events[6] add cost_note '3 x ~Rs 117 - airport taxi to Junglighat, operator-range estimate, no published IXZ tariff verified; confirm one vehicle takes 3 adults + three 15 kg bags' and events[8] add cost_note 'short auto hop, estimate - no verified Port Blair tariff'.",
+   "data/itinerary.json Day 1 - retime the Radhanagar block: events[11] 15:30-15:55, events[12] 15:55-16:10, events[13] 16:10-16:30, events[14] 16:30-17:10 (place radhanagar, title 'Walk toward Neil's Cove', notes 'A 15-20 min walk north-west along the sand - turn back by 16:50; no Maps listing, distance unverified'), events[15] unchanged at 17:10-17:45.",
+   "data/itinerary.json Day 1 events[12] cost_note -> 'Family room for 3, breakfast incl., CASH only - RATE VERIFIED FOR Sep 25-26 ONLY, re-check for Sep 23-24'.",
+   "data/itinerary.json Day 1 events[13] cost_inr 230 -> 237, cost_note -> '~2 L petrol Rs 177 (2 x Rs 88.66) + parking Rs 60 (2 scooters x Rs 30)', notes -> 'Fill up at the IndianOil in the Govind Nagar / Havelock Bazar area before turning onto SH4 - the island's only reliable pump (opens 06:00).'",
+   "data/itinerary.json Day 1 events[15] notes -> 'Sunset 17:15, last light 17:36 (verified for 23 Sep). Free entry; swim only where locals do - September surf is monsoon surf.'",
+   "data/itinerary.json Day 1 events[17] notes -> '4.4-star beachside cafe at Beach No. 2, ~1 km from Bhuma - take the scooters after dark' and cost_note -> 'Dinner for 3 = Rs 1,400-1,800 (TripAdvisor menu: salads Rs 195-345; veg-friendly pizza/pasta)'.",
+   "data/itinerary.json Day 2 events[3] notes - append 'Operator standard is 1-2 h (~1.5 h): the sunrise return MUST be confirmed by phone, otherwise we are off the water by ~05:10 and take sunrise at Kala Pathar.'",
+   "data/itinerary.json Day 2 - reorder the afternoon so counter-dependent activities finish before 15:00: events[16] ride 12:30-12:45 (change route to a new pure-veg-neil -> bharatpur leg or chain via the jetty), JET SKI 12:45-13:15, SNORKEL 13:15-14:00, SCUBA 14:00-16:15 (pre-booked dive school, spans the 14:32 high tide), dry off 16:15-16:40; leave events[21] 16:40-16:55 and the 16:55 sunset unchanged.",
+   "data/itinerary.json Day 2 SCUBA cost_note -> '3 x Rs 3,500 shore Try Dive - this is Dive Andaman's HAVELOCK list price; DiveIndia's Neil branch publishes only Rs 14,000 pp Intro to Scuba. UNVERIFIED for Neil - phone DIVEResort Bharatpur (50 m from jetty) to lock the rate before booking.'",
+   "data/itinerary.json Day 2 SNORKEL cost_note -> '3 x ~Rs 1,000 beach-counter rate - UNVERIFIED; the only sourced guided-snorkel price is from Rs 3,500 pp (Go2Andaman, Bharatpur page). Counters run 08:00-15:00.'",
+   "data/itinerary.json Day 2 events[4] route -> 'ride-kayak-kalapathar' and notes -> 'Sunrise was 05:09 - the light is already high by 06:10; shoot the black rocks backlit rather than expecting golden hour.'",
+   "data/itinerary.json Day 2 events[13] cost_note -> 'stay Rs 3,968 (Sep 26-27 quote - RE-PRICE for Sep 24-25) + Rs 150 fuel' and events[14] notes -> '8.6/10, ~2 km from the island centre - confirm the exact address before locking tomorrow's 05:00 Sitapur run.'",
+   "data/itinerary.json Day 2 events[15]/[23] cost_note -> '3 x ~Rs 265; Neil veg dinner band Rs 700-900 (Maps Rs 200-400 pp)' - drop the 'Rs 240 thali' attribution (that price is VEERA at Bharatpur).",
+   "data/itinerary.json Day 3 - retime the dawn run: events[1] 04:25-04:50, events[2] 04:50-05:00 (title 'Ride to Sitapur'), events[3] 05:00-06:15, events[4] 06:15-06:25.",
+   "data/itinerary.json Day 3 events[7] tips -> 'Grip water-shoes mandatory; dead coral is slippery. Local guides offer to walk you out - agree the price first, no published rate exists.' and notes -> 'Low tide 08:51 at 0.40 m (Port Blair table, +/-15 min; Neil differs by minutes).'",
+   "data/itinerary.json Day 3 events[8] cost_note -> '~1.1 L top-up for 2 scooters @ Rs 88.66'.",
+   "data/itinerary.json Day 3 events[10] notes -> 'Chosen over the Rs 1,400 Green Ocean (arrives 12:45) - 15 minutes earlier ashore, which is what keeps the 50-min cushion at the 15:00 trek gate.'",
+   "data/itinerary.json Day 3 events[11] cost_inr 1200 -> 1000, cost_note -> '2 x Rs 500/24h Honda Activa (Eternal Andamans published rate; Rs 500 refundable deposit each; Rs 499/day overtime if not back by 09:00)'; retime to 12:30-13:00.",
+   "data/itinerary.json Day 3 events[12] retime 13:00-13:50, cost_inr 250 -> 220, cost_note -> '2 scooters x 55.5 km = 111 km / 45 kmpl = 2.5 L x Rs 88.66'; events[13] 13:50-14:00.",
+   "data/itinerary.json Day 3 events[14] retime 14:00-16:00, notes -> '1.5 km, 45-60 min each way to the 300 ft viewpoint (sourced). Gate entry BEFORE 15:00. Trek gate closes 15:00 sharp; the beach is open to 18:00 and the area clears by 19:00.'; events[15] 16:00-16:30 with route ride-chidiyatapu-munda (reversed); events[16] 16:30-17:40.",
+   "data/itinerary.json Day 3 events[18] cost_note -> 'Family room, 2 nights (Sep 25-27), free cancellation - RE-QUOTE: Rs 8,845 is the verified Sep 23-25 price'; events[19] notes -> 'Veg South-Indian stalwart, ~700 m / a 10-minute walk into Aberdeen Bazaar (verify evening hours - only the 07:00 opening is sourced).'",
+   "data/itinerary.json Day 3 - insert a scooter return: events[19] dinner 19:00-20:15, new event 20:15-20:30 'Return PB scooters at the hotel (Eternal pickup)' place hotel-atlanta cost_inr 0 cost_note 'inside the single 24h slot (12:30 Sep 25 -> 20:30 Sep 25); Rs 500 deposit refunded each', then prep 20:30-21:45.",
+   "data/itinerary.json Day 4 events[2] cost_inr 7500 -> 4500, cost_note -> 'Round-trip Port Blair-Baratang taxi Rs 4,500 per cab (Andaman Ocean, verified 2026-08-19); boat, entry fees and permits billed separately - if you switch to the Go2Andaman private package (Rs 8,400, quoted for up to 2 pax, 3-adult tier UNCONFIRMED) zero out the boat line instead', notes -> '48 km in the dark to make the 06:00 first convoy', tips -> 'Nothing in Port Blair opens before 07:00 - carry breakfast bought the previous evening and eat it during the ~40-min wait at Jirkatang (operator itineraries schedule breakfast there at 06:00). Government photo ID in hand, not in the boot.'",
+   "data/itinerary.json Day 4 events[3] tips -> 'You may glimpse Jarawa people - cameras stay packed. Operators are absolute: no photos, no stops, windows shut. Government photo ID is compulsory at the check post.'",
+   "data/itinerary.json Day 4 events[4] notes -> 'Vehicle-ferry fee - confirm in writing that it is inside the cab quote; only the all-in private package is documented as including fees and permits.'",
+   "data/itinerary.json Day 4 events[6] notes -> 'Operators allot ~09:00-10:00 at the caves: mangrove boardwalk in, then the chambers.' and add cost_note 'Forest entry/permit fees not separately verified - confirm they are inside the cab quote.'",
+   "data/itinerary.json Day 4 events[8] cost_inr 450 -> 600, cost_note -> '3 x ~Rs 200 - ESTIMATE ONLY, no Baratang food price is verified', notes -> 'No Baratang food option is verified - pre-order the veg lunch with the operator (both verified operators exclude lunch and arrange it on request) or carry it from Port Blair.'",
+   "data/itinerary.json Day 4 - retime the return and evening: events[10] 12:10-13:55 (12:30 departure + 83 min) with notes appended 'Missing the slot means the next convoy (14:30-15:00) and a post-17:00 return, which kills the evening - confirm the slot with the driver at the caves', events[11] 13:55-15:20, events[12] nap 15:20-16:30, events[13] Marina 16:30-18:00 (notes add 'Sunset 17:13, light gone by ~17:35'), new travel event 18:00-18:20 to Cellular Jail, events[14] 18:20-19:35 (notes 'Saturday = Hindi show only, 18:50 (English runs Mon/Wed/Fri); ~45-min show, arrive 30 min early; carry govt photo ID; Rs 300 pp if you go'), new cab event 19:35-19:45 route cab-jail-icyspicy, events[15] dinner 19:45-21:00 with cost_note '3 x ~Rs 335 - factbase band for 3 veg adults is Rs 700-1,100', events[16] pack 21:00-21:30, events[17] sleep 21:30-24:00.",
+   "data/itinerary.json Day 5 events[0] sleep 00:00-06:30; events[1] 06:30-07:45 with route walk-atlanta-annapurna, cost_inr 300 -> 450, cost_note '3 x ~Rs 150 (Annapurna Rs 200-400 band)', notes -> 'Atlanta's rate excludes breakfast; Annapurna opens 07:00, ~10 min walk each way - pack 06:30-07:00, eat 07:00-07:35, or take it away.'",
+   "data/itinerary.json Day 5 events[2] cost_note 'hotel-arranged airport drop, Rs 300 flat - confirm at reception (no published PB tariff)', notes -> '4.5 km down VIP Rd - 10 min.'",
+   "data/itinerary.json Day 5 events[3] notes -> 'At the counter by 09:35 - assume a 60-min domestic cutoff; confirm Akasa's IXZ check-in window when booking. 1h45 of buffer before that cutoff.'",
+   "data/itinerary.json - after all cost edits, set sleep_hours to [5.5, 7.0, 5.75, 9.0], rewrite philosophy's 'Sleep averages 7.3 h/night (min 5.75)' to 'Sleep averages 6.8 h/night (min 5.5)' and its 'Cost ~Rs 40,400/person' to the recomputed per-person figure, and recompute total_cost_inr = sum of all event cost_inr.",
+   "Rebuild and validate: run python3 populate_base.py then python3 populate_events.py from the project root, confirm the reported places/routes/facts counts and that db.validate() passes with no bad place/route refs and a contiguous 5-day ledger."
+  ],
+  "verdict": "REJECT - do not ship. 3 critical, 30 major, 40 minor defects survive verification against the CURRENT files. Important caveat on the inputs: the Day 2 and Day 3 audits were run against a superseded itinerary - patch_day2_v3.py rebuilt Day 2 (Elephant Beach dropped entirely, all underwater activity moved to Bharatpur) and patch_routes.py added the hotel-anchored ROUTES_V2 legs - so I dropped roughly a dozen already-fixed findings (the REFUTED Elephant Beach trek and its Rs 800 snorkel, the rising-tide walk-back, the Rs 500-vs-Rs 1,000 second scooter slot which is now correctly a single 10am-10am slot, the Laxmanpur 17:15-after-sunset arrival, the Nautika check-in swap, and most wrong-origin route legs on Days 1-3), and I re-derived their live equivalents where the same error reappeared in new form. Two audit-flagged criticals were downgraded (the Jarawa 'criminal offence' line and the caves '1.2 km / 35 min' are unsourced claims, not plan-breaking), and one new critical was found that no audit saw: the rebuilt Day 2 now schedules the Bharatpur snorkel and jet ski (Rs 5,400) at 15:00-16:15, entirely after the 08:00-15:00 counter hours in factbase. Also newly found: the Day 2 scuba line attributes Dive Andaman's Havelock shore-dive price to DiveIndia's Neil branch, whose only published beginner rate is 4x higher. The systemic pattern is unchanged - operational numbers (fares, cutoffs, walk distances, guide fees) invented in the plan text and in ROUTES_V2 rather than derived from factbase, five of which are physically impossible against the app's own coordinates."
+ }
+}
