@@ -336,7 +336,14 @@
     // focus map
     if (r && r.polyline) {
       VMap.activeRoute(r.id);
-      const p = VMap.pointAlong(r, 0.5); if (p) VMap.focusLatLng(p[0], p[1], 2);
+      if (r.mode === "flight") {
+        const f = e.start_min != null
+          ? Math.min(Math.max((simMin - e.start_min) / (e.end_min - e.start_min), 0), 1) : 0;
+        const pose = VMap.poseAlong(r, f);
+        if (pose) VMap.fitPoints([[pose.lat, pose.lng], [places.ixz.lat, places.ixz.lng]]);
+      } else {
+        const p = VMap.pointAlong(r, 0.5); if (p) VMap.focusLatLng(p[0], p[1], 2);
+      }
     } else if (pl && pl.lat != null) {
       VMap.activePlace(pl.id); VMap.focusLatLng(pl.lat, pl.lng, 5);
     }
