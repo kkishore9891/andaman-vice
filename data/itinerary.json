@@ -1,21 +1,22 @@
 {
  "name": "final",
- "philosophy": "Havelock-first shape. It is forced by three verified facts: (1) the last Sunday nonstop leaves 13:35 and the budget makes the Rs 9,206 Akasa 10:35 the only sane return, so Sunday must be empty; (2) Baratang needs a full Port-Blair day ending ~15:00, and Munda Pahad's trek gate shuts at 15:00, so both anchor to Fri/Sat; (3) Bharatpur watersports need the 14:32 Thursday high tide and Natural Bridge needs the 08:51 Friday low. Sleep averages 7.3 h/night (min 5.75). Cost ~Rs 40,400/person - the user's worst-case line - with listed swaps down to ~Rs 37k. v2 additions on user request: the 03:30 Thu kayak is scheduled in the trip's only true-dark window (moonset 02:54, dawn 04:47) as a confirm-by-phone attempt, and the Elephant Beach forest trek + coral-garden snorkel fills Thursday morning, pushing the Neil ferry to the verified 15:00 Nautika and the jet ski to 16:35 (beach open to 18:00).",
+ "philosophy": "Havelock-first shape. It is forced by three verified facts: (1) the last Sunday nonstop leaves 13:35 and the budget makes the Rs 9,206 Akasa 10:35 the only sane return, so Sunday must be empty; (2) Baratang needs a full Port-Blair day ending ~15:00, and Munda Pahad's trek gate shuts at 15:00, so both anchor to Fri/Sat; (3) Bharatpur watersports need the 14:32 Thursday high tide and Natural Bridge needs the 08:51 Friday low. Sleep averages 7.3 h/night (min 5.75). Cost ~Rs 40,400/person - the user's worst-case line - with listed swaps down to ~Rs 37k. v2 additions on user request: the 03:30 Thu kayak is scheduled in the trip's only true-dark window (moonset 02:54, dawn 04:47) as a confirm-by-phone attempt, and the Elephant Beach forest trek + coral-garden snorkel fills Thursday morning, pushing the Neil ferry to the verified 15:00 Nautika and the jet ski to 16:35 (beach open to 18:00). v3: on the user's call, ALL underwater activity moved to Neil/Bharatpur (their own notes and the reference video both rate it above Elephant Beach) and Elephant Beach was dropped entirely. Taking the cheap 09:15 Green Ocean instead of the 15:00 Nautika buys a full Neil afternoon, so scuba, snorkel and jet ski all sit on the verified 14:32 high tide.",
  "sleep_hours": [
   5.5,
   7.0,
   5.75,
   9.75
  ],
- "total_cost_inr": 133319,
+ "total_cost_inr": 142439,
  "risks": [
   "September is peak monsoon (388 mm avg): every ferry/boat can be weather-delayed - all bookings chosen refundable where possible (Green Ocean/Makruzz tickets are not; budget assumes they sail)",
   "Ferry prices/times captured live 2026-08-19; rebook-check all four sailings when booking",
   "Bhuma homestay is cash-only and non-refundable (Rs 5,000 damage deposit)",
   "Baratang cab price is an operator-range estimate (Rs 6,500-9,000 private for 3) - lock by phone a day ahead",
   "Night kayak (Thu 03:30) MUST be phone-confirmed Wed evening - operators often refuse full-moon week; glow will be mild, sunrise-from-kayak is the sure part. Fallback: sleep to 04:15 + Kala Pathar sunrise",
-  "Elephant Beach trek is officially open but monsoon-muddy; the stream crossing needs water shoes. Fallback: Rs 1,250 pp speedboat from the jetty",
-  "v2 cost is ~Rs 44,300/person - Rs 4,300 over the worst-case line. Trims if wanted: drop kayak (-Rs 3,500), Ananya hotel swap in PB (-Rs 940), Green Ocean Friday ferry (-Rs 775)"
+  "Scuba must be phone-booked a day ahead; no flying for 18 h after a dive - Sunday's 10:35 departure is comfortably clear",
+  "Monsoon visibility on Neil is variable; if the dive is called off for sea state, the snorkel and jet ski still run and the money is refunded",
+  "COST: this version runs about Rs 47,500/person, over the Rs 40,000 worst-case line. Trims listed in the app: drop the full-moon kayak (-Rs 3,500/person), swap Hotel Atlanta for Ananya Residency (-Rs 1,563/person), take Green Ocean instead of Makruzz on Friday (-Rs 775/person), shared instead of private Baratang cab (-Rs 250/person)"
  ],
  "days": [
   {
@@ -217,8 +218,8 @@
   {
    "day": 2,
    "date": "2026-09-24",
-   "title": "GLOW RUN → SHAHEED DWEEP",
-   "theme": "Night kayak in the only dark window, Kala Pathar driftwood dawn, the giant-tree trek to Elephant Beach, then Neil by 15:45 for jet ski and sunset.",
+   "title": "GLOW RUN → NEIL UNDERWATER",
+   "theme": "Night kayak in the only dark window, Kala Pathar driftwood dawn, then the early ferry to Neil for scuba, snorkel and jet ski on the same high tide.",
    "events": [
     {
      "start": "00:00",
@@ -233,15 +234,15 @@
      "title": "Up in the dark (kayak kit)",
      "category": "prep",
      "place": "hotel-bhuma",
-     "tips": "Dry bag, quick-dry clothes, headlamp. Skip if the operator cancelled - sleep to 04:15."
+     "tips": "Dry bag, quick-dry clothes, headlamp. If the operator cancelled, sleep to 05:30 instead."
     },
     {
      "start": "03:20",
      "end": "03:30",
      "title": "Ride to the kayak launch",
      "category": "travel",
-     "place": "kayak-point",
-     "route": "ride-bhuma-kayak"
+     "route": "ride-bhuma-kayak",
+     "place": "kayak-point"
     },
     {
      "start": "03:30",
@@ -251,8 +252,8 @@
      "place": "kayak-point",
      "cost_inr": 10500,
      "cost_note": "3 x Rs 3,500 (Andaman Bliss, all taxes)",
-     "notes": "The trip's ONLY true darkness: moonset 02:54, civil dawn 04:47. Expect a mild sparkle at paddle-strokes, not the new-moon fireworks - then sunrise 05:09 from the kayaks.",
-     "tips": "Basic swimming required (age 13-45 rule). Phones in dry bag only."
+     "notes": "The trip's ONLY true darkness: moonset 02:54, civil dawn 04:47. Expect a mild sparkle at the paddle strokes, not new-moon fireworks - then sunrise 05:09 from the kayaks.",
+     "tips": "Basic swimming required (operator's age 13-45 rule). Phones in a dry bag only."
     },
     {
      "start": "05:45",
@@ -260,7 +261,7 @@
      "title": "Ride to Kala Pathar",
      "category": "travel",
      "route": "ride-bhuma-kalapathar",
-     "notes": "Golden hour is 05:45-06:45 - straight there while the light is soft."
+     "notes": "Golden hour runs to about 06:45 - go straight there while the light is soft."
     },
     {
      "start": "06:10",
@@ -268,7 +269,7 @@
      "title": "Kala Pathar — fallen trees & black rocks",
      "category": "scenic",
      "place": "kalapathar",
-     "notes": "The rustic driftwood-and-jungle shoreline from the video. Free roadside parking."
+     "notes": "The driftwood-and-jungle shoreline from the video. Free roadside parking."
     },
     {
      "start": "06:50",
@@ -279,153 +280,146 @@
     },
     {
      "start": "07:05",
-     "end": "07:55",
-     "title": "Breakfast @ Bhuma (incl.)",
+     "end": "07:40",
+     "title": "Breakfast @ Bhuma (included)",
      "category": "meal",
-     "place": "hotel-bhuma"
+     "place": "hotel-bhuma",
+     "tips": "Ask the night before for an early serving."
+    },
+    {
+     "start": "07:40",
+     "end": "07:55",
+     "title": "Pack & checkout",
+     "category": "prep",
+     "place": "hotel-bhuma",
+     "tips": "Settle the cash bill and collect the Rs 5,000 damage deposit."
     },
     {
      "start": "07:55",
      "end": "08:15",
-     "title": "Checkout — bags stored at Bhuma",
-     "category": "prep",
-     "place": "hotel-bhuma",
-     "tips": "Homestay holds luggage till the 13:00 pickup; settle the cash bill now."
+     "title": "Ride to the jetty, return scooters",
+     "category": "travel",
+     "route": "ride-hljetty-bhuma",
+     "notes": "Hand the scooters back at the jetty gate (drop-off is included in the rental)."
     },
     {
      "start": "08:15",
-     "end": "08:35",
-     "title": "Ride to the Elephant Beach trailhead",
-     "category": "travel",
-     "route": "ride-bhuma-elephant"
-    },
-    {
-     "start": "08:35",
      "end": "09:15",
-     "title": "TREK — giant trees to Elephant Beach",
-     "category": "activity",
-     "route": "walk-elephant",
-     "notes": "1.7 km forest trail past enormous buttress-root trees; stream crossing near the end.",
-     "tips": "Clogs/water shoes, mosquito repellent. Trail is flat but monsoon-muddy."
+     "title": "Green Ocean check-in",
+     "category": "prep",
+     "place": "havelock-jetty",
+     "notes": "Counter opens 60 min before sailing; a PRINTED ticket is mandatory on Green Ocean."
     },
     {
      "start": "09:15",
-     "end": "11:00",
-     "title": "ELEPHANT BEACH — snorkel the coral garden",
-     "category": "activity",
-     "place": "elephant-beach",
-     "cost_inr": 2400,
-     "cost_note": "~Rs 800 pp gear+guide on the beach (on-spot rate, estimate)",
-     "notes": "Shallow reef right off the sand - the transcript's favourite snorkel. Book water sports ON the beach, never prepaid.",
-     "tips": "No restaurants here - carry water/fruit. Lockers/showers at small extra cost."
-    },
-    {
-     "start": "11:00",
-     "end": "11:40",
-     "title": "Trek back to the trailhead",
-     "category": "travel",
-     "route": "walk-elephant"
-    },
-    {
-     "start": "11:40",
-     "end": "12:00",
-     "title": "Ride back to Govind Nagar",
-     "category": "travel",
-     "route": "ride-bhuma-elephant"
-    },
-    {
-     "start": "12:00",
-     "end": "13:00",
-     "title": "Lunch @ Something Different",
-     "category": "meal",
-     "place": "something-different",
-     "cost_inr": 1600,
-     "notes": "Opens 11:30 - beachside table, veg mains Rs 195-345."
-    },
-    {
-     "start": "13:00",
-     "end": "13:20",
-     "title": "Bags + jetty, return scooters",
-     "category": "travel",
-     "route": "ride-hljetty-bhuma",
-     "cost_inr": 500,
-     "cost_note": "possible 2nd-slot charge (10am-10am rental windows)",
-     "tips": "Hand scooters back with the agreed fuel level."
-    },
-    {
-     "start": "13:20",
-     "end": "14:15",
-     "title": "Nautika check-in (45 min)",
-     "category": "prep",
-     "place": "havelock-jetty"
-    },
-    {
-     "start": "14:15",
-     "end": "15:00",
-     "title": "Jetty wait",
-     "category": "buffer",
-     "place": "havelock-jetty"
-    },
-    {
-     "start": "15:00",
-     "end": "15:45",
-     "title": "SAIL — Nautika-Pro to Neil",
+     "end": "10:30",
+     "title": "SAIL — Green Ocean 1 to Neil",
      "category": "travel",
      "route": "ferry-havelock-neil",
-     "cost_inr": 4800,
-     "cost_note": "3 x Rs 1,600 Luxury (verified live)"
+     "cost_inr": 4200,
+     "cost_note": "3 x Rs 1,400 all-in (Rs 1,050 + Rs 50 PMB + Rs 300 fuel)",
+     "notes": "Cheapest of the six verified Thursday sailings, and the early slot is what buys the full Neil afternoon."
     },
     {
-     "start": "15:45",
-     "end": "16:05",
-     "title": "Neil scooters @ jetty",
+     "start": "10:30",
+     "end": "10:50",
+     "title": "Neil scooters at the jetty",
      "category": "travel",
      "place": "neil-jetty",
      "cost_inr": 1000,
      "cost_note": "2 x ~Rs 500/day",
-     "notes": "Neil On Wheels, ph +91 94742 68205 - book ahead."
+     "notes": "Neil On Wheels, Neil Kendra (5.0-rated), ph +91 94742 68205 - book ahead."
     },
     {
-     "start": "16:05",
-     "end": "16:20",
-     "title": "Ride via the pump — flash check-in @ Blue Lagoon",
+     "start": "10:50",
+     "end": "11:10",
+     "title": "Ride to Blue Lagoon via the pump",
      "category": "travel",
      "route": "ride-neiljetty-bluelagoon",
      "cost_inr": 4118,
-     "cost_note": "stay Rs 3,968 (breakfast incl., free cancel) + Rs 150 fuel",
-     "notes": "Top up at IndianOil Neil Kendra (closes ~18:00) on the way; drop bags, straight back out."
+     "cost_note": "stay Rs 3,968 (breakfast incl., free cancellation) + Rs 150 fuel",
+     "notes": "Top up at IndianOil Neil Kendra on the way - it is the island's only pump and shuts around 18:00."
     },
     {
-     "start": "16:20",
-     "end": "16:35",
+     "start": "11:10",
+     "end": "11:30",
+     "title": "Check in & drop bags",
+     "category": "prep",
+     "place": "hotel-bluelagoon",
+     "notes": "8.6/10, on the Sitapur side - tomorrow's sunrise beach is a 3-minute ride away."
+    },
+    {
+     "start": "11:30",
+     "end": "12:30",
+     "title": "Veg thali lunch @ Pure Veg Restaurant",
+     "category": "meal",
+     "place": "pure-veg-neil",
+     "route": "ride-bluelagoon-pureveg",
+     "cost_inr": 720,
+     "cost_note": "3 x Rs 240 thali",
+     "notes": "Neil's best-rated veg kitchen (4.8). Eat light - you are diving in an hour."
+    },
+    {
+     "start": "12:30",
+     "end": "12:45",
      "title": "Ride to Bharatpur",
      "category": "travel",
      "route": "ride-bluelagoon-bharatpur"
     },
     {
-     "start": "16:35",
-     "end": "17:05",
-     "title": "JET SKI @ Bharatpur",
+     "start": "12:45",
+     "end": "15:00",
+     "title": "SCUBA DIVE @ Bharatpur",
+     "category": "activity",
+     "place": "bharatpur",
+     "cost_inr": 10500,
+     "cost_note": "3 x Rs 3,500 shore try-dive (DiveIndia's Neil branch sits 50 m from the jetty)",
+     "notes": "Briefing, kit-up and a guided shore dive on Neil's coral garden, timed to the 14:32 high tide. Non-swimmers can dive - the instructor handles everything but breathing.",
+     "tips": "Book by phone a day ahead. No alcohol the night before and no flying for 18 h after - Sunday's 10:35 flight is well clear."
+    },
+    {
+     "start": "15:00",
+     "end": "15:45",
+     "title": "SNORKEL the coral garden",
+     "category": "activity",
+     "place": "bharatpur",
+     "cost_inr": 3000,
+     "cost_note": "~Rs 1,000 pp guided boat snorkel, booked on the beach",
+     "notes": "The transcript's best snorkel in the Andamans - better than Elephant Beach or North Bay - and the tide is still high.",
+     "tips": "Book at the beach counter, never prepaid online."
+    },
+    {
+     "start": "15:45",
+     "end": "16:15",
+     "title": "JET SKI runs",
      "category": "activity",
      "place": "bharatpur",
      "cost_inr": 2400,
      "cost_note": "3 x Rs 800 (10-15 min each; verified range 800-1,200)",
-     "notes": "Beach open till 18:00; tide still ~1.5 m - plenty of water in the lagoon."
+     "notes": "Glassy high-tide water over the lagoon."
     },
     {
-     "start": "17:05",
-     "end": "17:15",
-     "title": "Hop to Laxmanpur",
+     "start": "16:15",
+     "end": "16:40",
+     "title": "Dry off & beach time",
+     "category": "buffer",
+     "place": "bharatpur",
+     "notes": "Beach is open till 18:00, entry free."
+    },
+    {
+     "start": "16:40",
+     "end": "16:55",
+     "title": "Ride to Laxmanpur Beach 1",
      "category": "travel",
      "route": "ride-bharatpur-laxmanpur"
     },
     {
-     "start": "17:15",
+     "start": "16:55",
      "end": "17:50",
      "title": "SUNSET @ Laxmanpur Beach 1",
      "category": "scenic",
      "place": "laxmanpur",
-     "notes": "Sunset 17:14 - Neil's sunset stage."
+     "notes": "Sunset 17:14 - Neil's sunset stage. Dead-coral shore, so watch rather than swim."
     },
     {
      "start": "17:50",
@@ -434,7 +428,7 @@
      "category": "meal",
      "place": "pure-veg-neil",
      "cost_inr": 800,
-     "cost_note": "thali Rs 240 pp + extras"
+     "cost_note": "thali Rs 240 pp plus extras"
     },
     {
      "start": "19:00",
@@ -449,7 +443,7 @@
      "title": "Wind down",
      "category": "buffer",
      "place": "hotel-bluelagoon",
-     "tips": "Tomorrow: 04:30 wake for Sitapur sunrise, then Natural Bridge at the 08:51 low tide."
+     "tips": "Tomorrow: 04:30 up for the Sitapur sunrise, then Natural Bridge at the 08:51 low tide."
     },
     {
      "start": "21:30",
