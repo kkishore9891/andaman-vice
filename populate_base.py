@@ -91,11 +91,11 @@ R = [
  # Chennai is 12° of longitude off-map, so the drawn line is the final APPROACH
  # corridor (the plane traces it); the full 1,355 km sits in the stats.
  ("fly-maa-ixz", "maa", "ixz", "flight", 1355, 135,
-  [[12.60, 92.36], [12.30, 92.47], [11.98, 92.60], [11.75, 92.68], [11.641656, 92.730243]],
+  [[12.35, 92.52], [12.10, 92.56], [11.90, 92.61], [11.75, 92.66], [11.641656, 92.730243]],
   "Akasa QP 1145 (Boeing 737 MAX 8), 07:40→09:55, 2h15m over the Bay of Bengal. "
   "The line on the map is the final approach into Port Blair from the west — the full 1,355 km crossing starts far off-map at Chennai."),
  ("fly-ixz-maa", "ixz", "maa", "flight", 1355, 130,
-  [[11.641656, 92.730243], [11.75, 92.68], [11.98, 92.60], [12.30, 92.47], [12.60, 92.36]],
+  [[11.641656, 92.730243], [11.75, 92.66], [11.90, 92.61], [12.10, 92.56], [12.35, 92.52]],
   "Return over the Bay of Bengal to Chennai. The map shows the departure corridor heading west-north-west; Chennai lies 1,355 km beyond the frame."),
  ("cab-ixz-phoenix", "ixz", "phoenix-bay", "cab", 3.4, 8, [[11.641656, 92.730243], [11.658, 92.729], [11.6726921, 92.7345295]],
   "Via VIP Rd."),
