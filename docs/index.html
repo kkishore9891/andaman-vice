@@ -356,10 +356,11 @@ const VMap = (() => {
 
   function apply() {
     svg.setAttribute("viewBox", `${vb.x} ${vb.y} ${vb.w} ${vb.h}`);
-    // sqrt scaling: zooming IN makes labels/strokes grow on screen (instead of
-    // staying fixed), zooming OUT keeps them from swallowing the map.
+    // Labels/strokes grow on screen when zooming in, but capped at 2x
+    // (and never below 0.75x when zoomed out) so nothing balloons.
     const s = vb.w / W;
-    const k = Math.sqrt(s);
+    const f = Math.max(0.75, Math.min(2, 1 / Math.sqrt(s)));
+    const k = f * s;
     svg.style.setProperty("--sw", k);
     for (const t of svg.querySelectorAll(".mk circle"))
       t.setAttribute("r", 8 * k + "");
@@ -411,12 +412,48 @@ const VMap = (() => {
       m.classList.toggle("active", m.dataset.id === id);
   }
 
-  function you(lat, lng) {
+  function you(lat, lng, headingDeg, mode) {
     gYou.innerHTML = "";
     if (lat == null) return;
     const [x, y] = proj(lat, lng);
-    el("circle", { class: "you-ring", cx: x, cy: y, r: 6 }, gYou);
-    el("circle", { class: "you", cx: x, cy: y, r: 5.5 }, gYou);
+    if (mode === "flight") {
+      const s = vb.w / W;
+      const k = Math.max(0.75, Math.min(2, 1 / Math.sqrt(s))) * s;
+      const t = el("text", {
+        class: "you-plane", x, y,
+        "font-size": 26 * k,
+        "text-anchor": "middle", "dominant-baseline": "central",
+        transform: `rotate(${(headingDeg || 90) - 45} ${x} ${y})`,
+      }, gYou);
+      t.textContent = "✈";
+    } else {
+      el("circle", { class: "you-ring", cx: x, cy: y, r: 6 }, gYou);
+      el("circle", { class: "you", cx: x, cy: y, r: 5.5 }, gYou);
+    }
+    apply();
+  }
+
+  /* position + true bearing along a route at fraction t (for vehicle glyphs) */
+  function poseAlong(r, t) {
+    const p = pointAlong(r, Math.min(t, 0.999));
+    const q = pointAlong(r, Math.min(t + 0.01, 1));
+    if (!p || !q) return null;
+    const dLng = (q[1] - p[1]) * Math.cos(p[0] * Math.PI / 180);
+    const dLat = q[0] - p[0];
+    return { lat: p[0], lng: p[1], heading: (Math.atan2(dLng, dLat) * 180 / Math.PI + 360) % 360 };
+  }
+
+  /* fit viewBox to show all given [lat,lng] points with padding */
+  function fitPoints(pts, padFrac = 0.18) {
+    const xy = pts.map(p => proj(p[0], p[1]));
+    let x0 = Math.min(...xy.map(p => p[0])), x1 = Math.max(...xy.map(p => p[0]));
+    let y0 = Math.min(...xy.map(p => p[1])), y1 = Math.max(...xy.map(p => p[1]));
+    const pw = Math.max((x1 - x0), 40) * padFrac, ph = Math.max((y1 - y0), 40) * padFrac;
+    x0 -= pw; x1 += pw; y0 -= ph; y1 += ph;
+    let w = x1 - x0, h = y1 - y0;
+    const aspect = W / H;
+    if (w / h > aspect) h = w / aspect; else w = h * aspect;
+    vb = { x: (x0 + x1 - w) / 2, y: (y0 + y1 - h) / 2, w, h };
     apply();
   }
 
@@ -464,6 +501,7 @@ const VMap = (() => {
       drag = { x: e.clientX, y: e.clientY, vb: { ...vb } };
     });
     svg.addEventListener("pointermove", (e) => {
+      if (pinch) return;          // two fingers = zoom only, never pan-fight
       if (!drag) return;
       const r = svg.getBoundingClientRect();
       const sc = vb.w / r.width;
@@ -629,32 +667,25 @@ const VMap = (() => {
       const r = lf.route_id && routesById[lf.route_id];
       if (r && r.polyline) {
         const f = (simMin - lf.start_min) / (lf.end_min - lf.start_min);
-        const p = VMap.pointAlong(r, f);
-        if (p) VMap.you(p[0], p[1]);
+        if (r.mode === "flight") {
+          // plane glyph traces the projected flight line, nose on true bearing
+          const pose = VMap.poseAlong(r, f);
+          if (pose) {
+            VMap.you(pose.lat, pose.lng, pose.heading, "flight");
+            const ixz = places.ixz;   // keep plane + the islands in frame
+            VMap.fitPoints([[pose.lat, pose.lng], [ixz.lat, ixz.lng]]);
+          }
+        } else {
+          const p = VMap.pointAlong(r, f);
+          if (p) VMap.you(p[0], p[1]);
+        }
         VMap.activeRoute(lf.route_id); VMap.activePlace(null);
-        plane(r, f, lf);
       } else {
         const pl = lf.place_id && places[lf.place_id];
         if (pl && pl.lat != null) VMap.you(pl.lat, pl.lng);
         VMap.activeRoute(null); VMap.activePlace(lf.place_id);
-        plane(null);
       }
     }
-  }
-
-  /* flight overlay: plane emoji sweeping the screen for air legs (Chennai off-map) */
-  function plane(route, f, lf) {
-    const lay = $("#flightlayer");
-    if (!route || route.mode !== "flight") { lay.innerHTML = ""; return; }
-    let p = lay.querySelector(".plane");
-    if (!p) { p = document.createElement("div"); p.className = "plane"; p.textContent = "✈️"; lay.appendChild(p); }
-    const wr = lay.getBoundingClientRect();
-    const east = lf.title.toLowerCase().includes("chennai") && lf.end_min < 3 * 1440; // outbound
-    const x0 = -30, x1 = wr.width * 0.62, y0 = wr.height * 0.32, y1 = wr.height * 0.45;
-    const t = east ? f : 1 - f;
-    p.style.left = (x0 + (x1 - x0) * t) + "px";
-    p.style.top = (y0 + (y1 - y0) * t) + "px";
-    p.style.transform = east ? "" : "scaleX(-1)";
   }
 
   /* ---------- simulation ---------- */
@@ -712,9 +743,19 @@ const VMap = (() => {
     container.appendChild(box);
   }
 
+  /* events at a place: direct place_id matches + travel legs touching it */
+  function placeEvents(id) {
+    return leaves.filter(l => l.place_id === id ||
+      (l.route_id && routesById[l.route_id] &&
+       (routesById[l.route_id].from_place === id || routesById[l.route_id].to_place === id)));
+  }
+
   /* ---------- place card (map pin click) ---------- */
   function openPlace(id) {
     const pl = places[id]; if (!pl) return;
+    const here0 = placeEvents(id);
+    if (here0.length === 1) { openBrief(here0[0].id); return; }  // jump straight in
+    $("#brief-nav").style.visibility = "hidden";                 // no stale ◀ ▶
     brief.classList.remove("hidden");
     const cr = $("#brief-crumbs"); cr.innerHTML = "";
     const s = document.createElement("span");
@@ -731,7 +772,7 @@ const VMap = (() => {
     }
     if (pl.blurb) { const p = document.createElement("p"); p.textContent = pl.blurb; b.appendChild(p); }
     const wb = watchBtn(pl.source_url); if (wb) b.appendChild(wb);
-    const here = leaves.filter(l => l.place_id === id);
+    const here = placeEvents(id);
     const kd = document.createElement("div"); kd.className = "kids";
     if (here.length) {
       const hh = document.createElement("p"); hh.className = "mut";

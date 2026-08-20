@@ -120,32 +120,25 @@
       const r = lf.route_id && routesById[lf.route_id];
       if (r && r.polyline) {
         const f = (simMin - lf.start_min) / (lf.end_min - lf.start_min);
-        const p = VMap.pointAlong(r, f);
-        if (p) VMap.you(p[0], p[1]);
+        if (r.mode === "flight") {
+          // plane glyph traces the projected flight line, nose on true bearing
+          const pose = VMap.poseAlong(r, f);
+          if (pose) {
+            VMap.you(pose.lat, pose.lng, pose.heading, "flight");
+            const ixz = places.ixz;   // keep plane + the islands in frame
+            VMap.fitPoints([[pose.lat, pose.lng], [ixz.lat, ixz.lng]]);
+          }
+        } else {
+          const p = VMap.pointAlong(r, f);
+          if (p) VMap.you(p[0], p[1]);
+        }
         VMap.activeRoute(lf.route_id); VMap.activePlace(null);
-        plane(r, f, lf);
       } else {
         const pl = lf.place_id && places[lf.place_id];
         if (pl && pl.lat != null) VMap.you(pl.lat, pl.lng);
         VMap.activeRoute(null); VMap.activePlace(lf.place_id);
-        plane(null);
       }
     }
-  }
-
-  /* flight overlay: plane emoji sweeping the screen for air legs (Chennai off-map) */
-  function plane(route, f, lf) {
-    const lay = $("#flightlayer");
-    if (!route || route.mode !== "flight") { lay.innerHTML = ""; return; }
-    let p = lay.querySelector(".plane");
-    if (!p) { p = document.createElement("div"); p.className = "plane"; p.textContent = "✈️"; lay.appendChild(p); }
-    const wr = lay.getBoundingClientRect();
-    const east = lf.title.toLowerCase().includes("chennai") && lf.end_min < 3 * 1440; // outbound
-    const x0 = -30, x1 = wr.width * 0.62, y0 = wr.height * 0.32, y1 = wr.height * 0.45;
-    const t = east ? f : 1 - f;
-    p.style.left = (x0 + (x1 - x0) * t) + "px";
-    p.style.top = (y0 + (y1 - y0) * t) + "px";
-    p.style.transform = east ? "" : "scaleX(-1)";
   }
 
   /* ---------- simulation ---------- */
@@ -203,9 +196,19 @@
     container.appendChild(box);
   }
 
+  /* events at a place: direct place_id matches + travel legs touching it */
+  function placeEvents(id) {
+    return leaves.filter(l => l.place_id === id ||
+      (l.route_id && routesById[l.route_id] &&
+       (routesById[l.route_id].from_place === id || routesById[l.route_id].to_place === id)));
+  }
+
   /* ---------- place card (map pin click) ---------- */
   function openPlace(id) {
     const pl = places[id]; if (!pl) return;
+    const here0 = placeEvents(id);
+    if (here0.length === 1) { openBrief(here0[0].id); return; }  // jump straight in
+    $("#brief-nav").style.visibility = "hidden";                 // no stale ◀ ▶
     brief.classList.remove("hidden");
     const cr = $("#brief-crumbs"); cr.innerHTML = "";
     const s = document.createElement("span");
@@ -222,7 +225,7 @@
     }
     if (pl.blurb) { const p = document.createElement("p"); p.textContent = pl.blurb; b.appendChild(p); }
     const wb = watchBtn(pl.source_url); if (wb) b.appendChild(wb);
-    const here = leaves.filter(l => l.place_id === id);
+    const here = placeEvents(id);
     const kd = document.createElement("div"); kd.className = "kids";
     if (here.length) {
       const hh = document.createElement("p"); hh.className = "mut";

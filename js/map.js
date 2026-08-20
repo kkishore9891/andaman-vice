@@ -52,10 +52,11 @@ const VMap = (() => {
 
   function apply() {
     svg.setAttribute("viewBox", `${vb.x} ${vb.y} ${vb.w} ${vb.h}`);
-    // sqrt scaling: zooming IN makes labels/strokes grow on screen (instead of
-    // staying fixed), zooming OUT keeps them from swallowing the map.
+    // Labels/strokes grow on screen when zooming in, but capped at 2x
+    // (and never below 0.75x when zoomed out) so nothing balloons.
     const s = vb.w / W;
-    const k = Math.sqrt(s);
+    const f = Math.max(0.75, Math.min(2, 1 / Math.sqrt(s)));
+    const k = f * s;
     svg.style.setProperty("--sw", k);
     for (const t of svg.querySelectorAll(".mk circle"))
       t.setAttribute("r", 8 * k + "");
@@ -107,12 +108,48 @@ const VMap = (() => {
       m.classList.toggle("active", m.dataset.id === id);
   }
 
-  function you(lat, lng) {
+  function you(lat, lng, headingDeg, mode) {
     gYou.innerHTML = "";
     if (lat == null) return;
     const [x, y] = proj(lat, lng);
-    el("circle", { class: "you-ring", cx: x, cy: y, r: 6 }, gYou);
-    el("circle", { class: "you", cx: x, cy: y, r: 5.5 }, gYou);
+    if (mode === "flight") {
+      const s = vb.w / W;
+      const k = Math.max(0.75, Math.min(2, 1 / Math.sqrt(s))) * s;
+      const t = el("text", {
+        class: "you-plane", x, y,
+        "font-size": 26 * k,
+        "text-anchor": "middle", "dominant-baseline": "central",
+        transform: `rotate(${(headingDeg || 90) - 45} ${x} ${y})`,
+      }, gYou);
+      t.textContent = "✈";
+    } else {
+      el("circle", { class: "you-ring", cx: x, cy: y, r: 6 }, gYou);
+      el("circle", { class: "you", cx: x, cy: y, r: 5.5 }, gYou);
+    }
+    apply();
+  }
+
+  /* position + true bearing along a route at fraction t (for vehicle glyphs) */
+  function poseAlong(r, t) {
+    const p = pointAlong(r, Math.min(t, 0.999));
+    const q = pointAlong(r, Math.min(t + 0.01, 1));
+    if (!p || !q) return null;
+    const dLng = (q[1] - p[1]) * Math.cos(p[0] * Math.PI / 180);
+    const dLat = q[0] - p[0];
+    return { lat: p[0], lng: p[1], heading: (Math.atan2(dLng, dLat) * 180 / Math.PI + 360) % 360 };
+  }
+
+  /* fit viewBox to show all given [lat,lng] points with padding */
+  function fitPoints(pts, padFrac = 0.18) {
+    const xy = pts.map(p => proj(p[0], p[1]));
+    let x0 = Math.min(...xy.map(p => p[0])), x1 = Math.max(...xy.map(p => p[0]));
+    let y0 = Math.min(...xy.map(p => p[1])), y1 = Math.max(...xy.map(p => p[1]));
+    const pw = Math.max((x1 - x0), 40) * padFrac, ph = Math.max((y1 - y0), 40) * padFrac;
+    x0 -= pw; x1 += pw; y0 -= ph; y1 += ph;
+    let w = x1 - x0, h = y1 - y0;
+    const aspect = W / H;
+    if (w / h > aspect) h = w / aspect; else w = h * aspect;
+    vb = { x: (x0 + x1 - w) / 2, y: (y0 + y1 - h) / 2, w, h };
     apply();
   }
 
@@ -160,6 +197,7 @@ const VMap = (() => {
       drag = { x: e.clientX, y: e.clientY, vb: { ...vb } };
     });
     svg.addEventListener("pointermove", (e) => {
+      if (pinch) return;          // two fingers = zoom only, never pan-fight
       if (!drag) return;
       const r = svg.getBoundingClientRect();
       const sc = vb.w / r.width;
