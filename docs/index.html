@@ -366,23 +366,27 @@ const VMap = (() => {
 
   function apply() {
     svg.setAttribute("viewBox", `${vb.x} ${vb.y} ${vb.w} ${vb.h}`);
-    // Size everything in SCREEN PIXELS, not map units: one map unit is
-    // vb.w/clientWidth px, so a T-px target needs T * unitsPerPx user units.
-    // Zooming in still enlarges slightly (capped) without ever ballooning.
-    const cw = svg.clientWidth || svg.getBoundingClientRect().width || 1000;
-    const unitsPerPx = vb.w / cw;
+    // Size everything in SCREEN PIXELS. The SVG uses preserveAspectRatio="meet",
+    // so the real on-screen scale is min(cw/vb.w, ch/vb.h) — NOT cw/vb.w. The map
+    // is tall+portrait, so on a wide short window the height is what binds; using
+    // the width alone made text ~5x too small on desktop.
+    const r = svg.getBoundingClientRect();
+    const cw = svg.clientWidth || r.width || 1000;
+    const ch = svg.clientHeight || r.height || 1000;
+    const pxPerUnit = Math.min(cw / vb.w, ch / vb.h) || 1;
+    const unitsPerPx = 1 / pxPerUnit;
     const grow = Math.max(1, Math.min(1.6, Math.pow(W / vb.w, 0.22)));
     const k = unitsPerPx * grow;
     svg.style.setProperty("--sw", k);
     for (const t of svg.querySelectorAll(".mk circle"))
-      t.setAttribute("r", 9 * k + "");
+      t.setAttribute("r", 11 * k + "");
     for (const t of svg.querySelectorAll(".mk text"))
-      t.setAttribute("font-size", 10 * k + "");
+      t.setAttribute("font-size", 12 * k + "");
     for (const t of svg.querySelectorAll(".mklabel")) {
-      t.setAttribute("font-size", 13 * k + "");
-      t.setAttribute("stroke-width", 3.2 * k + "");
+      t.setAttribute("font-size", 16 * k + "");
+      t.setAttribute("stroke-width", 3.6 * k + "");
       const c = t.getAttribute("data-cx");
-      if (c !== null) t.setAttribute("x", (+c + 13 * k) + "");
+      if (c !== null) t.setAttribute("x", (+c + 15 * k) + "");
     }
     for (const t of svg.querySelectorAll(".you"))
       t.setAttribute("r", 6 * k + "");
