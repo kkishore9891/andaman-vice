@@ -7,7 +7,7 @@
   5.75,
   9.75
  ],
- "total_cost_inr": 139939,
+ "total_cost_inr": 138139,
  "risks": [
   "September is peak monsoon (388 mm avg): every ferry/boat can be weather-delayed - all bookings chosen refundable where possible (Green Ocean/Makruzz tickets are not; budget assumes they sail)",
   "Ferry prices/times captured live 2026-08-19; rebook-check all four sailings when booking",
@@ -325,13 +325,12 @@
     {
      "start": "10:15",
      "end": "11:30",
-     "title": "SNORKEL at Govind Nagar",
-     "category": "activity",
+     "title": "Beach time at Govind Nagar",
+     "category": "buffer",
      "place": "govind-nagar",
-     "cost_inr": 1800,
-     "cost_note": "~Rs 600 pp gear hire on the beach, ESTIMATE — being confirmed",
-     "notes": "Straight back in off the same beach with a mask once the tanks are off. Shallow coral close to shore, and no boat transfer to pay for.",
-     "tips": "Rent gear from the dive shop you just dived with - they will usually throw it in cheap."
+     "cost_inr": 0,
+     "notes": "Swim and dry off on the same beach after the dive. Snorkelling was dropped on your call — the scuba covers that reef, and the dive itself is time spent looking at it.",
+     "tips": "If anyone still fancies a mask, the dive shop will usually lend gear cheaply — ask when you book the dive."
     },
     {
      "start": "11:30",
