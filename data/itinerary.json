@@ -7,7 +7,7 @@
   5.75,
   9.75
  ],
- "total_cost_inr": 143689,
+ "total_cost_inr": 142489,
  "risks": [
   "September is peak monsoon (388 mm avg): every ferry/boat can be weather-delayed - all bookings chosen refundable where possible (Green Ocean/Makruzz tickets are not; budget assumes they sail)",
   "Ferry prices/times captured live 2026-08-19; rebook-check all four sailings when booking",
@@ -23,7 +23,7 @@
    "day": 1,
    "date": "2026-09-23",
    "title": "WHEELS UP → SWARAJ DWEEP",
-   "theme": "Chennai dawn flight, the fast catamaran to Swaraj Dweep, then a full afternoon at the quiet end of Asia's most-photographed beach.",
+   "theme": "Chennai dawn flight, the catamaran to Swaraj Dweep, and an unhurried first evening at Asia's most-photographed beach.",
    "events": [
     {
      "start": "03:45",
@@ -31,7 +31,7 @@
      "title": "Wake up & roll out (Chennai)",
      "category": "prep",
      "place": "maa",
-     "notes": "Bags packed the night before. Keep each check-in bag at or under 15 kg (Akasa's free allowance; the Nautika ferry caps luggage at 15 kg too).",
+     "notes": "Bags packed the night before. Keep each check-in bag at or under 15 kg (Akasa's free allowance; the ferries cap luggage at 15-20 kg too).",
      "tips": "Carry printed ferry tickets and DL photocopies for the scooter rentals."
     },
     {
@@ -74,7 +74,7 @@
      "title": "Land IXZ — bags & exit",
      "category": "prep",
      "place": "ixz",
-     "notes": "Tight-ish turnaround today: the ferry check-in closes at 11:45, so move briskly."
+     "notes": "No rush today: the ferry counter does not close until 13:00."
     },
     {
      "start": "10:35",
@@ -88,48 +88,47 @@
     },
     {
      "start": "10:50",
-     "end": "11:30",
-     "title": "Quick veg lunch @ Icy Spicy",
+     "end": "11:45",
+     "title": "Veg lunch @ Icy Spicy",
      "category": "meal",
      "place": "icy-spicy",
      "cost_inr": 900,
      "cost_note": "ghee dosa Rs 149, mains Rs 250-350 (menu prices, 19 Aug)",
-     "notes": "Port Blair's veg anchor, 4.2 stars from 3,491 reviews. Order dosas - they arrive fastest.",
-     "tips": "Ask for the bill when the food lands; the ferry counter closes at 11:45."
+     "notes": "Port Blair's veg anchor, 4.2 stars from 3,491 reviews. A proper sit-down meal - the afternoon is unhurried."
     },
     {
-     "start": "11:30",
-     "end": "11:45",
+     "start": "11:45",
+     "end": "12:00",
      "title": "Cab to the ferry jetty",
      "category": "travel",
      "route": "cab-icyspicy-phoenix",
      "cost_inr": 200,
      "cost_note": "short auto/taxi hop, ESTIMATE — no verified tariff",
-     "tips": "CONFIRM THE JETTY ON YOUR TICKET. Private catamarans may sail from Haddo rather than Phoenix Bay — the two are adjacent parts of the same harbour but not the same gate."
+     "tips": "CONFIRM THE JETTY ON YOUR TICKET. Private catamarans may sail from Haddo rather than Phoenix Bay — adjacent parts of the same harbour, but not the same gate."
     },
     {
-     "start": "11:45",
-     "end": "12:30",
-     "title": "Nautika check-in",
+     "start": "12:00",
+     "end": "13:15",
+     "title": "Green Ocean check-in",
      "category": "prep",
      "place": "phoenix-bay",
-     "notes": "Nautika asks you to reach 45 minutes before departure; boarding shuts 15 minutes prior.",
-     "tips": "Luggage is capped at 15 kg per person, with excess at Rs 100/kg."
+     "notes": "The counter opens 60 minutes before sailing and shuts 15 minutes prior. A PRINTED ticket is mandatory on Green Ocean.",
+     "tips": "Print the tickets in Chennai — do not rely on finding a printer here."
     },
     {
-     "start": "12:30",
-     "end": "14:00",
-     "title": "SAIL — Nautika-Pro to Havelock",
+     "start": "13:15",
+     "end": "15:30",
+     "title": "SAIL — Green Ocean 1 to Havelock",
      "category": "travel",
      "route": "ferry-pb-havelock",
-     "cost_inr": 5400,
-     "cost_note": "3 x Rs 1,800 Luxury (live operator search, 19 Aug)",
-     "notes": "Chosen over the cheaper 13:15 Green Ocean because arriving 14:00 instead of 15:30 is what makes Neil's Cove and the Radhanagar sunset both possible today.",
+     "cost_inr": 4200,
+     "cost_note": "3 x Rs 1,400 all-in (Rs 1,050 + Rs 50 PMB + Rs 300 fuel)",
+     "notes": "The cheapest verified sailing of the day.",
      "tips": "Take a motion-sickness tablet 30 minutes before if the sea looks up."
     },
     {
-     "start": "14:00",
-     "end": "14:30",
+     "start": "15:30",
+     "end": "16:00",
      "title": "Scooters at the jetty, ride out",
      "category": "travel",
      "route": "ride-hljetty-bhuma",
@@ -139,8 +138,8 @@
      "tips": "Photograph both scooters at handover."
     },
     {
-     "start": "14:30",
-     "end": "14:50",
+     "start": "16:00",
+     "end": "16:20",
      "title": "Check in @ Bhuma Homestay",
      "category": "prep",
      "place": "hotel-bhuma",
@@ -149,8 +148,8 @@
      "notes": "9.5/10 from 226 reviews, 50 m from Govind Nagar Beach. Rs 5,000 refundable damage deposit."
     },
     {
-     "start": "14:50",
-     "end": "15:20",
+     "start": "16:20",
+     "end": "16:50",
      "title": "Ride to Radhanagar (fuel en route)",
      "category": "travel",
      "route": "ride-bhuma-radhanagar",
@@ -160,38 +159,13 @@
      "tips": "Scooter parking at the beach entrance runs Rs 20-30."
     },
     {
-     "start": "15:20",
-     "end": "15:40",
-     "title": "Walk to Neil's Cove",
-     "category": "travel",
-     "route": "walk-radhanagar-cove",
-     "notes": "About 1.2 km along the sand to the right of the main beach.",
-     "tips": "Barefoot is fine on sand; carry water."
-    },
-    {
-     "start": "15:40",
-     "end": "16:50",
-     "title": "Neil's Cove — the quiet lagoon",
-     "category": "scenic",
-     "place": "neils-cove",
-     "notes": "The crowd stays behind at the main beach. Swim, float, and have the water largely to yourselves.",
-     "tips": "Exact position is approximate — there is no Google Maps listing for the cove; just keep the sea on your left walking north-west."
-    },
-    {
      "start": "16:50",
-     "end": "17:10",
-     "title": "Walk back to Radhanagar",
-     "category": "travel",
-     "route": "walk-radhanagar-cove"
-    },
-    {
-     "start": "17:10",
      "end": "17:45",
-     "title": "SUNSET @ Radhanagar Beach",
+     "title": "RADHANAGAR BEACH — swim & sunset",
      "category": "scenic",
      "place": "radhanagar",
-     "notes": "Sunset is 17:15 (verified). Radhanagar holds Blue Flag certification; the beach is patrolled and has changing rooms.",
-     "tips": "Stay for the afterglow — the sky keeps working for about 20 minutes after the sun goes."
+     "notes": "Sunset is 17:15 (verified). Blue Flag certified, with lifeguards, changing rooms and clean toilets. Get in the water first, then dry off for the sky.",
+     "tips": "Optional if you feel like walking: Neil's Cove is about 1.2 km along the sand to the right — roughly 20 minutes each way, so only worth it if you skip the swim."
     },
     {
      "start": "17:45",
