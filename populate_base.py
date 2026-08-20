@@ -159,9 +159,13 @@ def main():
     c = db.conn()
     c.execute("DELETE FROM places"); c.execute("DELETE FROM routes"); c.execute("DELETE FROM facts")
     for (pid, name, isl, lat, lng, kind, photo, blurb) in P:
-        # fallback Maps link by coordinates; canonical listing URLs applied below
-        murl = (f"https://www.google.com/maps/search/?api=1&query={lat},{lng}"
-                if lat is not None else None)
+        # Fallback = NAME search (opens the business listing with menu/photos/
+        # reviews), never a bare coordinate pin. Canonical listing URLs below win.
+        import urllib.parse as _u
+        area = {"havelock": " Havelock Swaraj Dweep", "neil": " Neil Island Shaheed Dweep",
+                "south_andaman": " Port Blair", "baratang": " Baratang"}.get(isl, "")
+        murl = ("https://www.google.com/maps/search/?api=1&query="
+                + _u.quote_plus(name + area)) if lat is not None else None
         c.execute("INSERT INTO places (id,name,island,lat,lng,kind,photo,blurb,source_url,maps_url) "
                   "VALUES (?,?,?,?,?,?,?,?,?,?)",
                   (pid, name, isl, lat, lng, kind, photo, blurb, None, murl))
@@ -215,6 +219,21 @@ def main():
     }
     for pid, t in yt_links.items():
         c.execute("UPDATE places SET source_url=? WHERE id=?", (f"{YT}{t}s", pid))
+    # Canonical Google Maps LISTING urls (opened + name-verified in the browser).
+    # These open the place card itself - menu, photos, hours, reviews - not a pin.
+    G = "https://www.google.com/maps/place/"
+    canonical = {
+      "icy-spicy": G + "Icy+Spicy+-+Pure+Veg/@11.6587633,92.7313498,1563m/data=!3m2!1e3!4b1!4m6!3m5!1s0x308895a508bcbd15:0xc50f513f8d030e5d!8m2!3d11.6587633!4d92.7313498!16s%2Fg%2F11r8s7820",
+      "annapurna": G + "Annapurna+Cafeteria+Pure+Veg/@11.6671159,92.7423254,1563m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3088950b9112bb31:0x9abee36ad549492e!8m2!3d11.6671159!4d92.7423254!16s%2Fg%2F1tdr5mfx",
+      "something-different": G + "Something+Different+-+A+Beachside+Cafe/@12.035727,92.989741,1561m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3088d33db6b96377:0x838400de2bff7381!8m2!3d12.035727!4d92.989741!16s%2Fg%2F11cnhpr3t_",
+      "pure-veg-neil": G + "PURE+VEG+RESTAURANT/@11.8414615,93.0197503,1562m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3088d97bd787643f:0x55211e18a164b49!8m2!3d11.8414615!4d93.0197503!16s%2Fg%2F11pkht8c0z",
+      "hl-pump": G + "IndianOil/@12.008853,92.97162,1561m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3088d25615405c53:0x29abaf986f9af813!8m2!3d12.008853!4d92.97162!16s%2Fg%2F11dfpqs462",
+      "hotel-atlanta": G + "Hotel+Atlanta+-+A+Seaview+Hotel/@11.6721653,92.7455293,1563m/data=!3m1!1e3!4m9!3m8!1s0x30889544245cffc3:0x4857634e89b86650!5m2!4m1!1i2!8m2!3d11.6721653!4d92.7455293!16s%2Fg%2F11ldkm5j04",
+      "hotel-bhuma": G + "Bhuma+Homestay/@12.0314836,92.9960689,1561m/data=!3m1!1e3!4m9!3m8!1s0x3088d398856370e3:0x5787c47a082dfc03!5m2!4m1!1i2!8m2!3d12.0314836!4d92.9960689!16s%2Fg%2F11vcw8309g",
+      "hotel-bluelagoon": G + "Blue+Lagoon+Resort,+Neil+Island/@11.8178389,93.0530135,1562m/data=!3m1!1e3!4m9!3m8!1s0x3088d9dc90b059e9:0xd0c5192b3088e7bd!5m2!4m1!1i2!8m2!3d11.8178389!4d93.0530135!16s%2Fg%2F11h6t76ln3",
+    }
+    for pid, url in canonical.items():
+        c.execute("UPDATE places SET maps_url=? WHERE id=?", (url, pid))
     c.execute("INSERT OR REPLACE INTO meta VALUES ('kit', ?)", (json.dumps(kit, ensure_ascii=False),))
     c.execute("INSERT OR REPLACE INTO meta VALUES ('petrol_inr_l', ?)", (str(PETROL),))
     c.execute("INSERT OR REPLACE INTO meta VALUES ('scooter_kmpl', ?)", (str(KMPL),))
