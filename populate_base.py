@@ -277,9 +277,19 @@ def main():
         c.execute("INSERT INTO places (id,name,island,lat,lng,kind,photo,blurb,source_url,maps_url) "
                   "VALUES (?,?,?,?,?,?,?,?,?,?)",
                   (pid, name, isl, lat, lng, kind, photo, blurb, None, murl))
+    coords = {p[0]: (p[3], p[4]) for p in P}
     for (rid, a, b, mode, km, mins, poly, note) in R:
         fuel_l = round(2 * km / KMPL, 3) if mode == "scooter" else None   # 2 scooters
         fuel_c = round(fuel_l * PETROL, 1) if fuel_l else None
+        # Never store null geometry: a stored "null" parses to null in the
+        # frontend and used to take the whole app down. Fall back to a straight
+        # line between the endpoints.
+        if not poly or len(poly) < 2:
+            pa, pb = coords.get(a), coords.get(b)
+            if pa and pb and pa[0] is not None and pb[0] is not None:
+                poly = [[pa[0], pa[1]], [pb[0], pb[1]]]
+            else:
+                raise SystemExit(f"route {rid}: no geometry and no usable endpoint coords")
         c.execute("INSERT INTO routes VALUES (?,?,?,?,?,?,?,?,?,?,?)",
                   (rid, a, b, mode, km, mins, json.dumps(poly), fuel_l, fuel_c, note, None))
     fb = json.load(open(FB))

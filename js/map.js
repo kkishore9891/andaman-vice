@@ -117,7 +117,9 @@ const VMap = (() => {
     for (const r of rs) {
       let pts = [];
       try { pts = JSON.parse(r.polyline || "[]"); } catch (e) {}
-      if (pts.length < 2) continue;
+      // A stored "null" parses to null, not []. One bad row must never take
+      // down the whole app, so validate rather than trusting the data.
+      if (!Array.isArray(pts) || pts.length < 2) continue;
       const d = pts.map((p, i) => {
         const [x, y] = proj(p[0], p[1]);
         return (i ? "L" : "M") + x.toFixed(1) + " " + y.toFixed(1);
@@ -199,7 +201,7 @@ const VMap = (() => {
   function pointAlong(r, t) {
     let pts = [];
     try { pts = JSON.parse(r.polyline || "[]"); } catch (e) { return null; }
-    if (pts.length < 2) return null;
+    if (!Array.isArray(pts) || pts.length < 2) return null;
     const segs = []; let total = 0;
     for (let i = 1; i < pts.length; i++) {
       const d = Math.hypot(pts[i][0] - pts[i - 1][0],
