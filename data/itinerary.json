@@ -83,7 +83,7 @@
      "end": "10:55",
      "title": "Cab toward town (Junglighat)",
      "category": "travel",
-     "route": "cab-ixz-aberdeen",
+     "route": "cab-ixz-icyspicy",
      "cost_inr": 350,
      "notes": "Icy Spicy is en route between airport and jetty."
     },
@@ -102,7 +102,7 @@
      "end": "11:55",
      "title": "Auto to Phoenix Bay Jetty",
      "category": "travel",
-     "route": "cab-ixz-phoenix",
+     "route": "cab-icyspicy-phoenix",
      "cost_inr": 150
     },
     {
@@ -130,7 +130,7 @@
      "end": "16:00",
      "title": "Scooters at the jetty → ride out",
      "category": "travel",
-     "route": "ride-jetty-govind",
+     "route": "ride-hljetty-bhuma",
      "cost_inr": 1000,
      "cost_note": "2 x Rs 500/24h (Go2Andaman off-season rate, valid to 30 Sep)",
      "notes": "Booked >=48h ahead with DL copies; helmets included, fuel not.",
@@ -151,7 +151,7 @@
      "end": "16:50",
      "title": "Ride to Radhanagar (fuel en route)",
      "category": "travel",
-     "route": "ride-govind-radhanagar",
+     "route": "ride-bhuma-radhanagar",
      "cost_inr": 230,
      "cost_note": "~2 L petrol Rs 200 (@Rs 88.66/L) + parking Rs 30",
      "notes": "IndianOil pump sits ON the Radhanagar road — top both tanks.",
@@ -181,7 +181,7 @@
      "end": "18:20",
      "title": "Night ride back to Govind Nagar",
      "category": "travel",
-     "route": "ride-govind-radhanagar",
+     "route": "ride-bhuma-radhanagar",
      "cost_inr": 0,
      "notes": "Dark by 17:36 — easy pace, high beam off for oncoming."
     },
@@ -240,7 +240,8 @@
      "end": "03:30",
      "title": "Ride to the kayak launch",
      "category": "travel",
-     "place": "kayak-point"
+     "place": "kayak-point",
+     "route": "ride-bhuma-kayak"
     },
     {
      "start": "03:30",
@@ -258,7 +259,7 @@
      "end": "06:10",
      "title": "Ride to Kala Pathar",
      "category": "travel",
-     "route": "ride-govind-kalapathar",
+     "route": "ride-bhuma-kalapathar",
      "notes": "Golden hour is 05:45-06:45 - straight there while the light is soft."
     },
     {
@@ -274,7 +275,7 @@
      "end": "07:05",
      "title": "Ride back to Bhuma",
      "category": "travel",
-     "route": "ride-govind-kalapathar"
+     "route": "ride-bhuma-kalapathar"
     },
     {
      "start": "07:05",
@@ -296,7 +297,7 @@
      "end": "08:35",
      "title": "Ride to the Elephant Beach trailhead",
      "category": "travel",
-     "route": "ride-govind-elephant"
+     "route": "ride-bhuma-elephant"
     },
     {
      "start": "08:35",
@@ -330,7 +331,7 @@
      "end": "12:00",
      "title": "Ride back to Govind Nagar",
      "category": "travel",
-     "route": "ride-govind-elephant"
+     "route": "ride-bhuma-elephant"
     },
     {
      "start": "12:00",
@@ -346,7 +347,7 @@
      "end": "13:20",
      "title": "Bags + jetty, return scooters",
      "category": "travel",
-     "route": "ride-jetty-govind",
+     "route": "ride-hljetty-bhuma",
      "cost_inr": 500,
      "cost_note": "possible 2nd-slot charge (10am-10am rental windows)",
      "tips": "Hand scooters back with the agreed fuel level."
@@ -389,7 +390,7 @@
      "end": "16:20",
      "title": "Ride via the pump — flash check-in @ Blue Lagoon",
      "category": "travel",
-     "route": "ride-neiljetty-sitapur",
+     "route": "ride-neiljetty-bluelagoon",
      "cost_inr": 4118,
      "cost_note": "stay Rs 3,968 (breakfast incl., free cancel) + Rs 150 fuel",
      "notes": "Top up at IndianOil Neil Kendra (closes ~18:00) on the way; drop bags, straight back out."
@@ -399,7 +400,7 @@
      "end": "16:35",
      "title": "Ride to Bharatpur",
      "category": "travel",
-     "route": "ride-neiljetty-bharatpur"
+     "route": "ride-bluelagoon-bharatpur"
     },
     {
      "start": "16:35",
@@ -416,7 +417,7 @@
      "end": "17:15",
      "title": "Hop to Laxmanpur",
      "category": "travel",
-     "route": "ride-neiljetty-laxmanpur"
+     "route": "ride-bharatpur-laxmanpur"
     },
     {
      "start": "17:15",
@@ -440,7 +441,7 @@
      "end": "19:20",
      "title": "Ride home",
      "category": "travel",
-     "route": "ride-neiljetty-sitapur"
+     "route": "ride-bluelagoon-pureveg"
     },
     {
      "start": "19:20",
@@ -486,7 +487,7 @@
      "end": "04:47",
      "title": "3-minute ride to Sitapur",
      "category": "travel",
-     "route": "ride-neiljetty-sitapur",
+     "route": "ride-bluelagoon-sitapur",
      "cost_inr": 0
     },
     {
@@ -503,7 +504,7 @@
      "end": "06:25",
      "title": "Ride back",
      "category": "travel",
-     "route": "ride-neiljetty-sitapur",
+     "route": "ride-bluelagoon-sitapur",
      "cost_inr": 0
     },
     {
@@ -519,7 +520,7 @@
      "end": "07:50",
      "title": "Ride to Natural Bridge",
      "category": "travel",
-     "route": "ride-neiljetty-bridge",
+     "route": "ride-bluelagoon-bridge",
      "cost_inr": 0
     },
     {
@@ -538,7 +539,8 @@
      "title": "Jetty: return scooters + refuel-as-agreed",
      "category": "travel",
      "place": "neil-jetty",
-     "cost_inr": 100
+     "cost_inr": 100,
+     "route": "ride-bridge-neiljetty"
     },
     {
      "start": "10:00",
@@ -573,7 +575,7 @@
      "end": "14:00",
      "title": "Ride south to Chidiya Tapu",
      "category": "travel",
-     "route": "ride-pb-chidiyatapu",
+     "route": "ride-phoenix-chidiyatapu",
      "cost_inr": 250,
      "cost_note": "~2.7 L fuel for the 55 km round trip",
      "notes": "24 km, 44 min on NH4 — South Andaman's prettiest road."
@@ -619,7 +621,7 @@
      "end": "18:40",
      "title": "Night ride back to Port Blair",
      "category": "travel",
-     "route": "ride-pb-chidiyatapu",
+     "route": "ride-chidiyatapu-atlanta",
      "cost_inr": 0
     },
     {
@@ -687,7 +689,7 @@
      "end": "06:00",
      "title": "Cab to Jirkatang Check Post",
      "category": "travel",
-     "route": "cab-pb-jirkatang",
+     "route": "cab-atlanta-jirkatang",
      "cost_inr": 7500,
      "cost_note": "Private AC cab day-tour for 3 (verified range Rs 6,500-9,000 — lock price when booking)",
      "notes": "47 km in the dark to make the 06:00 first convoy. Two-wheelers are banned past the check post."
@@ -770,7 +772,7 @@
      "end": "15:00",
      "title": "Drive back to Port Blair",
      "category": "travel",
-     "route": "cab-pb-jirkatang",
+     "route": "cab-atlanta-jirkatang",
      "cost_inr": 0
     },
     {
@@ -789,7 +791,8 @@
      "category": "scenic",
      "place": "marina-park",
      "cost_inr": 0,
-     "notes": "Where the first tricolour rose in 1943; the waterfront is 5 min from the hotel."
+     "notes": "Where the first tricolour rose in 1943; the waterfront is 5 min from the hotel.",
+     "route": "walk-atlanta-marina"
     },
     {
      "start": "17:45",
@@ -806,7 +809,8 @@
      "title": "Farewell dinner @ Icy Spicy",
      "category": "meal",
      "place": "icy-spicy",
-     "cost_inr": 1000
+     "cost_inr": 1000,
+     "route": "cab-atlanta-icyspicy"
     },
     {
      "start": "20:30",
@@ -854,7 +858,7 @@
      "end": "08:05",
      "title": "Cab to the airport",
      "category": "travel",
-     "route": "cab-ixz-aberdeen",
+     "route": "cab-atlanta-ixz",
      "cost_inr": 300,
      "notes": "2.7 km against traffic — 10 min."
     },

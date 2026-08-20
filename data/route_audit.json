@@ -1,0 +1,346 @@
+{
+ "audit": {
+  "mismatches": [
+   {
+    "day": 1,
+    "event_title": "Cab toward town (Junglighat)",
+    "route_id": "cab-ixz-aberdeen",
+    "problem": "Route ends at aberdeen (Aberdeen Bazaar) but the next place-bearing event is lunch at icy-spicy (Junglighat), 1.45 km away in a different part of Port Blair. Origin (ixz) is correct; the destination is wrong. No ixz->icy-spicy route exists in R.",
+    "needed_route": "ixz -> icy-spicy"
+   },
+   {
+    "day": 1,
+    "event_title": "Auto to Phoenix Bay Jetty",
+    "route_id": "cab-ixz-phoenix",
+    "problem": "Known bug. Route starts at ixz (airport) but the crew has been at icy-spicy since 10:55; the airport is 1.91 km back the other way. Destination (phoenix-bay) is correct, origin is wrong. No icy-spicy->phoenix-bay route (1.59 km) exists in R.",
+    "needed_route": "icy-spicy -> phoenix-bay"
+   },
+   {
+    "day": 2,
+    "event_title": "Ride via the pump \u2014 flash check-in @ Blue Lagoon",
+    "route_id": "ride-neiljetty-sitapur",
+    "problem": "The leg actually ends at the hotel (Blue Lagoon check-in, its cost_inr is the room rate), not at Sitapur Beach: hotel-bluelagoon is 1.61 km short of sitapur. Origin (neil-jetty) is correct. Also mis-seeds the rest of the evening, because the next leg is computed from sitapur/neil-jetty instead of the hotel.",
+    "needed_route": "neil-jetty -> hotel-bluelagoon"
+   },
+   {
+    "day": 2,
+    "event_title": "Ride to Bharatpur",
+    "route_id": "ride-neiljetty-bharatpur",
+    "problem": "Route starts at neil-jetty, but the crew just checked in at Blue Lagoon on the Sitapur side \u2014 3.21 km from the jetty and 2.89 km from Bharatpur. Both the declared 1.1 km / 3 min and the drawn polyline are wrong for the leg actually being ridden.",
+    "needed_route": "hotel-bluelagoon -> bharatpur"
+   },
+   {
+    "day": 2,
+    "event_title": "Hop to Laxmanpur",
+    "route_id": "ride-neiljetty-laxmanpur",
+    "problem": "Route starts at neil-jetty, but the crew is at bharatpur (jet ski, 16:35-17:05). Bharatpur is a distinct pin 0.35 km straight / ~1.1 km by road from the jetty, so the ride is bharatpur -> laxmanpur (2.36 km straight), not neil-jetty -> laxmanpur. Minor offset but a genuinely different origin place.",
+    "needed_route": "bharatpur -> laxmanpur"
+   },
+   {
+    "day": 2,
+    "event_title": "Ride home",
+    "route_id": "ride-neiljetty-sitapur",
+    "problem": "Both endpoints are wrong. Crew is at pure-veg-neil (Lakshmanpur, 1.33 km from the jetty) after dinner and is heading to hotel-bluelagoon (1.61 km short of sitapur, 3.21 km from the jetty). The route drawn is the jetty->Sitapur run they never make.",
+    "needed_route": "pure-veg-neil -> hotel-bluelagoon"
+   },
+   {
+    "day": 3,
+    "event_title": "3-minute ride to Sitapur",
+    "route_id": "ride-neiljetty-sitapur",
+    "problem": "Route starts at neil-jetty, but the crew wakes at hotel-bluelagoon (3.21 km from the jetty). The event's own title/duration (5 min, 'a 3-min ride' per the hotel blurb) contradicts the route's 5.6 km / 10 min from the jetty. Destination (sitapur) is correct.",
+    "needed_route": "hotel-bluelagoon -> sitapur"
+   },
+   {
+    "day": 3,
+    "event_title": "Ride back",
+    "route_id": "ride-neiljetty-sitapur",
+    "problem": "Ridden in reverse from sitapur, which is fine, but the destination is hotel-bluelagoon (breakfast/checkout at 06:25), not neil-jetty \u2014 3.21 km apart. This is not merely a reversed route: the far endpoint is a genuinely different place.",
+    "needed_route": "sitapur -> hotel-bluelagoon"
+   },
+   {
+    "day": 3,
+    "event_title": "Ride to Natural Bridge",
+    "route_id": "ride-neiljetty-bridge",
+    "problem": "Route starts at neil-jetty, but the crew leaves from hotel-bluelagoon after checkout \u2014 the hotel is 4.53 km from natural-bridge versus the route's 2.1 km / 4 min from the jetty, and the event allots 20 min. Destination (natural-bridge) is correct.",
+    "needed_route": "hotel-bluelagoon -> natural-bridge"
+   }
+  ],
+  "ok_count": 28,
+  "summary": "Walked all 5 days of /home/kkishore9891/Desktop/Andaman Trip/website/.claude/worktrees/bg-populate/data/itinerary.json against the R route table in /home/kkishore9891/Desktop/Andaman Trip/website/.claude/worktrees/bg-populate/populate_base.py: 37 events carry a \"route\" field, 28 are consistent (including legitimate reverse uses) and 9 are mismatched. Two clusters. (1) Day 1 Port Blair: the airport->town cab pair is off by one hop \u2014 cab-ixz-aberdeen actually ends at Icy Spicy in Junglighat, and the following cab-ixz-phoenix starts from Icy Spicy, not the airport (the known bug). (2) Neil Island, days 2-3, 7 of the 9: every Neil route in R is anchored at neil-jetty, but the crew sleeps at Blue Lagoon on the Sitapur side, 3.21 km away, so every hotel departure/arrival (check-in, Bharatpur, Laxmanpur hop, ride home, Sitapur sunrise out-and-back, Natural Bridge) draws the wrong line. Root cause: R contains no hotel-anchored or restaurant-anchored routes at all \u2014 9 legs the itinerary actually travels have no route defined (ixz->icy-spicy, icy-spicy->phoenix-bay, neil-jetty->hotel-bluelagoon, hotel-bluelagoon->bharatpur, bharatpur->laxmanpur, pure-veg-neil->hotel-bluelagoon, hotel-bluelagoon->sitapur, sitapur->hotel-bluelagoon, hotel-bluelagoon->natural-bridge). No geographically impossible place sequence exists: every island change is covered by a ferry/flight and each day starts where the previous one ended. Deliberately NOT flagged as mismatches, all sub-1 km stand-ins or true reverse rides: hotel-bhuma vs govind-nagar (0.53 km), kayak-point vs govind-nagar (0.56 km), phoenix-bay vs aberdeen on day 3's Chidiya Tapu ride (0.93 km), hotel-atlanta vs aberdeen on the Baratang cab and day-5 airport cab (0.70 km), and the two \"ride back to Govind Nagar\" legs that end 1.33 km on at Something Different. Separate, non-route observations worth a look: day 2 03:20 \"Ride to the kayak launch\" is a travel event with no route at all (hotel-bhuma -> kayak-point); day 4 has no travel legs between hotel-atlanta, marina-park, cellular-jail and the 2.53 km hop to Icy Spicy; and the Port Blair scooters rented day 3 12:30 are never returned in the itinerary."
+ },
+ "maps": {
+  "routes": [
+   {
+    "id": "ixz->icy-spicy",
+    "km": 0.65,
+    "minutes": 2,
+    "via": "Great Andaman Trunk Rd",
+    "source_url": "https://www.google.com/maps/dir/Veer+Savarkar+International+Airport+Port+Blair/Icy+Spicy+Pure+Veg+Junglighat+Port+Blair/data=!4m2!4m1!3e0"
+   },
+   {
+    "id": "icy-spicy->phoenix-bay",
+    "km": 2.6,
+    "minutes": 7,
+    "via": "Great Andaman Trunk Rd",
+    "source_url": "https://www.google.com/maps/dir/Icy+Spicy+Pure+Veg+Junglighat+Port+Blair/Phoenix+Bay+Jetty+Port+Blair/data=!4m2!4m1!3e0"
+   },
+   {
+    "id": "phoenix-bay->chidiya-tapu",
+    "km": 26.5,
+    "minutes": 49,
+    "via": "NH 4",
+    "source_url": "https://www.google.com/maps/dir/Phoenix+Bay+Jetty+Port+Blair/Chidiya+Tapu+Beach/data=!4m2!4m1!3e0"
+   },
+   {
+    "id": "chidiya-tapu->hotel-atlanta",
+    "km": 24.6,
+    "minutes": 46,
+    "via": "NH 4",
+    "source_url": "https://www.google.com/maps/dir/Chidiya+Tapu+Beach/Hotel+Atlanta+A+Seaview+Hotel+Port+Blair/data=!4m2!4m1!3e0"
+   },
+   {
+    "id": "hotel-atlanta->jirkatang",
+    "km": 48.3,
+    "minutes": 79,
+    "via": "NH 4",
+    "source_url": "https://www.google.com/maps/dir/Hotel+Atlanta+A+Seaview+Hotel+Port+Blair/Jirkatang+Check+Post/data=!4m2!4m1!3e0"
+   },
+   {
+    "id": "hotel-atlanta->annapurna",
+    "km": 1.1,
+    "minutes": 4,
+    "via": "Rina Rd",
+    "source_url": "https://www.google.com/maps/dir/Hotel+Atlanta+A+Seaview+Hotel+Port+Blair/Annapurna+Cafeteria+Pure+Veg+Aberdeen+Bazaar/data=!4m2!4m1!3e0"
+   },
+   {
+    "id": "hotel-atlanta->marina-park",
+    "km": 1.4,
+    "minutes": 3,
+    "via": "Rajiv Gandhi Rd and Rina Rd",
+    "source_url": "https://www.google.com/maps/dir/Hotel+Atlanta+A+Seaview+Hotel+Port+Blair/Marina+Park+Port+Blair/data=!4m2!4m1!3e0"
+   },
+   {
+    "id": "hotel-atlanta->ixz",
+    "km": 3.2,
+    "minutes": 8,
+    "via": "VIP Rd",
+    "source_url": "https://www.google.com/maps/dir/Hotel+Atlanta+A+Seaview+Hotel+Port+Blair/Veer+Savarkar+International+Airport+Port+Blair/data=!4m2!4m1!3e0"
+   },
+   {
+    "id": "hotel-atlanta->icy-spicy",
+    "km": 2.9,
+    "minutes": 9,
+    "via": "Rina Rd",
+    "source_url": "https://www.google.com/maps/dir/Hotel+Atlanta+A+Seaview+Hotel+Port+Blair/Icy+Spicy+Pure+Veg+Junglighat+Port+Blair/data=!4m2!4m1!3e0"
+   },
+   {
+    "id": "havelock-jetty->hotel-bhuma",
+    "km": 2.5,
+    "minutes": 7,
+    "via": "SH4",
+    "source_url": "https://www.google.com/maps/dir/Havelock+Jetty+Swaraj+Dweep/Bhuma+Homestay+Govind+Nagar+Havelock/data=!4m2!4m1!3e0"
+   },
+   {
+    "id": "hotel-bhuma->radhanagar",
+    "km": 9.1,
+    "minutes": 19,
+    "via": "SH4",
+    "source_url": "https://www.google.com/maps/dir/Bhuma+Homestay+Govind+Nagar+Havelock/Radhanagar+Beach+Havelock/data=!4m2!4m1!3e0"
+   },
+   {
+    "id": "hotel-bhuma->kalapathar",
+    "km": 4.1,
+    "minutes": 8,
+    "via": "SH5",
+    "source_url": "https://www.google.com/maps/dir/Bhuma+Homestay+Govind+Nagar+Havelock/Kala+Pathar+Beach+Havelock/data=!4m2!4m1!3e0"
+   },
+   {
+    "id": "hotel-bhuma->elephant-trek",
+    "km": 6,
+    "minutes": 12,
+    "via": "SH4",
+    "source_url": "https://www.google.com/maps/dir/Bhuma+Homestay+Govind+Nagar+Havelock/Walking+Path+To+Elephant+Beach/data=!4m2!4m1!3e0"
+   },
+   {
+    "id": "neil-jetty->hotel-bluelagoon",
+    "km": 4.2,
+    "minutes": 7,
+    "via": "SH6",
+    "source_url": "https://www.google.com/maps/dir/Shaheed+Dweep+Jetty+Neil+Island/Blue+Lagoon+Resort+Neil+Island/data=!4m2!4m1!3e0"
+   },
+   {
+    "id": "hotel-bluelagoon->sitapur",
+    "km": 1.4,
+    "minutes": 3,
+    "via": "SH6",
+    "source_url": "https://www.google.com/maps/dir/Blue+Lagoon+Resort+Neil+Island/Sitapur+Beach+Neil+Island/data=!4m2!4m1!3e0"
+   },
+   {
+    "id": "hotel-bluelagoon->bharatpur",
+    "km": 3.9,
+    "minutes": 7,
+    "via": "SH6",
+    "source_url": "https://www.google.com/maps/dir/Blue+Lagoon+Resort+Neil+Island/Bharatpur+Beach+Neil+Island/data=!4m2!4m1!3e0"
+   },
+   {
+    "id": "hotel-bluelagoon->natural-bridge",
+    "km": 5.4,
+    "minutes": 8,
+    "via": "SH6 and Village road",
+    "source_url": "https://www.google.com/maps/dir/Blue+Lagoon+Resort+Neil+Island/Natural+bridge+1+Shaheed+Dweep/data=!4m2!4m1!3e0"
+   },
+   {
+    "id": "hotel-bluelagoon->pure-veg-neil",
+    "km": 5.1,
+    "minutes": 8,
+    "via": "SH6 and Village road",
+    "source_url": "https://www.google.com/maps/dir/Blue+Lagoon+Resort+Neil+Island/PURE+VEG+RESTAURANT+Lakshmanpur+Neil+Island/data=!4m2!4m1!3e0"
+   },
+   {
+    "id": "laxmanpur->hotel-bluelagoon",
+    "km": 6,
+    "minutes": 10,
+    "via": "Village road and SH6",
+    "source_url": "https://www.google.com/maps/dir/Laxmanpur+Beach+Neil+Island/Blue+Lagoon+Resort+Neil+Island/data=!4m2!4m1!3e0"
+   },
+   {
+    "id": "natural-bridge->neil-jetty",
+    "km": 2.1,
+    "minutes": 4,
+    "via": "Village road",
+    "source_url": "https://www.google.com/maps/dir/Natural+bridge+1+Shaheed+Dweep/Shaheed+Dweep+Jetty+Neil+Island/data=!4m2!4m1!3e0"
+   }
+  ],
+  "place_links": [
+   {
+    "id": "icy-spicy",
+    "matched_name": "Icy Spicy - Pure Veg",
+    "maps_url": "https://www.google.com/maps/place/Icy+Spicy+-+Pure+Veg/@11.6587633,92.7313498,1563m/data=!3m2!1e3!4b1!4m6!3m5!1s0x308895a508bcbd15:0xc50f513f8d030e5d!8m2!3d11.6587633!4d92.7313498!16s%2Fg%2F11r8s7820"
+   },
+   {
+    "id": "annapurna",
+    "matched_name": "Annapurna Cafeteria Pure Veg",
+    "maps_url": "https://www.google.com/maps/place/Annapurna+Cafeteria+Pure+Veg/@11.6671159,92.7423254,1563m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3088950b9112bb31:0x9abee36ad549492e!8m2!3d11.6671159!4d92.7423254!16s%2Fg%2F1tdr5mfx"
+   },
+   {
+    "id": "something-different",
+    "matched_name": "Something Different - A Beachside Cafe",
+    "maps_url": "https://www.google.com/maps/place/Something+Different+-+A+Beachside+Cafe/@12.035727,92.989741,1561m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3088d33db6b96377:0x838400de2bff7381!8m2!3d12.035727!4d92.989741!16s%2Fg%2F11cnhpr3t_"
+   },
+   {
+    "id": "pure-veg-neil",
+    "matched_name": "PURE VEG RESTAURANT",
+    "maps_url": "https://www.google.com/maps/place/PURE+VEG+RESTAURANT/@11.8414615,93.0197503,1562m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3088d97bd787643f:0x55211e18a164b49!8m2!3d11.8414615!4d93.0197503!16s%2Fg%2F11pkht8c0z"
+   },
+   {
+    "id": "hotel-atlanta",
+    "matched_name": "Hotel Atlanta - A Seaview Hotel",
+    "maps_url": "https://www.google.com/maps/place/Hotel+Atlanta+-+A+Seaview+Hotel/@11.6721653,92.7455293,1563m/data=!3m1!1e3!4m9!3m8!1s0x30889544245cffc3:0x4857634e89b86650!5m2!4m1!1i2!8m2!3d11.6721653!4d92.7455293!16s%2Fg%2F11ldkm5j04"
+   },
+   {
+    "id": "hotel-bhuma",
+    "matched_name": "Bhuma Homestay",
+    "maps_url": "https://www.google.com/maps/place/Bhuma+Homestay/@12.0314836,92.9960689,1561m/data=!3m1!1e3!4m9!3m8!1s0x3088d398856370e3:0x5787c47a082dfc03!5m2!4m1!1i2!8m2!3d12.0314836!4d92.9960689!16s%2Fg%2F11vcw8309g"
+   },
+   {
+    "id": "hotel-bluelagoon",
+    "matched_name": "Blue Lagoon Resort, Neil Island",
+    "maps_url": "https://www.google.com/maps/place/Blue+Lagoon+Resort,+Neil+Island/@11.8178389,93.0530135,1562m/data=!3m1!1e3!4m9!3m8!1s0x3088d9dc90b059e9:0xd0c5192b3088e7bd!5m2!4m1!1i2!8m2!3d11.8178389!4d93.0530135!16s%2Fg%2F11h6t76ln3"
+   },
+   {
+    "id": "hl-pump",
+    "matched_name": "IndianOil (Havelock, 12.008853,92.97162)",
+    "maps_url": "https://www.google.com/maps/place/IndianOil/@12.008853,92.97162,1561m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3088d25615405c53:0x29abaf986f9af813!8m2!3d12.008853!4d92.97162!16s%2Fg%2F11dfpqs462"
+   },
+   {
+    "id": "neil-pump",
+    "matched_name": "IndianOil (Neil Kendra, Shaheed Dweep)",
+    "maps_url": "https://www.google.com/maps/place/IndianOil/@11.831935,93.030909,1562m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3088d90d4368cdef:0x28ac3f7f603df382!8m2!3d11.831935!4d93.030909!16s%2Fg%2F11h01t5032"
+   },
+   {
+    "id": "phoenix-bay",
+    "matched_name": "Phoenix Bay Jetty",
+    "maps_url": "https://www.google.com/maps/place/Phoenix+Bay+Jetty/@11.6726985,92.7345305,3126m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3088959f150bf0fd:0x14d92975608ce055!8m2!3d11.6726985!4d92.7345305!16s%2Fg%2F11gc8tc2ft"
+   },
+   {
+    "id": "havelock-jetty",
+    "matched_name": "Havelock Jetty",
+    "maps_url": "https://www.google.com/maps/place/Havelock+Jetty/@12.0429471,92.9835984,1561m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3088d3fa1cc2605b:0x3297a66752f5150a!8m2!3d12.0429471!4d92.9835984!16s%2Fg%2F11q1trvx7l"
+   },
+   {
+    "id": "neil-jetty",
+    "matched_name": "Shaheed Dweep Jetty",
+    "maps_url": "https://www.google.com/maps/place/Shaheed+Dweep+Jetty/@11.8371487,93.0311195,3125m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3088d99a3137bbd1:0xffbc8324237261d3!8m2!3d11.8371487!4d93.0311195!16s%2Fg%2F11c6dzms82"
+   },
+   {
+    "id": "radhanagar",
+    "matched_name": "Radhanagar Beach",
+    "maps_url": "https://www.google.com/maps/place/Radhanagar+Beach/@11.9830678,92.9484492,6246m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3088d212164bb773:0x9715637d9a7265b3!8m2!3d11.9844552!4d92.9508454!16s%2Fg%2F1hc18h9zw"
+   },
+   {
+    "id": "kalapathar",
+    "matched_name": "Kala Pathar Beach",
+    "maps_url": "https://www.google.com/maps/place/Kala+Pathar+Beach/@12.0002055,93.0079768,6245m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3088d39ad246aa93:0xa562a45e499c1abd!8m2!3d12.0006111!4d93.0070952!16s%2Fg%2F12hrhkb0v"
+   },
+   {
+    "id": "bharatpur",
+    "matched_name": "Bharatpur Beach, Neil Island",
+    "maps_url": "https://www.google.com/maps/place/Bharatpur+Beach,+Neil+Island/@11.8361324,93.034197,3125m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3088d9990d90cc03:0x8384b4367470fc0a!8m2!3d11.8361324!4d93.034197!16s%2Fg%2F11cjhkd_l5"
+   },
+   {
+    "id": "natural-bridge",
+    "matched_name": "Natural bridge 1",
+    "maps_url": "https://www.google.com/maps/place/Natural+bridge+1/@11.8320292,93.0139828,1562m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3088db0000e788ef:0x8df2a078f6e76a0f!8m2!3d11.8320292!4d93.0139828!16s%2Fg%2F11wxjq724g"
+   },
+   {
+    "id": "sitapur",
+    "matched_name": "Sitapur Beach",
+    "maps_url": "https://www.google.com/maps/place/Sitapur+Beach/@11.8262966,93.0656817,3003m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3088d8f863b86131:0x6d7b01e475bf3549!8m2!3d11.8261573!4d93.0650936!16s%2Fg%2F11h0wf7z0"
+   },
+   {
+    "id": "laxmanpur",
+    "matched_name": "Laxmanpur Beach No 1",
+    "maps_url": "https://www.google.com/maps/place/Laxmanpur+Beach+No+1/@11.8470058,93.0156096,6249m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3088da20a18f8a61:0xa0d515ea579c8453!8m2!3d11.847006!4d93.0156096!16s%2Fg%2F1tfd9wxl"
+   },
+   {
+    "id": "elephant-beach",
+    "matched_name": "Elephant Beach",
+    "maps_url": "https://www.google.com/maps/place/Elephant+Beach/@12.008108,92.9416061,6002m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3088d27d470f1f33:0xbe96fc275b9105fa!8m2!3d12.0081083!4d92.9416061!16s%2Fg%2F1q5blvb_h"
+   },
+   {
+    "id": "elephant-trek",
+    "matched_name": "Walking Path To Elephant Beach",
+    "maps_url": "https://www.google.com/maps/place/Walking+Path+To+Elephant+Beach/@12.0087171,92.9635124,1501m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3088d25dec04ebb9:0xcfca19e5821243f0!8m2!3d12.0087171!4d92.9635124!16s%2Fg%2F11f03_bshq"
+   },
+   {
+    "id": "chidiya-tapu",
+    "matched_name": "Chidiya Tapu Beach",
+    "maps_url": "https://www.google.com/maps/place/Chidiya+Tapu+Beach/@11.5059679,92.7014649,6257m/data=!3m2!1e3!4b1!4m6!3m5!1s0x30888dfc24f0eccf:0x8f3a8242f0ef351!8m2!3d11.5059682!4d92.7014649!16s%2Fg%2F1tdjtg0m"
+   },
+   {
+    "id": "munda-pahad",
+    "matched_name": "Munda Pahad Beach",
+    "maps_url": "https://www.google.com/maps/place/Munda+Pahad+Beach/@11.4914543,92.7087511,1503m/data=!3m2!1e3!4b1!4m6!3m5!1s0x30888de86b12401b:0x8a33420ae35be5cd!8m2!3d11.4914543!4d92.7087511!16s%2Fg%2F113hbmhrs"
+   },
+   {
+    "id": "limestone-caves",
+    "matched_name": "Limestone Cave Baratang",
+    "maps_url": "https://www.google.com/maps/place/Limestone+Cave+Baratang/@12.0959029,92.7454867,1500m/data=!3m2!1e3!4b1!4m6!3m5!1s0x308f4afbac8bd9c7:0xa1e372f97c60eb89!8m2!3d12.0959029!4d92.7454867!16s%2Fg%2F1tfhx0db"
+   },
+   {
+    "id": "jirkatang",
+    "matched_name": "Jirkatang Check Post",
+    "maps_url": "https://www.google.com/maps/place/Jirkatang+Check+Post/@11.8396966,92.6537788,1502m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3088baf978690e8b:0x3f386f20dd94b2de!8m2!3d11.8396966!4d92.6537788!16s%2Fg%2F11g6bhncfg"
+   },
+   {
+    "id": "ixz",
+    "matched_name": "Veer Savarkar International Airport",
+    "maps_url": "https://www.google.com/maps/place/Veer+Savarkar+International+Airport/@11.641656,92.730243,1563m/data=!3m2!1e3!4b1!4m6!3m5!1s0x30889451c7104cff:0x692277584b73d9f0!8m2!3d11.641656!4d92.730243!16zL20vMDl3cjFw"
+   }
+  ]
+ },
+ "verify": {
+  "verdict": "confirmed",
+  "notes": "Independently re-ran all five routes in Google Maps (driving mode, !3e0) in my own tab, mostly with origin/destination REVERSED as a cross-check, plus forward re-runs on the two shortest legs. Consent popup never appeared; not logged in.\n\nObserved values:\n1. ixz->icy-spicy \u2014 forward: 650 m / 2 min via Great Andaman Trunk Rd; reversed: 650 m / 2 min via Great Andaman Trunk Rd. Reported 0.65 km / 2 min. Exact match (0%).\n2. icy-spicy->phoenix-bay \u2014 forward: 3.0 km / 8 min via Foreshore Rd (alts 3.4 km/9 min and 4.0 km/9 min via VIP Rd); reversed: 3.0 km / 8 min via Foreshore Rd. Reported 2.6 km / 7 min via Great Andaman Trunk Rd. Deltas +15% km, +14% min \u2014 inside the ~20% band, so it passes, but this is the weakest leg: no \"Great Andaman Trunk Rd\" variant appeared among the three alternatives I saw, so the reported via-label looks off even though the magnitude holds.\n3. phoenix-bay->chidiya-tapu \u2014 reversed: 25.8 km / 49 min via NH 4 (alts 26.6 km/49 min, 28.1 km/56 min). Reported 26.5 km / 49 min via NH 4. Delta -3% km, 0% min.\n4. chidiya-tapu->hotel-atlanta \u2014 reversed: 25.0 km / 48 min via NH 4 (alts 26.2 km/49 min, 25.9 km/49 min). Reported 24.6 km / 46 min via NH 4. Delta +2% km, +4% min.\n5. hotel-atlanta->jirkatang \u2014 reversed: 47.9 km / 1 hr 15 min via NH 4 (alts 49.4 km/1 hr 20 min; a 33.6 km/1 hr 19 min NH 4+SH10 variant). Reported 48.3 km / 79 min via NH 4. Delta -1% km, -5% min.\n\nAll five are within ~20% on both km and minutes, so the reported set is confirmed. Live traffic makes minute values drift a little between runs; the km figures are stable. Optional tightening: update leg 2 to \"3.0 km, 8 min via Foreshore Rd\" to match what Maps returns in both directions today."
+ }
+}

@@ -154,6 +154,75 @@ R = [
   [[11.847006, 93.0156096], [11.8371487, 93.0311195], [11.8261573, 93.0650936]], "Via SH6."),
 ]
 
+# --- v2.3: hotel/restaurant-anchored legs, distances read live from Google
+# Maps (2026-08-20) and independently re-verified with reversed queries. ---
+ROUTES_V2 = [
+ ("cab-ixz-icyspicy", "ixz", "icy-spicy", "cab", 0.65, 2,
+  [[11.641656, 92.730243], [11.6587633, 92.7313498]],
+  "Great Andaman Trunk Rd — the Junglighat side of the airport."),
+ ("cab-icyspicy-phoenix", "icy-spicy", "phoenix-bay", "cab", 2.6, 7,
+  [[11.6587633, 92.7313498], [11.6726921, 92.7345295]],
+  "Great Andaman Trunk Rd north to the ferry terminal."),
+ ("ride-phoenix-chidiyatapu", "phoenix-bay", "chidiya-tapu", "scooter", 26.5, 49,
+  [[11.6726921, 92.7345295], [11.62, 92.72], [11.56, 92.71], [11.5059682, 92.7014649]],
+  "NH 4 south from the jetty."),
+ ("ride-chidiyatapu-atlanta", "chidiya-tapu", "hotel-atlanta", "scooter", 24.6, 46,
+  [[11.5059682, 92.7014649], [11.56, 92.71], [11.62, 92.72], [11.6721653, 92.7455293]],
+  "NH 4 back north in the dark."),
+ ("cab-atlanta-jirkatang", "hotel-atlanta", "jirkatang", "cab", 48.3, 79,
+  [[11.6721653, 92.7455293], [11.7, 92.7], [11.78, 92.67], [11.8396935, 92.6538333]],
+  "NH 4. Two-wheelers are barred beyond the check post."),
+ ("walk-atlanta-annapurna", "hotel-atlanta", "annapurna", "walk", 1.1, 4,
+  [[11.6721653, 92.7455293], [11.6671159, 92.7423254]],
+  "Rina Rd."),
+ ("walk-atlanta-marina", "hotel-atlanta", "marina-park", "walk", 1.4, 3,
+  [[11.6721653, 92.7455293], [11.6698312, 92.7474232]],
+  "Rajiv Gandhi Rd and Rina Rd — the waterfront is minutes from the hotel."),
+ ("cab-atlanta-ixz", "hotel-atlanta", "ixz", "cab", 3.2, 8,
+  [[11.6721653, 92.7455293], [11.641656, 92.730243]],
+  "VIP Rd."),
+ ("cab-atlanta-icyspicy", "hotel-atlanta", "icy-spicy", "cab", 2.9, 9,
+  [[11.6721653, 92.7455293], [11.6587633, 92.7313498]],
+  "Rina Rd."),
+ ("ride-hljetty-bhuma", "havelock-jetty", "hotel-bhuma", "scooter", 2.5, 7,
+  [[12.0429471, 92.9835984], [12.0314836, 92.9960689]],
+  "SH4 along the east coast."),
+ ("ride-bhuma-radhanagar", "hotel-bhuma", "radhanagar", "scooter", 9.1, 19,
+  [[12.0314836, 92.9960689], [12.038, 92.985], [12.0087171, 92.9635124], [11.9844552, 92.9508454]],
+  "SH4 southwest — the island's prettiest ride."),
+ ("ride-bhuma-kalapathar", "hotel-bhuma", "kalapathar", "scooter", 4.1, 8,
+  [[12.0314836, 92.9960689], [12.0006111, 93.0070952]],
+  "SH5 south."),
+ ("ride-bhuma-elephant", "hotel-bhuma", "elephant-trek", "scooter", 6.0, 12,
+  [[12.0314836, 92.9960689], [12.038, 92.985], [12.0087171, 92.9635124]],
+  "SH4 toward Radhanagar; trailhead on the right."),
+ ("ride-bhuma-kayak", "hotel-bhuma", "kayak-point", "scooter", 0.6, 3,
+  [[12.0314836, 92.9960689], [12.026, 93.003]],
+  "A few hundred metres up the beach road in the dark."),
+ ("ride-neiljetty-bluelagoon", "neil-jetty", "hotel-bluelagoon", "scooter", 4.2, 7,
+  [[11.8371487, 93.0311195], [11.828, 93.045], [11.8178389, 93.0530135]],
+  "SH6 east toward the Sitapur side."),
+ ("ride-bluelagoon-sitapur", "hotel-bluelagoon", "sitapur", "scooter", 1.4, 3,
+  [[11.8178389, 93.0530135], [11.8261573, 93.0650936]],
+  "SH6 — the sunrise beach is minutes from the room."),
+ ("ride-bluelagoon-bharatpur", "hotel-bluelagoon", "bharatpur", "scooter", 3.9, 7,
+  [[11.8178389, 93.0530135], [11.828, 93.045], [11.8361324, 93.034197]],
+  "SH6 west to the watersports lagoon."),
+ ("ride-bluelagoon-bridge", "hotel-bluelagoon", "natural-bridge", "scooter", 5.4, 8,
+  [[11.8178389, 93.0530135], [11.8371487, 93.0311195], [11.8320292, 93.0139828]],
+  "SH6 then the village road."),
+ ("ride-bluelagoon-pureveg", "hotel-bluelagoon", "pure-veg-neil", "scooter", 5.1, 8,
+  [[11.8178389, 93.0530135], [11.8371487, 93.0311195], [11.8414615, 93.0197503]],
+  "SH6 then the village road to Lakshmanpur."),
+ ("ride-bharatpur-laxmanpur", "bharatpur", "laxmanpur", "scooter", 3.5, 7,
+  [[11.8361324, 93.034197], [11.8371487, 93.0311195], [11.847006, 93.0156096]],
+  "Via the jetty junction. (Distance derived from the two verified jetty legs.)"),
+ ("ride-bridge-neiljetty", "natural-bridge", "neil-jetty", "scooter", 2.1, 4,
+  [[11.8320292, 93.0139828], [11.8371487, 93.0311195]],
+  "Village road."),
+]
+R = R + ROUTES_V2
+
 
 def main():
     c = db.conn()
@@ -232,6 +301,7 @@ def main():
       "hotel-bhuma": G + "Bhuma+Homestay/@12.0314836,92.9960689,1561m/data=!3m1!1e3!4m9!3m8!1s0x3088d398856370e3:0x5787c47a082dfc03!5m2!4m1!1i2!8m2!3d12.0314836!4d92.9960689!16s%2Fg%2F11vcw8309g",
       "hotel-bluelagoon": G + "Blue+Lagoon+Resort,+Neil+Island/@11.8178389,93.0530135,1562m/data=!3m1!1e3!4m9!3m8!1s0x3088d9dc90b059e9:0xd0c5192b3088e7bd!5m2!4m1!1i2!8m2!3d11.8178389!4d93.0530135!16s%2Fg%2F11h6t76ln3",
     }
+    canonical.update({"icy-spicy": "https://www.google.com/maps/place/Icy+Spicy+-+Pure+Veg/@11.6587633,92.7313498,1563m/data=!3m2!1e3!4b1!4m6!3m5!1s0x308895a508bcbd15:0xc50f513f8d030e5d!8m2!3d11.6587633!4d92.7313498!16s%2Fg%2F11r8s7820", "annapurna": "https://www.google.com/maps/place/Annapurna+Cafeteria+Pure+Veg/@11.6671159,92.7423254,1563m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3088950b9112bb31:0x9abee36ad549492e!8m2!3d11.6671159!4d92.7423254!16s%2Fg%2F1tdr5mfx", "something-different": "https://www.google.com/maps/place/Something+Different+-+A+Beachside+Cafe/@12.035727,92.989741,1561m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3088d33db6b96377:0x838400de2bff7381!8m2!3d12.035727!4d92.989741!16s%2Fg%2F11cnhpr3t_", "pure-veg-neil": "https://www.google.com/maps/place/PURE+VEG+RESTAURANT/@11.8414615,93.0197503,1562m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3088d97bd787643f:0x55211e18a164b49!8m2!3d11.8414615!4d93.0197503!16s%2Fg%2F11pkht8c0z", "hotel-atlanta": "https://www.google.com/maps/place/Hotel+Atlanta+-+A+Seaview+Hotel/@11.6721653,92.7455293,1563m/data=!3m1!1e3!4m9!3m8!1s0x30889544245cffc3:0x4857634e89b86650!5m2!4m1!1i2!8m2!3d11.6721653!4d92.7455293!16s%2Fg%2F11ldkm5j04", "hotel-bhuma": "https://www.google.com/maps/place/Bhuma+Homestay/@12.0314836,92.9960689,1561m/data=!3m1!1e3!4m9!3m8!1s0x3088d398856370e3:0x5787c47a082dfc03!5m2!4m1!1i2!8m2!3d12.0314836!4d92.9960689!16s%2Fg%2F11vcw8309g", "hotel-bluelagoon": "https://www.google.com/maps/place/Blue+Lagoon+Resort,+Neil+Island/@11.8178389,93.0530135,1562m/data=!3m1!1e3!4m9!3m8!1s0x3088d9dc90b059e9:0xd0c5192b3088e7bd!5m2!4m1!1i2!8m2!3d11.8178389!4d93.0530135!16s%2Fg%2F11h6t76ln3", "hl-pump": "https://www.google.com/maps/place/IndianOil/@12.008853,92.97162,1561m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3088d25615405c53:0x29abaf986f9af813!8m2!3d12.008853!4d92.97162!16s%2Fg%2F11dfpqs462", "neil-pump": "https://www.google.com/maps/place/IndianOil/@11.831935,93.030909,1562m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3088d90d4368cdef:0x28ac3f7f603df382!8m2!3d11.831935!4d93.030909!16s%2Fg%2F11h01t5032", "phoenix-bay": "https://www.google.com/maps/place/Phoenix+Bay+Jetty/@11.6726985,92.7345305,3126m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3088959f150bf0fd:0x14d92975608ce055!8m2!3d11.6726985!4d92.7345305!16s%2Fg%2F11gc8tc2ft", "havelock-jetty": "https://www.google.com/maps/place/Havelock+Jetty/@12.0429471,92.9835984,1561m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3088d3fa1cc2605b:0x3297a66752f5150a!8m2!3d12.0429471!4d92.9835984!16s%2Fg%2F11q1trvx7l", "neil-jetty": "https://www.google.com/maps/place/Shaheed+Dweep+Jetty/@11.8371487,93.0311195,3125m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3088d99a3137bbd1:0xffbc8324237261d3!8m2!3d11.8371487!4d93.0311195!16s%2Fg%2F11c6dzms82", "radhanagar": "https://www.google.com/maps/place/Radhanagar+Beach/@11.9830678,92.9484492,6246m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3088d212164bb773:0x9715637d9a7265b3!8m2!3d11.9844552!4d92.9508454!16s%2Fg%2F1hc18h9zw", "kalapathar": "https://www.google.com/maps/place/Kala+Pathar+Beach/@12.0002055,93.0079768,6245m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3088d39ad246aa93:0xa562a45e499c1abd!8m2!3d12.0006111!4d93.0070952!16s%2Fg%2F12hrhkb0v", "bharatpur": "https://www.google.com/maps/place/Bharatpur+Beach,+Neil+Island/@11.8361324,93.034197,3125m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3088d9990d90cc03:0x8384b4367470fc0a!8m2!3d11.8361324!4d93.034197!16s%2Fg%2F11cjhkd_l5", "natural-bridge": "https://www.google.com/maps/place/Natural+bridge+1/@11.8320292,93.0139828,1562m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3088db0000e788ef:0x8df2a078f6e76a0f!8m2!3d11.8320292!4d93.0139828!16s%2Fg%2F11wxjq724g", "sitapur": "https://www.google.com/maps/place/Sitapur+Beach/@11.8262966,93.0656817,3003m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3088d8f863b86131:0x6d7b01e475bf3549!8m2!3d11.8261573!4d93.0650936!16s%2Fg%2F11h0wf7z0", "laxmanpur": "https://www.google.com/maps/place/Laxmanpur+Beach+No+1/@11.8470058,93.0156096,6249m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3088da20a18f8a61:0xa0d515ea579c8453!8m2!3d11.847006!4d93.0156096!16s%2Fg%2F1tfd9wxl", "elephant-beach": "https://www.google.com/maps/place/Elephant+Beach/@12.008108,92.9416061,6002m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3088d27d470f1f33:0xbe96fc275b9105fa!8m2!3d12.0081083!4d92.9416061!16s%2Fg%2F1q5blvb_h", "elephant-trek": "https://www.google.com/maps/place/Walking+Path+To+Elephant+Beach/@12.0087171,92.9635124,1501m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3088d25dec04ebb9:0xcfca19e5821243f0!8m2!3d12.0087171!4d92.9635124!16s%2Fg%2F11f03_bshq", "chidiya-tapu": "https://www.google.com/maps/place/Chidiya+Tapu+Beach/@11.5059679,92.7014649,6257m/data=!3m2!1e3!4b1!4m6!3m5!1s0x30888dfc24f0eccf:0x8f3a8242f0ef351!8m2!3d11.5059682!4d92.7014649!16s%2Fg%2F1tdjtg0m", "munda-pahad": "https://www.google.com/maps/place/Munda+Pahad+Beach/@11.4914543,92.7087511,1503m/data=!3m2!1e3!4b1!4m6!3m5!1s0x30888de86b12401b:0x8a33420ae35be5cd!8m2!3d11.4914543!4d92.7087511!16s%2Fg%2F113hbmhrs", "limestone-caves": "https://www.google.com/maps/place/Limestone+Cave+Baratang/@12.0959029,92.7454867,1500m/data=!3m2!1e3!4b1!4m6!3m5!1s0x308f4afbac8bd9c7:0xa1e372f97c60eb89!8m2!3d12.0959029!4d92.7454867!16s%2Fg%2F1tfhx0db", "jirkatang": "https://www.google.com/maps/place/Jirkatang+Check+Post/@11.8396966,92.6537788,1502m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3088baf978690e8b:0x3f386f20dd94b2de!8m2!3d11.8396966!4d92.6537788!16s%2Fg%2F11g6bhncfg", "ixz": "https://www.google.com/maps/place/Veer+Savarkar+International+Airport/@11.641656,92.730243,1563m/data=!3m2!1e3!4b1!4m6!3m5!1s0x30889451c7104cff:0x692277584b73d9f0!8m2!3d11.641656!4d92.730243!16zL20vMDl3cjFw"})
     for pid, url in canonical.items():
         c.execute("UPDATE places SET maps_url=? WHERE id=?", (url, pid))
     c.execute("INSERT OR REPLACE INTO meta VALUES ('kit', ?)", (json.dumps(kit, ensure_ascii=False),))
