@@ -64,8 +64,10 @@ const VMap = (() => {
     const grow = Math.max(1, Math.min(1.6, Math.pow(W / vb.w, 0.22)));
     const k = unitsPerPx * grow;
     svg.style.setProperty("--sw", k);
-    for (const t of svg.querySelectorAll(".mk circle"))
+    for (const t of svg.querySelectorAll(".mk circle:not(.hit)"))
       t.setAttribute("r", 11 * k + "");
+    for (const t of svg.querySelectorAll(".mk circle.hit"))
+      t.setAttribute("r", 24 * k + "");
     for (const t of svg.querySelectorAll(".mk text"))
       t.setAttribute("font-size", 12 * k + "");
     for (const t of svg.querySelectorAll(".mklabel")) {
@@ -90,6 +92,8 @@ const VMap = (() => {
       if (p.lat == null || p.island === "chennai" || p.island === "air") continue;
       const [x, y] = proj(p.lat, p.lng);
       const g = el("g", { class: "mk", "data-id": p.id }, gMk);
+      // invisible, generously sized tap target (finger-friendly on phones)
+      el("circle", { class: "hit", cx: x, cy: y, r: 20, fill: "transparent" }, g);
       el("circle", { cx: x, cy: y, r: 8 }, g);
       const ic = el("text", { x, y: y + 3 }, g);
       ic.textContent = (p.kind || "?")[0].toUpperCase();
@@ -206,9 +210,25 @@ const VMap = (() => {
     return pts[pts.length - 1];
   }
 
+  /* Pointer capture (needed for smooth panning) re-targets the browser's own
+     click event to the <svg>, so per-marker click listeners never fire. We
+     therefore detect taps ourselves: a pointerup close to its pointerdown. */
+  function tapAt(cx, cy) {
+    let n = document.elementFromPoint(cx, cy);
+    while (n && n !== svg) {
+      if (n.classList && n.classList.contains("mk")) {
+        const id = n.getAttribute("data-id");
+        if (id && cb.onPlace) cb.onPlace(id);
+        return true;
+      }
+      n = n.parentNode;
+    }
+    return false;
+  }
+
   /* --- pan / zoom --- */
   function bindPanZoom() {
-    let drag = null, pinch = null;
+    let drag = null, pinch = null, down = null;
     svg.addEventListener("wheel", (e) => {
       e.preventDefault();
       const f = e.deltaY > 0 ? 1.15 : 1 / 1.15;
@@ -216,6 +236,7 @@ const VMap = (() => {
     }, { passive: false });
     svg.addEventListener("pointerdown", (e) => {
       svg.setPointerCapture(e.pointerId);
+      down = { x: e.clientX, y: e.clientY };
       drag = { x: e.clientX, y: e.clientY, vb: { ...vb } };
     });
     svg.addEventListener("pointermove", (e) => {
@@ -227,7 +248,13 @@ const VMap = (() => {
       vb.y = drag.vb.y - (e.clientY - drag.y) * sc;
       apply();
     });
-    svg.addEventListener("pointerup", () => drag = null);
+    svg.addEventListener("pointerup", (e) => {
+      if (down && Math.hypot(e.clientX - down.x, e.clientY - down.y) < 6)
+        tapAt(e.clientX, e.clientY);      // moved barely at all => it was a tap
+      down = null; drag = null;
+      try { svg.releasePointerCapture(e.pointerId); } catch (err) {}
+    });
+    svg.addEventListener("pointercancel", () => { down = null; drag = null; });
     svg.addEventListener("touchstart", (e) => {
       if (e.touches.length === 2) {
         drag = null;
