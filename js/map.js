@@ -236,5 +236,6 @@ const VMap = (() => {
   }
 
   return { init, markers, routes, activeRoute, activePlace, you,
-           focusLatLng, focusAll, pointAlong, proj: (a, b) => proj(a, b) };
+           focusLatLng, focusAll, pointAlong, poseAlong, fitPoints,
+           proj: (a, b) => proj(a, b) };
 })();
