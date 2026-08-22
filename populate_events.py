@@ -69,6 +69,8 @@ def main():
     c.execute("INSERT OR REPLACE INTO meta VALUES ('total_cost_inr', ?)",
               (str(it.get("total_cost_inr") or 0),))
     c.execute("INSERT OR REPLACE INTO meta VALUES ('philosophy', ?)", (it.get("philosophy") or "",))
+    c.execute("INSERT OR REPLACE INTO meta VALUES ('risks', ?)",
+              (json.dumps(it.get("risks") or [], ensure_ascii=False),))
     c.commit()
     print("events:", c.execute("SELECT COUNT(*) FROM events").fetchone()[0],
           "| ledger:", db.m2iso(lo), "->", db.m2iso(hi))
