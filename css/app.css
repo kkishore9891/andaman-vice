@@ -139,6 +139,9 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 #brief-nav{margin-left:auto;display:flex;gap:4px}
 #brief-nav button{width:30px;height:30px;border:1px solid var(--line);color:var(--shore);
   font-size:13px}
+#brief-nav #bn-day{width:auto;padding:0 10px;font-family:var(--disp);font-weight:700;
+  font-size:12px;letter-spacing:.1em;color:var(--sand);border-color:var(--sand)}
+#brief-nav #bn-day:hover:not(:disabled){box-shadow:0 0 10px rgba(255,217,138,.4)}
 #brief-nav button:hover:not(:disabled){border-color:var(--shore);
   box-shadow:0 0 8px rgba(25,227,210,.35)}
 #brief-nav button:disabled{color:var(--line);cursor:default}

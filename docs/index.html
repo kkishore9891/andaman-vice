@@ -145,6 +145,9 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 #brief-nav{margin-left:auto;display:flex;gap:4px}
 #brief-nav button{width:30px;height:30px;border:1px solid var(--line);color:var(--shore);
   font-size:13px}
+#brief-nav #bn-day{width:auto;padding:0 10px;font-family:var(--disp);font-weight:700;
+  font-size:12px;letter-spacing:.1em;color:var(--sand);border-color:var(--sand)}
+#brief-nav #bn-day:hover:not(:disabled){box-shadow:0 0 10px rgba(255,217,138,.4)}
 #brief-nav button:hover:not(:disabled){border-color:var(--shore);
   box-shadow:0 0 8px rgba(25,227,210,.35)}
 #brief-nav button:disabled{color:var(--line);cursor:default}
@@ -363,6 +366,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
       <div id="brief-crumbs"></div>
       <div id="brief-nav">
         <button id="bn-prev" title="Previous event">◀</button>
+        <button id="bn-day" title="Back to the whole day">DAY</button>
         <button id="bn-next" title="Next event">▶</button>
       </div>
       <button id="brief-close">✕</button>
@@ -1125,10 +1129,14 @@ const VMap = (() => {
     const nav = $("#brief-nav");
     nav.style.visibility = li >= 0 ? "visible" : "hidden";
     if (li >= 0) {
+      const day = Math.floor(e.start_min / 1440) + 1;
       $("#bn-prev").disabled = li <= 0;
       $("#bn-next").disabled = li >= leaves.length - 1;
       $("#bn-prev").onclick = () => li > 0 && openBrief(leaves[li - 1].id);
       $("#bn-next").onclick = () => li < leaves.length - 1 && openBrief(leaves[li + 1].id);
+      $("#bn-day").disabled = false;
+      $("#bn-day").onclick = () => openDayAgenda(day);
+      $("#bn-day").title = `Back to all of ${DAYNAMES[day - 1]}`;
     }
     // focus map
     if (r && r.polyline) {

@@ -420,10 +420,14 @@
     const nav = $("#brief-nav");
     nav.style.visibility = li >= 0 ? "visible" : "hidden";
     if (li >= 0) {
+      const day = Math.floor(e.start_min / 1440) + 1;
       $("#bn-prev").disabled = li <= 0;
       $("#bn-next").disabled = li >= leaves.length - 1;
       $("#bn-prev").onclick = () => li > 0 && openBrief(leaves[li - 1].id);
       $("#bn-next").onclick = () => li < leaves.length - 1 && openBrief(leaves[li + 1].id);
+      $("#bn-day").disabled = false;
+      $("#bn-day").onclick = () => openDayAgenda(day);
+      $("#bn-day").title = `Back to all of ${DAYNAMES[day - 1]}`;
     }
     // focus map
     if (r && r.polyline) {
